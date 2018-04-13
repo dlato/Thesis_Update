@@ -1,0 +1,272 @@
+\documentclass[12pt]{article}
+\usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xspace}
+%\usepackage{underscore}
+\usepackage{pdfpages}
+\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{longtable}
+\usepackage{booktabs}
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{13 pt}
+\setlength{\parindent}{28 pt}
+\setlength{\parskip}{12 pt}
+\pagestyle{fancyplain}
+\usepackage[T1]{fontenc}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc, arrows}
+\usepackage{lscape} %to make the page landscape
+\usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
+\title{Sinorhizobium Update}
+\author{Daniella Lato}
+\date{\today}
+\renewcommand\headrulewidth{0.5mm}
+\newcommand{\s}{\textit{Sinorhizobium}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\smed}{\textit{S.\,medicae}\xspace}
+\newcommand{\sfred}{\textit{S.\,fredii}\xspace}
+\newcommand{\ssah}{\textit{S.\,saheli}\xspace}
+\newcommand{\ster}{\textit{S.\,terangae}\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
+\newcommand{\escoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\sul}{\textit{Sulfolobus}\xspace}
+\newcommand{\ent}{\textit{Enterobacteria}\xspace}
+\newcommand{\p}{progressiveMauve}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\ecoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+\begin{document}
+
+$\checkmark$	Dec 23:	Obtain gene expression data for each bacteria
+	
+%	: Have a pipeline for gene expression data figured out
+
+%	Nov 30:	Create graphs with slopes for each COG
+	
+	
+%	Dec 3:	Create new binned scatter plot of COG log reg
+	
+%	Dec 6:	Determine if there are any other stats I want/need for COG stuff
+	
+%	Dec 10:	Calculate above stats and write in table
+	
+%	Dec 21:	Find papers on COG stuff (for intro and discussion), and other mol trends (discussion for sub paper)
+	
+%	Jan 6:	Read above mentioned papers and make notes
+$X$	Jan 6: Write up methods for COG and sub paper
+
+$\checkmark$	Jan 6: Read papers on gene expression
+	
+$\checkmark$	Jan 6: Apply for McMaster Bursaries and Grants
+	
+$\checkmark$	Jan 6:	Conference Grants Completed	
+
+$\checkmark$	Feb 16: Have pipeline in R for normalizing raw counts
+	
+$\checkmark$	Mar 2: Have code for plotting gene expression and substitution graphs
+	
+$\checkmark$	Mar 17: Have all \smel chrom, \ecol and \bass data sets combined and into one graph
+	
+$\checkmark$	Mar 31: Have all \strep data sets combined and into one graph (will take more time because it is not all the same strain)
+	
+$\checkmark$	April 5: ISMB Chicago Conference Abstract Due
+	
+$\checkmark$	April 7: Have something figured out for the \pb and \pa gene expression datasets
+
+	April 27: Create regression lines for gene expression
+	
+	April 27: Write up gene expression stuff
+	
+	April 27: Make 2nd, 3rd, 4th, order regression lines for substitution data
+	
+	May 31:	Have data for other molecular trends (GC content, number of genes, essential gene lists..etc.) combined with graphs (or in supplement) for sub analysis
+	
+	May 31:	Complete COG analysis
+	
+	Jun 30:	Gene Expression analysis write up
+	
+	Jun 30:	COG analysis Paper draft completed
+	
+	Jul 31:	Updated Sub Paper methods and results
+	
+	Jul 31: Add other mol trends to Sub Paper
+	
+\section*{Last Week}
+I combined the data for the \pa and \pb gene expression. The graphs are currently running and should be done by the end of the day.
+I also submitted my abstract for the ISMB Conference and should hear back by the beginning of May.
+I started to think about the Gene expression and simulating inversions and have come up with an idea of how to do it, but I wanted to talk to you to work out some of the kinks.
+I also ran into a small blip with the gene expression data, some of the files had info on the number of ambiguous matches..etc and these numbers were screwing up the normalization of the expression values. So I had to re-do all of this for each of the bacteria. Its all fixed below.
+
+\begin{table}[b!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+			\midrule
+			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.41\e{-5} & \cellcolor{black!16}1.44\e{-5} & \cellcolor{black!16}8.1\e{-6} \\
+			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.51\e{-5} & \cellcolor{black!16}2.05\e{-5} & \cellcolor{black!16}3.7\e{-6} \\
+			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.46\e{-6} & \cellcolor{black!16}1.3\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
+			\smel Chromosome & -5.68\e{-6} & 2.98\e{-5} & 8.5\e{-1}\\
+			\smel pSymA & -2.74\e{-4} & 4.85\e{-4} & 5.73\e{-1} \\
+			\smel pSymB & 4.5\e{-4} & 2.46\e{-4} & 6.8\e{-2}\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:tabel2} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Grey coloured boxes indicate statistically significant results at the 0.5 significance level. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+\end{table}
+
+
+\section*{This Week}
+I would like to begin creating regression lines for the gene expression data to determine what spatial trends are seen.
+I would also like to start writing the code for the gene expression inversion simulation.
+
+
+\section*{Next Week}
+I would like to keep working on the above mentioned stuff.
+
+
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18}
+
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%			\midrule
+%			\ecol Chromosome & -1.44\e{-7}& 2.01\e{-9} & $<$2\e{-16}\\
+%			\bass Chromosome & -1.121\e{-7} & 3.41\e{-9} & $<$2\e{-16}\\
+%			\strep Chromosome & 1.24\e{-8} & 7.2\e{-10} & $<$2\e{-16}\\
+%			\smel Chromosome & -1.526\e{-6} & 3.02\e{-8} & $<$2\e{-16}\\
+%			\smel pSymA & -1.058\e{-6}& 2.58\e{-8}& $<$2\e{-16}\\
+%			\smel pSymB & 1.79\e{-7}& 1.84\e{-8}& 1.6\e{-10}\\
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons when 10,000bp sections of the genome are re-organized.}
+%\end{table}
+%
+%Below is the actual logistic regression results without block shuffling.
+%
+%
+
+
+
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%			\midrule
+%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-1.394\e{-7} & \cellcolor{black!16}2.425\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
+%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-2.538\e{-8} & \cellcolor{black!16}1.58\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
+%			\strep Chromosome & 1.736\e{-8} & 7.231\e{-10} & $<$2\e{-16}\\
+%			\cellcolor{black!16}\smel Chromosome & \cellcolor{black!16}-1.541\e{-6} & \cellcolor{black!16}3.042\e{-8} & \cellcolor{black!16}$<$2\e{-16}\\
+%			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-9.852\e{-7} & \cellcolor{black!16}2.388\e{-8} & \cellcolor{black!16}$<$2\e{-16} \\
+%			\smel pSymB & 4.342\e{-8} & 1.89\e{-8} & 0.0216\\
+%			\bottomrule
+%		\end{tabular}
+		
+%	}%resizebox
+%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%\end{table}
+%
+%
+%
+%\begin{table}[]
+%	\centering
+%	\resizebox{1.2\textwidth}{!}{%
+%		\begin{tabular}{lcccccc}
+%			\toprule
+%			Origin Location & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+%			\midrule
+%			Moved 100kb Left & -1.647\e{-7}*** & 4.374\e{-9}* &  6.909\e{-9}*** &  -1.316\e{-6}*** & -1.378\e{-6}*** & -1.362\e{-7}**\\
+%			Moved 90kb Left & -1.782\e{-7}*** & -1.036\e{-7}*** & 5.677\e{-9}*** & -1.32\e{-6}*** & -1.155\e{-6}*** & -1.755\e{-7}***\\
+%			Moved 80kb Left& -1.919\e{-7}*** & -1.072\e{-7}*** & 8.11\e{-9}*** & -1.338\e{-6}*** & -1.280\e{-6}*** & -1.746\e{-8}***\\
+%			Moved 70kb Left& -1.953\e{-7}*** & -1.102\e{-7}*** & 6.716\e{-9}*** & -1.363\e{-6}*** & -1.265\e{-6}*** & -1.746\e{-8}***\\
+%			Moved 60kb Left& -1.920\e{-7}*** & -1.19\e{-7}*** & 8.7\e{-9}*** & -1.324\e{-6}*** & -1.263\e{-6}*** & -1.782\e{-7}***\\
+%			Moved 50kb Left& -1.685\e{-7}*** & -1.211\e{-7}*** & 1.045\e{-8}*** & -1.36\e{-6}*** & -1.251\e{-6}*** & 1.521\e{-7}***\\
+%			Moved 40kb Left& -1.600\e{-7}*** & -1.299\e{-7}*** & 1.214\e{-8}*** & -1.255\e{-6}*** & -1.266\e{-6}*** & 2.086\e{-7}***\\
+%			Moved 30kb Left& -1.674\e{-7}*** & -1.292\e{-7}*** & 1.24\e{-8}*** & -1.26\e{-6}*** & -1.259\e{-6}*** & 2.467\e{-7}***\\
+%			Moved 20kb Left& -1.647\e{-7}*** & -1.1\e{-7}*** & 1.395\e{-8}*** & -1.525\e{-6}*** & -1.288\e{-6}*** & 2.94\e{-7}***\\
+%			Moved 10kb Left& -1.558\e{-7}*** & -2.602\e{-9} & 1.563\e{-8}*** &  -1.599\e{-6}*** &  -9.499\e{-7}*** & 3.506\e{-7}*** \\
+%			Moved 10kb Right& -1.592\e{-7}*** & -2.045\e{-8}*** & 1.578\e{-8}*** & 1.614\e{-6}*** & -1.401\e{-6}*** & 3.234\e{-7}*** \\
+%			Moved 20kb Right& -1.600\e{-7}*** & -1.006\e{-7}*** & 1.903\e{-8}*** & -1.634\e{-6}*** & -1.491\e{-6}*** & 2.856\e{-7}***\\
+%			Moved 30kb Right& -1.704\e{-7}*** & -8.596\e{-8}*** & 2.046\e{-8}*** & -1.698\e{-6}*** & -1.462\e{-6}*** & 2.39\e{-7}***\\
+%			Moved 40kb Right& -1.770\e{-7}*** & -8.378\e{-8}*** & 2.125\e{-8}*** & -1.719\e{-6}*** & -1.449\e{-6}*** & 2.02\e{-7}***\\
+%			Moved 50kb Right& -1.715\e{-7}*** & -7.879\e{-8}*** & 1.957\e{-8}*** & -1.735\e{-6}*** & -1.308\e{-6}*** & 1.728\e{-7}***\\
+%			Moved 60kb Right& -1.723\e{-7}*** & -6.98\e{-8}*** & 1.974\e{-8}*** & -1.788\e{-6}*** & -1.177\e{-6}*** & 1.329\e{-7}***\\
+%			Moved 70kb Right& -1.636\e{-7}*** & -6.634\e{-8}*** & 1.934\e{-8}*** & -1.854\e{-6}*** & -1.135\e{-6}*** & 1.216\e{-7}***\\
+%			Moved 80kb Right& -1.612\e{-7}** & -5.814\e{-8}*** & 2.313\e{-8}*** & -1.891\e{-6}*** & -9.201\e{-7}*** & 9.62\e{-8}***\\
+%			Moved 90kb Right& -1.610\e{-7}*** & -4.314\e{-8}*** & 2.304\e{-8}*** & -1.865\e{-6}*** & -7.492\e{-7}*** & 9.96\e{-8}***\\
+%			Moved 100kb Right& -1.693\e{-7}*** & -2.597\e{-8}*** &  1.945\e{-8}*** &  -1.525\e{-6}*** & -8.55\e{-7}*** & 5.59\e{-8}**\\
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%\end{table}
+
+%\begin{table}[h]
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			Bacteria Replicon & \multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Identical Tree} & 
+%			\multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Not Identical Tree} & 
+%			\multicolumn{1}{p{3cm}}{\centering \% of Total Alignment Discarded} \\  
+%			\midrule
+%			\ecol Chromosome & 81.58\% & 18.42\% & 25.18\%\\
+%			\bass Chromosome & 83.33\% & 16.67\% & 19.37\%\\
+%			\strep Chromosome & 96.53\% & 3.47\% & 12.42\%\\
+%			\smel Chromosome & 81.82\% & 18.18\% & 25.42\%\\
+%			\smel \pa & 100\% & 0\% & 0\%\\
+%			\smel \pb & 100\% & 0\% & 0\%\\
+%			\bottomrule
+%		\end{tabular}
+%	}%resize box
+%\end{table}
+%
+% 
+
+%
+%\clearpage
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Bidirectionality_outliers_coloured_9Jun17/bass_chrom_change_histogram_bidirectionality_colour_6Nov17.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Bidirectionality_outliers_coloured_9Jun17/streo_chrom_change_histogram_bidirectionality_colour_6Nov17.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Bidirectionality_outliers_coloured_9Jun17/chrom_change_histogram_bidirectionality_colour_24Nov17.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Papers/Substitutions_paper/Substitutions_paper/Figs/pSymA_change_histogram_bidirectionality_colour_6Oct17.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Papers/Substitutions_paper/Substitutions_paper/Figs/pSymB_change_histogram_bidirectionality_colour_10Oct17.pdf}
+%
+%
+\end{document}
