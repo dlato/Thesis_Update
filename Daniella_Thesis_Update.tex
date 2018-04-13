@@ -87,9 +87,11 @@ $\checkmark$	April 5: ISMB Chicago Conference Abstract Due
 	
 $\checkmark$	April 7: Have something figured out for the \pb and \pa gene expression datasets
 
-	April 27: Create regression lines for gene expression
+$\checkmark$	April 27: Create regression lines for gene expression
 	
 	April 27: Write up gene expression stuff
+	
+	April 27: Manuscript for Substitution and Gene expression paper finished
 	
 	April 27: Make 2nd, 3rd, 4th, order regression lines for substitution data
 	
@@ -106,12 +108,18 @@ $\checkmark$	April 7: Have something figured out for the \pb and \pa gene expres
 	Jul 31: Add other mol trends to Sub Paper
 	
 \section*{Last Week}
-I combined the data for the \pa and \pb gene expression. The graphs are currently running and should be done by the end of the day.
-I also submitted my abstract for the ISMB Conference and should hear back by the beginning of May.
-I started to think about the Gene expression and simulating inversions and have come up with an idea of how to do it, but I wanted to talk to you to work out some of the kinks.
-I also ran into a small blip with the gene expression data, some of the files had info on the number of ambiguous matches..etc and these numbers were screwing up the normalization of the expression values. So I had to re-do all of this for each of the bacteria. Its all fixed below.
+I finished the gene expression and substitution graphs for all the bacteria. The graphs are below.
+I relized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
+It did not change the logistic regression results (also seen below).
+%However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative. I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figre this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
+I also created simple linear regressions for the gene expression data and the results are summarized in the table below.
+The significant linear regressions were all negative as predicted by other authors.
+So gene expression decreases as you move further from the origin of replication.
+All of \smel did not have a significant linear regression which is interesting. It might be because there was only one gene expression dataset I could use, therefore less samples than the other bacteria.
 
-\begin{table}[b!]
+I still need to talk to you about the gene expression inversion stuff.
+
+\begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lccc}
@@ -124,6 +132,26 @@ I also ran into a small blip with the gene expression data, some of the files ha
 			\smel Chromosome & -5.68\e{-6} & 2.98\e{-5} & 8.5\e{-1}\\
 			\smel pSymA & -2.74\e{-4} & 4.85\e{-4} & 5.73\e{-1} \\
 			\smel pSymB & 4.5\e{-4} & 2.46\e{-4} & 6.8\e{-2}\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Grey coloured boxes indicate statistically significant results at the 0.5 significance level. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+\end{table}
+
+\begin{table}[b!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+			\midrule
+			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-1.394\e{-7} & \cellcolor{black!16}2.425\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
+			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-2.538\e{-8} & \cellcolor{black!16}1.58\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
+			\strep Chromosome & 1.736\e{-8} & 7.231\e{-10} & $<$2\e{-16}\\
+			\cellcolor{black!16}\smel Chromosome & \cellcolor{black!16}-1.541\e{-6} & \cellcolor{black!16}3.042\e{-8} & \cellcolor{black!16}$<$2\e{-16}\\
+			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-9.130\e{-7} & \cellcolor{black!16}1.975\e{-8} & \cellcolor{black!16}$<$2\e{-16} \\
+			\smel pSymB & 2.488\e{-7} & 1.964\e{-8} & $<$2\e{-16}\\
 			\bottomrule
 		\end{tabular}
 		
@@ -145,6 +173,8 @@ I would like to keep working on the above mentioned stuff.
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18}
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18}
 
