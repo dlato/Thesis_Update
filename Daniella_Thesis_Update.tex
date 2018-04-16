@@ -109,7 +109,7 @@ $\checkmark$	April 27: Create regression lines for gene expression
 	
 \section*{Last Week}
 I finished the gene expression and substitution graphs for all the bacteria. The graphs are below.
-I relized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
+I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 It did not change the logistic regression results (also seen below).
 %However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative. I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figre this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
 I also created simple linear regressions for the gene expression data and the results are summarized in the table below.
@@ -157,7 +157,7 @@ I still need to talk to you about the gene expression inversion stuff.
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:tabel2} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Grey coloured boxes indicate statistically significant results at the 0.5 significance level. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
 \end{table}
 
 
