@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  16 APR 2018 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  23 APR 2018 09:55
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -491,23 +491,34 @@ File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
 \pgfarrowlength=\dimen172
 \pgfarrowwidth=\dimen173
 \pgfarrowlinewidth=\dimen174
-)))
+))) (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\ulem\ulem.sty
+\UL@box=\box43
+\UL@hyphenbox=\box44
+\UL@skip=\skip62
+\UL@hook=\toks31
+\UL@height=\dimen175
+\UL@pe=\count120
+\UL@pixel=\dimen176
+\ULC@box=\box45
+Package: ulem 2012/05/18
+\ULdepth=\dimen177
+)
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarydecorations.markings.code.tex
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarydecorations.code.tex
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\pgf\modules\pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen175
-\pgfdecoratedremainingdistance=\dimen176
-\pgfdecoratedinputsegmentcompleteddistance=\dimen177
-\pgfdecoratedinputsegmentremainingdistance=\dimen178
-\pgf@decorate@distancetomove=\dimen179
-\pgf@decorate@repeatstate=\count120
-\pgfdecorationsegmentamplitude=\dimen180
-\pgfdecorationsegmentlength=\dimen181
+\pgfdecoratedcompleteddistance=\dimen178
+\pgfdecoratedremainingdistance=\dimen179
+\pgfdecoratedinputsegmentcompleteddistance=\dimen180
+\pgfdecoratedinputsegmentremainingdistance=\dimen181
+\pgf@decorate@distancetomove=\dimen182
+\pgf@decorate@repeatstate=\count121
+\pgfdecorationsegmentamplitude=\dimen183
+\pgfdecorationsegmentlength=\dimen184
 )
-\tikz@lib@dec@box=\box43
+\tikz@lib@dec@box=\box46
 )
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.markings.code.tex))
@@ -522,13 +533,13 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen182
+\arrowsize=\dimen185
 )) (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\graphics\lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip62
+\@mathmargin=\skip63
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsmath\amstext.sty
@@ -536,51 +547,51 @@ Package: amstext 2000/06/29 v2.01
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks31
-\ex@=\dimen183
+\@emptytoks=\toks32
+\ex@=\dimen186
 ))
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen184
+\pmbraise@=\dimen187
 )
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsmath\amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count121
+\inf@bad=\count122
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count122
-\leftroot@=\count123
+\uproot@=\count123
+\leftroot@=\count124
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count124
-\DOTSCASE@=\count125
+\classnum@=\count125
+\DOTSCASE@=\count126
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box44
-\strutbox@=\box45
-\big@size=\dimen185
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen188
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count126
-\c@MaxMatrixCols=\count127
+\macc@depth=\count127
+\c@MaxMatrixCols=\count128
 \dotsspace@=\muskip10
-\c@parentequation=\count128
-\dspbrk@lvl=\count129
-\tag@help=\toks32
-\row@=\count130
-\column@=\count131
-\maxfields@=\count132
-\andhelp@=\toks33
-\eqnshift@=\dimen186
-\alignsep@=\dimen187
-\tagshift@=\dimen188
-\tagwidth@=\dimen189
-\totwidth@=\dimen190
-\lineht@=\dimen191
-\@envbody=\toks34
-\multlinegap=\skip63
-\multlinetaggap=\skip64
-\mathdisplay@stack=\toks35
+\c@parentequation=\count129
+\dspbrk@lvl=\count130
+\tag@help=\toks33
+\row@=\count131
+\column@=\count132
+\maxfields@=\count133
+\andhelp@=\toks34
+\eqnshift@=\dimen189
+\alignsep@=\dimen190
+\tagshift@=\dimen191
+\tagwidth@=\dimen192
+\totwidth@=\dimen193
+\lineht@=\dimen194
+\@envbody=\toks35
+\multlinegap=\skip64
+\multlinetaggap=\skip65
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -596,15 +607,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amscls\amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks36
-\thm@bodyfont=\toks37
-\thm@headfont=\toks38
-\thm@notefont=\toks39
-\thm@headpunct=\toks40
-\thm@preskip=\skip65
-\thm@postskip=\skip66
-\thm@headsep=\skip67
-\dth@everypar=\toks41
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip66
+\thm@postskip=\skip67
+\thm@headsep=\skip68
+\dth@everypar=\toks42
 )
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
@@ -614,34 +625,34 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
 (Daniella_Thesis_Update.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
-\scratchdimen=\dimen192
-\scratchbox=\box46
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count136
-\MPscratchDim=\dimen193
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count134
+\scratchdimen=\dimen195
+\scratchbox=\box49
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen196
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks44
 )
-\AtBeginShipoutBox=\box47
+\AtBeginShipoutBox=\box50
  (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\oberdiek\pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
@@ -650,17 +661,17 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 54.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 55.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -682,10 +693,10 @@ aphic file (type pdf)
 Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_co
-lour_16Mar18.pdf used on input line 174.
+lour_16Mar18.pdf used on input line 175.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 174--175
+Overfull \hbox (28.0pt too wide) in paragraph at lines 175--176
 [][] 
  []
 
@@ -701,10 +712,10 @@ file (type pdf)
 Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_
-9Apr18.pdf used on input line 176.
+9Apr18.pdf used on input line 177.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 176--177
+Overfull \hbox (28.0pt too wide) in paragraph at lines 177--178
 [][] 
  []
 
@@ -722,10 +733,10 @@ _Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf Graphic
 Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_
-12Apr18.pdf used on input line 178.
+12Apr18.pdf used on input line 179.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 178--179
+Overfull \hbox (28.0pt too wide) in paragraph at lines 179--180
 [][] 
  []
 
@@ -743,10 +754,10 @@ phic file (type pdf)
 Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_co
-lour_5Apr18.pdf used on input line 180.
+lour_5Apr18.pdf used on input line 181.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 180--181
+Overfull \hbox (28.0pt too wide) in paragraph at lines 181--182
 [][] 
  []
 
@@ -764,10 +775,10 @@ raphic file (type pdf)
 Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_c
-olour_16Mar18.pdf used on input line 182.
+olour_16Mar18.pdf used on input line 183.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 182--183
+Overfull \hbox (28.0pt too wide) in paragraph at lines 183--184
 [][] 
  []
 
@@ -785,10 +796,10 @@ raphic file (type pdf)
 Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_c
-olour_19Mar18.pdf used on input line 184.
+olour_19Mar18.pdf used on input line 185.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 184--185
+Overfull \hbox (28.0pt too wide) in paragraph at lines 185--186
 [][] 
  []
 
@@ -798,11 +809,11 @@ xpression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>]
 xpression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>]
 (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 15960 strings out of 493673
- 332741 string characters out of 3141142
- 365572 words of memory out of 3000000
- 18964 multiletter control sequences out of 15000+200000
- 14932 words of font info for 46 fonts, out of 3000000 for 9000
+ 16045 strings out of 493673
+ 333609 string characters out of 3141142
+ 366429 words of memory out of 3000000
+ 19044 multiletter control sequences out of 15000+200000
+ 15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,581b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\font
@@ -815,7 +826,7 @@ iella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniel
 la/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniell
 a/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/
 Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (9 pages, 130658 bytes).
+Output written on Daniella_Thesis_Update.pdf (9 pages, 130999 bytes).
 PDF statistics:
  193 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

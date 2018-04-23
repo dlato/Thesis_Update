@@ -17,6 +17,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{tikz-cd}
 \usepackage{tikz}
+\usepackage[normalem]{ulem}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{calc, arrows}
 \usepackage{lscape} %to make the page landscape
@@ -93,7 +94,7 @@ $\checkmark$	April 27: Create regression lines for gene expression
 	
 	April 27: Manuscript for Substitution and Gene expression paper finished
 	
-	April 27: Make 2nd, 3rd, 4th, order regression lines for substitution data
+	\sout{April 27: Make 2nd, 3rd, 4th, order regression lines for substitution data}
 	
 	May 31:	Have data for other molecular trends (GC content, number of genes, essential gene lists..etc.) combined with graphs (or in supplement) for sub analysis
 	
@@ -108,17 +109,24 @@ $\checkmark$	April 27: Create regression lines for gene expression
 	Jul 31: Add other mol trends to Sub Paper
 	
 \section*{Last Week}
-I finished the gene expression and substitution graphs for all the bacteria. The graphs are below.
 I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 It did not change the logistic regression results (also seen below).
-%However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative. I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figre this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
+However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative. I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figure this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
 I also created simple linear regressions for the gene expression data and the results are summarized in the table below.
-The significant linear regressions were all negative as predicted by other authors.
-So gene expression decreases as you move further from the origin of replication.
-All of \smel did not have a significant linear regression which is interesting. It might be because there was only one gene expression dataset I could use, therefore less samples than the other bacteria.
-I started to write up these gene expression results and methods into my manuscript.
 
-I still need to talk to you about the gene expression inversion stuff.
+I looked at the gene expression data for \smel in detail and it appears to look ok.
+When I graph the raw data and plot the regression line it looks like there is no trend for \smel, the points are evenly distributed throughout the genome and there appears to be no increasing or decreasing trend.
+When looking at the other bacteria's raw data, there is clearly a decreasing trend when moving away from the origin.
+Additionally the number of genes and number of replicates are all comparable between \smel and the other bacteria.
+So I think that the reason \smel does not have significant gene expression regressions is because there is simply no trend.
+
+I spent a few days last week writing up the manuscript for the gene expression and substitution stuff.
+
+\section*{This Week}
+I need to figure out the weird thing happening with the \pb robust origin shuffling test.
+I also plan on having my manuscript finished before I leave for camping on Friday.
+
+
 
 \begin{table}[h]
 	\centering
@@ -161,15 +169,6 @@ I still need to talk to you about the gene expression inversion stuff.
 \end{table}
 
 
-\section*{This Week}
-I would like to write code for the 2nd, 3rd, and 4th order regression lines for the substitution data and possibly the gene expression data.
-I would also like to start writing the code for the gene expression inversion simulation.
-
-
-\section*{Next Week}
-I would like to finish up the above mentioned stuff and begin writing and editing my manuscript.
-
-
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
 
@@ -202,34 +201,7 @@ I would like to finish up the above mentioned stuff and begin writing and editin
 %	}%resizebox
 %	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons when 10,000bp sections of the genome are re-organized.}
 %\end{table}
-%
-%Below is the actual logistic regression results without block shuffling.
-%
-%
 
-
-
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{lccc}
-%			\toprule
-%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-%			\midrule
-%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-1.394\e{-7} & \cellcolor{black!16}2.425\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
-%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-2.538\e{-8} & \cellcolor{black!16}1.58\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
-%			\strep Chromosome & 1.736\e{-8} & 7.231\e{-10} & $<$2\e{-16}\\
-%			\cellcolor{black!16}\smel Chromosome & \cellcolor{black!16}-1.541\e{-6} & \cellcolor{black!16}3.042\e{-8} & \cellcolor{black!16}$<$2\e{-16}\\
-%			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-9.852\e{-7} & \cellcolor{black!16}2.388\e{-8} & \cellcolor{black!16}$<$2\e{-16} \\
-%			\smel pSymB & 4.342\e{-8} & 1.89\e{-8} & 0.0216\\
-%			\bottomrule
-%		\end{tabular}
-		
-%	}%resizebox
-%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-%\end{table}
-%
-%
 %
 %\begin{table}[]
 %	\centering
