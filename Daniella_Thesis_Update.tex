@@ -112,7 +112,6 @@ $\checkmark$	April 27: Create regression lines for gene expression
 I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 It did not change the logistic regression results (seen below).
 However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative (opposite). I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figure this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
-I also created simple linear regressions for the gene expression data and the results are summarized in the table below.
 
 I looked at the gene expression data for \smel in detail and it appears to look ok.
 When I graph the raw data and plot the regression line it looks like there is no trend for \smel, the points are evenly distributed throughout the genome and there appears to be no increasing or decreasing trend.
@@ -202,40 +201,40 @@ I also plan on having my manuscript finished before I leave for camping on Frida
 %	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons when 10,000bp sections of the genome are re-organized.}
 %\end{table}
 
-%
-%\begin{table}[]
-%	\centering
-%	\resizebox{1.2\textwidth}{!}{%
-%		\begin{tabular}{lcccccc}
-%			\toprule
-%			Origin Location & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
-%			\midrule
-%			Moved 100kb Left & -1.647\e{-7}*** & 4.374\e{-9}* &  6.909\e{-9}*** &  -1.316\e{-6}*** & -1.378\e{-6}*** & -1.362\e{-7}**\\
-%			Moved 90kb Left & -1.782\e{-7}*** & -1.036\e{-7}*** & 5.677\e{-9}*** & -1.32\e{-6}*** & -1.155\e{-6}*** & -1.755\e{-7}***\\
-%			Moved 80kb Left& -1.919\e{-7}*** & -1.072\e{-7}*** & 8.11\e{-9}*** & -1.338\e{-6}*** & -1.280\e{-6}*** & -1.746\e{-8}***\\
-%			Moved 70kb Left& -1.953\e{-7}*** & -1.102\e{-7}*** & 6.716\e{-9}*** & -1.363\e{-6}*** & -1.265\e{-6}*** & -1.746\e{-8}***\\
-%			Moved 60kb Left& -1.920\e{-7}*** & -1.19\e{-7}*** & 8.7\e{-9}*** & -1.324\e{-6}*** & -1.263\e{-6}*** & -1.782\e{-7}***\\
-%			Moved 50kb Left& -1.685\e{-7}*** & -1.211\e{-7}*** & 1.045\e{-8}*** & -1.36\e{-6}*** & -1.251\e{-6}*** & 1.521\e{-7}***\\
-%			Moved 40kb Left& -1.600\e{-7}*** & -1.299\e{-7}*** & 1.214\e{-8}*** & -1.255\e{-6}*** & -1.266\e{-6}*** & 2.086\e{-7}***\\
-%			Moved 30kb Left& -1.674\e{-7}*** & -1.292\e{-7}*** & 1.24\e{-8}*** & -1.26\e{-6}*** & -1.259\e{-6}*** & 2.467\e{-7}***\\
-%			Moved 20kb Left& -1.647\e{-7}*** & -1.1\e{-7}*** & 1.395\e{-8}*** & -1.525\e{-6}*** & -1.288\e{-6}*** & 2.94\e{-7}***\\
-%			Moved 10kb Left& -1.558\e{-7}*** & -2.602\e{-9} & 1.563\e{-8}*** &  -1.599\e{-6}*** &  -9.499\e{-7}*** & 3.506\e{-7}*** \\
-%			Moved 10kb Right& -1.592\e{-7}*** & -2.045\e{-8}*** & 1.578\e{-8}*** & 1.614\e{-6}*** & -1.401\e{-6}*** & 3.234\e{-7}*** \\
-%			Moved 20kb Right& -1.600\e{-7}*** & -1.006\e{-7}*** & 1.903\e{-8}*** & -1.634\e{-6}*** & -1.491\e{-6}*** & 2.856\e{-7}***\\
-%			Moved 30kb Right& -1.704\e{-7}*** & -8.596\e{-8}*** & 2.046\e{-8}*** & -1.698\e{-6}*** & -1.462\e{-6}*** & 2.39\e{-7}***\\
-%			Moved 40kb Right& -1.770\e{-7}*** & -8.378\e{-8}*** & 2.125\e{-8}*** & -1.719\e{-6}*** & -1.449\e{-6}*** & 2.02\e{-7}***\\
-%			Moved 50kb Right& -1.715\e{-7}*** & -7.879\e{-8}*** & 1.957\e{-8}*** & -1.735\e{-6}*** & -1.308\e{-6}*** & 1.728\e{-7}***\\
-%			Moved 60kb Right& -1.723\e{-7}*** & -6.98\e{-8}*** & 1.974\e{-8}*** & -1.788\e{-6}*** & -1.177\e{-6}*** & 1.329\e{-7}***\\
-%			Moved 70kb Right& -1.636\e{-7}*** & -6.634\e{-8}*** & 1.934\e{-8}*** & -1.854\e{-6}*** & -1.135\e{-6}*** & 1.216\e{-7}***\\
-%			Moved 80kb Right& -1.612\e{-7}** & -5.814\e{-8}*** & 2.313\e{-8}*** & -1.891\e{-6}*** & -9.201\e{-7}*** & 9.62\e{-8}***\\
-%			Moved 90kb Right& -1.610\e{-7}*** & -4.314\e{-8}*** & 2.304\e{-8}*** & -1.865\e{-6}*** & -7.492\e{-7}*** & 9.96\e{-8}***\\
-%			Moved 100kb Right& -1.693\e{-7}*** & -2.597\e{-8}*** &  1.945\e{-8}*** &  -1.525\e{-6}*** & -8.55\e{-7}*** & 5.59\e{-8}**\\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-%\end{table}
+
+\begin{table}[]
+	\centering
+	\resizebox{1.2\textwidth}{!}{%
+			\begin{tabular}{lcccccc}
+\toprule
+Origin Location & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+\midrule
+Moved 100kb Left & -1.445\e{-7}*** & 4.374\e{-9}* &  6.909\e{-9}*** &  -1.316\e{-6}*** & -1.058\e{-6}*** & \e{-8}*\\
+Moved 90kb Left & -1.544\e{-7}*** & -1.036\e{-7}*** & 5.677\e{-9}*** & -1.32\e{-6}*** & -1.246\e{-6}*** &\e{-7}***\\
+Moved 80kb Left& -1.65\e{-7}*** & -1.072\e{-7}*** & 8.11\e{-9}*** & -1.338\e{-6}*** & -1.398\e{-6}*** & \e{-8}*\\
+Moved 70kb Left& -1.667\e{-7}*** & -1.102\e{-7}*** & 6.716\e{-9}*** & -1.363\e{-6}*** & -1.405\e{-6}*** & 9.83\e{-8}\\
+Moved 60kb Left& -1.64\e{-7}*** & -1.19\e{-7}*** & 8.7\e{-9}*** & -1.324\e{-6}*** & -1.394\e{-6}*** & 1.129\e{-7}***\\
+Moved 50kb Left& -1.446\e{-7}*** & -1.211\e{-7}*** & 1.045\e{-8}*** & -1.36\e{-6}*** & -1.403\e{-6}*** & 1.521\e{-7}***\\
+Moved 40kb Left& -1.4\e{-7}*** & -1.299\e{-7}*** & 1.214\e{-8}*** & -1.255\e{-6}*** & -1.422\e{-6}*** & 1.543\e{-7}***\\
+Moved 30kb Left& -1.498\e{-7}*** & -1.292\e{-7}*** & 1.24\e{-8}*** & -1.26\e{-6}*** & -1.392\e{-6}*** & 1.63\e{-7}***\\
+Moved 20kb Left& -1.51\e{-7}*** & -1.1\e{-7}*** & 1.395\e{-8}*** & -1.525\e{-6}*** & -1.412\e{-6}*** & 1.603\e{-7}***\\
+Moved 10kb Left& -1.262\e{-7}*** & -2.602\e{-9} & 1.563\e{-8}*** &  -1.599\e{-6}*** &  -9.499\e{-7}*** & 2.973\e{-7}*** \\
+Moved 10kb Right& -1.305\e{-7}*** & -2.045\e{-8}*** & 1.578\e{-8}*** & 1.614\e{-6}*** & -1.026\e{-6}*** & 3.505\e{-7}*** \\
+Moved 20kb Right& -1.454\e{-7}*** & -1.006\e{-7}*** & 1.903\e{-8}*** & -1.634\e{-6}*** & -1.475\e{-6}*** & 1.649\e{-7}***\\
+Moved 30kb Right& -1.548\e{-7}*** & -8.596\e{-8}*** & 2.046\e{-8}*** & -1.698\e{-6}*** & -1.417\e{-6}*** & 1.526\e{-7}***\\
+Moved 40kb Right& -1.632\e{-7}*** & -8.378\e{-8}*** & 2.125\e{-8}*** & -1.719\e{-6}*** & -1.367\e{-6}*** & 1.589\e{-7}***\\
+Moved 50kb Right& -1.856\e{-7}*** & -7.879\e{-8}*** & 1.957\e{-8}*** & -1.735\e{-6}*** & -1.277\e{-6}*** & 1.654\e{-7}***\\
+Moved 60kb Right& -1.91\e{-7}*** & -6.98\e{-8}*** & 1.974\e{-8}*** & -1.788\e{-6}*** & -1.169\e{-6}*** & 1.645\e{-7}***\\
+Moved 70kb Right& -1.892\e{-7}*** & -6.634\e{-8}*** & 1.934\e{-8}*** & -1.854\e{-6}*** & -1.059\e{-6}*** & 1.843\e{-7}***\\
+Moved 80kb Right& -1.879\e{-7}** & -5.814\e{-8}*** & 2.313\e{-8}*** & -1.891\e{-6}*** & -9.07\e{-7}*** & 1.90\e{-7}***\\
+Moved 90kb Right& -1.862\e{-7}*** & -4.314\e{-8}*** & 2.304\e{-8}*** & -1.865\e{-6}*** & -7.171\e{-7}*** & 2.415\e{-7}***\\
+Moved 100kb Right& -1.799\e{-7}*** & -2.597\e{-8}*** &  1.945\e{-8}*** &  -1.525\e{-6}*** & -6.572\e{-7}*** & 3.095\e{-7}***\\
+\bottomrule
+\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+\end{table}
 
 %\begin{table}[h]
 %	\resizebox{\textwidth}{!}{%
