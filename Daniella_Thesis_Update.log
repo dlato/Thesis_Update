@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  23 APR 2018 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  23 APR 2018 10:21
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -624,7 +624,11 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\dstroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-(Daniella_Thesis_Update.aux)
+(Daniella_Thesis_Update.aux
+
+LaTeX Warning: Label `tab:tabel2' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -637,8 +641,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
-
-(C:\Users\Daniella\Downloads\MiKTeX\tex\context\base\supp-pdf.mkii
+ (C:\Users\Daniella\Downloads\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
 \scratchdimen=\dimen195
@@ -799,32 +802,45 @@ Overfull \hbox (28.0pt too wide) in paragraph at lines 182--183
 [][] 
  []
 
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 205.
+
+
+Overfull \hbox (77.98691pt too wide) in paragraph at lines 207--236
+ [][] 
+ []
+
 [8 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
 xpression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>]
 [9 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
 xpression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>]
-(Daniella_Thesis_Update.aux) ) 
+[10] (Daniella_Thesis_Update.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  16045 strings out of 493673
  333609 string characters out of 3141142
- 364429 words of memory out of 3000000
+ 375469 words of memory out of 3000000
  19044 multiletter control sequences out of 15000+200000
  15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 72i,12n,86p,581b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Daniella\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/
-Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/D
-aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dan
-iella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniel
-la/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniell
-a/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/
-Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (9 pages, 131070 bytes).
+ 72i,12n,86p,615b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecbx1728.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/Daniella/Downloads/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1
+/public/amsfonts/symbols/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (10 pages, 134754 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
