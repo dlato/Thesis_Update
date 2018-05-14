@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  23 APR 2018 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  14 MAY 2018 10:15
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -664,25 +664,25 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 55.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 66.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/Daniella/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2]
+]
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf, id=16,
+ession/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf, id=13,
  505.89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
 _Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf Gr
@@ -692,17 +692,22 @@ aphic file (type pdf)
 Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_co
-lour_16Mar18.pdf used on input line 172.
+lour_16Mar18.pdf used on input line 168.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 172--173
+Overfull \hbox (28.0pt too wide) in paragraph at lines 168--169
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf, id=17, 505.8
-9pt x 505.89pt> [3]
+ession/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf, id=14, 505.8
+9pt x 505.89pt> [2]
+Overfull \vbox (57.1979pt too high) has occurred while \output is active []
+
+
+[3 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
+xpression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
 _Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf Graphic 
 file (type pdf)
@@ -711,19 +716,17 @@ file (type pdf)
 Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_
-9Apr18.pdf used on input line 174.
+9Apr18.pdf used on input line 170.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 174--175
+Overfull \hbox (28.0pt too wide) in paragraph at lines 170--171
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf, id=25, 505.
-89pt x 505.89pt> [4 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Express
-ion_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour
-_16Mar18.pdf>]
+ession/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf, id=29, 505.
+89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
 _Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf Graphic
  file (type pdf)
@@ -732,17 +735,17 @@ _Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf Graphic
 Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_
-12Apr18.pdf used on input line 176.
+12Apr18.pdf used on input line 172.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 176--177
+Overfull \hbox (28.0pt too wide) in paragraph at lines 172--173
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18.pdf, id=33, 
-505.89pt x 505.89pt> [5 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
+ession/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18.pdf, id=30, 
+505.89pt x 505.89pt> [4 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_
 9Apr18.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
@@ -753,17 +756,17 @@ phic file (type pdf)
 Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_co
-lour_5Apr18.pdf used on input line 178.
+lour_5Apr18.pdf used on input line 174.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 178--179
+Overfull \hbox (28.0pt too wide) in paragraph at lines 174--175
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf, id=41
-, 505.89pt x 505.89pt> [6 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_E
+ession/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf, id=38
+, 505.89pt x 505.89pt> [5 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_E
 xpression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colou
 r_12Apr18.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
@@ -774,17 +777,17 @@ raphic file (type pdf)
 Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_c
-olour_16Mar18.pdf used on input line 180.
+olour_16Mar18.pdf used on input line 176.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 180--181
+Overfull \hbox (28.0pt too wide) in paragraph at lines 176--177
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
-ession/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf, id=49
-, 505.89pt x 505.89pt> [7 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_E
+ession/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf, id=46
+, 505.89pt x 505.89pt> [6 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_E
 xpression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_
 colour_5Apr18.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene
@@ -795,27 +798,27 @@ raphic file (type pdf)
 Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_c
-olour_19Mar18.pdf used on input line 182.
+olour_19Mar18.pdf used on input line 178.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 182--183
+Overfull \hbox (28.0pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 205.
+               Default added (so using `tbp') on input line 201.
 
 
-Overfull \hbox (77.98691pt too wide) in paragraph at lines 207--236
+Overfull \hbox (77.98691pt too wide) in paragraph at lines 203--232
  [][] 
  []
 
-[8 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
+[7 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
 xpression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>]
-[9 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
+[8 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_E
 xpression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>]
-[10] (Daniella_Thesis_Update.aux)
+[9] (Daniella_Thesis_Update.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -827,7 +830,7 @@ Here is how much of TeX's memory you used:
  19044 multiletter control sequences out of 15000+200000
  15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 72i,12n,86p,615b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,12n,86p,614b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 00\ecbx1728.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
 appen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\
@@ -838,9 +841,9 @@ ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1
 /public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (10 pages, 134754 bytes).
+Output written on Daniella_Thesis_Update.pdf (9 pages, 134368 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
