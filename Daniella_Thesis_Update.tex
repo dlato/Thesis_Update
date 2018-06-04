@@ -72,9 +72,9 @@ $\checkmark$	May 11: Find gene expression papers for bacteria and specific bacte
 	
 $\checkmark$	May 25: Read above papers and make notes (one a day?)
 	
-$X$	May 25: Think about/compile list of inversions in \ecol for new paper
-	
-	June 8: Gather gene expression data for the above mentioned \ecol strains
+June 8: Have process down for testing position clustering
+
+June 22: Have all clustering testing complete for all bacteria
 	
 	June 12-29: Have first draft of ISMB presentation done (and present for the lab)/ prepare for conference questions
 	
@@ -83,6 +83,10 @@ $X$	May 25: Think about/compile list of inversions in \ecol for new paper
 	July 6-13: ISB Chicago Conference
 	
 	July 20: Have date booked for Comps
+	
+	July 20: Think about/compile list of inversions in \ecol for new paper
+	
+	July 31: Gather gene expression data for the above mentioned \ecol strains
 	
 	July 16 - August 31: Prepare for Comps
 	
@@ -115,16 +119,23 @@ $X$	May 25: Think about/compile list of inversions in \ecol for new paper
 %Additionally the number of genes and number of replicates are all comparable between \smel and the other bacteria.
 %So I think that the reason \smel does not have significant gene expression regressions is because there is simply no trend.
 
-Last week I finished reading the list of papers that I had. I still think I could use more about gene expression so if you have any suggestions I would appreciate it.
-I also began to test out the ancestral reconstruction script you wrote for the genomic positions.
+Last week I was testing the ancestral position reconstruction code you developed.
+We determined that PAML does an acceptable job at reconstructing the ancestral positions the only thing that it does not know how to handle is clustering the positions, a.k.a how many base pairs apart do two positions have to be in order for them to be considered the same?
+So, you wrote another code that only clusters positions based on specified base pair differences.
+I was testing this to ensure that it worked as it was supposed to and it does!
+I also began to look at the Parsnp \ecoli alignment and started thinking about how to identify inversions in an automated and efficient manner.
+You suggested that the first thing to do is to gather gene expression data for all the \ecoli strains used and get as much as possible and then worry about identifying inversions.
 
 \section*{This Week}
-I would like to continue to work on testing the new ancestral reconstruction script this week.
-I also need to start picking a date for Comps and a Committee meeting.
-I would also like to compile a list of inversions for the gene expression/inversion paper.
+I am working on choosing a date for my Comprehensive exam so I can begin preparing for that.
+I plan on having an automated process complete for testing the different position clustering that way I can just run this a million times on all the bacteria.
+If there is time I would like to begin to gather gene expression data for this inversion paper.
 
 \section*{Next Week}
+I would like to run the position clustering testing on all the bacteria and begin compiling this information.
 I would like to start gathering gene expression data for the inversion paper.
+
+\newpage
 
 \begin{table}[h]
 	\centering
