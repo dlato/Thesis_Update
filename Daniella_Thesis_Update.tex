@@ -72,11 +72,11 @@ $\checkmark$	May 11: Find gene expression papers for bacteria and specific bacte
 	
 $\checkmark$	May 25: Read above papers and make notes (one a day?)
 	
-June 8: Have process down for testing position clustering
+$\checkmark$ June 8: Have process down for testing position clustering
+
+June 12-29: Have first draft of ISMB presentation done (and present for the lab)/ prepare for conference questions
 
 June 22: Have all clustering testing complete for all bacteria
-	
-	June 12-29: Have first draft of ISMB presentation done (and present for the lab)/ prepare for conference questions
 	
 	July 5: Have final edits for ISMB presentation finished
 	
@@ -119,21 +119,21 @@ June 22: Have all clustering testing complete for all bacteria
 %Additionally the number of genes and number of replicates are all comparable between \smel and the other bacteria.
 %So I think that the reason \smel does not have significant gene expression regressions is because there is simply no trend.
 
-Last week I was testing the ancestral position reconstruction code you developed.
-We determined that PAML does an acceptable job at reconstructing the ancestral positions the only thing that it does not know how to handle is clustering the positions, a.k.a how many base pairs apart do two positions have to be in order for them to be considered the same?
-So, you wrote another code that only clusters positions based on specified base pair differences.
-I was testing this to ensure that it worked as it was supposed to and it does!
-I also began to look at the Parsnp \ecoli alignment and started thinking about how to identify inversions in an automated and efficient manner.
-You suggested that the first thing to do is to gather gene expression data for all the \ecoli strains used and get as much as possible and then worry about identifying inversions.
+I spent last week working out how to integrate the clustering code into my current pipeline in the most efficient way.
+This required me to write a few formatting scripts and tweak a couple of my existing scripts.
+I think I have it all figured out and am beginning to run all of the diff testing for each of the replicons.
+
+While the clustering testing was running I have been looking on GEO to find datasets for each of the PARSNP \ecoli genomes.
+This is the most time consuming portion of the analysis and I still have about 70 genomes to search for.
+So far, there is limited data. Sometimes the specific strain is not annotated on GEO, sometimes there is just nothing that is ``control'' enough.
+Might have to pick strains based on what expression data is available and then align all of those genomes.  
 
 \section*{This Week}
-I am working on choosing a date for my Comprehensive exam so I can begin preparing for that.
-I plan on having an automated process complete for testing the different position clustering that way I can just run this a million times on all the bacteria.
-If there is time I would like to begin to gather gene expression data for this inversion paper.
+I will be starting to create and think about my presentation for the conference because it is less than a month away.
+In between preparing for that, I will be running the clustering testing.
 
 \section*{Next Week}
-I would like to run the position clustering testing on all the bacteria and begin compiling this information.
-I would like to start gathering gene expression data for the inversion paper.
+I will continue to work on my presentation for the conference and run the clustering testing.
 
 \newpage
 
