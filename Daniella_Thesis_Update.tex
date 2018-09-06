@@ -68,13 +68,17 @@ $\checkmark$	Aug 21: Comprehensive Exam 10:30am
 
 $\checkmark$ Aug 26: make new list of dates for goals
 
+$\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitutions paper
+
+Sep 9: Gene expression data for the inversions project
+
 	Sep 14: Have all clustering testing complete for all bacteria
 	
-$\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitutions paper
-	
-	Sep 9: Gene expression data for the inversions project
-	
 	Sep 14: Compile notes from comps papers into one document
+	
+	Sep 14: Have Lab Meeting Presentation done
+	
+	Sep 18: Present in Lab Meeting
 	
 	Sep 30: New intro for Substitution paper
 	
@@ -125,27 +129,12 @@ $\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitut
 %	Jul 31: Add other mol trends to Sub Paper
 	
 \section*{Last Week}
-I had my comprehensive exam which took up most of the beginning of last week.
-For the remainder of the week I combined all of the R scripts for the clustering testing which was the last bit that had to be made more automated.
-This should all run quite quickly from here on out so I am hoping to have that done by the end of the week.
+The clustering testing has been very frustrating. A few weeks ago I combined all of my steps so that I would have to do less ``checking in'' on the processes. But in doing that, something has gone wrong and some of the data files are coming up empty.
+I have been trying to work this out all week and I still can not figure it out.
+This issue appears to only be happening for \smel Chrom and pSymA.
+This is what I spent majority of my time on last week, trying to fix this issue, which is setting me back for the rest of the clustering analysis.
 
-I also made new goals for the next little while (see above) so let me know what you think!
-
-I have also looked into NSERC and below is what I found:
-
-Selection Criteria:
-\begin{itemize}
-	\item 30\% Academic excellence (transcript, scholarships/awards based on academic excellence)
-	\item 50\% Research ability or potential (research proposal, publications, conferences, posters, technical reports, stage of academic career to be considered, not only the number of publication and conferences but also the quality, scholarships/awards based on research ability/potential, researcher attributes (critical thinking, application of knowledge...etc), ability to complete projects within appropriate time)
-	\item 20\% Communication, interpersonal and leadership abilities (extracurriculars, professional, academic, awards for reports, posters, teaching, volunteer work, participation in publication writing, quality of presentation of application)
-\end{itemize}
-
-I currently have one paper out that was from work I did as a summer student at SickKids in which I'm second author and did all of the data collection and organization. 
-
-I could not find any info on people in the Biology department at Mac that got the NSERC Doctoral award. But I did look up some other awardees from Ontario and their publications range. Some have 2-4 first author papers accompanied by 3+ non-first author papers.
-However, there are some recipients who only have 2 first author papers, or 2 non-first author papers. 
-
-I trust your opinion so please let me know if you think it is worth it for me to apply!
+I tried to run as much as I could for the rest of the replicons.
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -164,14 +153,38 @@ I trust your opinion so please let me know if you think it is worth it for me to
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
 \section*{This Week}
-I would like to have all of the clustering testing complete for all replicons by the end of this week.
+I would like to continue to work on the clustering testing.
+
+I will mostly be working on my lab meeting presentation which will be almost exactly the same as my comprehensive exam presentation.
+
+I would also like to think about how to gather information on coding and non-coding sections of the genomes to incorporate this into the substitution analysis to help tease apart selection.
+
+%In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
 
 \section*{Next Week}
-I plan on writing out methods for the clustering analysis and adding this to the substitutions paper.
-I would also like to go back to gathering gene expression data for the expression and inversions analysis.
+I would like to compile all my notes from comps into one file so that I can use this to update my substitutions paper intro.
+I would like to complete the remainder of the clustering testing.
 
 
 \newpage
+
+\begin{table}[]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccccc}
+			\toprule
+			Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+			\midrule
+			1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
+			10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
+			100bp & -1.764\e{-7}*** & -1.417\e{8}*** & &  & & \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:clustering} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons to test position differences. Each row denotes different base pair distances that the positions were clustered together as. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the positions in the genome were determined to be the same at each position difference listed in the first column.}
+\end{table}
+
 
 \begin{table}[h]
 	\centering
