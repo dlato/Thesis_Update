@@ -70,7 +70,7 @@ $\checkmark$ Aug 26: make new list of dates for goals
 
 $\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitutions paper
 
-Sep 9: Gene expression data for the inversions project
+$X$ Sep 9: Gene expression data for the inversions project
 
 	Sep 14: Have all clustering testing complete for all bacteria
 	
@@ -134,7 +134,9 @@ I have been trying to work this out all week and I still can not figure it out.
 This issue appears to only be happening for \smel Chrom and pSymA.
 This is what I spent majority of my time on last week, trying to fix this issue, which is setting me back for the rest of the clustering analysis.
 
-I tried to run as much as I could for the rest of the replicons.
+I tried to run as much as I could for the rest of the replicons, the current results are below.
+
+I was also going through the list of bacteria you used in the PARSNP \ecoli alignment and seeing how many of those strains have usable gene expression data. I have about 30 more strains to look through.
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -157,6 +159,8 @@ I would like to continue to work on the clustering testing.
 
 I will mostly be working on my lab meeting presentation which will be almost exactly the same as my comprehensive exam presentation.
 
+I would also like to finish going though the \ecoli alignment to find gene expression data to use for the inversions and expression analysis. 
+
 I would also like to think about how to gather information on coding and non-coding sections of the genomes to incorporate this into the substitution analysis to help tease apart selection.
 
 %In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
@@ -172,13 +176,14 @@ I would like to complete the remainder of the clustering testing.
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcccccc}
-			\toprule
-			Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
-			\midrule
-			1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
-			10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
-			100bp & -1.764\e{-7}*** & -1.417\e{8}*** & &  & & \\
-			\bottomrule
+		\toprule
+		Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+		\midrule
+		1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
+		10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
+		100bp & -1.764\e{-7}*** & -1.417\e{-8}*** & 1.448\e{-8}*** &  & & \\
+		1000bp & & -1.417\e{-8}*** & & & -1.153\e{-6}*** & 4.021\e{-7}***\\
+		\bottomrule
 		\end{tabular}
 		
 	}%resizebox
