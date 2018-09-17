@@ -72,11 +72,11 @@ $\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitut
 
 $X$ Sep 9: Gene expression data for the inversions project
 
-	Sep 14: Have all clustering testing complete for all bacteria
+$X$	Sep 14: Have all clustering testing complete for all bacteria
 	
-	Sep 14: Compile notes from comps papers into one document
+$X$	Sep 14: Compile notes from comps papers into one document
 	
-	Sep 14: Have Lab Meeting Presentation done
+$\checkmark$	Sep 14: Have Lab Meeting Presentation done
 	
 	Sep 18: Present in Lab Meeting
 	
@@ -129,19 +129,18 @@ $X$ Sep 9: Gene expression data for the inversions project
 %	Jul 31: Add other mol trends to Sub Paper
 	
 \section*{Last Week}
-I also spent quite a few hours figuring out and testing the assignment submission for 3S03. It should be all ok now.
+I was running the position clustering and I am almost done. The updated results are below. This is taking a bit longer than I expected it to.
 
+I spent majority of last week figuring out how to accurately obtain the coding and non-coding sequences.
+I wanted to check how often the following happened: within the same column of the alignment, is there at least one taxa that is coding while the rest are non-coding? Or vice versa?
+Initially when I checked this I was seeing HUGE discrepancies. There would be ~2000bp where one taxa was non-coding and the rest were coding.
+However, after looking into this more carefully all weekend, I found that this ``discrepancy'' is mostly consisting of gaps and therefore gets thrown out in my analysis.
+Where there are no gaps, and there is still one taxa that is non-coding while the rest are coding, the sequence alignment is nearly identical between all taxa.
+These same results are seen when I look at other blocks with ``discrepancies''.
+So, this makes me think that it may be mostly annotation error and that the sections that are ``non-coding'' are actually coding but have not been annotated properly.
+Another explanation could be that the promoter for some reason got mutated and is not transcribed any more, but because I see near perfect sequence identity between all taxa in pretty much all the blocks, I suspect it is poor annotation and not the promoter. 
 
-
-
-The clustering testing has been very frustrating. A few weeks ago I combined all of my steps so that I would have to do less ``checking in'' on the processes. But in doing that, something has gone wrong and some of the data files are coming up empty.
-I have been trying to work this out all week and I still can not figure it out.
-This issue appears to only be happening for \smel Chrom and pSymA.
-This is what I spent majority of my time on last week, trying to fix this issue, which is setting me back for the rest of the clustering analysis.
-
-I tried to run as much as I could for the rest of the replicons, the current results are below.
-
-I was also going through the list of bacteria you used in the PARSNP \ecoli alignment and seeing how many of those strains have usable gene expression data. I have about 30 more strains to look through.
+I also spent quite a few hours last week doing administrative stuff like figuring out and testing the assignment submission for 3S03, and helping Jennifer from Bio 720.
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -160,18 +159,17 @@ I was also going through the list of bacteria you used in the PARSNP \ecoli alig
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
 \section*{This Week}
-I would like to continue to work on the clustering testing.
-
-I will mostly be working on my lab meeting presentation which will be almost exactly the same as my comprehensive exam presentation.
+I would like to continue to work on the clustering testing, and I think that I can get it all done by the end of next week.
 
 I would also like to finish going though the \ecoli alignment to find gene expression data to use for the inversions and expression analysis. 
 
-I would also like to think about how to gather information on coding and non-coding sections of the genomes to incorporate this into the substitution analysis to help tease apart selection.
+I would also like to start writing code to gather info about the coding and non-coding sections of the alignments for the substitution analysis.
 
 %In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
 
 \section*{Next Week}
 I would like to compile all my notes from comps into one file so that I can use this to update my substitutions paper intro.
+I would like to keep working on the coding v.s. non-coding stuff.
 I would like to complete the remainder of the clustering testing.
 
 
@@ -181,14 +179,16 @@ I would like to complete the remainder of the clustering testing.
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcccccc}
-		\toprule
-		Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
-		\midrule
-		1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
-		10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
-		100bp & -1.764\e{-7}*** & -1.417\e{-8}*** & 1.448\e{-8}*** &  & & \\
-		1000bp & & -1.417\e{-8}*** & & & -1.153\e{-6}*** & 4.021\e{-7}***\\
-		\bottomrule
+			\toprule
+			Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+			\midrule
+			1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
+			10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
+			100bp & -1.764\e{-7}*** & -1.417\e{-8}*** & 1.448\e{-8}*** &  & -1.166\e{-6}*** & 4.021\e{-7}*** \\
+			1000bp & -1.784\e{-7}*** & -1.417\e{-8}*** & 1.505\e{-8}*** & -1.605\e{-6}*** & -1.153\e{-6}*** & 4.021\e{-7}***\\
+			10000bp & -1.712\e{-7}*** & -3.496\e{-8}*** & & & -3.570\e{-8}* & 3.784\e{-7}*** \\
+			100000bp & & & & & & 3.784\e{-7}***\\
+			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
