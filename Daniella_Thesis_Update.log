@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  10 SEP 2018 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  17 SEP 2018 10:28
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -683,7 +683,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ] [2] [3]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 175.
+               Default added (so using `tbp') on input line 178.
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expr
@@ -697,10 +697,10 @@ aphic file (type pdf)
 Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_co
-lour_16Mar18.pdf used on input line 236.
+lour_16Mar18.pdf used on input line 241.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 236--237
+Overfull \hbox (28.0pt too wide) in paragraph at lines 241--242
 [][] 
  []
 
@@ -721,10 +721,10 @@ file (type pdf)
 Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_
-9Apr18.pdf used on input line 238.
+9Apr18.pdf used on input line 243.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 238--239
+Overfull \hbox (28.0pt too wide) in paragraph at lines 243--244
 [][] 
  []
 
@@ -740,10 +740,10 @@ _Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf Graphic
 Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_
-12Apr18.pdf used on input line 240.
+12Apr18.pdf used on input line 245.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 240--241
+Overfull \hbox (28.0pt too wide) in paragraph at lines 245--246
 [][] 
  []
 
@@ -761,10 +761,10 @@ phic file (type pdf)
 Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_co
-lour_5Apr18.pdf used on input line 242.
+lour_5Apr18.pdf used on input line 247.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 242--243
+Overfull \hbox (28.0pt too wide) in paragraph at lines 247--248
 [][] 
  []
 
@@ -782,10 +782,10 @@ raphic file (type pdf)
 Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_c
-olour_16Mar18.pdf used on input line 244.
+olour_16Mar18.pdf used on input line 249.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 244--245
+Overfull \hbox (28.0pt too wide) in paragraph at lines 249--250
 [][] 
  []
 
@@ -803,19 +803,19 @@ raphic file (type pdf)
 Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_c
-olour_19Mar18.pdf used on input line 246.
+olour_19Mar18.pdf used on input line 251.
 (pdftex.def)             Requested size: 390.0pt x 390.00737pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 246--247
+Overfull \hbox (28.0pt too wide) in paragraph at lines 251--252
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 269.
+               Default added (so using `tbp') on input line 274.
 
 
-Overfull \hbox (77.98691pt too wide) in paragraph at lines 271--300
+Overfull \hbox (77.98691pt too wide) in paragraph at lines 276--305
  [][] 
  []
 
@@ -846,9 +846,9 @@ ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1
 /public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (11 pages, 138120 bytes).
+Output written on Daniella_Thesis_Update.pdf (11 pages, 139448 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 209 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

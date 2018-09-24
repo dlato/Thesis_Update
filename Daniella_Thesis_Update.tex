@@ -69,22 +69,18 @@ $\checkmark$	Aug 21: Comprehensive Exam 10:30am
 $\checkmark$ Aug 26: make new list of dates for goals
 
 $\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitutions paper
-
-$X$ Sep 9: Gene expression data for the inversions project
-
-$X$	Sep 14: Have all clustering testing complete for all bacteria
-	
-$X$	Sep 14: Compile notes from comps papers into one document
 	
 $\checkmark$	Sep 14: Have Lab Meeting Presentation done
 	
-	Sep 18: Present in Lab Meeting
+$\checkmark$	Sep 18: Present in Lab Meeting
+
+	Sep 30: Have all clustering testing complete for all bacteria
+
+	Sep 30: Compile notes from comps papers into one document
+		
+	Oct 5: Gene expression data for the inversions project
 	
-	Sep 30: New intro for Substitution paper
-	
-	Sep 15-28: Apply for NSERC (if applicable)
-	
-	Oct 3: NSERC Due
+	Oct 12: New intro for Substitution paper
 	
 	Oct 5-12: Apply for Mac Scholarships and Awards
 	
@@ -129,18 +125,15 @@ $\checkmark$	Sep 14: Have Lab Meeting Presentation done
 %	Jul 31: Add other mol trends to Sub Paper
 	
 \section*{Last Week}
-I was running the position clustering and I am almost done. The updated results are below. This is taking a bit longer than I expected it to.
+I had my lab meeting presentation. If are any comments you have about that please let me know.
+I was running the position clustering and it will for sure be done at the end of this week. There is only \smel and \strep left.
 
-I spent majority of last week figuring out how to accurately obtain the coding and non-coding sequences.
-I wanted to check how often the following happened: within the same column of the alignment, is there at least one taxa that is coding while the rest are non-coding? Or vice versa?
-Initially when I checked this I was seeing HUGE discrepancies. There would be ~2000bp where one taxa was non-coding and the rest were coding.
-However, after looking into this more carefully all weekend, I found that this ``discrepancy'' is mostly consisting of gaps and therefore gets thrown out in my analysis.
-Where there are no gaps, and there is still one taxa that is non-coding while the rest are coding, the sequence alignment is nearly identical between all taxa.
-These same results are seen when I look at other blocks with ``discrepancies''.
-So, this makes me think that it may be mostly annotation error and that the sections that are ``non-coding'' are actually coding but have not been annotated properly.
-Another explanation could be that the promoter for some reason got mutated and is not transcribed any more, but because I see near perfect sequence identity between all taxa in pretty much all the blocks, I suspect it is poor annotation and not the promoter. 
+I spent most of last week working on my code to extract the coding and non-coding segments of the genomes. I am nearly done this.
+Just double checking that there are no bugs or things that I have missed.
 
-I also spent quite a few hours last week doing administrative stuff like figuring out and testing the assignment submission for 3S03, and helping Jennifer from Bio 720.
+I also finished going through the PARSNP file with a list of \ecol that you had aligned, to try and find gene expression data.
+There is a VERY limited number of raw control gene expression data sets for different strains of \ecol (8 data sets in total).
+There might be more data sets for the more popular strains like k-12. 
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -159,18 +152,21 @@ I also spent quite a few hours last week doing administrative stuff like figurin
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
 \section*{This Week}
-I would like to continue to work on the clustering testing, and I think that I can get it all done by the end of next week.
+I would like to continue to work on the clustering testing, and will have it done by the end of the week.
 
-I would also like to finish going though the \ecoli alignment to find gene expression data to use for the inversions and expression analysis. 
+I would also like to finish the code for getting the coding and non-coding portions of the genome (which shouldn't be too difficult) and begin re-doing the substitution analysis on both sections of the genome.
 
-I would also like to start writing code to gather info about the coding and non-coding sections of the alignments for the substitution analysis.
+I would like to compile all my notes from comps into one file so that I can use this to update my substitutions paper intro.
+
 
 %In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
 
 \section*{Next Week}
-I would like to compile all my notes from comps into one file so that I can use this to update my substitutions paper intro.
-I would like to keep working on the coding v.s. non-coding stuff.
-I would like to complete the remainder of the clustering testing.
+I would like to keep running the coding and non-coding analysis.
+
+I would like to look into the inversions and gene expression stuff more in-depth and come up with some possible inversions to test the gene expression in these regions.
+
+I would like to add the info from my comps paper notes to re-write the intro for the substitutions paper.
 
 
 \newpage
