@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  12 NOV 2018 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  13 NOV 2018 12:07
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -660,52 +660,61 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 (C:\Users\Daniella\Downloads\MiKTeX\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-ABD: EveryShipout initializing macros [1{C:/Users/Daniella/AppData/Local/MiKTeX
-/2.9/pdftex/config/pdftex.map}
-
-] [2]
-LaTeX Font Info:    Try loading font information for U+msa on input line 190.
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    Try loading font information for U+msa on input line 130.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 190.
+LaTeX Font Info:    Try loading font information for U+msb on input line 130.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 190.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 130.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+
+
+(C:\Users\Daniella\Downloads\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+ [1{C:/Users/Daniella/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+] [2] [3] [4]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4] (Daniella_Thesis_Update.aux) ) 
+[5] [6] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16005 strings out of 493673
- 329439 string characters out of 3141142
+ 16035 strings out of 493673
+ 329887 string characters out of 3141142
  365450 words of memory out of 3000000
- 19016 multiletter control sequences out of 15000+200000
- 12699 words of font info for 41 fonts, out of 3000000 for 9000
+ 19039 multiletter control sequences out of 15000+200000
+ 15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 72i,12n,86p,848b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,12n,86p,848b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Daniella\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Dani
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Daniella\AppData\
+Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Dani
 ella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C
 :/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
 /Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
 sers/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/User
 s/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
-/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Daniella_Thesis_Update.pdf (4 pages, 81576 bytes).
+/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/D
+aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (6 pages, 93942 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
+ 161 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
