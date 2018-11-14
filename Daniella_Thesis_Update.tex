@@ -17,7 +17,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{tikz-cd}
 \usepackage{tikz}
-\usepackage[normalem]{ulem}
+\usepackage[normalem]{ulem} %to strikeout text
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{calc, arrows}
 \usepackage{lscape} %to make the page landscape
@@ -129,7 +129,7 @@
 
 \underline{Subs Paper Things to Do:}
 \begin{itemize}
-	\item \# of coding and non-coding sites
+	\item \sout{ \# of coding and non-coding sites}
 	
 	\item \# of subs in each of $\uparrow$
 	
@@ -231,7 +231,7 @@
 
 $\checkmark$ Make check lists for each of the 3 papers
 $\checkmark$ Read paper on detecting selection in bacterial genomes
-
+$\checkmark$ \# of coding and non-coding sites
 
 Last week was spent analyzing the coding and non-coding data. The results are summarized in the tables below.
 They are exciting! 
@@ -279,21 +279,21 @@ I will have a more solid list of tasks for next week based on the lists I will b
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
+		\begin{tabular}{lccrr}
 			\toprule
-			Bacteria and Replicon & Proportion of Coding Sequences & Proportion of Non-Coding Sequences\\
+			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
 			\midrule
-			\ecol Chromosome & 87.22\% & 12.78\% \\ % 4048616/4641652 & 
-			\bass Chromosome &  & \\
-			\strep Chromosome & & \\
-			\smel Chromosome & & \\
-			\smel pSymA & 83.34\% & 16.66\% \\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & & \\
+			\ecol Chromosome & 87.22\% & 12.78\% & 702 & 256423 \\ % 4048616/4641652 & 
+			\bass Chromosome & 87.58\% & 12.42\% & 15547 & 287781\\ %3692179/4215606
+			\strep Chromosome & 88.02\% & 11.98\% & 1357 & 1200749\\ % 7628849/8667507
+			\smel Chromosome & 85.68\% & 14.32\% & 1530 & 5581\\ % 3130925/3654135
+			\smel pSymA & 83.34\% & 16.66\% & 3230 & 10343\\ % 1128615/1354226 & 225611/1354226
+			\smel pSymB & 88.70\% & 11.30\% & 37419 & 10596\\ % 1493048/1683333
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon.}
+	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
 \end{table}
 
 
