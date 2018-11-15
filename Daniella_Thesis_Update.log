@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  14 NOV 2018 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  15 NOV 2018 14:54
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -624,19 +624,22 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\dstroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(C:\Users\Daniella\Downloads\MiKTeX\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
 (Daniella_Thesis_Update.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -661,44 +664,49 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 130.
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 130.
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 130.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 132.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 134.
 
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
  [1{C:/Users/Daniella/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2] [3] [4]
+] [2] [3]
+Overfull \hbox (36.61821pt too wide) in paragraph at lines 289--289
+[][] 
+ []
+
+[4] [5]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] [6] (Daniella_Thesis_Update.aux) ) 
+[6] [7] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16036 strings out of 493673
- 329916 string characters out of 3141142
- 368458 words of memory out of 3000000
- 19040 multiletter control sequences out of 15000+200000
+ 16049 strings out of 493673
+ 330253 string characters out of 3141142
+ 368561 words of memory out of 3000000
+ 19050 multiletter control sequences out of 15000+200000
  15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,848b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -712,9 +720,9 @@ sers/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/User
 s/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
 /Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/D
 aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (6 pages, 95390 bytes).
+Output written on Daniella_Thesis_Update.pdf (7 pages, 99333 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 172 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

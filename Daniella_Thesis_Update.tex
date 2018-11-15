@@ -22,6 +22,7 @@
 \usetikzlibrary{calc, arrows}
 \usepackage{lscape} %to make the page landscape
 \usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\usepackage{indentfirst} % to indent the first paragraph
 \rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
 \title{Sinorhizobium Update}
 \author{Daniella Lato}
@@ -49,6 +50,7 @@
 \newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
 \newcommand{\pa}{pSymA\xspace}
 \newcommand{\pb}{pSymB\xspace}
+\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
 \begin{document}
@@ -131,9 +133,11 @@
 \begin{itemize}
 	\item \sout{ \# of coding and non-coding sites}
 	
-	\item \# of subs in each of $\uparrow$
+	\item \sout{\# of subs in each of $\uparrow$}
 	
 	\item Look into \ecol coding issue
+	
+	\item Look into \strep non-coding issue
 	
 	\item get dN/dS for coding/non-coding stuff
 	 
@@ -188,38 +192,32 @@
 	\item write discussion
 	
 	\item write conclusion
+	
+	\item look for more GEO expression data for \ecol
+	
+	\item look for more GEO expression data for \bass
+	
+	\item look for more GEO expression data for \strep
+	
+	\item look for more GEO expression data for \smel
 \end{itemize}
 
 \underline{Inversions and Gene Expression Letter Things to Do:}
 \begin{itemize}
 	\item create latex template for paper
-	
 	\item find papers about inversions and expression
-	
 	\item read papers $\uparrow$
-	
 	\item put notes from papers $\uparrow$ into doc
-	
 	\item use large PARSNP alignment to identify inversions
-	
 	\item confirm inversions with dot plot
-	
 	\item get as much GEO data as possible
-	
 	\item write outline for letter
-	
 	\item write Abstract
-	
 	\item write intro
-	
 	\item write methods
-	
 	\item compile tables (supplementary)
-	
 	\item write results
-	
 	\item write discussion
-	
 	\item write conclusion 
 \end{itemize}
 
@@ -230,8 +228,18 @@
 \section*{Last Week}
 
 $\checkmark$ Make check lists for each of the 3 papers
+
 $\checkmark$ Read paper on detecting selection in bacterial genomes
+
 $\checkmark$ \# of coding and non-coding sites
+
+$\checkmark$ \# of subs in coding and non-coding sites
+
+
+You can see that majority of the substitutions are coming from the non-coding regions of the genomes.
+And that the number of substitutions are higher in the non-coding regions than the coding regions for every replicon except \pb, which is really weird and interesting. Thoughts?
+
+
 
 Last week was spent analyzing the coding and non-coding data. The results are summarized in the tables below.
 They are exciting! 
@@ -242,6 +250,44 @@ I think that maybe why we were seeing only negative trends before was because th
 
 I have been sticking to my goal of reading one paper a week during my off time while TA-ing.
 
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+			\begin{tabular}{lll}
+				\toprule
+				Bacteria Strain/Species & GEO Accession Number & Date Accessed\\
+				\midrule
+				\ecol K12 MG1655  & GSE60522 & December 20, 2017\\
+				\ecol K12 MG1655 & GSE73673 & December 19, 2017\\
+				\ecol K12 MG1655 & GSE85914 & December 19, 2017\\
+				\ecol K12 DH10B & GSE98890 & December 19, 2017\\
+				\ecol BW25113 & GSE73673 & December 19, 2017 \\
+				\ecol BW25113 & GSE85914 & December 19, 2017 \\
+				\ecol O157:H7 & GSE46120 & August 28, 2018\\
+				\midrule
+				\bass 168 & GSE104816 & December 14, 2017\\
+				\bass 168 & GSE67058 & December 16, 2017\\
+				\bass 168 & GSE93894 & December 15, 2017\\
+				\midrule
+				\scoe A3 & GSE57268 & March 16, 2018\\
+				\midrule
+				\smel RM2010 Chromosome & GSE69880 & December 12, 2017\\
+%				\smel 1021 Chromosome & GSE121228 & diff phases\\
+				\smel 1021 Chromosome & GSE69880 & November 15, 18\\
+				\midrule
+				\smel 2011 \pa & NC\_020527 Dr. Finan & April 4, 2018 \\
+				\smel 1021 \pa & GSE69880 & November 15, 18\\
+				\midrule
+				\smel 2011 \pb & NC\_020560 Dr. Finan & April 4, 2018 \\
+				\smel 1021 \pb & GSE69880 & November 15, 18\\
+				\bottomrule
+				
+				
+			\end{tabular}
+			\caption{\label{tab:tableS1} Summary of strains and species found for each gene expression analysis. Gene Expression Omnibus accession numbers and date accessed are provided.}
+		\end{minipage}}
+	\end{table}	
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
