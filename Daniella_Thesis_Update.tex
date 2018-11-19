@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage[margin=0.75in]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{xspace}
@@ -9,7 +10,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \pagestyle{fancy}
-\setlength{\headheight}{15.2pt}
+%\setlength{\headheight}{15.2pt}
 \setlength{\headsep}{13 pt}
 \setlength{\parindent}{28 pt}
 \setlength{\parskip}{12 pt}
@@ -244,60 +245,25 @@ $\checkmark$ look for more GEO expression data for \smel
 
 $\checkmark$ look for more GEO expression data for \strep
 
-
-You can see that majority of the substitutions are coming from the non-coding regions of the genomes.
-And that the number of substitutions are higher in the non-coding regions than the coding regions for every replicon except \pb, which is really weird and interesting. Thoughts?
+$\checkmark$ read two papers on multiple genome alignments (problems, methods...etc), not super useful
 
 
+Last week I finished up running all the coding and non-coding analysis and the results are summarized in the tables below.
+You can see that for most replicons, majority of the substitutions are coming from the non-coding regions of the genomes.
+The replicons that do not follow this trend is \pb, \pa (which are not chromosomes so this may still be able to be worked into a story) and \strep. 
+I am not sure why \strep is showing both coding and non-coding sequences to have higher number of substitutions when moving away from the origin.
+Maybe because these taxa are from different strains of \strep, so I am only capturing sequences where all taxa are present, which would likely be important genes, which would be expected to have a positive substitution trend?
+Thoughts?
 
-Last week was spent analyzing the coding and non-coding data. The results are summarized in the tables below.
-They are exciting! 
-For the chromosomes of all the bacteria (so far) it looks like the coding sections have a positive trend and the non-coding sections have a negative trend! Which makes sense biologically!
+The number of substitutions are higher in the non-coding regions than the coding regions for every replicon except \pb, which is also really weird and interesting. Thoughts?
+
 \ecoli looked like the code was doing something weird and I think it may have to do with my origin and bidirectionality scaling. I am looking into this.
-It appears to be only \pa and \pb that do not follow these trends but they are not chromosomes so I think we can still make a convincing argument as to why they are not following the trends of the other replicons.
-I think that maybe why we were seeing only negative trends before was because there were more substitutions in the non-coding regions than coding and these non-coding subs were driving the logistic regression to be negative.
+%I think that maybe why we were seeing only negative trends before was because there were more substitutions in the non-coding regions than coding and these non-coding subs were driving the logistic regression to be negative.
 
-I have been sticking to my goal of reading one paper a week during my off time while TA-ing.
+I also made a table to summarize the proportion of coding and non-coding sections in each of the genomes (below).
 
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
-			\begin{tabular}{lll}
-				\toprule
-				Bacteria Strain/Species & GEO Accession Number & Date Accessed\\
-				\midrule
-				\ecol K12 MG1655  & GSE60522 & December 20, 2017\\
-				\ecol K12 MG1655 & GSE73673 & December 19, 2017\\
-				\ecol K12 MG1655 & GSE85914 & December 19, 2017\\
-				\ecol K12 DH10B & GSE98890 & December 19, 2017\\
-				\ecol BW25113 & GSE73673 & December 19, 2017 \\
-				\ecol BW25113 & GSE85914 & December 19, 2017 \\
-				\ecol O157:H7 & GSE46120 & August 28, 2018\\
-				\midrule
-				\bass 168 & GSE104816 & December 14, 2017\\
-				\bass 168 & GSE67058 & December 16, 2017\\
-				\bass 168 & GSE93894 & December 15, 2017\\
-				\midrule
-				\scoe A3 & GSE57268 & March 16, 2018\\
-				\snat A3 & GSE112559 & November 15, 2018\\
-% strep has LOTS of time dependent data sets, but the other bac do not really have that				
-				\midrule
-				\smel 1021 Chromosome & GSE69880 & December 12, 2017\\
-%				\smel 1021 Chromosome & GSE121228 & diff phases\\
-				\midrule
-				\smel 2011 \pa & NC\_020527 Dr. Finan & April 4, 2018 \\
-				\smel 1021 \pa & GSE69880 & November 15, 18\\
-				\midrule
-				\smel 2011 \pb & NC\_020560 Dr. Finan & April 4, 2018 \\
-				\smel 1021 \pb & GSE69880 & November 15, 18\\
-				\bottomrule
-				
-				
-			\end{tabular}
-			\caption{\label{tab:tableS1} Summary of strains and species found for each gene expression analysis. Gene Expression Omnibus accession numbers and date accessed are provided.}
-		\end{minipage}}
-	\end{table}	
+I have also looked at the GEO datasets and attempted to find more for \strep, and \smel. These are summarized also in a table below.
+I have only just begun looking for more data in \bass.
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -316,19 +282,27 @@ I have been sticking to my goal of reading one paper a week during my off time w
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
 \section*{This Week}
-Finish up the \strep non-coding analysis.
-Put numbers to the proportion of each genome that is coding/non-coding and how many substitutions are in each so I know if it truly was more substitutions in the non-coding regions that were driving the previous whole genome substitution trends.
-I need to keep looking at coding \ecol and double checking it is doing what it is supposed to be doing.
+%aim to tick off 4 tasks a week
+I will finish going through the \bass and \ecol GEO data sets to see if there is any more expression data I can grab.
 
-I would like to make 3 check-lists for the 3 papers that we talked about today, so that I can start getting things done for them.
+I would like to fix the bidirectionality issue that seems to be happening only with the \ecol coding analysis.
+
+Find papers for the various gene expression papers to see what has already been done in the field and have solid background knowladge.
+
+I would like to create a template in latex for both gene expression papers and add in information that I already have written up.
+
 
 %In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
 
 \section*{Next Week}
 
-I will have a more solid list of tasks for next week based on the lists I will be making this week for the papers. So I will be starting these this week/next week.
+I would like to start figuring out how to get dN/dS for coding and non-coding stuff and/or codon position logistic regression information.
 
+Write out my methods for the coding/non-coding stuff.
 
+Read some of the gene expression papers I will find.
+
+Determine next steps for inversions and gene expression paper.
 
 
 \newpage
@@ -417,7 +391,46 @@ I will have a more solid list of tasks for next week based on the lists I will b
 	\caption{\label{tab:non_cod_log_reg} Logistic regression analysis of the number of substitutions along all non-coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
 \end{table}
 
-
+\begin{table}[h]
+	\centering
+	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+			\begin{tabular}{lll}
+				\toprule
+				Bacteria Strain/Species & GEO Accession Number & Date Accessed\\
+				\midrule
+				\ecol K12 MG1655  & GSE60522 & December 20, 2017\\
+				\ecol K12 MG1655 & GSE73673 & December 19, 2017\\
+				\ecol K12 MG1655 & GSE85914 & December 19, 2017\\
+				\ecol K12 DH10B & GSE98890 & December 19, 2017\\
+				\ecol BW25113 & GSE73673 & December 19, 2017 \\
+				\ecol BW25113 & GSE85914 & December 19, 2017 \\
+				\ecol O157:H7 & GSE46120 & August 28, 2018\\
+				\midrule
+				\bass 168 & GSE104816 & December 14, 2017\\
+				\bass 168 & GSE67058 & December 16, 2017\\
+				\bass 168 & GSE93894 & December 15, 2017\\
+				\bass 168 & GSE80786 & November 16, 2018\\
+				% bass also has quite a few time dependent data sets, or separated by growth phase				
+				\midrule
+				\scoe A3 & GSE57268 & March 16, 2018\\
+				\snat A3 & GSE112559 & November 15, 2018\\
+				% strep has LOTS of time dependent data sets, but the other bac do not really have that				
+				\midrule
+				\smel 1021 Chromosome & GSE69880 & December 12, 2017\\
+				%				\smel 1021 Chromosome & GSE121228 & diff phases\\
+				\midrule
+				\smel 2011 \pa & NC\_020527 (Dr. Finan) & April 4, 2018 \\
+				\smel 1021 \pa & GSE69880 & November 15, 18\\
+				\midrule
+				\smel 2011 \pb & NC\_020560 (Dr. Finan) & April 4, 2018 \\
+				\smel 1021 \pb & GSE69880 & November 15, 18\\
+				\bottomrule
+				
+				
+			\end{tabular}
+			\caption{\label{tab:tableS1} Summary of strains and species found for each gene expression analysis. Gene Expression Omnibus accession numbers and date accessed are provided.}
+		\end{minipage}}
+	\end{table}	
 
 
 
