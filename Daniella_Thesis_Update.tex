@@ -139,6 +139,8 @@
 	
 	\item \sout{Look into \strep non-coding issue}
 	
+	\item \sout{Look into \strep coding issue}
+	
 	\item Look into \ecol coding issue
 	
 	\item Look into \pb coding/non-coding trend weirdness
@@ -241,29 +243,30 @@ $\checkmark$ look for more GEO expression data for \bass
 
 $\checkmark$ format paper and put in stuff that is already written
 
+$\checkmark$ Look into \strep coding issue
+
 Last week I was checking in on the results from the coding/non-coding stuff and I noticed that \strep coding has only about 7600bp of data (including both substitutions and non-substitutions), which seems very wrong.
 I think that this might be because for th other bacteria we are dealing with the same sub-strains, so choosing a single sub-strain to identify coding and non-coding regions for all sub-strains.
 Where as for \strep we are dealing with strains, not sub-strains. So potentially the coding and non-coding regions of one strain may not line up nicely with the regions of another strain?
 Should I make it so that if a base in the alignment falls within ANY coding or non-coding region of ANY strain then it should count?
 If I should do this, then should I change my analysis for all the bacteria to also do this?
+It could also be the fact that we are using blocks that have ALL taxa present. So this limits the data. In addition, we are removing any column in the alignment that has at least one gap in it and treating this column as missing data.
+This may also account for why there is so little \strep coding data?
+
+Started looking into reasons why \pb has the opposite trend than what we expect.
+Have not found an explanation yet, will continue to look into this.
+
+I am still looking into the issue with \ecol coding and it's bidirectionality scaling.
+
+I am almost finished going through the gene expression data. There are just about 300 more \ecol experiments for me to parse through.
+The table below summarizes what I have found so far.
+Let me know which taxa you think there is enough diversity to do a phylogenetic analysis on.
+
+Some of the bacteria also have time series data (samples taken at different times), or data sampled from different growth conditions. This is \ecol, \bas, \strep, and limited data for \smel chrom.
+However, these are sampled at variable times ranging from minutes to days, or different growth periods and conditions.
+The growth phases I think may be too subjective, and the time series data may not have enough datasets sampled at the same to be comparable.
 
 
-Last week I finished up running all the coding and non-coding analysis and the results are summarized in the tables below.
-You can see that for most replicons, majority of the substitutions are coming from the non-coding regions of the genomes.
-The replicons that do not follow this trend is \pb, \pa (which are not chromosomes so this may still be able to be worked into a story) and \strep. 
-I am not sure why \strep is showing both coding and non-coding sequences to have higher number of substitutions when moving away from the origin.
-Maybe because these taxa are from different strains of \strep, so I am only capturing sequences where all taxa are present, which would likely be important genes, which would be expected to have a positive substitution trend?
-Thoughts?
-
-The number of substitutions are higher in the non-coding regions than the coding regions for every replicon except \pb, which is also really weird and interesting. Thoughts?
-
-\ecoli looked like the code was doing something weird and I think it may have to do with my origin and bidirectionality scaling. I am looking into this.
-%I think that maybe why we were seeing only negative trends before was because there were more substitutions in the non-coding regions than coding and these non-coding subs were driving the logistic regression to be negative.
-
-I also made a table to summarize the proportion of coding and non-coding sections in each of the genomes (below).
-
-I have also looked at the GEO datasets and attempted to find more for \strep, and \smel. These are summarized also in a table below.
-I have only just begun looking for more data in \bass.
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -283,16 +286,14 @@ I have only just begun looking for more data in \bass.
 
 \section*{This Week}
 %aim to tick off 4 tasks a week
-I will finish going through the \bass and \ecol GEO data sets to see if there is any more expression data I can grab.
+I will finish going through the \ecol GEO data sets to see if there is any more expression data I can grab, and focus on this to break from trying to figure out the weirdness that is happening with the coding/non-coding stuff.
 
-I would like to fix the bidirectionality issue that seems to be happening only with the \ecol coding analysis.
+I would like to fix the bidirectionality issue that seems to be happening only with the \ecol coding analysis, and figure out what is happening with \strep coding and \pb.
 
 Find papers for the various gene expression papers to see what has already been done in the field and have solid background knowladge.
 
-I would like to create a template in latex for both gene expression papers and add in information that I already have written up.
+I would like to create a template in latex for the inversions and gene expression paper.
 
-
-%In between having this finished I would like to keep looking for gene expression data for \ecoli and have this finished by the end of the week.
 
 \section*{Next Week}
 
