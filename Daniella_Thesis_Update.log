@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  26 NOV 2018 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  27 NOV 2018 15:30
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -783,6 +783,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -804,10 +807,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16527 strings out of 493673
- 337348 string characters out of 3141142
- 389834 words of memory out of 3000000
- 19519 multiletter control sequences out of 15000+200000
+ 16529 strings out of 493673
+ 337362 string characters out of 3141142
+ 390847 words of memory out of 3000000
+ 19521 multiletter control sequences out of 15000+200000
  15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,848b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -821,7 +824,7 @@ rs/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
 niella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Dan
 iella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Danie
 lla/Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (7 pages, 100715 bytes).
+Output written on Daniella_Thesis_Update.pdf (7 pages, 103570 bytes).
 PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
