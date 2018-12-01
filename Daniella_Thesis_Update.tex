@@ -139,11 +139,11 @@
 	
 	\item \sout{Look into \strep non-coding issue}
 	
-	\item \sout{Look into \strep coding issue}
-	
 	\item \sout{Look into \ecol coding issue}
 	
-	\item Look into \pb coding/non-coding trend weirdness
+	\item \sout{Look into \pb coding/non-coding trend weirdness}
+	
+	\item Figure out why \strep appears to have tons of coding data missing
 	
 	\item get dN/dS for coding/non-coding stuff
 	 
@@ -255,6 +255,8 @@ $\checkmark$ Get numbers for how many different strains and multiples of each st
 
 \ch Look into \ecol coding issue for the sub paper
 
+\ch Look into \pb coding/non-coding trend weirdness
+
 I finished going through all the datasets on GEO and found at least one more I could include for each of the bacteria. So I think that it would be wise to re-do the gene expression analysis with these new data sets to have the most amount of data possible for each replicon.
 
 The summary of all the strains that I have found are in a table below.
@@ -264,6 +266,7 @@ The only question I have about this is that I have 7 datasets for \ecol K-12 MG1
 Re-did gene expression analysis with the extra datasets I found for \bass and \ecol.
 
 I looked into the \ecol coding issue and I fixed it! I accidentally put in the wrong genome length and it was messing things up and making the positions negative. But it is all fixed now and the regression lines info is in the tables below.
+This also fixed the \pb coding and non-coding issue! Everything seems to make sense again!
 
 
 Last week I was checking in on the results from the coding/non-coding stuff and I noticed that \strep coding has only about 7600bp of data (including both substitutions and non-substitutions), which seems very wrong.
@@ -361,9 +364,9 @@ Determine next steps for inversions and gene expression paper.
 			\ecol Chromosome & 2.496\e{-5}** & \cc-1.397\e{-7}*** \\
 			\bass Chromosome & 1.912\e{-6}*** & \cc-1.439\e{-8}***\\
 			\strep Chromosome & 2.984\e{-5}*** & 1.689\e{-8}***\\
-			\smel Chromosome & 6.993\e{-6}*** & \cc -1.311\e{-6}***\\
+			\smel Chromosome & NS & \cc -1.311\e{-6}***\\
 			\smel pSymA & \cc-9.713\e{-7}*** & \cc-1.413\e{-7}***\\
-			\smel pSymB & \cc6.181\e{-7}*** & 5.916\e{-7}***\\
+			\smel pSymB & 6.181\e{-7}*** & 5.916\e{-7}***\\
 			\bottomrule
 		\end{tabular}
 		
