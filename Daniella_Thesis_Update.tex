@@ -143,7 +143,7 @@
 	
 	\item \sout{Look into \pb coding/non-coding trend weirdness}
 	
-	\item Figure out why \strep appears to have tons of coding data missing
+	\item \sout{Figure out why \strep appears to have tons of coding data missing}
 	
 	\item get dN/dS for coding/non-coding stuff
 	 
@@ -257,6 +257,8 @@ $\checkmark$ Get numbers for how many different strains and multiples of each st
 
 \ch Look into \pb coding/non-coding trend weirdness
 
+\ch Figure out why \strep appears to have tons of coding data missing
+
 I finished going through all the datasets on GEO and found at least one more I could include for each of the bacteria. So I think that it would be wise to re-do the gene expression analysis with these new data sets to have the most amount of data possible for each replicon.
 
 The summary of all the strains that I have found are in a table below.
@@ -268,28 +270,10 @@ Re-did gene expression analysis with the extra datasets I found for \bass and \e
 I looked into the \ecol coding issue and I fixed it! I accidentally put in the wrong genome length and it was messing things up and making the positions negative. But it is all fixed now and the regression lines info is in the tables below.
 This also fixed the \pb coding and non-coding issue! Everything seems to make sense again!
 
-
-Last week I was checking in on the results from the coding/non-coding stuff and I noticed that \strep coding has only about 7600bp of data (including both substitutions and non-substitutions), which seems very wrong.
-I think that this might be because for th other bacteria we are dealing with the same sub-strains, so choosing a single sub-strain to identify coding and non-coding regions for all sub-strains.
-Where as for \strep we are dealing with strains, not sub-strains. So potentially the coding and non-coding regions of one strain may not line up nicely with the regions of another strain?
-Should I make it so that if a base in the alignment falls within ANY coding or non-coding region of ANY strain then it should count?
-If I should do this, then should I change my analysis for all the bacteria to also do this?
-It could also be the fact that we are using blocks that have ALL taxa present. So this limits the data. In addition, we are removing any column in the alignment that has at least one gap in it and treating this column as missing data.
-This may also account for why there is so little \strep coding data?
-
-Started looking into reasons why \pb has the opposite trend than what we expect.
-Have not found an explanation yet, will continue to look into this.
-
-I am still looking into the issue with \ecol coding and it's bidirectionality scaling.
-
-I am almost finished going through the gene expression data. There are just about 300 more \ecol experiments for me to parse through.
-The table below summarizes what I have found so far.
-Let me know which taxa you think there is enough diversity to do a phylogenetic analysis on.
-
-Some of the bacteria also have time series data (samples taken at different times), or data sampled from different growth conditions. This is \ecol, \bas, \strep, and limited data for \smel chrom.
-However, these are sampled at variable times ranging from minutes to days, or different growth periods and conditions.
-The growth phases I think may be too subjective, and the time series data may not have enough datasets sampled at the same to be comparable.
-
+However, when I was looking into why \strep appeared to have only 7600bp of ``coding'' data, I realized that my code was not doing what I thought it was doing.
+It was missing identifying a majority of the coding sites because the data file was not sorted in ascending order and therefore the coding regions at the beginning of the genome were getting skipped over. 
+I fixed this by simply ordering the datafile. 
+I am just waiting for the rest of the replicons to finish running. The logistic regression results that I do have are below.
 
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
@@ -310,46 +294,40 @@ The growth phases I think may be too subjective, and the time series data may no
 
 \section*{This Week}
 %aim to tick off 4 tasks a week
-I will finish going through the \ecol GEO data sets to see if there is any more expression data I can grab, and focus on this to break from trying to figure out the weirdness that is happening with the coding/non-coding stuff.
 
-I would like to fix the bidirectionality issue that seems to be happening only with the \ecol coding analysis, and figure out what is happening with \strep coding and \pb.
-
-Find papers for the various gene expression papers to see what has already been done in the field and have solid background knowladge.
+Find papers for the various gene expression papers to see what has already been done in the field and have solid background knowledge.
 
 I would like to create a template in latex for the inversions and gene expression paper.
 
-
-\section*{Next Week}
-
 I would like to start figuring out how to get dN/dS for coding and non-coding stuff and/or codon position logistic regression information.
 
-Write out my methods for the coding/non-coding stuff.
 
-Read some of the gene expression papers I will find.
+
+\section*{Next Week}
 
 Determine next steps for inversions and gene expression paper.
 
 
 \newpage
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccrr}
-			\toprule
-			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
-			\midrule
-			\ecol Chromosome & 87.22\% & 12.78\% & 702 & 256423 \\ % 4048616/4641652 & 
-			\bass Chromosome & 87.58\% & 12.42\% & 15547 & 287781\\ %3692179/4215606
-			\strep Chromosome & 88.02\% & 11.98\% & 1357 & 1200749\\ % 7628849/8667507
-			\smel Chromosome & 85.68\% & 14.32\% & 1530 & 5581\\ % 3130925/3654135
-			\smel pSymA & 83.34\% & 16.66\% & 3230 & 10343\\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & 88.70\% & 11.30\% & 37419 & 10596\\ % 1493048/1683333
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
-\end{table}
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccrr}
+%			\toprule
+%			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
+%			\midrule
+%			\ecol Chromosome & 87.22\% & 12.78\% & 702 & 256423 \\ % 4048616/4641652 & 
+%			\bass Chromosome & 87.58\% & 12.42\% & 15547 & 287781\\ %3692179/4215606
+%			\strep Chromosome & 88.02\% & 11.98\% & 1357 & 1200749\\ % 7628849/8667507
+%			\smel Chromosome & 85.68\% & 14.32\% & 1530 & 5581\\ % 3130925/3654135
+%			\smel pSymA & 83.34\% & 16.66\% & 3230 & 10343\\ % 1128615/1354226 & 225611/1354226
+%			\smel pSymB & 88.70\% & 11.30\% & 37419 & 10596\\ % 1493048/1683333
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+%\end{table}
 
 
 
@@ -361,12 +339,12 @@ Determine next steps for inversions and gene expression paper.
 			\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
-			\ecol Chromosome & 2.496\e{-5}** & \cc-1.397\e{-7}*** \\
-			\bass Chromosome & 1.912\e{-6}*** & \cc-1.439\e{-8}***\\
-			\strep Chromosome & 2.984\e{-5}*** & 1.689\e{-8}***\\
-			\smel Chromosome & NS & \cc -1.311\e{-6}***\\
-			\smel pSymA & NS & \cc-1.413\e{-7}***\\
-			\smel pSymB & 2.54\e{-3}*** & 5.916\e{-7}***\\
+			\ecol Chromosome & &  \\
+			\bass Chromosome &  &\\
+			\strep Chromosome & & \\
+			\smel Chromosome & NS & -1.478\e{-6}*** \\
+			\smel pSymA & NS & \\
+			\smel pSymB & 2.54\e{-3}*** & \\
 			\bottomrule
 		\end{tabular}
 		
@@ -376,46 +354,46 @@ Determine next steps for inversions and gene expression paper.
 
 
 
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccc}
-			\toprule
-			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-			\midrule
-			\ecol Chromosome & 2.496\e{-5} & 8.695\e{-6}& 0.0041 \\
-			\bass Chromosome & 1.912\e{-6} & 8.753
-			\e{-8} & $<$2\e{-16}\\
-			\strep Chromosome & 2.984\e{-5} & 1.858\e{-6} & $<$2\e{-16}\\
-			\smel Chromosome & 6.993\e{-6} & 6.205\e{-7} & $<$2\e{-16}\\
-			\smel pSymA & -9.713\e{-7} & 3.212\e{-8} & $<$2\e{-16}\\
-			\smel pSymB & 6.181\e{-7} & 2.253\e{-8} & $<$2\e{-16}\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_log_reg} Logistic regression analysis of the number of substitutions along all coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccc}
-			\toprule
-			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-			\midrule
-			\ecol Chromosome & -1.397\e{-7} & 2.427\e{-9} & $<$ 2\e{-16} \\
-			\bass Chromosome & -1.439\e{-8} & 1.569\e{-9} & $<$2\e{-16}\\
-			\strep Chromosome & 1.689\e{-8} & 7.235\e{-10} & $<$2\e{-16}\\
-			\smel Chromosome & -1.311\e{-6}& 3.393\e{-8}& $<$2\e{-16}\\
-			\smel pSymA & -1.413\e{-7} & 3.762\e{-8} & 1.73\e{-4}\\
-			\smel pSymB & 5.196\e{-7} & 4.769\e{-8} & $<$2\e{-16}\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:non_cod_log_reg} Logistic regression analysis of the number of substitutions along all non-coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-\end{table}
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%			\midrule
+%			\ecol Chromosome & 2.496\e{-5} & 8.695\e{-6}& 0.0041 \\
+%			\bass Chromosome & 1.912\e{-6} & 8.753
+%			\e{-8} & $<$2\e{-16}\\
+%			\strep Chromosome & 2.984\e{-5} & 1.858\e{-6} & $<$2\e{-16}\\
+%			\smel Chromosome & 6.993\e{-6} & 6.205\e{-7} & $<$2\e{-16}\\
+%			\smel pSymA & -9.713\e{-7} & 3.212\e{-8} & $<$2\e{-16}\\
+%			\smel pSymB & 6.181\e{-7} & 2.253\e{-8} & $<$2\e{-16}\\
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:cod_log_reg} Logistic regression analysis of the number of substitutions along all coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%\end{table}
+%
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%			\midrule
+%			\ecol Chromosome & -1.397\e{-7} & 2.427\e{-9} & $<$ 2\e{-16} \\
+%			\bass Chromosome & -1.439\e{-8} & 1.569\e{-9} & $<$2\e{-16}\\
+%			\strep Chromosome & 1.689\e{-8} & 7.235\e{-10} & $<$2\e{-16}\\
+%			\smel Chromosome & -1.311\e{-6}& 3.393\e{-8}& $<$2\e{-16}\\
+%			\smel pSymA & -1.413\e{-7} & 3.762\e{-8} & 1.73\e{-4}\\
+%			\smel pSymB & 5.196\e{-7} & 4.769\e{-8} & $<$2\e{-16}\\
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:non_cod_log_reg} Logistic regression analysis of the number of substitutions along all non-coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%\end{table}
 
 \begin{table}[h]
 	\centering
