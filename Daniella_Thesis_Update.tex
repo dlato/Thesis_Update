@@ -145,6 +145,8 @@
 	
 	\item \sout{Figure out why \strep appears to have tons of coding data missing}
 	
+	\item Figure out what is going on with cod/non-cod code and why it is still not working!
+	
 	\item get dN/dS for coding/non-coding stuff
 	 
 	\item Or get 1st, 2nd, 3rd codon pos log regs
@@ -188,7 +190,7 @@
 	
 	\item \sout{re-do gene expression analysis for \ecol}
 	
-	\item find papers about what has been done with gene expression
+	\item \sout{find papers about what has been done with gene expression}
 	
 	\item read papers $\uparrow$
 	
@@ -221,14 +223,14 @@
 \underline{Inversions and Gene Expression Letter Things to Do:}
 \begin{itemize}
 	\item \sout{get as much GEO data as possible}
+	\item \sout{}
 	\item create latex template for paper
-	\item find papers about inversions and expression
 	\item read papers $\uparrow$
 	\item put notes from papers $\uparrow$ into doc
 	\item use large PARSNP alignment to identify inversions
 	\item confirm inversions with dot plot
 	\item write outline for letter
-	\item write Abstract
+	\item write Abstractfind papers about inversions and expression
 	\item write intro
 	\item write methods
 	\item compile tables (supplementary)
@@ -238,15 +240,25 @@
 \end{itemize}
 
 
-
+% next week look into how to calculate the dN/dS for the subs paper
+% week of Dec 17th do same ancestral analysis on gene exp data for ecoli...which is going to require me to do everything from scratch so make a tree and all that jazz
 
 	
 \section*{Last Week}
 
-\ch Finish re-doing the coding/non-coding analysis (after fixing the code)
+\ch find papers about inversions and expression
+
+\ch find papers about what has been done with gene expression
+
+As I was going through the coding and non-coding code I kept finding that in some bacteria the code was doing what it was properly supposed to be doing, and sometimes it was not.
+I realized that this was because there are some genes that overlap or there are situations where one gene completely resides within the region of another gene.
+This is what was messing up my code, and I am still working on fixing the problem.
+
+I have found about 30 articles on both gene expression and/or inversions in bacteria. 
+My plan is to read and make notes on all of these over the break and apply for a few more scholarships
 
 
-Finished re-doing the coding/non-coding analysis (again) with the proper code. The results are summarized in the table below.
+
 
 
 
@@ -295,11 +307,35 @@ I would like to start figuring out how to get dN/dS for coding and non-coding st
 
 
 \section*{Next Week}
+%\section*{Next Week/Holiday Break}
+%I have found about 30 articles on both gene expression and/or inversions in bacteria. 
+%My plan is to read and make notes on all of these over the break and apply for a few more scholarships
+
 
 Determine next steps for inversions and gene expression paper.
 
 
 \newpage
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccrr}
+			\toprule
+			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
+			\midrule
+			\ecol Chromosome & 87.22\% & 12.78\% & 700 & 256425 \\ % 4048616/4641652 & 
+			\bass Chromosome & 87.58\% & 12.42\% & 15546 & 287782\\ %3692179/4215606
+			\strep Chromosome & 88.02\% & 11.98\% & 210592 & 991514\\ % 7628849/8667507
+			\smel Chromosome & 85.68\% & 14.32\% & 1529 & 5582\\ % 3130925/3654135
+			\smel pSymA & 83.34\% & 16.66\% & 32040 & 10333\\ % 1128615/1354226 & 225611/1354226
+			\smel pSymB & 88.70\% & 11.30\% & 37420 & 10595\\ % 1493048/1683333
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+\end{table}
+
 %\begin{table}[h]
 %	\centering
 %	\resizebox{\textwidth}{!}{%
@@ -333,7 +369,7 @@ Determine next steps for inversions and gene expression paper.
 			\ecol Chromosome & 2.509\e{-5}** &  \cc -1.397\e{-7}*** \\
 			\bass Chromosome & 1.909\e{-6}*** & \cc -1.439\e{-8}*** \\
 			\strep Chromosome & 5.483\e{-7}*** & NS \\
-			\smel Chromosome & NS & \cc -1.546\e{-6}***\\
+			\smel Chromosome & 6.993\e{-6}***& \cc -1.546\e{-6}***\\
 			\smel pSymA & \cc -9.704\e{-7}*** & \cc -1.464\e{-7}***\\
 			\smel pSymB & 6.182\e{-7}*** & 5.916\e{-7}***\\
 			\bottomrule
