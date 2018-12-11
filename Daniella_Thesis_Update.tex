@@ -310,12 +310,12 @@ My plan is to read and make notes on all of these over the break and apply for a
 			\toprule
 			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
 			\midrule
-			\ecol Chromosome & 87.22\% & 12.78\% & 200860 & 56265 \\ % 4048616/4641652 & 
-			\bass Chromosome & 87.58\% & 12.42\% & 269482 & 33846\\ %3692179/4215606
-			\strep Chromosome & 88.02\% & 11.98\% & &\\ % 7628849/8667507
-			\smel Chromosome & 85.68\% & 14.32\% & 6023 & 1088\\ % 3130925/3654135
+			\ecol Chromosome & 86.47\% & 13.53\% & 200860 & 56265 \\ % 4013445/4641652 & 
+			\bass Chromosome & 87.49\% & 12.51\% & 269482 & 33846\\ %3688210/4215606
+			\strep Chromosome & 89.03\% & 10.97\% & 1060278 & 141828\\ % 7716382/8667507
+			\smel Chromosome & 86.27\% & 13.73\% & 6023 & 1088\\ % 3152315/3654135
 			\smel pSymA & 83.34\% & 16.66\% & 32040 & 10333\\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & 88.70\% & 11.30\% & 41532 & 6483\\ % 1493048/1683333
+			\smel pSymB & 88.81\% & 11.19\% & 41532 & 6483\\ % 1495047/1683333
 			\bottomrule
 		\end{tabular}
 		
@@ -355,7 +355,7 @@ My plan is to read and make notes on all of these over the break and apply for a
 			\midrule
 			\ecol Chromosome & \cc -5.938\e{-8}*** &  \cc -9.237\e{-8}*** \\
 			\bass Chromosome & \cc -9.791\e{-8}*** & NS \\
-			\strep Chromosome & &\\
+			\strep Chromosome & & 9.182\e{-9}***\\
 			\smel Chromosome & 1.252\e{-6}*** & \cc -7.037\e{-7}***\\
 			\smel pSymA & \cc -9.704\e{-7}*** & \cc -1.464\e{-7}***\\
 			\smel pSymB & 3.295\e{-7}*** & NS\\
@@ -363,7 +363,7 @@ My plan is to read and make notes on all of these over the break and apply for a
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1= `NS'.}
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 %
