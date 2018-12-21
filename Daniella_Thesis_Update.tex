@@ -145,17 +145,25 @@
 	
 	\item \sout{Figure out why \strep appears to have tons of coding data missing}
 	
-	\item Figure out what is going on with cod/non-cod code and why it is still not working!
+	\item \sout{Figure out what is going on with cod/non-cod code and why it is still not working!}
 	
-	\item get dN/dS for coding/non-coding stuff
+	\item \sout{write up methods for coding/non-coding}
+	
+	\item \sout{write methods and results for clustering}
+	
+	\item \sout{start code to split alignment into multiple alignments of each gene}
+	
+	\item figure out how to deal with overlapping genes
+	
+	\item figure out how to deal with gaps in gene of ref taxa
+	
+	\item split up the alignment into multiple alignments of each gene
+	
+	\item get dN/dS for coding/non-coding stuff per gene
 	 
 	\item Or get 1st, 2nd, 3rd codon pos log regs
 	
 	\item write up coding/non-coding results
-	
-	\item write up methods for coding/non-coding
-	
-	\item write methods and results for clustering
 	
 	\item take out gene expression from this paper
 	
@@ -196,8 +204,6 @@
 	
 	\item put notes from $\uparrow$ papers into word doc
 	
-	\item do same ancestral/phylogenetic analysis that I did in the subs paper 
-	
 	\item write abstract
 	
 	\item write intro
@@ -224,6 +230,13 @@
 \begin{itemize}
 	\item \sout{get as much GEO data as possible}
 	\item \sout{find papers about inversions and expression}
+	
+	\item \sout{see how many inversions I can identify in these strains of \ecoli with gene expression data}
+	
+	
+	\item check if opposite strand in \p means an inversions (check visual matches the xmfa)
+	
+	\item check if PARSNP and \p both identify the same inversions (check xmfa file)
 	\item create latex template for paper
 	\item read papers $\uparrow$
 	\item put notes from papers $\uparrow$ into doc
@@ -237,6 +250,7 @@
 	\item write results
 	\item write discussion
 	\item write conclusion 
+	\item do same ancestral/phylogenetic analysis that I did in the subs paper 
 \end{itemize}
 
 
@@ -245,28 +259,53 @@
 
 	
 \section*{Last Week}
+\ch write up methods for coding/non-coding
 
-\ch find papers about inversions and expression
+\ch write methods and results for clustering
 
-\ch find papers about what has been done with gene expression
+\ch see how many inversions I can identify in these strains of \ecoli with gene expression data
 
-As I was going through the coding and non-coding code I kept finding that in some bacteria the code was doing what it was properly supposed to be doing, and sometimes it was not.
-I realized that this was because there are some genes that overlap or there are situations where one gene completely resides within the region of another gene.
-This is what was messing up my code, and obviously when trying to fix this a bunch of other new errors arose.
-I am still working on fixing the problem and HOPEFULLY this will be done by today and I will have the coding/non-coding results by tomorrow!
+\ch start code to split alignment into multiple alignments of each gene
 
-I have found about 30 articles on both gene expression and/or inversions in bacteria. 
-My plan is to read and make notes on all of these over the break and apply for a few more scholarships
+Did some easy writing last week for the substitution paper.
 
-I made a detailed plan of what I want to do over the break, which consists of reading all the articles I found on gene expression and inversions and gene expression.
-As well as writing out the methods and results of the coding/non-coding stuff in the substitutions paper.
+I also looked at the inversions and gene expression for the 5 strains of \ecol and there are inversions (pics of alignments below, the taxa with all the weird stuff going on is ATCC)!!
+Mauve identified 3 large inversions roughly: 1,000,000bp, 800,000bp and 500,000bp. 
+Parsnp identified similar inversions (in similar locations) roughly: 1,350,000bp, 547,000bp and 1,376,300bp.
+Both of the programs had some sections that were not within an LCB or part of the core genome within these regions so the actual continuous length of the inversions may be smaller.
+These inversions only exist in one of the bacteria: \ecoli ATCC. The other 4 strains are all VERY similar with hardly any rearrangements, let alone inversions.
+So based on this we decided that we can just compaire the inversions between K-12 MG1655 and ATCC.
+I believe that \p is only showing information from one strand so when something is listed on the opposite strand from the reference in \p then it should be an inversion. I obviously need to check this and make sure this is the case. If it is, then it will make coding to identify inversions super simple!
+Also need to check if the inversions identified by \p and PARSNP are the same.
 
-Summary of GEO data I found in a table below. Some questions for you:
-\begin{enumerate}
-	\item Do you think there is enough there to do the same ancestral reconstruction analysis for \ecol?
-	\item Follow up to 1. : I have 6 datasets for \ecol K-12 MG1655, would these all be combined to obtain one gene expression value? Or would they all be considered separate taxa on the tree? The issue with that is that they were all mapped to the reference K-12 MG1655 genome. Thoughts?
-	\item Do you think there is enough \ecol data to look at inversions and gene expression?
-\end{enumerate}
+I have mostly been working on getting started on the dN/dS stuff so that this can get done and I can submit this paper!
+We agreed that it is best to calculate dN/dS per gene using annotation from the reference genome.
+My first task with this was to chop up the alignment of each block into the alignment of each gene.
+This is proving to be more difficult than I thought. 
+At the moment I have and array that tells me where in the alignment there is a gap in the reference or not and if there is not then it assigns the actual genomic position to the array at that spot in the alignment (so I know where the alignment falls within the genome at each column of the aln).
+I also have an array that will classify each site in the genome as coding or non-coding. If it is coding, it further classifies based on the gene name. So non-coding = 0 and coding = gene name.
+\textbf{I have not figured out what to do when one gene resides in another gene or genes overlap.}
+ Ideally each site can be apart of multiple genes and I would sort of subset the alignment for each gene and print that out.
+ However, I have not quite figured out how to do this yet.
+I also have an array that then combines the two above ones that will at each site in the alignment tell me if it is non-coding or in a gene and which gene. 
+The last thing I am struggling with is how to actually print the alignment into a proper format.
+BioPython makes it really easy to read in the alignment and print out columns and manipulate, but I am not sure if it can print out sections of the alignment with proper headers and such.
+This would probably require me to have a list of start and stop alignment positions, which I can easily get now.
+So I need to think about this more. If you have any suggestions of things in python or another program like samtools that can print out sections of the alignment I would love to hear about it!
+I am also unsure of what to do when there is a gap in the middle of the alignment of the ref taxa. Do I just not include any gaps? (they get cut out eventually from the analysis, but I do not know if they will mess up the dN/dS calculation PAML does...)
+
+
+
+
+%%%%%%%%%%%%%%%%%bring these up next time!!!
+%I also re-calculated the proportion of coding and non-coding subs in each of those sections in the genome (table below).
+%They all match what we expect in that there is more coding than non-coding regions. And that there are proportionally more substitutions in non-coding than coding regions. However, \bass seems to not follow this last trend, having a higher proportion of its substitutions in the coding regions.
+
+%	\item I was looking at PAML to do this calculation but I am unsure of what parameters to use? (i.e. for the codon frequency model?) and would this be a pairwise dN/dS in codeml?
+
+
+
+
 
 
 
@@ -286,23 +325,25 @@ Summary of GEO data I found in a table below. Some questions for you:
 %However, after reading the articles I found that the substitution rate is higher than what was previously estimated using phylogenetic methods.
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
-\section*{This Week}
+%\section*{This Week}
 %aim to tick off 4 tasks a week
-
-I NEED to have this coding and non-coding business all finished for good! It is taking way too long to figure this out.
-This week I would like to figure out how to calculate dN/dS for the substitution data.
+%
+%This week I would like to figure out how to calculate dN/dS for the substitution data.
 
 
 %\section*{Next Week}
 \section*{Next Week/Holiday Break}
-
-Next week I want to get started on performing the ancestral reconstruction with the \ecol genomes for the gene expression data.
-
 I have found about 30 articles on both gene expression and/or inversions in bacteria. 
 My plan is to read and make notes on all of these over the break and apply for a few more scholarships
 
 
 \newpage
+
+\includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
+
+\includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
+
+
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
@@ -354,11 +395,11 @@ My plan is to read and make notes on all of these over the break and apply for a
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
 			\ecol Chromosome & \cc -5.938\e{-8}*** &  \cc -9.237\e{-8}*** \\
-			\bass Chromosome & \cc -9.791\e{-8}*** & NS \\
-			\strep Chromosome & & 9.182\e{-9}***\\
-			\smel Chromosome & \cc -1.498\e{-6}*** & \cc -7.037\e{-7}***\\
+			\bass Chromosome & \cc -7.584\e{-8}*** & NS \\
+			\strep Chromosome & 5.483\e{-7}*** & 9.182\e{-9}***\\
+			\smel Chromosome & \cc -1.448\e{-6}*** & \cc -7.037\e{-7}***\\
 			\smel pSymA & \cc -9.704\e{-7}*** & \cc -1.464\e{-7}***\\
-			\smel pSymB & 3.295\e{-7}*** & NS\\
+			\smel pSymB & 5.007\e{-7}*** & NS\\
 			\bottomrule
 		\end{tabular}
 		
