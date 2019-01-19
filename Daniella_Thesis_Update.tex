@@ -200,7 +200,7 @@
 	
 	\item \sout{find papers about what has been done with gene expression}
 	
-	\item read papers $\uparrow$
+	\item \sout{read papers $\uparrow$}
 	
 	\item put notes from $\uparrow$ papers into word doc
 	
@@ -233,13 +233,14 @@
 	
 	\item \sout{see how many inversions I can identify in these strains of \ecoli with gene expression data}
 	
+	\item \sout{read papers about inversions}
+	
 	
 	\item check if opposite strand in \p means an inversions (check visual matches the xmfa)
 	
 	\item check if PARSNP and \p both identify the same inversions (check xmfa file)
 	\item create latex template for paper
-	\item read papers $\uparrow$
-	\item put notes from papers $\uparrow$ into doc
+	\item put notes from papers into doc
 	\item use large PARSNP alignment to identify inversions
 	\item confirm inversions with dot plot
 	\item write outline for letter
@@ -258,41 +259,67 @@
 % week of Dec 17th do same ancestral analysis on gene exp data for ecoli...which is going to require me to do everything from scratch so make a tree and all that jazz
 
 	
-\section*{Last Week}
-\ch write up methods for coding/non-coding
+\section*{Last Week/Holiday}
 
-\ch write methods and results for clustering
+dN/dS
+Super confused. This book I found that basically walks you through how to get dn/ds says that you need to first find orghologs and then align them because codeml requires codon based alignments (duh bc this is how it can actually distinguish between syn and non-syn subs and why I was getting weird errors when I tried to just put my aln into paml).
+So what I am wondering is should I be starting from scratch and finding orthologs with blast and then going from there? Or should I still use the blocks specified by mauve but re-align them so they are codon alignments? 
+Do I use gene trees or my same whole genome tree? (maybe whole genome tree is fine bc I already showed that the trees of each block is very similar to the trees of the overall genome and blocks that wernt were removed)
+Do I vary the dn/ds over sites? branches? both?
 
-\ch see how many inversions I can identify in these strains of \ecoli with gene expression data
 
-\ch start code to split alignment into multiple alignments of each gene
 
-Did some easy writing last week for the substitution paper.
+\ch read papers about gene expression trends in bacteria
 
-I also looked at the inversions and gene expression for the 5 strains of \ecol and there are inversions (pics of alignments below, the taxa with all the weird stuff going on is ATCC)!!
-Mauve identified 3 large inversions roughly: 1,000,000bp, 800,000bp and 500,000bp. 
-Parsnp identified similar inversions (in similar locations) roughly: 1,350,000bp, 547,000bp and 1,376,300bp.
-Both of the programs had some sections that were not within an LCB or part of the core genome within these regions so the actual continuous length of the inversions may be smaller.
-These inversions only exist in one of the bacteria: \ecoli ATCC. The other 4 strains are all VERY similar with hardly any rearrangements, let alone inversions.
-So based on this we decided that we can just compaire the inversions between K-12 MG1655 and ATCC.
-I believe that \p is only showing information from one strand so when something is listed on the opposite strand from the reference in \p then it should be an inversion. I obviously need to check this and make sure this is the case. If it is, then it will make coding to identify inversions super simple!
-Also need to check if the inversions identified by \p and PARSNP are the same.
+\ch read papers about inversions in bacteria 
 
-I have mostly been working on getting started on the dN/dS stuff so that this can get done and I can submit this paper!
-We agreed that it is best to calculate dN/dS per gene using annotation from the reference genome.
-My first task with this was to chop up the alignment of each block into the alignment of each gene.
-This is proving to be more difficult than I thought. 
-At the moment I have and array that tells me where in the alignment there is a gap in the reference or not and if there is not then it assigns the actual genomic position to the array at that spot in the alignment (so I know where the alignment falls within the genome at each column of the aln).
-I also have an array that will classify each site in the genome as coding or non-coding. If it is coding, it further classifies based on the gene name. So non-coding = 0 and coding = gene name.
-\textbf{I have not figured out what to do when one gene resides in another gene or genes overlap.}
- Ideally each site can be apart of multiple genes and I would sort of subset the alignment for each gene and print that out.
- However, I have not quite figured out how to do this yet.
-I also have an array that then combines the two above ones that will at each site in the alignment tell me if it is non-coding or in a gene and which gene. 
-The last thing I am struggling with is how to actually print the alignment into a proper format.
-BioPython makes it really easy to read in the alignment and print out columns and manipulate, but I am not sure if it can print out sections of the alignment with proper headers and such.
-This would probably require me to have a list of start and stop alignment positions, which I can easily get now.
-So I need to think about this more. If you have any suggestions of things in python or another program like samtools that can print out sections of the alignment I would love to hear about it!
-I am also unsure of what to do when there is a gap in the middle of the alignment of the ref taxa. Do I just not include any gaps? (they get cut out eventually from the analysis, but I do not know if they will mess up the dN/dS calculation PAML does...)
+\ch apply for a few more scholarships
+
+I spent the holiday break reading papers and making notes. These papers were about trends in gene expression in bacteria (more general) and inversions in bacteria (general) as well as the impact on inversions and rearrangements on gene expression in bacteria.
+
+For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
+However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
+But, they all basically said that because bacterial genomes are so highly organized based on gene order, physical folding of the chromosome, co-regulation of gene clusters...etc that this is why we see gene expression decreasing when moving away from the origin of replication.
+
+For the papers on Inversions, the results were a bit all over the place.
+Most of the papers were older (1980's) and often focused on one known inversion in one bacteria.
+These often were related to antibiotic resistance, flagella state of bacteria, or turning specific genes on/off.
+Sometimes these studies would say how the inversion altered expression of close down or upstream genes by changing promoters locations.
+Other studies engineered their own inversions, some mentioning gene expression and some don't and talk more about the replication of inversions or how they tend to be symmetrical around the origin.
+One large study done with Staphylococcus in 2012 just mentions that lots of genes are deferentially expressed (some up regulated and some down regulated).
+The overall feeling I got was that inversions can alter gene expression and this can be done by changing the promoter location of specific genes, which can impact many things about the bacteria like their growth state and resistance.
+There seems to be no ``trend'' with respect to inversions always causing gene expression to go up or down.
+It also looks like no one has done what we are doing: looking at existing expression data to see how having an inversion impacts gene expression within and outside of the inversion.
+
+I also applied for a few more scholarships over the break. I will keep you updated if I get any of them!
+
+I have also been working on the code that will split up each of the blocks into an alignment of each gene so that I can calculate dN/dS for each of these genes.
+
+
+%I also looked at the inversions and gene expression for the 5 strains of \ecol and there are inversions (pics of alignments below, the taxa with all the weird stuff going on is ATCC)!!
+%Mauve identified 3 large inversions roughly: 1,000,000bp, 800,000bp and 500,000bp. 
+%Parsnp identified similar inversions (in similar locations) roughly: 1,350,000bp, 547,000bp and 1,376,300bp.
+%Both of the programs had some sections that were not within an LCB or part of the core genome within these regions so the actual continuous length of the inversions may be smaller.
+%These inversions only exist in one of the bacteria: \ecoli ATCC. The other 4 strains are all VERY similar with hardly any rearrangements, let alone inversions.
+%So based on this we decided that we can just compaire the inversions between K-12 MG1655 and ATCC.
+%I believe that \p is only showing information from one strand so when something is listed on the opposite strand from the reference in \p then it should be an inversion. I obviously need to check this and make sure this is the case. If it is, then it will make coding to identify inversions super simple!
+%Also need to check if the inversions identified by \p and PARSNP are the same.
+
+%I have mostly been working on getting started on the dN/dS stuff so that this can get done and I can submit this paper!
+%We agreed that it is best to calculate dN/dS per gene using annotation from the reference genome.
+%My first task with this was to chop up the alignment of each block into the alignment of each gene.
+%This is proving to be more difficult than I thought. 
+%At the moment I have and array that tells me where in the alignment there is a gap in the reference or not and if there is not then it assigns the actual genomic position to the array at that spot in the alignment (so I know where the alignment falls within the genome at each column of the aln).
+%I also have an array that will classify each site in the genome as coding or non-coding. If it is coding, it further classifies based on the gene name. So non-coding = 0 and coding = gene name.
+%\textbf{I have not figured out what to do when one gene resides in another gene or genes overlap.}
+% Ideally each site can be apart of multiple genes and I would sort of subset the alignment for each gene and print that out.
+%However, I have not quite figured out how to do this yet.
+%I also have an array that then combines the two above ones that will at each site in the alignment tell me if it is non-coding or in a gene and which gene. 
+%The last thing I am struggling with is how to actually print the alignment into a proper format.
+%BioPython makes it really easy to read in the alignment and print out columns and manipulate, but I am not sure if it can print out sections of the alignment with proper headers and such.
+%This would probably require me to have a list of start and stop alignment positions, which I can easily get now.
+%So I need to think about this more. If you have any suggestions of things in python or another program like samtools that can print out sections of the alignment I would love to hear about it!
+%I am also unsure of what to do when there is a gap in the middle of the alignment of the ref taxa. Do I just not include any gaps? (they get cut out eventually from the analysis, but I do not know if they will mess up the dN/dS calculation PAML does...)
 
 
 
@@ -325,17 +352,18 @@ I am also unsure of what to do when there is a gap in the middle of the alignmen
 %However, after reading the articles I found that the substitution rate is higher than what was previously estimated using phylogenetic methods.
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
-%\section*{This Week}
+\section*{This Week}
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-
+I would like to finish making the code for printing out the alignment of each gene so that I can then calculate the dN/dS for each gene of all the bacteria.
+I still need to work out how to deal with overlapping genes, how to deal with gaps in the reference sequence, and how to print out the alignment of each gene in a readable format
+I would like to read 2 more papers this week.
 
 %\section*{Next Week}
-\section*{Next Week/Holiday Break}
-I have found about 30 articles on both gene expression and/or inversions in bacteria. 
-My plan is to read and make notes on all of these over the break and apply for a few more scholarships
-
+\section*{Next Week}
+I would like to have parameters for the PAML dN/dS calculation figured out so I can then run this on each gene for each bacteria.
+I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
 
 \newpage
 
