@@ -42,7 +42,7 @@
 \newcommand{\vib}{\textit{Vibrio}\xspace}
 \newcommand{\sul}{\textit{Sulfolobus}\xspace}
 \newcommand{\ent}{\textit{Enterobacteria}\xspace}
-\newcommand{\p}{progressiveMauve}
+\newcommand{\p}{progressiveMauve\xspace}
 \newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
 \newcommand{\strep}{\textit{Streptomyces}\xspace}
 \newcommand{\bass}{\textit{B.\,subtilis}\xspace}
@@ -68,29 +68,6 @@
 %	Dec 21:	Find papers on COG stuff (for intro and discussion), and other mol trends (discussion for sub paper)
 	
 %	Jan 6:	Read above mentioned papers and make notes
-	
-%$\checkmark$	Aug 21: Comprehensive Exam 10:30am
-%
-%$\checkmark$ Aug 26: make new list of dates for goals
-%
-%$\checkmark$	Sep 7: Write Up methods for clustering testing and add to substitutions paper
-%	
-%$\checkmark$	Sep 14: Have Lab Meeting Presentation done
-%	
-%$\checkmark$	Sep 18: Present in Lab Meeting
-%
-%$\checkmark$	Sep 30: Have all clustering testing complete for all bacteria
-%
-%$\checkmark$	Sep 30: Compile notes from comps papers into one document
-%		
-%$\checkmark$	Oct 5: Gene expression data for the inversions project
-%	
-%	Oct 12: New intro for Substitution paper
-%	
-%$\checkmark$	Oct 5-12: Apply for Mac Scholarships and Awards
-%	
-%$\checkmark$ 	Oct 26: Write detailed outlines for all papers
-%
 %	Oct 31: Write out methods for gene expression paper
 %	
 %	Sep 9: Think about/compile list of inversions in \ecol for new paper
@@ -153,29 +130,43 @@
 	
 	\item \sout{start code to split alignment into multiple alignments of each gene}
 	
-	\item figure out how to deal with overlapping genes
+	\item \sout{figure out how to deal with overlapping genes}
 	
-	\item figure out how to deal with gaps in gene of ref taxa
+	\item \sout{figure out how to deal with gaps in gene of ref taxa}
 	
-	\item split up the alignment into multiple alignments of each gene
+	\item \sout{split up the alignment into multiple alignments of each gene}
+	
+	\item \sout{check if each gene alignment is a multiple of 3 (proper codon alignment)}
 	
 	\item get dN/dS for coding/non-coding stuff per gene
 	 
 	\item Or get 1st, 2nd, 3rd codon pos log regs
 	
-	\item write up coding/non-coding results
+	\item \sout{write up coding/non-coding results}
 	
-	\item take out gene expression from this paper
+	\item \sout{take out gene expression from this paper}
 	
-	\item write better intro/methods for distribution of subs graphs
+	\item \sout{write better intro/methods for distribution of subs graphs}
+	
+	\item \sout{write discussion for coding/non-coding}
+	
+	\item \sout{write coding/non-coding into conclusion}
+	
+	\item make a list of what should be in supplementary files for subs paper
+	
+	\item put everything in list into supplementary file for subs paper
+	
+	\item write dN/dS methods
+	
+	\item write dN/dS results
+	
+	\item write dN/dS discussion
+	
+	\item write dN/dS into conclusion
 	
 	\item mol clock for my analysis?
 	
-	\item write discussion for coding/non-coding
-	
 	\item GC content? COG? where do these fit?
-	
-	\item write coding/non-coding into conclusion
 	
 \end{itemize}
 
@@ -260,41 +251,67 @@
 
 	
 \section*{Last Week/Holiday}
+\ch figure out how to deal with overlapping genes
+\ch figure out how to deal with gaps in gene of ref taxa
+\ch check if each gene alignment is a multiple of 3 (proper codon alignment)
+\ch split up the alignment into multiple alignments of each gene
+\ch write better intro/methods for distribution of subs graphs
+\ch take out gene expression from subs paper
+\ch write up coding/non-coding results
+\ch write discussion for coding/non-coding
+\ch write coding/non-coding into conclusion
 
-dN/dS
-Super confused. This book I found that basically walks you through how to get dn/ds says that you need to first find orghologs and then align them because codeml requires codon based alignments (duh bc this is how it can actually distinguish between syn and non-syn subs and why I was getting weird errors when I tried to just put my aln into paml).
-So what I am wondering is should I be starting from scratch and finding orthologs with blast and then going from there? Or should I still use the blocks specified by mauve but re-align them so they are codon alignments? 
-Do I use gene trees or my same whole genome tree? (maybe whole genome tree is fine bc I already showed that the trees of each block is very similar to the trees of the overall genome and blocks that wernt were removed)
-Do I vary the dn/ds over sites? branches? both?
+I spent last week writing up the coding and non-coding stuff into my substitutions paper including the methods, results, and discussion. 
+I also mostly worked on my code for splitting up the alignment into multiple alignments for each gene. This is totally done!!
+It deals with gaps in the reference sequence (which messes up the genome position counting), gaps in general, and when genes are overlapping.
+I also got it to print the alignment in a nice pretty format that PAML can then use!
+I briefly started working on actually running CODEML and using it to determine the dN and dS rates for each gene. I was getting errors with my file format so it must be something silly I am missing.
+
+Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
+\begin{table}[h]
+	\centering
+	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+			\begin{tabular}{lll}
+				\toprule
+				Category & Number of Genes& Proportion of Genes\\
+				\midrule
+				Total Genes  & 188 & 100\% \\
+				Genes not divisible by 3 & 50 & ~27\%\\
+				Genes with all gaps & 34 & ~18\% \\
+				Total Usable Genes & 104 & ~55\% \\
+				\bottomrule
+				
+				
+			\end{tabular}
+		\end{minipage}}
+	\end{table}	
 
 
 
-\ch read papers about gene expression trends in bacteria
 
-\ch read papers about inversions in bacteria 
+Questions for you about dN/dS:
+\begin{enumerate}
+	\item Should I just throw out any genes that are not divisible by 3?
+	\item Should I use a gene tree for each gene or the overall species tree(the one I use for the rest of my analysis)? I think the species tree is fine?
+	\item I have really confused myself about gaps and I really don't know if removing them is good... so I need to talk to you about this
+	\item Should I be allowing substitutions to vary per site? branch? or use a site-branch model?
+	\item I think I should be trying the simplest model and then comparing it to more complicated models and do a likelihood ratio test to see which one fits better? (I think that this can be done in PAML or it easily gives you the info and then I can do the actual test in R)
+	If I should do this...do I do this on a per gene basis? What if a different model fits all the genes? Is this comparable?
+\end{enumerate}
 
-\ch apply for a few more scholarships
-
-I spent the holiday break reading papers and making notes. These papers were about trends in gene expression in bacteria (more general) and inversions in bacteria (general) as well as the impact on inversions and rearrangements on gene expression in bacteria.
-
-For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
-However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
-But, they all basically said that because bacterial genomes are so highly organized based on gene order, physical folding of the chromosome, co-regulation of gene clusters...etc that this is why we see gene expression decreasing when moving away from the origin of replication.
-
-For the papers on Inversions, the results were a bit all over the place.
-Most of the papers were older (1980's) and often focused on one known inversion in one bacteria.
-These often were related to antibiotic resistance, flagella state of bacteria, or turning specific genes on/off.
-Sometimes these studies would say how the inversion altered expression of close down or upstream genes by changing promoters locations.
-Other studies engineered their own inversions, some mentioning gene expression and some don't and talk more about the replication of inversions or how they tend to be symmetrical around the origin.
-One large study done with Staphylococcus in 2012 just mentions that lots of genes are deferentially expressed (some up regulated and some down regulated).
-The overall feeling I got was that inversions can alter gene expression and this can be done by changing the promoter location of specific genes, which can impact many things about the bacteria like their growth state and resistance.
-There seems to be no ``trend'' with respect to inversions always causing gene expression to go up or down.
-It also looks like no one has done what we are doing: looking at existing expression data to see how having an inversion impacts gene expression within and outside of the inversion.
-
-I also applied for a few more scholarships over the break. I will keep you updated if I get any of them!
-
-I have also been working on the code that will split up each of the blocks into an alignment of each gene so that I can calculate dN/dS for each of these genes.
-
+%For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
+%However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
+%But, they all basically said that because bacterial genomes are so highly organized based on gene order, physical folding of the chromosome, co-regulation of gene clusters...etc that this is why we see gene expression decreasing when moving away from the origin of replication.
+%
+%For the papers on Inversions, the results were a bit all over the place.
+%Most of the papers were older (1980's) and often focused on one known inversion in one bacteria.
+%These often were related to antibiotic resistance, flagella state of bacteria, or turning specific genes on/off.
+%Sometimes these studies would say how the inversion altered expression of close down or upstream genes by changing promoters locations.
+%Other studies engineered their own inversions, some mentioning gene expression and some don't and talk more about the replication of inversions or how they tend to be symmetrical around the origin.
+%One large study done with Staphylococcus in 2012 just mentions that lots of genes are deferentially expressed (some up regulated and some down regulated).
+%The overall feeling I got was that inversions can alter gene expression and this can be done by changing the promoter location of specific genes, which can impact many things about the bacteria like their growth state and resistance.
+%There seems to be no ``trend'' with respect to inversions always causing gene expression to go up or down.
+%It also looks like no one has done what we are doing: looking at existing expression data to see how having an inversion impacts gene expression within and outside of the inversion.
 
 %I also looked at the inversions and gene expression for the 5 strains of \ecol and there are inversions (pics of alignments below, the taxa with all the weird stuff going on is ATCC)!!
 %Mauve identified 3 large inversions roughly: 1,000,000bp, 800,000bp and 500,000bp. 
@@ -356,14 +373,12 @@ I have also been working on the code that will split up each of the blocks into 
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I would like to finish making the code for printing out the alignment of each gene so that I can then calculate the dN/dS for each gene of all the bacteria.
-I still need to work out how to deal with overlapping genes, how to deal with gaps in the reference sequence, and how to print out the alignment of each gene in a readable format
-I would like to read 2 more papers this week.
+I would like to finish figuring out the pipeline for determining the dN/dS for each gene, including what models to use, model goodness of fit testing, and having an idea of how to arrange the results.
 
 %\section*{Next Week}
 \section*{Next Week}
-I would like to have parameters for the PAML dN/dS calculation figured out so I can then run this on each gene for each bacteria.
-I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
+I would like to run my above pipeline on each gene in each replicon and take over the machines.
+If there is time, I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
 
 \newpage
 
