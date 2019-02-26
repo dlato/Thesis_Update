@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  21 JAN 2019 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  25 FEB 2019 10:36
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -651,11 +651,7 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\tools\indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(Daniella_Thesis_Update.aux
-
-LaTeX Warning: Label `tab:tableS1' multiply defined.
-
-)
+(Daniella_Thesis_Update.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
@@ -776,25 +772,187 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] <Mauve_aln_pic_17Dec18.jpg, id=22, 1924.18875pt x 1074.0125pt>
+[4]
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=21, 50
+5.89pt x 505.89pt>
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graph
+ic file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionali
+ty_colour.pdf used on input line 362.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 362--363
+[][] 
+ []
+
+
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=22, 505
+.89pt x 505.89pt>
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graphi
+c file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionalit
+y_colour.pdf used on input line 364.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 364--365
+[][] 
+ []
+
+
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=23, 50
+5.89pt x 505.89pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graph
+ic file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionali
+ty_colour.pdf used on input line 366.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 366--367
+[][] 
+ []
+
+
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=33, 50
+5.89pt x 505.89pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graph
+ic file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionali
+ty_colour.pdf used on input line 368.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 368--369
+[][] 
+ []
+
+
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=43, 50
+5.89pt x 505.89pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graph
+ic file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionali
+ty_colour.pdf used on input line 370.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 370--371
+[][] 
+ []
+
+
+<C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
+19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf, id=54, 50
+5.89pt x 505.89pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
+File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
+_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf Graph
+ic file (type pdf)
+
+<use C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
+Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
+_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionali
+ty_colour.pdf used on input line 372.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 372--373
+[][] 
+ []
+
+<Mauve_aln_pic_17Dec18.jpg, id=64, 1924.18875pt x 1074.0125pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
 File: Mauve_aln_pic_17Dec18.jpg Graphic file (type jpg)
 
 <use Mauve_aln_pic_17Dec18.jpg>
-Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 387.
+Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 381.
 (pdftex.def)             Requested size: 505.89pt x 282.36679pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 387--388
+Overfull \hbox (28.0pt too wide) in paragraph at lines 381--382
 [][] 
  []
 
-<Parsnp_aln_pic_17Dec18.png, id=23, 1445.4pt x 903.375pt>
+<Parsnp_aln_pic_17Dec18.png, id=74, 1445.4pt x 903.375pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
+7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>]
 File: Parsnp_aln_pic_17Dec18.png Graphic file (type png)
 
 <use Parsnp_aln_pic_17Dec18.png>
-Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 389.
+Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 383.
 (pdftex.def)             Requested size: 505.89pt x 316.1722pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 389--390
+Overfull \hbox (28.0pt too wide) in paragraph at lines 383--384
 [][] 
  []
 
@@ -813,46 +971,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./Mauve_aln_pic_17Dec18.jpg> <./Parsnp_aln_pic_17Dec18.png (PNG copy)>]
+[11 <./Mauve_aln_pic_17Dec18.jpg> <./Parsnp_aln_pic_17Dec18.png (PNG copy)>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[12]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (Daniella_Thesis_Update.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[13] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16538 strings out of 493673
- 337613 string characters out of 3141142
- 387863 words of memory out of 3000000
- 19526 multiletter control sequences out of 15000+200000
- 15038 words of font info for 47 fonts, out of 3000000 for 9000
+ 16559 strings out of 493673
+ 341599 string characters out of 3141142
+ 390827 words of memory out of 3000000
+ 19544 multiletter control sequences out of 15000+200000
+ 12699 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 72i,13n,86p,830b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecbx1728.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/Daniella/Downloads/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1
-/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (7 pages, 1176299 bytes).
+ 72i,12n,86p,831b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Daniella\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Daniella\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Daniell
+a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/U
+sers/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Us
+ers/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
+s/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
+aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Da
+niella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Daniella_Thesis_Update.pdf (13 pages, 1226250 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 229 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

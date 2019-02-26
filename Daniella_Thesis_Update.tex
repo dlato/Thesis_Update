@@ -152,9 +152,15 @@
 	
 	\item \sout{write coding/non-coding into conclusion}
 	
-	\item make a list of what should be in supplementary files for subs paper
+	\item \sout{figured out pipeline for CODEML to calculate dN/dS for each gene}
 	
-	\item put everything in list into supplementary file for subs paper
+	\item grab genes from each gbk file
+	
+	\item align $\uparrow$ with a codon-aware aligner
+	
+	\item \sout{make a list of what should be in supplementary files for subs paper}
+	
+	\item \sout{put everything in list into supplementary file for subs paper}
 	
 	\item write dN/dS methods
 	
@@ -163,6 +169,8 @@
 	\item write dN/dS discussion
 	
 	\item write dN/dS into conclusion
+	
+	\item \sout{new bar graph with coding and non-coding sites separated}
 	
 	\item mol clock for my analysis?
 	
@@ -250,54 +258,27 @@
 % week of Dec 17th do same ancestral analysis on gene exp data for ecoli...which is going to require me to do everything from scratch so make a tree and all that jazz
 
 	
-\section*{Last Week/Holiday}
-\ch figure out how to deal with overlapping genes
-\ch figure out how to deal with gaps in gene of ref taxa
-\ch check if each gene alignment is a multiple of 3 (proper codon alignment)
-\ch split up the alignment into multiple alignments of each gene
-\ch write better intro/methods for distribution of subs graphs
-\ch take out gene expression from subs paper
-\ch write up coding/non-coding results
-\ch write discussion for coding/non-coding
-\ch write coding/non-coding into conclusion
+\section*{Last Week}
 
-I spent last week writing up the coding and non-coding stuff into my substitutions paper including the methods, results, and discussion. 
-I also mostly worked on my code for splitting up the alignment into multiple alignments for each gene. This is totally done!!
-It deals with gaps in the reference sequence (which messes up the genome position counting), gaps in general, and when genes are overlapping.
-I also got it to print the alignment in a nice pretty format that PAML can then use!
-I briefly started working on actually running CODEML and using it to determine the dN and dS rates for each gene. I was getting errors with my file format so it must be something silly I am missing.
+Last week I was mostly busy with my competition but I got a few things done. 
+Before the break we determined that if you have one gene overlapping with 2 genes from another taxa there could be a situation where the nucleotides in one column of an alignment are not the same class.
+So they may not be the 1st codon position, or 2nd...etc.
+Since then, I have been working on determining how often this happens in the alignment of a sample block from \ecoli.
+I have gotten this information but, it becomes more complicated when there are genes within genes in some of the taxa. This means that some genes overlap WITHIN a taxa and so one particular site in the alignment may be classified as more than one thing (1st, 2nd, 3rd, or non coding).
+I am still working on how to classify/deal with this issue to get accurate information about each column in the alignment.
 
-Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
-\begin{table}[h]
-	\centering
-	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
-			\begin{tabular}{lll}
-				\toprule
-				Category & Number of Genes& Proportion of Genes\\
-				\midrule
-				Total Genes  & 188 & 100\% \\
-				Genes not divisible by 3 & 50 & ~27\%\\
-				Genes with all gaps & 34 & ~18\% \\
-				Total Usable Genes & 104 & ~55\% \\
-				\bottomrule
-				
-				
-			\end{tabular}
-		\end{minipage}}
-	\end{table}	
+Once that is figured out then I can re-do the coding/non-coding part of the analysis.
 
+I also sent you a draft of my substitutions paper before reading week which I would really appreciate your feedback on.
 
+I also read and made notes on quite a few papers last week, gathering more information about gene expression and inversions.
 
+%These are below. The graphs kind of look wrong to me because they look like there is more coding subs than non-coding, when in actuality there are not.
+%But I think this may be the way that R does stacked bar graphs so I need to look into this further.
+%I think these graphs give a better picture of what is going on with the substitution data and how it relates to coding and non-coding sites.
+%I am also not quite sure what to do about the outliers in these graphs..because the coding and non-coding subsets have different outliers.
 
-Questions for you about dN/dS:
-\begin{enumerate}
-	\item Should I just throw out any genes that are not divisible by 3?
-	\item Should I use a gene tree for each gene or the overall species tree(the one I use for the rest of my analysis)? I think the species tree is fine?
-	\item I have really confused myself about gaps and I really don't know if removing them is good... so I need to talk to you about this
-	\item Should I be allowing substitutions to vary per site? branch? or use a site-branch model?
-	\item I think I should be trying the simplest model and then comparing it to more complicated models and do a likelihood ratio test to see which one fits better? (I think that this can be done in PAML or it easily gives you the info and then I can do the actual test in R)
-	If I should do this...do I do this on a per gene basis? What if a different model fits all the genes? Is this comparable?
-\end{enumerate}
+%The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
 
 %For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
 %However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
@@ -322,36 +303,11 @@ Questions for you about dN/dS:
 %I believe that \p is only showing information from one strand so when something is listed on the opposite strand from the reference in \p then it should be an inversion. I obviously need to check this and make sure this is the case. If it is, then it will make coding to identify inversions super simple!
 %Also need to check if the inversions identified by \p and PARSNP are the same.
 
-%I have mostly been working on getting started on the dN/dS stuff so that this can get done and I can submit this paper!
-%We agreed that it is best to calculate dN/dS per gene using annotation from the reference genome.
-%My first task with this was to chop up the alignment of each block into the alignment of each gene.
-%This is proving to be more difficult than I thought. 
-%At the moment I have and array that tells me where in the alignment there is a gap in the reference or not and if there is not then it assigns the actual genomic position to the array at that spot in the alignment (so I know where the alignment falls within the genome at each column of the aln).
-%I also have an array that will classify each site in the genome as coding or non-coding. If it is coding, it further classifies based on the gene name. So non-coding = 0 and coding = gene name.
-%\textbf{I have not figured out what to do when one gene resides in another gene or genes overlap.}
-% Ideally each site can be apart of multiple genes and I would sort of subset the alignment for each gene and print that out.
-%However, I have not quite figured out how to do this yet.
-%I also have an array that then combines the two above ones that will at each site in the alignment tell me if it is non-coding or in a gene and which gene. 
-%The last thing I am struggling with is how to actually print the alignment into a proper format.
-%BioPython makes it really easy to read in the alignment and print out columns and manipulate, but I am not sure if it can print out sections of the alignment with proper headers and such.
-%This would probably require me to have a list of start and stop alignment positions, which I can easily get now.
-%So I need to think about this more. If you have any suggestions of things in python or another program like samtools that can print out sections of the alignment I would love to hear about it!
-%I am also unsure of what to do when there is a gap in the middle of the alignment of the ref taxa. Do I just not include any gaps? (they get cut out eventually from the analysis, but I do not know if they will mess up the dN/dS calculation PAML does...)
-
-
-
-
 %%%%%%%%%%%%%%%%%bring these up next time!!!
 %I also re-calculated the proportion of coding and non-coding subs in each of those sections in the genome (table below).
 %They all match what we expect in that there is more coding than non-coding regions. And that there are proportionally more substitutions in non-coding than coding regions. However, \bass seems to not follow this last trend, having a higher proportion of its substitutions in the coding regions.
 
 %	\item I was looking at PAML to do this calculation but I am unsure of what parameters to use? (i.e. for the codon frequency model?) and would this be a pairwise dN/dS in codeml?
-
-
-
-
-
-
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -373,14 +329,54 @@ Questions for you about dN/dS:
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I would like to finish figuring out the pipeline for determining the dN/dS for each gene, including what models to use, model goodness of fit testing, and having an idea of how to arrange the results.
+I would like to have the data on how many columns of the alignments are actually comparing the same nucleotide classification (1st, 2nd, 3rd, non-coding) and then make a decision on how to deal with the results from this.
 
 %\section*{Next Week}
 \section*{Next Week}
-I would like to run my above pipeline on each gene in each replicon and take over the machines.
-If there is time, I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
+I would like to implement some sort of plan for how to deal with sites in the alignment that do not compare the same nucleotide classifications. Then I can hopefully re-run the coding and non-coding analysis and any PRANK alignments that have to happen.
+%If there is time, I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
 
 \newpage
+
+%Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
+%\begin{table}[h]
+%	\centering
+%	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+%			\begin{tabular}{lll}
+%				\toprule
+%				Category & Number of Genes& Proportion of Genes\\
+%				\midrule
+%				Total Genes  & 188 & 100\% \\
+%				Genes not divisible by 3 & 50 & ~27\%\\
+%				Genes with all gaps & 34 & ~18\% \\
+%				Total Usable Genes & 104 & ~55\% \\
+%				\bottomrule
+%				
+%				
+%			\end{tabular}
+%		\end{minipage}}
+%	\end{table}	
+	
+
+% Sub density graphs with coding and non-coding information
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+
+
+
+
+
+
+
 
 \includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
 
@@ -575,7 +571,7 @@ If there is time, I want to begin figuring out how to obtain all inversions from
 %			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.03\e{-5} & \cellcolor{black!16}1.28\e{-5} & \cellcolor{black!16}2.8\e{-6} \\
 %			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.7\e{-5} & \cellcolor{black!16}2.0\e{-5} & \cellcolor{black!16}1.2\e{-6} \\
 %			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.5\e{-6} & \cellcolor{black!16}1.4\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
-%			\smel Chromosome & 3.19\e{-5} & 3.57\e{-5} & 3.7\e{-1}\\
+%			\smel Chromosome & 3.97\e{-5} & 4.25\e{-5} & 3.5\e{-1}\\
 %			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-5.36\e{-5} & \cellcolor{black!16}6.34\e{-4} & \cellcolor{black!16}9.33\e{-1} \\
 %			\smel pSymB & 5.05\e{-4} & 2.6\e{-4} & 5.3\e{-2}\\
 %			\bottomrule
