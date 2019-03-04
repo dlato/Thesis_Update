@@ -201,7 +201,7 @@
 	
 	\item \sout{read papers $\uparrow$}
 	
-	\item put notes from $\uparrow$ papers into word doc
+	\item \sout{put notes from $\uparrow$ papers into word doc}
 	
 	\item write abstract
 	
@@ -239,7 +239,7 @@
 	
 	\item check if PARSNP and \p both identify the same inversions (check xmfa file)
 	\item create latex template for paper
-	\item put notes from papers into doc
+	\item \sout{put notes from papers into doc}
 	\item use large PARSNP alignment to identify inversions
 	\item confirm inversions with dot plot
 	\item write outline for letter
@@ -260,23 +260,50 @@
 	
 \section*{Last Week}
 
-Last week I was mostly busy with my competition but I got a few things done. 
-Before the break we determined that if you have one gene overlapping with 2 genes from another taxa there could be a situation where the nucleotides in one column of an alignment are not the same class.
-So they may not be the 1st codon position, or 2nd...etc.
-Since then, I have been working on determining how often this happens in the alignment of a sample block from \ecoli.
-I have gotten this information but, it becomes more complicated when there are genes within genes in some of the taxa. This means that some genes overlap WITHIN a taxa and so one particular site in the alignment may be classified as more than one thing (1st, 2nd, 3rd, or non coding).
-I am still working on how to classify/deal with this issue to get accurate information about each column in the alignment.
+\ch finished code to get codon classification for each column in the alignment (to see if we are comparing codon position 1 with codon position 1)
 
-Once that is figured out then I can re-do the coding/non-coding part of the analysis.
+\ch figure out what R is doing with the stacked bar graphs
 
-I also sent you a draft of my substitutions paper before reading week which I would really appreciate your feedback on.
+\ch put gene expression notes from papers into electronic doc
 
-I also read and made notes on quite a few papers last week, gathering more information about gene expression and inversions.
+\ch put inversions notes from papers into electronic doc
 
-%These are below. The graphs kind of look wrong to me because they look like there is more coding subs than non-coding, when in actuality there are not.
-%But I think this may be the way that R does stacked bar graphs so I need to look into this further.
-%I think these graphs give a better picture of what is going on with the substitution data and how it relates to coding and non-coding sites.
-%I am also not quite sure what to do about the outliers in these graphs..because the coding and non-coding subsets have different outliers.
+\ch re-do gene expression analysis with data from same strain of \smel for \pa and \pb so it matches the chromosome
+
+\ch get only gene expression graphs (not including substitution data)
+
+Last week I was mostly working on the code to properly classify each column in the alignment as codon position 1, 2, 3, non-coding (0), or overlapping with another gene (4).
+This took a very long time because I kept running into errors and realizing that I had to account for more situations (like different kinds of overlap) than I thought.
+A summary of what I found for ONE sample alignment block from \ecoli is below in Table \ref{tab:classification}.
+So overall, this finding is not good. It means that either the annotation is very wrong (which we really can not back up because we are not sequencing anything ourselves), or that Mafft and/or Mauve are doing a bad job at identifying what is homologous or not.
+When I look at the Mafft alignment it seems to be really good and having most columns the same nucleotide.
+So I need to look into this more.
+
+I also looked into how R creates the stacked bar graphs (which are below) for the coding and non-coding separation of substitutions.
+It does what I thought it did, which is just put the totals of coding and non-coding stacked on top of each other in one bar.
+So the total height of the bar is the total number of substitutions in that 10kb section, and the total coding subs in that section is the bottom portion, plus the total non-coding subs in that section on top of that.
+This still confused me as to why there were more coding substitutions than non-coding BUT then I remembered that most of the genome is coding.
+So even though in the table below (Table \ref{tab:cod_non_cod_proportions}) the proportion of coding and non-coding substitutions is relatively even, the actual NUMBER of coding substitutions will be more than non-coding because there are more coding regions of the genome. 
+So I think my graphs make sense. 
+
+I also read some papers and organized the notes I took from these papers into an electronic doc to make it easier for me when I write out the gene expression papers.
+
+When I was re-doing the gene expression analysis for \pa and \pb I noticed that the calculation for the midpoint of each gene was not an integer value and therefore might have been causing problems in later bidirectional calculations.
+So I am working on re-doing the gene expression analysis for all of the replicons (but I do not expect the results to change much).
+I also re-created the expression graphs on their own (without the substitution data) (graphs not shown) and some points it looks like there are complete bars/10kb sections ``missing''.
+I looked into the briefly and found that these bars are not actually missing, they just have only a few genes present in that section.
+The reason for this was potentially partially what I mentioned above about the non-integer midpoint calculation, I also found some weird gene names in the \ecol that might be messing things up.
+But I think that the main reason is that in some of the samples there are some genes missing for whatever reason. So when I merge the data, these genes are not in the data frame and it therefore appears like some 10kb sections have no genes. 
+I have decided that it would not be right to only use some samples to account for gene expression for some genes and all samples for other genes.
+If you can think of a better thing to do than to toss everything that does not have expression values for all samples for one gene, please let me know.
+
+Another issue that we talked about on Friday was that some of my raw expression values are VERY high for some samples (100,000) and others are not (100's).
+I was concerned that I was not grabbing the correct raw count values from the data frames, or that the authors of the data did not actually provide the raw count data they said they did.
+However, when I normalize the samples this issue is fixed and all of the values ``even out''.
+I need to do one more check before I can feel at ease with this.
+
+I have also been working on the corrections that you gave me for my substitutions paper.
+
 
 %The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
 
@@ -329,7 +356,14 @@ I also read and made notes on quite a few papers last week, gathering more infor
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I would like to have the data on how many columns of the alignments are actually comparing the same nucleotide classification (1st, 2nd, 3rd, non-coding) and then make a decision on how to deal with the results from this.
+As mentioned above, the results from the codon classification stuff is bad and I need to look into this more.
+We decided that I should be looking at a gene start and end from one of the taxa and look at the Mafft alignment to see what is going on in that section of the alignment.
+
+I would also like to add up the values from the gene expression data to make sure that I do have raw count values.
+I would also like to re-do the expression analysis checking for any weird gene names and with the new midpoint calculation.
+I will then also have gene expression graphs.
+
+I also plan on finishing the edits for the substitutions paper this week.
 
 %\section*{Next Week}
 \section*{Next Week}
@@ -337,6 +371,30 @@ I would like to implement some sort of plan for how to deal with sites in the al
 %If there is time, I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment.
 
 \newpage
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lrr}
+			\toprule
+			Classification & Number of Nucleotides in Alignment & \% of Total Alignment\\
+			\midrule
+			Gapped & 78450 &  ~31\% \\
+			Not same class & 138002 & ~55\% \\
+			Same class & 35852 & ~15\%\\
+			Codon 1 & 113& $<$0.05\%\\
+			Codon 2 & 113 & $<$0.05\%\\
+			Codon 3 & 113 & $<$0.05\%\\
+			Misc 4 & 0 & 0 \\
+			Non-coding & 35513 & ~15\% \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:classification} Classification of each column in the alignment of ONE sample \ecol block with a total alignment length of 252304. The percentages are calculated based on the WHOLE alignment length. The "same class" classification is any column where all taxa had the same classification. "Not same class" is any column where at least one taxa did not have the same classification as the rest of the taxa in that column. The "Same class" category can be further broken down into the different nucleotide classifications to show how often those were found to be the same between all taxa in a column. The "Gapped" category denotes a site where at least one taxa had a gap present.}
+\end{table}
+
 
 %Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
 %\begin{table}[h]
