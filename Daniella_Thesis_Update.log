@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  18 MAR 2019 10:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  25 MAR 2019 11:02
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -784,10 +784,10 @@ ic file (type pdf)
 7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 391.
+ty_colour.pdf used on input line 392.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 391--392
+Overfull \hbox (28.0pt too wide) in paragraph at lines 392--393
 [][] 
  []
 
@@ -810,10 +810,10 @@ c file (type pdf)
 7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionalit
-y_colour.pdf used on input line 393.
+y_colour.pdf used on input line 394.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 393--394
+Overfull \hbox (28.0pt too wide) in paragraph at lines 394--395
 [][] 
  []
 
@@ -837,10 +837,10 @@ ic file (type pdf)
 7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 395.
+ty_colour.pdf used on input line 396.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 395--396
+Overfull \hbox (28.0pt too wide) in paragraph at lines 396--397
 [][] 
  []
 
@@ -864,10 +864,10 @@ ic file (type pdf)
 7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 397.
+ty_colour.pdf used on input line 398.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 397--398
+Overfull \hbox (28.0pt too wide) in paragraph at lines 398--399
 [][] 
  []
 
@@ -891,10 +891,10 @@ ic file (type pdf)
 7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 399.
+ty_colour.pdf used on input line 400.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 399--400
+Overfull \hbox (28.0pt too wide) in paragraph at lines 400--401
 [][] 
  []
 
@@ -918,10 +918,10 @@ ic file (type pdf)
 7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 401.
+ty_colour.pdf used on input line 402.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 401--402
+Overfull \hbox (28.0pt too wide) in paragraph at lines 402--403
 [][] 
  []
 
@@ -946,10 +946,10 @@ Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19
 .pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirection
-ality_colour_13Mar19.pdf used on input line 406.
+ality_colour_13Mar19.pdf used on input line 407.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 406--407
+Overfull \hbox (28.0pt too wide) in paragraph at lines 407--408
 [][] 
  []
 
@@ -974,10 +974,10 @@ Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.p
 df>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectiona
-lity_colour_4Mar19.pdf used on input line 408.
+lity_colour_4Mar19.pdf used on input line 409.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 408--409
+Overfull \hbox (28.0pt too wide) in paragraph at lines 409--410
 [][] 
  []
 
@@ -1003,10 +1003,10 @@ Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.
 pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirection
-ality_colour_4Mar19.pdf used on input line 410.
+ality_colour_4Mar19.pdf used on input line 411.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 410--411
+Overfull \hbox (28.0pt too wide) in paragraph at lines 411--412
 [][] 
  []
 
@@ -1032,10 +1032,10 @@ Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.p
 df>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectiona
-lity_colour_4Mar19.pdf used on input line 412.
+lity_colour_4Mar19.pdf used on input line 413.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 412--413
+Overfull \hbox (28.0pt too wide) in paragraph at lines 413--414
 [][] 
  []
 
@@ -1060,10 +1060,10 @@ raphic file (type pdf)
 Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_
-colour_4Mar19.pdf used on input line 414.
+colour_4Mar19.pdf used on input line 415.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 414--415
+Overfull \hbox (28.0pt too wide) in paragraph at lines 415--416
 [][] 
  []
 
@@ -1088,10 +1088,10 @@ raphic file (type pdf)
 Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_
-colour_4Mar19.pdf used on input line 416.
+colour_4Mar19.pdf used on input line 417.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 416--417
+Overfull \hbox (28.0pt too wide) in paragraph at lines 417--418
 [][] 
  []
 
@@ -1107,10 +1107,10 @@ Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>]
 File: Mauve_aln_pic_17Dec18.jpg Graphic file (type jpg)
 
 <use Mauve_aln_pic_17Dec18.jpg>
-Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 421.
+Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 422.
 (pdftex.def)             Requested size: 505.89pt x 282.36679pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 421--422
+Overfull \hbox (28.0pt too wide) in paragraph at lines 422--423
 [][] 
  []
 
@@ -1126,10 +1126,10 @@ Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>]
 File: Parsnp_aln_pic_17Dec18.png Graphic file (type png)
 
 <use Parsnp_aln_pic_17Dec18.png>
-Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 423.
+Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 424.
 (pdftex.def)             Requested size: 505.89pt x 316.1722pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 423--424
+Overfull \hbox (28.0pt too wide) in paragraph at lines 424--425
 [][] 
  []
 
@@ -1184,9 +1184,9 @@ s/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
 aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Da
 niella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Dani
 ella/Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (20 pages, 1285736 bytes).
+Output written on Daniella_Thesis_Update.pdf (20 pages, 1284756 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
+ 300 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
