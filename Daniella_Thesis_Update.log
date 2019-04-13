@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  25 MAR 2019 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  6 APR 2019 20:30
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -652,18 +652,18 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (Daniella_Thesis_Update.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -719,29 +719,29 @@ Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+LaTeX Font Info:    Try loading font information for U+msa on input line 112.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 112.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 111.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 112.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -784,10 +784,10 @@ ic file (type pdf)
 7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 392.
+ty_colour.pdf used on input line 372.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 392--393
+Overfull \hbox (28.0pt too wide) in paragraph at lines 372--373
 [][] 
  []
 
@@ -810,10 +810,10 @@ c file (type pdf)
 7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionalit
-y_colour.pdf used on input line 394.
+y_colour.pdf used on input line 374.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 394--395
+Overfull \hbox (28.0pt too wide) in paragraph at lines 374--375
 [][] 
  []
 
@@ -837,10 +837,10 @@ ic file (type pdf)
 7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 396.
+ty_colour.pdf used on input line 376.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 396--397
+Overfull \hbox (28.0pt too wide) in paragraph at lines 376--377
 [][] 
  []
 
@@ -864,10 +864,10 @@ ic file (type pdf)
 7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 398.
+ty_colour.pdf used on input line 378.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 398--399
+Overfull \hbox (28.0pt too wide) in paragraph at lines 378--379
 [][] 
  []
 
@@ -891,10 +891,10 @@ ic file (type pdf)
 7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 400.
+ty_colour.pdf used on input line 380.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 400--401
+Overfull \hbox (28.0pt too wide) in paragraph at lines 380--381
 [][] 
  []
 
@@ -918,10 +918,10 @@ ic file (type pdf)
 7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionali
-ty_colour.pdf used on input line 402.
+ty_colour.pdf used on input line 382.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 402--403
+Overfull \hbox (28.0pt too wide) in paragraph at lines 382--383
 [][] 
  []
 
@@ -946,10 +946,10 @@ Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19
 .pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirection
-ality_colour_13Mar19.pdf used on input line 407.
+ality_colour_13Mar19.pdf used on input line 387.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 407--408
+Overfull \hbox (28.0pt too wide) in paragraph at lines 387--388
 [][] 
  []
 
@@ -974,10 +974,10 @@ Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.p
 df>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectiona
-lity_colour_4Mar19.pdf used on input line 409.
+lity_colour_4Mar19.pdf used on input line 389.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 409--410
+Overfull \hbox (28.0pt too wide) in paragraph at lines 389--390
 [][] 
  []
 
@@ -1003,10 +1003,10 @@ Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.
 pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirection
-ality_colour_4Mar19.pdf used on input line 411.
+ality_colour_4Mar19.pdf used on input line 391.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 411--412
+Overfull \hbox (28.0pt too wide) in paragraph at lines 391--392
 [][] 
  []
 
@@ -1032,10 +1032,10 @@ Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.p
 df>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectiona
-lity_colour_4Mar19.pdf used on input line 413.
+lity_colour_4Mar19.pdf used on input line 393.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 413--414
+Overfull \hbox (28.0pt too wide) in paragraph at lines 393--394
 [][] 
  []
 
@@ -1060,10 +1060,10 @@ raphic file (type pdf)
 Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_
-colour_4Mar19.pdf used on input line 415.
+colour_4Mar19.pdf used on input line 395.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 415--416
+Overfull \hbox (28.0pt too wide) in paragraph at lines 395--396
 [][] 
  []
 
@@ -1088,10 +1088,10 @@ raphic file (type pdf)
 Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Exp
 ression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_
-colour_4Mar19.pdf used on input line 417.
+colour_4Mar19.pdf used on input line 397.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 417--418
+Overfull \hbox (28.0pt too wide) in paragraph at lines 397--398
 [][] 
  []
 
@@ -1107,10 +1107,10 @@ Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>]
 File: Mauve_aln_pic_17Dec18.jpg Graphic file (type jpg)
 
 <use Mauve_aln_pic_17Dec18.jpg>
-Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 422.
+Package pdftex.def Info: Mauve_aln_pic_17Dec18.jpg used on input line 402.
 (pdftex.def)             Requested size: 505.89pt x 282.36679pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 422--423
+Overfull \hbox (28.0pt too wide) in paragraph at lines 402--403
 [][] 
  []
 
@@ -1126,10 +1126,10 @@ Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf>]
 File: Parsnp_aln_pic_17Dec18.png Graphic file (type png)
 
 <use Parsnp_aln_pic_17Dec18.png>
-Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 424.
+Package pdftex.def Info: Parsnp_aln_pic_17Dec18.png used on input line 404.
 (pdftex.def)             Requested size: 505.89pt x 316.1722pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 424--425
+Overfull \hbox (28.0pt too wide) in paragraph at lines 404--405
 [][] 
  []
 
@@ -1169,7 +1169,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Here is how much of TeX's memory you used:
  16602 strings out of 493673
  345998 string characters out of 3141142
- 390844 words of memory out of 3000000
+ 391883 words of memory out of 3000000
  19576 multiletter control sequences out of 15000+200000
  15038 words of font info for 47 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -1184,7 +1184,7 @@ s/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
 aniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Da
 niella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Dani
 ella/Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (20 pages, 1284756 bytes).
+Output written on Daniella_Thesis_Update.pdf (20 pages, 1283769 bytes).
 PDF statistics:
  300 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

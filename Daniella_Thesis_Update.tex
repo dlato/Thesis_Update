@@ -24,7 +24,8 @@
 \usepackage{lscape} %to make the page landscape
 \usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
 \usepackage{indentfirst} % to indent the first paragraph
-\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
+%\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
+\rhead{\fancyplain{}{Thesis Update April 8, 2019 \hfill Daniella Lato}}
 \title{Sinorhizobium Update}
 \author{Daniella Lato}
 \date{\today}
@@ -154,10 +155,6 @@
 	
 	\item \sout{figured out pipeline for CODEML to calculate dN/dS for each gene}
 	
-	\item grab genes from each gbk file
-	
-	\item align $\uparrow$ with a codon-aware aligner
-	
 	\item \sout{make a list of what should be in supplementary files for subs paper}
 	
 	\item \sout{put everything in list into supplementary file for subs paper}
@@ -205,7 +202,7 @@
 	
 	\item write abstract
 	
-	\item write intro
+	\item \sout{write intro}
 	
 	\item add stuff from outline to Data section
 	
@@ -260,21 +257,11 @@
 	
 \section*{Last Week}
 
-\ch wrote detailed outline for gene expression paper
+\ch get all the alignments for each gene!!!
 
-\ch FINALLY figured out and fixed the \ecol issue with most sites in the alignment not being the same codon classification
-
-
-I wrote a detailed outline for my gene expression paper and plan on writing at the very least the introduction this weekend.
-
-Alignment Column Classification:
-I realized that there were two things that I forgot to account for in the alignment column classification: 1) some genes are complement and therefore their codon classification should be 3,2,1 instead of 1,2,3. 2) \p sometimes recognizes that the complement of one taxa may better align to the rest of the taxa, which alters what the start and end of that block is (they get switch and therefore I was looking at the wrong gene for one taxa!).
-I have fixed both of these things in my code and now everything makes sense!
-All of the test blocks I looks at (2 from \ecol and 2 from \bass) have only 4-5\% of the alignment where not all taxa have the same classification and between 48-85\% of the alignment that has all taxa with the same classification.
-This number is so varied because of the number of gaps in each of the alignments.
-Blocks with more gaps have therefore less sites available to be the same classification.
-
-
+Last week I FINALLY finished figuring out how to print out each column of the alignment separated by each gene, while avoiding any columns where not all taxa had the same classification (making sure we compared codon position 1 to codon position 1) and avoiding any gapped columns.
+I also began running the previous pipeline to determine the overall substitution patters between coding and non-coding sequences. This is taking a bit longer because the alignment is now broken up into multiple small files so I am working on improving that pipeline to include more parallel commands to make this process go faster. 
+I also began working on the pipeline for determining dN/dS for each gene. This is basically done, I just need to make it scalable for multiple files.
 
 
 %The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
@@ -328,15 +315,8 @@ Blocks with more gaps have therefore less sites available to be the same classif
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-Since I have figured out what is going on with the alignment column classification, I plan on re-doing the coding and non-coding substitution analysis this week with the correct coding and non-coding sections.
-I do not expect the results to change that much because the starts and stops of genes remains the same, it would only be the reversed complement taxa that would have things impacted.
+I plan on finishing the coding/non-coding substitution analysis and continue to work on the dN/dS pipeline.
 
-I would also like to develop some sort of pipeline for finding the dN/dS for each gene in all of my bacteria.
-Now that the alignments are actually aligning the sequences properly, we might not have to re-align the genes with a codon aware aligner.
-I need to think about this more.
-
-I would also like to write the intro to my gene expression paper by the end of this week.
-%\section*{Next Week}
 \section*{Next Week}
 I would like to implement the above pipeline for calculating the dN/dS for each gene and put all these results in to a coherent table.
 
@@ -474,12 +454,12 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 		\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
-			\ecol Chromosome & \cc -5.938\e{-8}*** &  \cc -9.237\e{-8}*** \\
-			\bass Chromosome & \cc -7.584\e{-8}*** & NS \\
-			\strep Chromosome & 5.483\e{-7}*** & 9.182\e{-9}***\\
-			\smel Chromosome & \cc -1.448\e{-6}*** & \cc -7.037\e{-7}***\\
-			\smel pSymA & \cc -9.704\e{-7}*** & \cc -1.464\e{-7}***\\
-			\smel pSymB & 5.007\e{-7}*** & NS\\
+			\ecol Chromosome & \cc -6.454\{-8}*** &  NS \\
+			\bass Chromosome & \cc -1.159\e{-7}***  & -9.861\e{-8}*** \\
+			\strep Chromosome & \cc -8.464\e{-9}*** & 3.572\e{-7}***\\
+			\smel Chromosome & \cc -1.269\e{-7}***  & \cc -1.51\e{-7}* \\
+			\smel pSymA & \cc -2.02\e{-7}*** & NS \\
+			\smel pSymB & 2.618\e{-7}*** & 8.591\e{-7}***\\
 			\bottomrule
 		\end{tabular}
 		
