@@ -24,8 +24,8 @@
 \usepackage{lscape} %to make the page landscape
 \usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
 \usepackage{indentfirst} % to indent the first paragraph
-%\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
-\rhead{\fancyplain{}{Thesis Update April 8, 2019 \hfill Daniella Lato}}
+\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
+%\rhead{\fancyplain{}{Thesis Update April 8, 2019 \hfill Daniella Lato}}
 \title{Sinorhizobium Update}
 \author{Daniella Lato}
 \date{\today}
@@ -257,11 +257,13 @@
 	
 \section*{Last Week}
 
-\ch get all the alignments for each gene!!!
+\ch re-run coding and non-coding substitution analysis for all bacteria
 
-Last week I FINALLY finished figuring out how to print out each column of the alignment separated by each gene, while avoiding any columns where not all taxa had the same classification (making sure we compared codon position 1 to codon position 1) and avoiding any gapped columns.
-I also began running the previous pipeline to determine the overall substitution patters between coding and non-coding sequences. This is taking a bit longer because the alignment is now broken up into multiple small files so I am working on improving that pipeline to include more parallel commands to make this process go faster. 
-I also began working on the pipeline for determining dN/dS for each gene. This is basically done, I just need to make it scalable for multiple files.
+I worked on re-running the substitution analysis for the coding and non-coding sections for all the bacteria. The results from this are summarized in the table \ref{tab:cod_non_cod_log_reg} below.
+The results are pretty consistent for the coding sections with a negative substitution trend (\pb was the only exception). But for the non-coding sections the results are a bit all over the place, with some non-significant results and the rest split up half and half as to if the substitution trend is positive or negative.
+I am not really sure what to make of these results or how to explain them. The only thing I can think of is that non-coding sections are more variable than the coding sections in their content so that is why we are seeing inconsistent results? I would really appreciate your thoughts on this.
+
+I also began working on re-creating the substitution density graphs for both coding and non-coding sections for each replicon but was hitting some snags with how my data is formatted. I am sure that I can have this working and complete by the end of today.
 
 
 %The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
@@ -315,7 +317,8 @@ I also began working on the pipeline for determining dN/dS for each gene. This i
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I plan on finishing the coding/non-coding substitution analysis and continue to work on the dN/dS pipeline.
+I plan on finishing the graphs for the coding/non-coding analysis, and I would like to again keep working on the pipeline for the dN/dS analysis.
+This weekend I would like to work on writing more for the gene expression paper and get a solid draft ready for that.
 
 \section*{Next Week}
 I would like to implement the above pipeline for calculating the dN/dS for each gene and put all these results in to a coherent table.
@@ -324,28 +327,6 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 
 \newpage
 
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrr}
-			\toprule
-			Classification & Number of Nucleotides in Alignment & \% of Total Alignment\\
-			\midrule
-			Gapped & 78450 &  ~31\% \\
-			Not same class & 138002 & ~55\% \\
-			Same class & 35852 & ~15\%\\
-			Codon 1 & 113& $<$0.05\%\\
-			Codon 2 & 113 & $<$0.05\%\\
-			Codon 3 & 113 & $<$0.05\%\\
-			Misc 4 & 0 & 0 \\
-			Non-coding & 35513 & ~15\% \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:classification} Classification of each column in the alignment of ONE sample \ecol block with a total alignment length of 252304. The percentages are calculated based on the WHOLE alignment length. The "same class" classification is any column where all taxa had the same classification. "Not same class" is any column where at least one taxa did not have the same classification as the rest of the taxa in that column. The "Same class" category can be further broken down into the different nucleotide classifications to show how often those were found to be the same between all taxa in a column. The "Gapped" category denotes a site where at least one taxa had a gap present.}
-\end{table}
 
 
 %Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
@@ -368,18 +349,19 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 %	\end{table}	
 	
 
-% Sub density graphs with coding and non-coding information
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+Sub density graphs with coding and non-coding information
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
 
 
@@ -404,19 +386,39 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 \includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
 
 
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccrr}
+%			\toprule
+%			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \% of Subs Coding & \% of Subs Non-Coding\\
+%			\midrule
+%			\ecol Chromosome & 86.47\% & 13.53\% & 5.00\% & 8.96\% \\ % 4013445/4641652 & 200860 & 56265 
+%			\bass Chromosome & 87.49\% & 12.51\% & 7.31\% & 6.42\%\\ %3688210/4215606 & 269482 & 33846
+%			\strep Chromosome & 89.03\% & 10.97\% & 13.74\% & 14.91\%\\ % 7716382/8667507 & 1060278 & 141828
+%			\smel Chromosome & 86.27\% & 13.73\% & 0.19\% & 0.22\%\\ % 3152315/3654135 & 6023 & 1088
+%			\smel pSymA & 83.34\% & 16.66\% & 2.84\% & 4.58\%\\ % 1128615/1354226 & 225611/1354226 & 32040 & 10333
+%			\smel pSymB & 88.81\% & 11.19\% & 2.78\% & 3.44\%\\ % 1495047/1683333 & 41532 & 6483
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+%\end{table}
+
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lccrr}
 			\toprule
-			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \% of Subs Coding & \% of Subs Non-Coding\\
+			Bacteria and Replicon & \# of Coding Sites & \# of Non-Coding Sites & \# of Subs Coding & \# of Subs Non-Coding\\
 			\midrule
-			\ecol Chromosome & 86.47\% & 13.53\% & 5.00\% & 8.96\% \\ % 4013445/4641652 & 200860 & 56265 
-			\bass Chromosome & 87.49\% & 12.51\% & 7.31\% & 6.42\%\\ %3688210/4215606 & 269482 & 33846
-			\strep Chromosome & 89.03\% & 10.97\% & 13.74\% & 14.91\%\\ % 7716382/8667507 & 1060278 & 141828
-			\smel Chromosome & 86.27\% & 13.73\% & 0.19\% & 0.22\%\\ % 3152315/3654135 & 6023 & 1088
-			\smel pSymA & 83.34\% & 16.66\% & 2.84\% & 4.58\%\\ % 1128615/1354226 & 225611/1354226 & 32040 & 10333
-			\smel pSymB & 88.81\% & 11.19\% & 2.78\% & 3.44\%\\ % 1495047/1683333 & 41532 & 6483
+			\ecol Chromosome & 2243082 & 141885 & 129595 & 6721 \\ % 4048616/4641652 & 
+			\bass Chromosome & 2073824 & 102906 & 171510 & 6187\\ %3692179/4215606
+			\strep Chromosome & 1996354 & 18584 &  & \\ % 7628849/8667507
+			\smel Chromosome & 1928634 & 199425 & 5153 & 842\\ % 3130925/3654135
+			\smel pSymA & 419531 & 68426 & 7709 & 943\\ % 1128615/1354226 & 225611/1354226
+			\smel pSymB & 559311 & 22098 & 10039 & 645\\ % 1493048/1683333
 			\bottomrule
 		\end{tabular}
 		
@@ -424,27 +426,7 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
 \end{table}
 
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lccrr}
-%%			\toprule
-%%			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \# of Subs Coding & \# of Subs Non-Coding\\
-%%			\midrule
-%%			\ecol Chromosome & 87.22\% & 12.78\% & 702 & 256423 \\ % 4048616/4641652 & 
-%%			\bass Chromosome & 87.58\% & 12.42\% & 15547 & 287781\\ %3692179/4215606
-%%			\strep Chromosome & 88.02\% & 11.98\% & 1357 & 1200749\\ % 7628849/8667507
-%%			\smel Chromosome & 85.68\% & 14.32\% & 1530 & 5581\\ % 3130925/3654135
-%%			\smel pSymA & 83.34\% & 16.66\% & 3230 & 10343\\ % 1128615/1354226 & 225611/1354226
-%%			\smel pSymB & 88.70\% & 11.30\% & 37419 & 10596\\ % 1493048/1683333
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
-%%\end{table}
-%
-%
+
 %
 %
 \begin{table}[h]
@@ -454,8 +436,8 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 		\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
-			\ecol Chromosome & \cc -6.454\{-8}*** &  NS \\
-			\bass Chromosome & \cc -1.159\e{-7}***  & -9.861\e{-8}*** \\
+			\ecol Chromosome & \cc -6.454\e{-8}*** &  NS \\
+			\bass Chromosome & \cc -1.159\e{-7}***  & \cc -9.861\e{-8}*** \\
 			\strep Chromosome & \cc -8.464\e{-9}*** & 3.572\e{-7}***\\
 			\smel Chromosome & \cc -1.269\e{-7}***  & \cc -1.51\e{-7}* \\
 			\smel pSymA & \cc -2.02\e{-7}*** & NS \\
