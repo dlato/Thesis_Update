@@ -212,7 +212,7 @@
 	
 	\item average gene expression
 	
-	\item write discussion
+	\item \sout{write discussion}
 	
 	\item write conclusion
 	
@@ -257,13 +257,25 @@
 	
 \section*{Last Week}
 
-\ch re-run coding and non-coding substitution analysis for all bacteria
+\ch write results and discussion for gene expression paper
 
-I worked on re-running the substitution analysis for the coding and non-coding sections for all the bacteria. The results from this are summarized in the table \ref{tab:cod_non_cod_log_reg} below.
-The results are pretty consistent for the coding sections with a negative substitution trend (\pb was the only exception). But for the non-coding sections the results are a bit all over the place, with some non-significant results and the rest split up half and half as to if the substitution trend is positive or negative.
-I am not really sure what to make of these results or how to explain them. The only thing I can think of is that non-coding sections are more variable than the coding sections in their content so that is why we are seeing inconsistent results? I would really appreciate your thoughts on this.
+\ch write methods for gene expression paper
 
-I also began working on re-creating the substitution density graphs for both coding and non-coding sections for each replicon but was hitting some snags with how my data is formatted. I am sure that I can have this working and complete by the end of today.
+\ch get coding and non-coding substitution graphs for each replicon
+
+\ch get proportions of coding and non-coding sections for each genome
+
+\ch results and outline of slides for OE3C
+
+I obtained a break down of the coding and non-coding proportions of the genome for each replicon. These can be found in Table \ref{tab:cod_non_cod_proportions}.
+The proportion of coding sites that have substitutions, and non-coding sites that have substitutions are about the same (5\% - 10\% of sites).
+The only concerning thing is that because we are now only looking at sites in the alignment where all taxa are the same classification (codon position 1, 2, 3, non-coding...etc), we are now only looking at less than half of the total sites in the genome.
+I am slightly concerned that some of the regions in the genome may be underrepresented. What are your thoughts on this?
+
+I realized when working through the dN/dS pipeline that there was still ``stop'' codons present and so I then realized that I forgot to account for the reverse complement of the sequence. So I had to add in this extra step into the pipeline, and re-run the coding/non-coding substitution analysis.
+
+I worked on writing the methods, results and discussion for the gene expression paper/letter.
+I also have started working on my presentation for the OE3C, I have most of the intro, and results.
 
 
 %The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
@@ -317,13 +329,17 @@ I also began working on re-creating the substitution density graphs for both cod
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I plan on finishing the graphs for the coding/non-coding analysis, and I would like to again keep working on the pipeline for the dN/dS analysis.
-This weekend I would like to work on writing more for the gene expression paper and get a solid draft ready for that.
+I realized that I made a slight mistake in the genome positions that each block prints out, so I have fixed this and need to re-do the substitution analysis again. I began this process this past weekend but it takes some time to run so I am still working on this.
 
+I would like to run the dN/dS pipeline on all of the replicons.
+
+I would like to have a presentation complete for the OE3C so I can practice it in front of everyone next week.
+ 
 \section*{Next Week}
-I would like to implement the above pipeline for calculating the dN/dS for each gene and put all these results in to a coherent table.
 
 I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment for the inversions analysis.
+
+I will mostly be at the OE3C conference (May 2-4).
 
 \newpage
 
@@ -347,6 +363,49 @@ I want to begin figuring out how to obtain all inversions from the Mauve or PARS
 %			\end{tabular}
 %		\end{minipage}}
 %	\end{table}	
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lrrrrr}
+			\toprule
+			Bacteria and Replicon & Average Replicon Length & \# of Coding Sites & \# of Non-Coding Sites & \# of Subs Coding & \# of Subs Non-Coding\\
+			\midrule
+			\ecol Chromosome & 5082529 & 2243082 & 141885 & 129595 & 6721 \\ % 4048616/4641652 & 
+			\bass Chromosome & 4077077 & 2073824 & 102906 & 171510 & 6187\\ %3692179/4215606
+			\strep Chromosome & 8497577 & 1996354 & 18584 & 246447 & 2808\\ % 7628849/8667507
+			\smel Chromosome & 3426881 & 1928634 & 199425 & 5153 & 842\\ % 3130925/3654135
+			\smel pSymA & 1455940 & 419531 & 68426 & 7709 & 943\\ % 1128615/1354226 & 225611/1354226
+			\smel pSymB & 1664597 & 559311 & 22098 & 10039 & 645\\ % 1493048/1683333
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+\end{table}
+
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
+			\midrule
+			\ecol Chromosome & \cc -6.454\e{-8}*** &  NS \\
+			\bass Chromosome & \cc -1.159\e{-7}***  & \cc -9.861\e{-8}*** \\
+			\strep Chromosome & \cc -8.464\e{-9}*** & 3.572\e{-7}***\\
+			\smel Chromosome & \cc -1.269\e{-7}***  & \cc -1.51\e{-7}* \\
+			\smel pSymA & \cc -2.02\e{-7}*** & NS \\
+			\smel pSymB & 2.618\e{-7}*** & 8.591\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 	
 
 Sub density graphs with coding and non-coding information
@@ -363,7 +422,7 @@ Sub density graphs with coding and non-coding information
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_15Apr19.pdf}
 
-
+Gene expression graphs
 
 % Gene Exp graphs
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19.pdf}
@@ -406,48 +465,8 @@ Sub density graphs with coding and non-coding information
 %	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
 %\end{table}
 
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccrr}
-			\toprule
-			Bacteria and Replicon & \# of Coding Sites & \# of Non-Coding Sites & \# of Subs Coding & \# of Subs Non-Coding\\
-			\midrule
-			\ecol Chromosome & 2243082 & 141885 & 129595 & 6721 \\ % 4048616/4641652 & 
-			\bass Chromosome & 2073824 & 102906 & 171510 & 6187\\ %3692179/4215606
-			\strep Chromosome & 1996354 & 18584 &  & \\ % 7628849/8667507
-			\smel Chromosome & 1928634 & 199425 & 5153 & 842\\ % 3130925/3654135
-			\smel pSymA & 419531 & 68426 & 7709 & 943\\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & 559311 & 22098 & 10039 & 645\\ % 1493048/1683333
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
-\end{table}
-
-
 %
 %
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
-		\toprule
-			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
-			\midrule
-			\ecol Chromosome & \cc -6.454\e{-8}*** &  NS \\
-			\bass Chromosome & \cc -1.159\e{-7}***  & \cc -9.861\e{-8}*** \\
-			\strep Chromosome & \cc -8.464\e{-9}*** & 3.572\e{-7}***\\
-			\smel Chromosome & \cc -1.269\e{-7}***  & \cc -1.51\e{-7}* \\
-			\smel pSymA & \cc -2.02\e{-7}*** & NS \\
-			\smel pSymB & 2.618\e{-7}*** & 8.591\e{-7}***\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
 
 %
 %
