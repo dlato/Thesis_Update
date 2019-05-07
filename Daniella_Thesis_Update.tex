@@ -257,28 +257,16 @@
 	
 \section*{Last Week}
 
-\ch write results and discussion for gene expression paper
+Preparing for the OE3C conference and the conference itself took up majority of my time last week.
 
-\ch write methods for gene expression paper
+Other than that, I noticed that I was still getting some random ``stop'' codons in the codeml analysis so I have been looking into this further and found that since we are only using one taxa to specify the gene starts and stops, there are some rare cases where in the reference taxa the codon is TGG but this has been changed in one of the other taxa to TGA (stop codon) so this whole column is therefore omitted from the rest of the dN/dS analysis. 
+I think this situation is unavoidable and since the column is removed anyways it should not impact the results. This also happens rarely.
 
-\ch get coding and non-coding substitution graphs for each replicon
+I also realized that for some reason some of the blocks did not run for the coding/non-coding substitution analysis... so I am currently re-running those. I do not expect the results to change that much.
 
-\ch get proportions of coding and non-coding sections for each genome
-
-\ch results and outline of slides for OE3C
-
-I obtained a break down of the coding and non-coding proportions of the genome for each replicon. These can be found in Table \ref{tab:cod_non_cod_proportions}.
-The proportion of coding sites that have substitutions, and non-coding sites that have substitutions are about the same (5\% - 10\% of sites).
-The only concerning thing is that because we are now only looking at sites in the alignment where all taxa are the same classification (codon position 1, 2, 3, non-coding...etc), we are now only looking at less than half of the total sites in the genome.
-I am slightly concerned that some of the regions in the genome may be underrepresented. What are your thoughts on this?
-
-I realized when working through the dN/dS pipeline that there was still ``stop'' codons present and so I then realized that I forgot to account for the reverse complement of the sequence. So I had to add in this extra step into the pipeline, and re-run the coding/non-coding substitution analysis.
-
-I worked on writing the methods, results and discussion for the gene expression paper/letter.
-I also have started working on my presentation for the OE3C, I have most of the intro, and results.
-
-
-%The only thing I noticed with PAML is that it puts ``???'' when there is a stop codon. This happens a lot in my test Block (87.5\% of the genes in this block had this warning pop up). It looks like PAML is just putting in the question marks and ignoring that there is a stop coding because it assumes you are giving it a whole gene so there should not be any stop codons within the genes. So I think this is fine? and I can keep using these genes? Please correct me if I am wrong. But also this should get fixed when I start making codon alignments of each gene because there should not be any start or stop codons within the genes.
+I talked to you about the weirdly high dN/dS ratios. These are because in some of the blocks/sections there are ONLY non-synonymous substitutions, and so the ratio is undefined and codeml really freaks out and gives high ratios like 999.99.
+Codeml also freaks out and gives wonky ratios when there are no substitutions.
+However, we discussed this and you suggested just taking the total counts of non-synonymous and synonymous substitutions and dividing this by the total number of sites and then get ratios based on that.
 
 %For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
 %However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
@@ -304,10 +292,6 @@ I also have started working on my presentation for the OE3C, I have most of the 
 %Also need to check if the inversions identified by \p and PARSNP are the same.
 
 %%%%%%%%%%%%%%%%%bring these up next time!!!
-%I also re-calculated the proportion of coding and non-coding subs in each of those sections in the genome (table below).
-%They all match what we expect in that there is more coding than non-coding regions. And that there are proportionally more substitutions in non-coding than coding regions. However, \bass seems to not follow this last trend, having a higher proportion of its substitutions in the coding regions.
-
-%	\item I was looking at PAML to do this calculation but I am unsure of what parameters to use? (i.e. for the codon frequency model?) and would this be a pairwise dN/dS in codeml?
 
 %I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
 %It did not change the logistic regression results (seen below).
@@ -329,18 +313,17 @@ I also have started working on my presentation for the OE3C, I have most of the 
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I realized that I made a slight mistake in the genome positions that each block prints out, so I have fixed this and need to re-do the substitution analysis again. I began this process this past weekend but it takes some time to run so I am still working on this.
+I would like to figure out how to combine the dN/dS results into one summary table for each of the bacteria and calculate the actual number of synonymous and non-synonymous substitutions.
 
-I would like to run the dN/dS pipeline on all of the replicons.
+I also want to finish re-running the coding/non-coding analysis.
 
-I would like to have a presentation complete for the OE3C so I can practice it in front of everyone next week.
+I would like to look at how to obtain all inversions from Mauve or PARSNP alignment for the inversions and gene expression analysis.
  
 \section*{Next Week}
 
-I want to begin figuring out how to obtain all inversions from the Mauve or PARSNP alignment for the inversions analysis.
+Create histograms with the total number of genes in each 10kb section of the genome to supplement the gene expression analysis.
 
-I will mostly be at the OE3C conference (May 2-4).
-
+Continue working on the inversions and gene expression analysis.
 \newpage
 
 
@@ -364,6 +347,27 @@ I will mostly be at the OE3C conference (May 2-4).
 %		\end{minipage}}
 %	\end{table}	
 
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lrr}
+			\toprule
+			& \multicolumn{2}{c}{dN/dS Ratio}\\
+			\cmidrule{2-3}
+			Bacteria and Replicon & Gene Average & Genome Average\\
+			\midrule
+			\ecol Chromosome &  & 0.0612  \\
+			\bass Chromosome &   & 0.0911 \\
+			\strep Chromosome &  &  \\
+			\smel Chromosome &   & 157.0089 \\
+			\smel pSymA &  & 30.1216 \\
+			\smel pSymB &  & 21.0320\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:dN_dS_ratios} dN/dS ratio calculated for each bacteria on a per gene and per genome basis. The per gene average was calculated by taking the average dN/dS of each gene, and then averaging these. The per genome average was calculated by taking the average of all dN/dS ratios.}
+\end{table}
 
 \begin{table}[h]
 	\centering
@@ -377,7 +381,7 @@ I will mostly be at the OE3C conference (May 2-4).
 			\strep Chromosome & 8497577 & 4419337 & 21581 & 300724 & 3670\\ % 7628849/8667507
 			\smel Chromosome & 3426881 & 1931139 & 199425 & 5141 & 842\\ % 3130925/3654135
 			\smel pSymA & 1455940 & 419223 & 34213 & 7647 & 943\\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & 1664597 & 552816 & 22098 & 10032 & 645\\ % 1493048/1683333
+			\smel pSymB & 1664597 & 552816 & 22098 & 11699 & 645\\ % 1493048/1683333
 			\bottomrule
 		\end{tabular}
 		
