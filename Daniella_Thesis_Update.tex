@@ -350,24 +350,27 @@ Continue working on the inversions and gene expression analysis.
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrrrrr}
+		\begin{tabular}{lrrrrrrrrr}
 			\toprule
-			& \multicolumn{3}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
-			\cmidrule{2-4}
-			\cmidrule{5-7}
-			Bacteria and Replicon & dS & dN & $\omega$ & dS & dN & $\omega$ \\
+			& \multicolumn{6}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
+			\cmidrule{2-7}
+			\cmidrule{8-10}
+			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & & & \\
+			\cmidrule{2-3}
+			\cmidrule{4-7}
+			Bacteria and Replicon & dS & dN & $\omega$  & dS & dN & $\omega$ & dS & dN & $\omega$ \\
 			\midrule
-			\ecol Chromosome & & & & 0.2600 & 0.0133 & 0.0557 \\
-			\bass Chromosome & & & & 0.5267 & 0.0321& 0.0828\\
-			\strep Chromosome &  & & & 0.1775 & 0.3017 & 2.4358 \\
-			\smel Chromosome &   & & & 0.0134& 0.0013& 161.7983 \\
-			\smel pSymA &  & & & 0.0800 & 0.0103 & 22.6539\\
-			\smel pSymB &  & & & 0.0782 & 0.0082 & 13.0893\\
+			\ecol Chromosome & 0.2600 & 0.0133 & 0.0557 & 0.2924 & 0.0144& 0.0606 & 0.2600 & 0.0133 & 0.0557 \\
+			\bass Chromosome & 0.5267& 0.0321& 0.0828& 0.6526& 0.0358& 0.0890& 0.5267 & 0.0321& 0.0828\\
+			\strep Chromosome & 0.1775& 0.3017& 2.4358& 0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
+			\smel Chromosome & 0.0134& 0.0013& 161.7983& 0.0134  & 0.0014& 157.5133& 0.0134& 0.0013& 161.7983 \\
+			\smel pSymA & 0.0800& 0.0103& 22.6539& 0.0798 & 0.0109& 30.4988& 0.0800 & 0.0103 & 22.6539\\
+			\smel pSymB & 0.0782& 0.0082& 13.0893& 0.0814 & 0.0086& 20.8251& 0.0782 & 0.0082 & 13.0893\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:dN_dS_ratios} dN/dS ratio calculated for each bacteria on a per gene and per genome basis. The per gene average was calculated by taking the average dN/dS of each gene, and then averaging these. The per genome average was calculated by taking the average of all dN/dS ratios.}
+	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacteria on a per gene and per genome basis. Averages are weighted by gene length for the per gene averages, and by section length for the per genome averages.}
 \end{table}
 
 \begin{table}[h]
