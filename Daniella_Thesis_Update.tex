@@ -1,4 +1,4 @@
-\left( \documentclass[12pt]{article}
+\documentclass[12pt]{article}
 \usepackage{scrtime} % for \thistime (this package MUST be listed first!)
 \usepackage[margin=0.75in]{geometry}
 \usepackage{graphicx}
@@ -10,7 +10,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 \pagestyle{fancy}
-%\setlength{\headheight}{15.2pt}
+\setlength{\headheight}{15.2pt}
 \setlength{\headsep}{13 pt}
 \setlength{\parindent}{28 pt}
 \setlength{\parskip}{12 pt}
@@ -350,18 +350,19 @@ Continue working on the inversions and gene expression analysis.
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrr}
+		\begin{tabular}{lrrrrrr}
 			\toprule
-			& \multicolumn{2}{c}{dN/dS Ratio}\\
-			\cmidrule{2-3}
-			Bacteria and Replicon & Gene Average & Genome Average\\
+			& \multicolumn{3}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
+			\cmidrule{2-4}
+			\cmidrule{5-7}
+			Bacteria and Replicon & dS & dN & $\omega$ & dS & dN & $\omega$ \\
 			\midrule
-			\ecol Chromosome &  & 0.0612  \\
-			\bass Chromosome &   & 0.0911 \\
-			\strep Chromosome &  &  \\
-			\smel Chromosome &   & 157.0089 \\
-			\smel pSymA &  & 30.1216 \\
-			\smel pSymB &  & 21.0320\\
+			\ecol Chromosome & & & & 0.2600 & 0.0133 & 0.0557 \\
+			\bass Chromosome & & & & 0.5267 & 0.0321& 0.0828\\
+			\strep Chromosome &  & & & 0.1775 & 0.3017 & 2.4358 \\
+			\smel Chromosome &   & & & 0.0134& 0.0013& 161.7983 \\
+			\smel pSymA &  & & & 0.0800 & 0.0103 & 22.6539\\
+			\smel pSymB &  & & & 0.0782 & 0.0082 & 13.0893\\
 			\bottomrule
 		\end{tabular}
 		
@@ -397,7 +398,6 @@ Continue working on the inversions and gene expression analysis.
 		\begin{tabular}{lcc}
 			\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
-			\midrule
 			\ecol Chromosome & \cc -9.983\e{-8}*** &  6.994\e{-8}*** \\
 			\bass Chromosome & \cc-1.071\e{-7}***  & \cc -9.861\e{8}*** \\
 			\strep Chromosome & \cc -2.626\e{-8}***  & 3.615\e{-7}*** \\
