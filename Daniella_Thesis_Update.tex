@@ -139,7 +139,7 @@
 	
 	\item \sout{check if each gene alignment is a multiple of 3 (proper codon alignment)}
 	
-	\item get dN/dS for coding/non-coding stuff per gene
+	\item \sout{get dN/dS for coding/non-coding stuff per gene}
 	 
 	\item Or get 1st, 2nd, 3rd codon pos log regs
 	
@@ -232,9 +232,9 @@
 	\item \sout{read papers about inversions}
 	
 	
-	\item check if opposite strand in \p means an inversions (check visual matches the xmfa)
+	\item \sout{check if opposite strand in \p means an inversions (check visual matches the xmfa)}
 	
-	\item check if PARSNP and \p both identify the same inversions (check xmfa file)
+	\item \sout{check if PARSNP and \p both identify the same inversions (check xmfa file)}
 	\item create latex template for paper
 	\item \sout{put notes from papers into doc}
 	\item use large PARSNP alignment to identify inversions
@@ -257,16 +257,43 @@
 	
 \section*{Last Week}
 
-Preparing for the OE3C conference and the conference itself took up majority of my time last week.
+\ch Finished re-running the coding and non-coding substitution analysis (Table \ref{tab:cod_non_cod_log_reg})
 
-Other than that, I noticed that I was still getting some random ``stop'' codons in the codeml analysis so I have been looking into this further and found that since we are only using one taxa to specify the gene starts and stops, there are some rare cases where in the reference taxa the codon is TGG but this has been changed in one of the other taxa to TGA (stop codon) so this whole column is therefore omitted from the rest of the dN/dS analysis. 
-I think this situation is unavoidable and since the column is removed anyways it should not impact the results. This also happens rarely.
+\ch Get per gene and per genome dN, dS, and $\omega$ results (Table \ref{tab:dN_dS_ratios})
 
-I also realized that for some reason some of the blocks did not run for the coding/non-coding substitution analysis... so I am currently re-running those. I do not expect the results to change that much.
+\ch started thinking more about inversions and gene expression
 
-I talked to you about the weirdly high dN/dS ratios. These are because in some of the blocks/sections there are ONLY non-synonymous substitutions, and so the ratio is undefined and codeml really freaks out and gives high ratios like 999.99.
-Codeml also freaks out and gives wonky ratios when there are no substitutions.
-However, we discussed this and you suggested just taking the total counts of non-synonymous and synonymous substitutions and dividing this by the total number of sites and then get ratios based on that.
+\ch check if opposite strand in \p means an inversions (check visual matches the xmfa)
+
+\ch check if PARSNP and \p both identify the same inversions (check xmfa file)
+
+I re-ran the coding and non-coding substitution analysis because I realized that my genome position numbering was off for the blocks. The results are still the same and can be found in Table \ref{tab:cod_non_cod_log_reg}. The updated distribution of substitutions histograms are also below.
+
+\textbf{dN, dS, $\omega$}
+Calculated the per gene and per genome dN, dS, and $\omega$ results for each bacteria. For the per gen rates I calculated both a weighted average (weighted by the length of the gene) and the non-weighted average to see if there was a big difference.
+In doing this, I noticed that my calculations for the per genome and weighted per gene averages were the same... So I need to look into this more to see what is happening.
+
+I was also thinking about maybe associating each of the dN, dS, and $\omega$ averages per gene with the midpoint of that gene and getting a distribution of these rates across the genome. But I am not sure if this is useful or conventional. Thoughts?
+
+
+\textbf{Inversions and Gene Expression:}
+
+I have been thinking about the inversions and gene expression project a lot this week and the only bacteria that has enough gene expression data is \ecol. So all analysis will have to be done on only that.
+I have 3 strains of \ecol gene expression data: k-12, ATCC, and Saki. Within K-12, I have 3 substrains: MG1655, DH108 and BW25113. Which makes for a total of 5 genomes. 
+I was thinking about maybe doing the same ancestral reconstruction process with these 5 strains but I am not sure of a few things:
+\begin{itemize}
+	\item Is 5 genomes going to provide enough data/information?
+	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
+	\item or should I have all positions in the gene have the same expression value?
+\end{itemize}
+Re-doing this analysis should not be too bad but would require me to re-code a few things to make the new data work. 
+
+I was also wondering if an inversion and reverse complement of a sequence is the same thing? That is, does an inverted piece of sequence have to be the reverse complement to be re-inserted into the genome?
+Another thing that I realized is that \p and PARSNP both allow for the blocks to be present in different parts of the genome for the different taxa. So this would be blending the rearrangements information and inversions information. Which then I am not sure if we can say that the gene expression differences are due to inversions alone unless we correct for this some how.
+But overall, PARSNP and \p are identifying the same large inversions, the only difference is that PARSNP can identify very small inversions better.
+I think this is because \p is trying to make the biggest blocks possible and is aligning the whole genome, where as PARSNP is just doing the core genome.
+Another difference is that PARSNP has very very few gaps in its alignment, I think this a result from aligning just the core? Not sure how this will impact future results.
+
 
 %For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
 %However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
@@ -313,17 +340,19 @@ However, we discussed this and you suggested just taking the total counts of non
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-I would like to figure out how to combine the dN/dS results into one summary table for each of the bacteria and calculate the actual number of synonymous and non-synonymous substitutions.
+Continue to check in with the dN/dS stuff and make sure my per gene and genome rates are correct and try to interpret these!
 
-I also want to finish re-running the coding/non-coding analysis.
+I would like to obtain all inversions from Mauve or PARSNP alignment for the inversions and gene expression analysis.
 
-I would like to look at how to obtain all inversions from Mauve or PARSNP alignment for the inversions and gene expression analysis.
+I want to work on finishing up some scholarships for travel to SMBE.
  
 \section*{Next Week}
 
 Create histograms with the total number of genes in each 10kb section of the genome to supplement the gene expression analysis.
 
 Continue working on the inversions and gene expression analysis.
+
+Write up interpretation of dN/dS results.
 \newpage
 
 
@@ -355,17 +384,17 @@ Continue working on the inversions and gene expression analysis.
 			& \multicolumn{6}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
 			\cmidrule{2-7}
 			\cmidrule{8-10}
-			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & & & \\
+			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
 			\cmidrule{2-3}
 			\cmidrule{4-7}
 			Bacteria and Replicon & dS & dN & $\omega$  & dS & dN & $\omega$ & dS & dN & $\omega$ \\
 			\midrule
-			\ecol Chromosome & 0.2600 & 0.0133 & 0.0557 & 0.2924 & 0.0144& 0.0606 & 0.2600 & 0.0133 & 0.0557 \\
-			\bass Chromosome & 0.5267& 0.0321& 0.0828& 0.6526& 0.0358& 0.0890& 0.5267 & 0.0321& 0.0828\\
+			\ecol Chromosome & 0.2600 & 0.0133 & 0.0556 & 0.2924 & 0.0144& 0.0604 & 0.2600 & 0.0133 & 0.0556 \\
+			\bass Chromosome & 0.5267& 0.0321& 0.0828& 0.6526& 0.0358& 0.0891& 0.5267 & 0.0321& 0.0828\\
 			\strep Chromosome & 0.1775& 0.3017& 2.4358& 0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
-			\smel Chromosome & 0.0134& 0.0013& 161.7983& 0.0134  & 0.0014& 157.5133& 0.0134& 0.0013& 161.7983 \\
-			\smel pSymA & 0.0800& 0.0103& 22.6539& 0.0798 & 0.0109& 30.4988& 0.0800 & 0.0103 & 22.6539\\
-			\smel pSymB & 0.0782& 0.0082& 13.0893& 0.0814 & 0.0086& 20.8251& 0.0782 & 0.0082 & 13.0893\\
+			\smel Chromosome & 0.0134& 0.0013& 0.0930& 0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
+			\smel pSymA & 0.0800& 0.0103& 0.2218& 0.0798 & 0.0109& 0.2320& 0.0800 & 0.0103 & 0.2218\\
+			\smel pSymB & 0.0782& 0.0082& 0.1590& 0.0814 & 0.0086& 0.1639& 0.0782 & 0.0082 & 0.1590\\
 			\bottomrule
 		\end{tabular}
 		
@@ -401,6 +430,7 @@ Continue working on the inversions and gene expression analysis.
 		\begin{tabular}{lcc}
 			\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
+			\midrule
 			\ecol Chromosome & \cc -9.983\e{-8}*** &  6.994\e{-8}*** \\
 			\bass Chromosome & \cc-1.071\e{-7}***  & \cc -9.861\e{8}*** \\
 			\strep Chromosome & \cc -2.626\e{-8}***  & 3.615\e{-7}*** \\
@@ -417,17 +447,17 @@ Continue working on the inversions and gene expression analysis.
 
 Sub density graphs with coding and non-coding information
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_25Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9May19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_25Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_26Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_8May19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_25Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_25Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_25Apr19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
 
 Gene expression graphs
 
