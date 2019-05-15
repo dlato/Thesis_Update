@@ -356,6 +356,15 @@ Write up interpretation of dN/dS results.
 \newpage
 
 
+Box plots for per gene dN, dS, and $\omega$
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ecoli_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/bass_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/strep_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/sinoC_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/pSymA_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/pSymB_dN_dS_omega_box_plot.pdf}
+
 
 %Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
 %\begin{table}[h]
@@ -379,28 +388,54 @@ Write up interpretation of dN/dS results.
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrrrrrrrr}
+		\begin{tabular}{lrrrrrr}
 			\toprule
-			& \multicolumn{6}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
+			& \multicolumn{3}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
 			\cmidrule{2-7}
-			\cmidrule{8-10}
-			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			\cmidrule{2-3}
-			\cmidrule{4-7}
-			Bacteria and Replicon & dS & dN & $\omega$  & dS & dN & $\omega$ & dS & dN & $\omega$ \\
+%			\cmidrule{8-10}
+%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+%			\cmidrule{2-3}
+%			\cmidrule{4-7}
+			Bacteria and Replicon &  dS & dN & $\omega$ & dS & dN & $\omega$ \\
 			\midrule
-			\ecol Chromosome & 0.2600 & 0.0133 & 0.0556 & 0.2924 & 0.0144& 0.0604 & 0.2600 & 0.0133 & 0.0556 \\
-			\bass Chromosome & 0.5267& 0.0321& 0.0828& 0.6526& 0.0358& 0.0891& 0.5267 & 0.0321& 0.0828\\
-			\strep Chromosome & 0.1775& 0.3017& 2.4358& 0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
-			\smel Chromosome & 0.0134& 0.0013& 0.0930& 0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
-			\smel pSymA & 0.0800& 0.0103& 0.2218& 0.0798 & 0.0109& 0.2320& 0.0800 & 0.0103 & 0.2218\\
-			\smel pSymB & 0.0782& 0.0082& 0.1590& 0.0814 & 0.0086& 0.1639& 0.0782 & 0.0082 & 0.1590\\
+			\ecol Chromosome & 0.2924 & 0.0144& 0.0604 & 0.2600 & 0.0133 & 0.0556 \\
+			\bass Chromosome & 0.6526& 0.0358& 0.0891& 0.5267 & 0.0321& 0.0828\\
+			\strep Chromosome &  0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
+			\smel Chromosome &  0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
+			\smel pSymA & 0.0798 & 0.0109& 0.2320& 0.0800 & 0.0103 & 0.2218\\
+			\smel pSymB & 0.0814 & 0.0086& 0.1639& 0.0782 & 0.0082 & 0.1590\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacteria on a per gene and per genome basis. Averages are weighted by gene length for the per gene averages, and by section length for the per genome averages.}
+	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
 \end{table}
+
+%\begin{table}[h]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lrrrrrrrrr}
+%			\toprule
+%			& \multicolumn{6}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
+%			\cmidrule{2-7}
+%			\cmidrule{8-10}
+%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+%			\cmidrule{2-3}
+%			\cmidrule{4-7}
+%			Bacteria and Replicon & dS & dN & $\omega$  & dS & dN & $\omega$ & dS & dN & $\omega$ \\
+%			\midrule
+%			\ecol Chromosome & 0.2600 & 0.0133 & 0.0556 & 0.2924 & 0.0144& 0.0604 & 0.2600 & 0.0133 & 0.0556 \\
+%			\bass Chromosome & 0.5267& 0.0321& 0.0828& 0.6526& 0.0358& 0.0891& 0.5267 & 0.0321& 0.0828\\
+%			\strep Chromosome & 0.1775& 0.3017& 2.4358& 0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
+%			\smel Chromosome & 0.0134& 0.0013& 0.0930& 0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
+%			\smel pSymA & 0.0800& 0.0103& 0.2218& 0.0798 & 0.0109& 0.2320& 0.0800 & 0.0103 & 0.2218\\
+%			\smel pSymB & 0.0782& 0.0082& 0.1590& 0.0814 & 0.0086& 0.1639& 0.0782 & 0.0082 & 0.1590\\
+%			\bottomrule
+%		\end{tabular}
+%		
+%	}%resizebox
+%	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacteria on a per gene and per genome basis. Averages are weighted by gene length for the per gene averages, and by section length for the per genome averages.}
+%\end{table}
 
 \begin{table}[h]
 	\centering
