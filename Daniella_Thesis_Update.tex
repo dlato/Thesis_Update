@@ -56,6 +56,8 @@
 \newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \newcommand{\ch}{$\checkmark$}
+\newcommand{\dn}{\textit{dN}\xspace}
+\newcommand{\ds}{\textit{dS}\xspace}
 \begin{document}
 %	Nov 30:	Create graphs with slopes for each COG
 	
@@ -257,43 +259,42 @@
 	
 \section*{Last Week}
 
-\ch Finished re-running the coding and non-coding substitution analysis (Table \ref{tab:cod_non_cod_log_reg})
+\ch re-calculate $\omega$ excluding the values that should be undefined or zero
 
-\ch Get per gene and per genome dN, dS, and $\omega$ results (Table \ref{tab:dN_dS_ratios})
+\ch first interpretation of \dn \ds results
 
-\ch started thinking more about inversions and gene expression
+\ch boxplots of \dn, \ds, and $\omega$ for each bacteria
 
-\ch check if opposite strand in \p means an inversions (check visual matches the xmfa)
-
-\ch check if PARSNP and \p both identify the same inversions (check xmfa file)
-
-I re-ran the coding and non-coding substitution analysis because I realized that my genome position numbering was off for the blocks. The results are still the same and can be found in Table \ref{tab:cod_non_cod_log_reg}. The updated distribution of substitutions histograms are also below.
+\ch apply to GSA travel scholarship
 
 \textbf{dN, dS, $\omega$}
-Calculated the per gene and per genome dN, dS, and $\omega$ results for each bacteria. For the per gen rates I calculated both a weighted average (weighted by the length of the gene) and the non-weighted average to see if there was a big difference.
-In doing this, I noticed that my calculations for the per genome and weighted per gene averages were the same... So I need to look into this more to see what is happening.
 
-I was also thinking about maybe associating each of the dN, dS, and $\omega$ averages per gene with the midpoint of that gene and getting a distribution of these rates across the genome. But I am not sure if this is useful or conventional. Thoughts?
+I re-calculated the average $\omega$ values excluding anything that had \ds = 0 or both \dn and \ds = 0 which should give $\omega$ a value of 0 or being undefined. The results make WAY more sense now and are in Table \ref{tab:dN_dS_ratios}.
 
+For the \dn, \ds results we see that for all the replicons that have $\omega$ < 1, \dn < \ds, as it should be.
+The only replicon that has and $\omega$ > 1 is \strep and it has \dn > \ds, also as it should be.
+So, using the classic definition of what it means to have $\omega$ > 1, the mutations here are going through positive selection which kind of makes sense because for \strep we are looking at different SPECIES so they are collectively trying to gain an advantage.
+Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
+What are your thoughts on this?
+
+\textbf{Boxplots}
+I made boxplots for each bacterial replicon and they can be seen below.
+For \ecol and \bas we can see there are a lot of outliers in both \dn and \ds.
+For \pa and \pb there are a few outliers in \dn but none anywhere else.
+\smel Chromosome looks really weird because there are so many 0 values for \dn, \ds, and $\omega$.
+Thoughts on these?
 
 \textbf{Inversions and Gene Expression:}
+Still not sure if I should be using the \p or PARSNP alignments for this analysis. I think PARSNP is better because it gives even tiny inversions that \p sometimes misses. But \p has the core and pan-genome, so I am not sure if that is more ideal.
+But we are dealing with the same strains of \ecol so most genes should be a part of the core and we do see that most of the genome is included in the alignment (see picture below). So maybe PARSNP is fine?
+What are your thoughts?
+%\begin{itemize}
+%	\item Is 5 genomes going to provide enough data/information?
+%	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
+%	\item or should I have all positions in the gene have the same expression value?
+%\end{itemize}
 
-I have been thinking about the inversions and gene expression project a lot this week and the only bacteria that has enough gene expression data is \ecol. So all analysis will have to be done on only that.
-I have 3 strains of \ecol gene expression data: k-12, ATCC, and Saki. Within K-12, I have 3 substrains: MG1655, DH108 and BW25113. Which makes for a total of 5 genomes. 
-I was thinking about maybe doing the same ancestral reconstruction process with these 5 strains but I am not sure of a few things:
-\begin{itemize}
-	\item Is 5 genomes going to provide enough data/information?
-	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
-	\item or should I have all positions in the gene have the same expression value?
-\end{itemize}
-Re-doing this analysis should not be too bad but would require me to re-code a few things to make the new data work. 
-
-I was also wondering if an inversion and reverse complement of a sequence is the same thing? That is, does an inverted piece of sequence have to be the reverse complement to be re-inserted into the genome?
-Another thing that I realized is that \p and PARSNP both allow for the blocks to be present in different parts of the genome for the different taxa. So this would be blending the rearrangements information and inversions information. Which then I am not sure if we can say that the gene expression differences are due to inversions alone unless we correct for this some how.
-But overall, PARSNP and \p are identifying the same large inversions, the only difference is that PARSNP can identify very small inversions better.
-I think this is because \p is trying to make the biggest blocks possible and is aligning the whole genome, where as PARSNP is just doing the core genome.
-Another difference is that PARSNP has very very few gaps in its alignment, I think this a result from aligning just the core? Not sure how this will impact future results.
-
+I also started to work on getting genomic positions associated with each \dn, \ds and $\omega$ value to show the distribution of these across the genome.
 
 %For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
 %However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
@@ -340,11 +341,11 @@ Another difference is that PARSNP has very very few gaps in its alignment, I thi
 %aim to tick off 4 tasks a week
 %
 %This week I would like to figure out how to calculate dN/dS for the substitution data.
-Continue to check in with the dN/dS stuff and make sure my per gene and genome rates are correct and try to interpret these!
-
 I would like to obtain all inversions from Mauve or PARSNP alignment for the inversions and gene expression analysis.
 
 I want to work on finishing up some scholarships for travel to SMBE.
+
+I want to get graphs showing the distribution of \dn, \ds, and $\omega$ across genomic position.
  
 \section*{Next Week}
 
