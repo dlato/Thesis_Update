@@ -7,7 +7,7 @@
 %\usepackage{underscore}
 \usepackage{pdfpages}
 \usepackage{xcolor,colortbl}%for changing cell colour
-\usepackage{longtable}00
+\usepackage{longtable}
 \usepackage{booktabs}
 \pagestyle{fancy}
 \setlength{\headheight}{15.2pt}
@@ -216,9 +216,9 @@
 	
 	\item \sout{write discussion}
 	
-	\item write conclusion
+	\item \sout{write conclusion}
 	
-	\item add into methods: filters for Hiseq, RT PCR and growth phases for data collection
+	\item \sout{add into methods: filters for Hiseq, RT PCR and growth phases for data collection}
 	
 	\item update supplementary figures/file
 	
@@ -239,7 +239,7 @@
 	\item \sout{check if PARSNP and \p both identify the same inversions (check xmfa file)}
 	\item create latex template for paper
 	\item \sout{put notes from papers into doc}
-	\item use large PARSNP alignment to identify inversions
+	\item \sout{use large PARSNP alignment to identify inversions}
 	\item confirm inversions with dot plot
 	\item write outline for letter
 	\item write Abstract
@@ -259,46 +259,33 @@
 	
 \section*{Last Week}
 
-\ch  write \dn/\ds methods
+\ch  use large PARSNP alignment to identify inversions
 
-\ch write \dn/\ds results
+\ch fix box plots for \dn, \ds, $\omega$
 
-\ch write  \dn/\ds discussion
+\ch fixed the distribution of \dn, \ds, and $\omega$ across the genome graphs
 
-\ch write  \dn/\ds conclusion
-
-\ch apply to Biology Travel Scholarship
-
-\ch create graphs for expression distribution (no sub data)
-
-\ch add \# of genes to expression graphs (top)
+\ch write discussion and conclusion for gene expression paper
 
 
-\textbf{dN, dS, $\omega$:}
+%\textbf{dN, dS, $\omega$:}
 
-For the \dn, \ds results (Table \ref{tab:dN_dS_ratios}) we see that for all the replicons that have $\omega$ < 1, \dn < \ds, as it should be.
-The only replicon that has and $\omega$ > 1 is \strep and it has \dn > \ds, also as it should be.
-So, using the classic definition of what it means to have $\omega$ > 1, the mutations here are going through positive selection which kind of makes sense because for \strep we are looking at different SPECIES so they are collectively trying to gain an advantage.
-Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
-What are your thoughts on this?
+%For the \dn, \ds results (Table \ref{tab:dN_dS_ratios}) we see that for all the replicons that have $\omega$ < 1, \dn < \ds, as it should be.
+%The only replicon that has and $\omega$ > 1 is \strep and it has \dn > \ds, also as it should be.
+%So, using the classic definition of what it means to have $\omega$ > 1, the mutations here are going through positive selection which kind of makes sense because for \strep we are looking at different SPECIES so they are collectively trying to gain an advantage.
+%Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
+%What are your thoughts on this?
 
-\textbf{Boxplots:}
+I fixed some issues with the box plots and decided to change them to violin plots to be more  informative (and because jitter was not working on the box plots).
+They are now al on one scale and in one picture (see below).
+Please let me know what you think of these.
 
-I made boxplots for each bacterial replicon and they can be seen below.
-For \ecol and \bas we can see there are a lot of outliers in both \dn and \ds.
-For \pa and \pb there are a few outliers in \dn but none anywhere else.
-\smel Chromosome looks really weird because there are so many 0 values for \dn, \ds, and $\omega$.
-Thoughts on these?
 
-\textbf{\dn, \ds, $\omega$ Genomic Position Distribution:}
+I tweaked the figures to show the distribution of \dn, \ds, $\omega$ across the genome.
+I was also wondering if I should be fitting a regression to the \dn, \ds, and $\omega$ data to see how those three values change (if at all) with genomic position? although to me the graphs look pretty non-linear.
+Thoughts?
 
-I made some new figures to show the distribution of \dn, \ds, $\omega$ across the genome. What are your thoughts on this? Do you think they are useful?
 
-\textbf{Inversions and Gene Expression:}
-
-Still not sure if I should be using the \p or PARSNP alignments for this analysis. I think PARSNP is better because it gives even tiny inversions that \p sometimes misses. But \p has the core and pan-genome, so I am not sure if that is more ideal.
-But we are dealing with the same strains of \ecol so most genes should be a part of the core and we do see that most of the genome is included in the alignment (see picture below). So maybe PARSNP is fine?
-What are your thoughts?
 %\begin{itemize}
 %	\item Is 5 genomes going to provide enough data/information?
 %	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
@@ -349,34 +336,40 @@ What are your thoughts?
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-%This week I would like to figure out how to calculate dN/dS for the substitution data.
-I would like to obtain all inversions from Mauve or PARSNP alignment for the inversions and gene expression analysis.
 
-I need to fix one weird thing that seems to be happening with the distribution of \dn \ds and $\omega$ across the genome graphs. This should not take me too long to fix.
-
-Write discussion and conclusion for gene expression paper. 
- 
-\section*{Next Week}
+I need to look into two things with the violin plots and the distribution of \dn/\ds across the genome.
 
 Continue working on the inversions and gene expression analysis, by confirming inversions with a dot plot.
 
+Write an abstract for the gene expression paper. 
+
+I would like to calculate the average gene expression per genome to add to the gene expression paper.
 
 Come up with more in-depth interpretation of selection results, add to subs paper.
+ 
+\section*{Next Week}
 
-write abstract for gene expression paper.
+Do final edits on the substitutions and gene expression papers so I can send you completed drafts of both.
+
+Start thinking about poster for SMBE.
+
+Continue working on inversions and gene expression
 
 \newpage
 
 
-Box plots for per gene dN, dS, and $\omega$
+Violin plots for per gene dN, dS, and $\omega$:
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ecoli_dN_dS_omega_box_plot.pdf}
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/bass_dN_dS_omega_box_plot.pdf}
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/strep_dN_dS_omega_box_plot.pdf}
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/sinoC_dN_dS_omega_box_plot.pdf}
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/pSymA_dN_dS_omega_box_plot.pdf}
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/pSymB_dN_dS_omega_box_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ALL_BAC_dN_dS_omega_violinplots_4Jun19.pdf}
 
+Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/ecoli_dN_dS_omega_dist_3Jun19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/bass_dN_dS_omega_dist_3Jun19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/strep_dN_dS_omega_dist_3Jun19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/sinoC_dN_dS_omega_dist_3Jun19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymA_dN_dS_omega_dist_3Jun19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_3Jun19.pdf}
 
 %Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
 %\begin{table}[h]
@@ -492,42 +485,42 @@ Box plots for per gene dN, dS, and $\omega$
 \end{table}
 	
 
-Sub density graphs with coding and non-coding information
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9May19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_8May19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
-
-Gene expression graphs
-
-% Gene Exp graphs
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-
-
-
-
-\includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
-
-\includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
-
+%Sub density graphs with coding and non-coding information
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9May19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_8May19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_7May19.pdf}
+%
+%Gene expression graphs
+%
+%% Gene Exp graphs
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%
+%
+%
+%
+%\includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
+%
+%\includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
+%
 
 %\begin{table}[h]
 %	\centering
@@ -684,7 +677,7 @@ Gene expression graphs
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Grey coloured boxes indicate statistically significant results at the 0.5 significance level. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
 \end{table}
 
 %\begin{table}[b!]
