@@ -202,17 +202,17 @@
 %	
 %	\item \sout{put notes from $\uparrow$ papers into word doc}
 %	
-	\item write abstract
+	\item \sout{write abstract}
 	
 	\item \sout{write intro}
 	
-	\item add stuff from outline to Data section
+	\item \sout{add stuff from outline to Data section}
 	
 	\item \sout{create graphs for expression distribution (no sub data)}
 	
 	\item \sout{add \# of genes to expression graphs (top)}
 	
-	\item average gene expression
+	\item \sout{average gene expression}
 	
 	\item \sout{write discussion}
 	
@@ -259,13 +259,15 @@
 	
 \section*{Last Week}
 
-\ch  use large PARSNP alignment to identify inversions
+\ch fixed/looked at weird points in the genome distribution of \dn, \ds, and $\omega$ graphs
 
-\ch fix box plots for \dn, \ds, $\omega$
+\ch write abstract for gene expression paper
 
-\ch fixed the distribution of \dn, \ds, and $\omega$ across the genome graphs
+\ch write code to get the gene name associated with each \dn, \ds, and $\omega$ value
 
-\ch write discussion and conclusion for gene expression paper
+\ch calculate average gene expression value for each replicon and gene expression paper
+
+\ch look into dot plot for inversions paper
 
 
 %\textbf{dN, dS, $\omega$:}
@@ -276,16 +278,26 @@
 %Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
 %What are your thoughts on this?
 
-I fixed some issues with the box plots and decided to change them to violin plots to be more  informative (and because jitter was not working on the box plots).
-They are now al on one scale and in one picture (see below).
-Please let me know what you think of these.
+I looked into the weird points of the distribution of \dn, \ds, and $\omega$ across the genome and the points where \ds is higher than \dn = $\omega$ are real, and the high number of \ds = 0 points in \smel chrom is also real. We discussed this and you said to just leave everything the way it is. 
 
 
-I tweaked the figures to show the distribution of \dn, \ds, $\omega$ across the genome.
+I looked into a number of programs that create a dot plot from an alignment or two genomes.
+There are lots of different programs like MUMerplot (which needs its own alignment), D-GENIES (only AA seqs), Dotlet (no command line), Dotter, Dotplot (need to install, makes its own alignment), and LAST (uses its own alignment, good for big data but talks about mapping reads..).
+Dotter is already on the machines so I was playing with that. 
+To align 2 whole \ecoli genomes took 7 days in Dotter. I am still working out how to save the resulting dot plot and make it look nice. The GUI seems to freeze sometimes so this is difficult. But I am working on it!
+
+I also started looking into why \pb is missing so much data, and why \strep had \dn > \ds for the whole genome. I think these two may be related to a small issue in my code. I am still testing this now.
+
+I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
+Do you think this is something that needs to be put into the gene expression paper?
+
+
+I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is almost done.
+
 I was also wondering if I should be fitting a regression to the \dn, \ds, and $\omega$ data to see how those three values change (if at all) with genomic position? although to me the graphs look pretty non-linear.
 Thoughts?
 
-
+I have also pretty much finished paper drafts for the Substitutions paper and the gene expression paper.
 %\begin{itemize}
 %	\item Is 5 genomes going to provide enough data/information?
 %	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
@@ -336,31 +348,28 @@ Thoughts?
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
+\textcolor{blue}{Reminder that I will be away from June 14-19th camping in Calgary}
 
-I need to look into two things with the violin plots and the distribution of \dn/\ds across the genome.
+I need to continue to look into the weird things about the selection distribution plots.
 
 Continue working on the inversions and gene expression analysis, by confirming inversions with a dot plot.
 
-Write an abstract for the gene expression paper. 
+Send you paper drafts for the substitutions paper and the gene expression paper.
 
-I would like to calculate the average gene expression per genome to add to the gene expression paper.
-
-Come up with more in-depth interpretation of selection results, add to subs paper.
- 
 \section*{Next Week}
-
-Do final edits on the substitutions and gene expression papers so I can send you completed drafts of both.
 
 Start thinking about poster for SMBE.
 
 Continue working on inversions and gene expression
+
+Make any necessary edits to the papers.
 
 \newpage
 
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lc}
+		\begin{tabular}{lr}
 			\toprule
 			Bacteria and Replicon & Average Expression Value (CPM)\\
 			\midrule
@@ -368,13 +377,13 @@ Continue working on inversions and gene expression
 			\bass Chromosome &  176.400\\
 			\strep Chromosome &  6.084\\
 			\smel Chromosome &  271.400\\
-			\smel pSymA & 690.1\\
+			\smel pSymA & 690.100\\
 			\smel pSymB & 595.700\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:gene_exp_mean} Arithmatic gene expression calculated across all genes in each replicon. Expression values are represented in Counts Per Millon.}
+	\caption{\label{tab:gene_exp_mean} Arithmetic gene expression calculated across all genes in each replicon. Expression values are represented in Counts Per Million.}
 \end{table}
 
 
