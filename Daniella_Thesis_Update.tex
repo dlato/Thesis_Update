@@ -259,15 +259,11 @@
 	
 \section*{Last Week}
 
-\ch fixed/looked at weird points in the genome distribution of \dn, \ds, and $\omega$ graphs
+\ch look into \strep \dn > \ds issue
 
-\ch write abstract for gene expression paper
+\ch look into why \pb is missing so much data in the \dn/\ds distribution graphs
 
-\ch write code to get the gene name associated with each \dn, \ds, and $\omega$ value
-
-\ch calculate average gene expression value for each replicon and gene expression paper
-
-\ch look into dot plot for inversions paper
+\ch send you two paper drafts, one for the substitutions paper and one for the gene expression paper
 
 
 %\textbf{dN, dS, $\omega$:}
@@ -281,23 +277,22 @@
 I looked into the weird points of the distribution of \dn, \ds, and $\omega$ across the genome and the points where \ds is higher than \dn = $\omega$ are real, and the high number of \ds = 0 points in \smel chrom is also real. We discussed this and you said to just leave everything the way it is. 
 
 
-I looked into a number of programs that create a dot plot from an alignment or two genomes.
-There are lots of different programs like MUMerplot (which needs its own alignment), D-GENIES (only AA seqs), Dotlet (no command line), Dotter, Dotplot (need to install, makes its own alignment), and LAST (uses its own alignment, good for big data but talks about mapping reads..).
-Dotter is already on the machines so I was playing with that. 
-To align 2 whole \ecoli genomes took 7 days in Dotter. I am still working out how to save the resulting dot plot and make it look nice. The GUI seems to freeze sometimes so this is difficult. But I am working on it!
+As I mentioned before, the GUI for Dotter is really bad and it constantly freezes. So I am still working through how to save plots where the contrast is good enough to define the inversions.
 
-I also started looking into why \pb is missing so much data, and why \strep had \dn > \ds for the whole genome. I think these two may be related to a small issue in my code. I am still testing this now.
+I also continued to look into why \pb is missing so much data, and why \strep had \dn > \ds for the whole genome. I realized that my definitions for the start and endings of genes was slightly off, and there was an issue with the genome positions that my program was spitting out. So I have fixed these issues and I am re-running all of this now to see if this makes a difference for the \pb and \strep selection issues.
 
 I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
 Do you think this is something that needs to be put into the gene expression paper?
 
 
-I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is almost done.
+I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is slowly getting done.
 
 I was also wondering if I should be fitting a regression to the \dn, \ds, and $\omega$ data to see how those three values change (if at all) with genomic position? although to me the graphs look pretty non-linear.
 Thoughts?
 
-I have also pretty much finished paper drafts for the Substitutions paper and the gene expression paper.
+I have also started to work on my poster for SMBE and have a few questions for you about what should be included or not. I will talk to you later this week.
+
+
 %\begin{itemize}
 %	\item Is 5 genomes going to provide enough data/information?
 %	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?

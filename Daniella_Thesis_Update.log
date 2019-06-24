@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  8 JUN 2019 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  10 JUN 2019 11:55
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -754,10 +754,10 @@ File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May1
 /ALL_BAC_dN_dS_omega_violinplots_4Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_box_plots_15May19/ALL_BAC_dN_dS_omega_violinplots_4Jun19.pdf used on input l
-ine 383.
+ine 392.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 383--384
+Overfull \hbox (28.0pt too wide) in paragraph at lines 392--393
 [][] 
  []
 
@@ -771,7 +771,7 @@ tribution_24May19/ecoli_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/ecoli_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/ecoli_dN_dS_omega_dist_3Jun19.pdf used on 
-input line 387.
+input line 396.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribu
@@ -783,7 +783,7 @@ tribution_24May19/bass_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/bass_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/bass_dN_dS_omega_dist_3Jun19.pdf used on i
-nput line 388.
+nput line 397.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribu
@@ -795,7 +795,7 @@ tribution_24May19/strep_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/strep_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/strep_dN_dS_omega_dist_3Jun19.pdf used on 
-input line 389.
+input line 398.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribu
@@ -807,7 +807,7 @@ tribution_24May19/sinoC_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/sinoC_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/sinoC_dN_dS_omega_dist_3Jun19.pdf used on 
-input line 390.
+input line 399.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribu
@@ -819,7 +819,7 @@ tribution_24May19/pSymA_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/pSymA_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/pSymA_dN_dS_omega_dist_3Jun19.pdf used on 
-input line 391.
+input line 400.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribu
@@ -831,10 +831,10 @@ tribution_24May19/pSymB_dN_dS_omega_dist_3Jun19.pdf Graphic file (type pdf)
 ribution_24May19/pSymB_dN_dS_omega_dist_3Jun19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_
 dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_3Jun19.pdf used on 
-input line 392.
+input line 401.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 387--393
+Overfull \hbox (28.0pt too wide) in paragraph at lines 396--402
 [][]
  []
 
@@ -884,9 +884,9 @@ iella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniel
 la/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniell
 a/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/
 Downloads/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (13 pages, 233677 bytes).
+Output written on Daniella_Thesis_Update.pdf (13 pages, 236501 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
