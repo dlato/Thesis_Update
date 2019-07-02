@@ -258,13 +258,7 @@
 
 	
 \section*{Last Week}
-
-\ch look into \strep \dn > \ds issue
-
-\ch look into why \pb is missing so much data in the \dn/\ds distribution graphs
-
-\ch send you two paper drafts, one for the substitutions paper and one for the gene expression paper
-
+\ch sent you a draft of my poster for SMBE
 
 %\textbf{dN, dS, $\omega$:}
 
@@ -274,12 +268,9 @@
 %Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
 %What are your thoughts on this?
 
-I looked into the weird points of the distribution of \dn, \ds, and $\omega$ across the genome and the points where \ds is higher than \dn = $\omega$ are real, and the high number of \ds = 0 points in \smel chrom is also real. We discussed this and you said to just leave everything the way it is. 
+As I mentioned before, the GUI for Dotter is really bad and it constantly freezes. So I am still working through how to save plots where the contrast is good enough to define the inversions. This is really frustrating and long but oh well!
 
-
-As I mentioned before, the GUI for Dotter is really bad and it constantly freezes. So I am still working through how to save plots where the contrast is good enough to define the inversions.
-
-I also continued to look into why \pb is missing so much data, and why \strep had \dn > \ds for the whole genome. I realized that my definitions for the start and endings of genes was slightly off, and there was an issue with the genome positions that my program was spitting out. So I have fixed these issues and I am re-running all of this now to see if this makes a difference for the \pb and \strep selection issues.
+As I am re-running the selection and substitutions stuff I am finding more and more issues (most of them small things, which causes my previous code to not work so I have to tweak file formats) which is very very frustrating but I am slowly working through it.
 
 I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
 Do you think this is something that needs to be put into the gene expression paper?
@@ -289,8 +280,6 @@ I have also been working to put the \dn, \ds, and $\omega$ values for each gene 
 
 I was also wondering if I should be fitting a regression to the \dn, \ds, and $\omega$ data to see how those three values change (if at all) with genomic position? although to me the graphs look pretty non-linear.
 Thoughts?
-
-I have also started to work on my poster for SMBE and have a few questions for you about what should be included or not. I will talk to you later this week.
 
 
 %\begin{itemize}
@@ -343,15 +332,15 @@ I have also started to work on my poster for SMBE and have a few questions for y
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-I hope to have the re-running of the selection and substitutions analysis done by the end of the week.
+I hope to have the re-running of the selection and substitutions analysis done by the end of the week (hopefully!!! but there are always issues that are slowing down my progress).
 
 I would also like to have a dot plot for the inversions and gene expression analysis.
 
-I also need to work on my poster for the conference.
+I also need to work on your comments on my poster for the conference.
 
 \section*{Next Week}
 
-Continue working on poster for conference.
+Continue working on poster for conference + print it!
 
 Make edits to the papers.
 
@@ -493,12 +482,12 @@ Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
 			\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
-			\ecol Chromosome & \cc -9.983\e{-8}*** &  6.994\e{-8}*** \\
+			\ecol Chromosome & \cc 2.801\e{-7}*** &  NS \\
 			\bass Chromosome & \cc-1.071\e{-7}***  & \cc -9.861\e{8}*** \\
 			\strep Chromosome & \cc -2.626\e{-8}***  & 3.615\e{-7}*** \\
 			\smel Chromosome & \cc -1.367\e{-7}***  & \cc -1.510\e{-7}* \\
-			\smel pSymA & \cc -1.075\e{-7}* & NS \\
-			\smel pSymB & 2.878\e{-7}*** & 8.595\e{-7}***\\
+			\smel pSymA & \cc -7.491\e{-7}*** & NS \\
+			\smel pSymB & 1.399\e{-7}*** & 8.595\e{-7}***\\
 			\bottomrule
 		\end{tabular}
 		
