@@ -354,13 +354,13 @@ Next Week + the week after is the conference and travelling for me. My goal is t
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrr}
+		\begin{tabular}{lccc}
 			\toprule
 			Bacteria and Replicon &  \dn & \ds & $\omega$ \\
 			\midrule
 			\ecol Chromosome & NS & NS & 1.416\e{-4} \\
 			\bass Chromosome & \cc -1.383\e{-6}*** & NS & \cc -1.309\e{-5}**\\
-			\strep Chromosome &  & & \\
+			\strep Chromosome & NS & NS & NS\\
 			\smel Chromosome & NS & NS & NS\\
 			\smel pSymA & NS & NS & NS\\
 			\smel pSymB & NS & NS & 1.167\e{-5}*\\
@@ -368,7 +368,7 @@ Next Week + the week after is the conference and travelling for me. My goal is t
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:dN_dS_spatial} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:dN_dS_lin_reg} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 
@@ -479,27 +479,6 @@ Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
 %	}%resizebox
 %	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacteria on a per gene and per genome basis. Averages are weighted by gene length for the per gene averages, and by section length for the per genome averages.}
 %\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrrrr}
-			\toprule
-			Bacteria and Replicon & Average Replicon Length & \# of Coding Sites & \# of Non-Coding Sites & \# of Subs Coding & \# of Subs Non-Coding\\
-			\midrule
-			\ecol Chromosome & 5082529 & 2960007 & 191748 & 207199 & 9534 \\ % 4048616/4641652 & 
-			\bass Chromosome & 4077077 & 2074653 & 102906 & 205150 & 6187\\ %3692179/4215606
-			\strep Chromosome & 8497577 & 2422980 & 21581 & 551530 & 3670\\ % 7628849/8667507
-			\smel Chromosome & 3426881 & 1931139 & 199425 & 6684 & 842\\ % 3130925/3654135
-			\smel pSymA & 1455940 & 419223 & 34213 & 9832 & 943\\ % 1128615/1354226 & 225611/1354226
-			\smel pSymB & 1664597 & 552816 & 22098 & 11699 & 645\\ % 1493048/1683333
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
-\end{table}
-
 
 
 \begin{table}[h]
