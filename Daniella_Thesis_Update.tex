@@ -171,7 +171,7 @@
 	
 %	\item \sout{new bar graph with coding and non-coding sites separated}
 %	
-	\item spatial analysis of \dn, \ds, and $\omega$
+	\item \sout{spatial analysis of \dn, \ds, and $\omega$}
 	
 	\item mol clock for my analysis?
 	
@@ -260,10 +260,12 @@
 
 	
 \section*{Last Week}
-\ch finished SMBE poster + sent them off for printing
 
-\ch attempt to save dotter plots (FAIL)
-
+Last week I was working on addressing some of the weird things about the substitution analysis.
+I was mostly looking into why \ecoli looks like it is missing a whole bunch of data in the \dn, \ds, $\omega$ genome distribution graphs.
+I already talked to you about this but it looks like it is because some genes have a ``join'' in the gene location and because of pseudo genes.
+So I had to re-code how the gene start and stop positions are being gathered.
+I am still making sure that this does not mess up any analysis down the line and that this will fix the issue with \pa also missing a big chunk of data.
 
 %\textbf{dN, dS, $\omega$:}
 
@@ -273,18 +275,35 @@
 %Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
 %What are your thoughts on this?
 
-As I mentioned before, the GUI for Dotter is really bad and it constantly freezes. And trying to save them is really really difficult. There is way too much noise and you can not see the inversions clearly. Although, through all the noise it looks like there are three major inversions which is good! If you have any suggestions on a different program to use so I can more easily obtain this dot plot please let me know!
+%Finally the re-running of the selection and substitution analysis has finished! The results are found in the graphs and tables below.
+%The new logistic regression for the substitution analysis looks like now only \bass and \smel Chromosome and \pa have a decreasing trend. The %other replicons have a positive trend. So it is pretty evenly split with 3 positive replicons and 3 negative replicons.
+%Thoughts?
+%I also re-did the coding/non-coding substitutions histograms and they look way nicer now! (See below)
+%The only thing that is weird is that \strep has a positive linear regression for both coding and non-coding, but the graph looks negative...
+%
+%I also quickly fit linear regression models to the \dn, \ds, and $\omega$ values as they vary across the genome (Table \ref{tab:dN_dS_lin_reg}).
+%As you can see, mostly nothing is significant. I think this is because most of the graphs are very non-linear and are quite spiky/variable throughout the genome.
+%When looking at the graphs of the distribution of \dn, \ds, and $\omega$ they are quite spiky and not very pretty. Not sure if they are informative.
+%Three weird things about this is that \ecoli, \bass and \pa appear to have chunks of data missing from their genomes. 
+%When you look at the substitutions graphs you can see that there are less substitutions total in those areas, so it could just be a lack of data.
+%I am looking into this more.
+%
+%When comparing the average genome \dn, \ds, and $\omega$ values to the violin plots, you can see that half of the replicons have $\omega$ values $>$ 1, but the corresponding violin plot shows that the median $\omega$ value is $<$ 1 except for \strep. So I am not sure if it is better to use the median or average vale?
+%
+%That being said, \strep still has \dn $>$ \ds. So the errors I found before did not fix this. I will continue to look into this.
+%
+%Dotter takes a few days to run (which is not ideal), but I have played with the window size in the hopes to reduce some of the noise.
+%However, when looking at my original dot plot compared to the one you produced in mummer, they look different.
+%Mine looks like there are at least 3 inversions total near the beginning and ends of the genome (I will have to show you on my computer because it takes way too long to load).
+%And yours looks like there are no inversions at all..which is curious.
+%Any thoughts on this?
+%
+%I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
+%Do you think this is something that needs to be put into the gene expression paper?
 
-Re-running the selection and substitutions stuff is almost done! Some of the results are in the below tables. I have not looked into this too much.
 
-I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
-Do you think this is something that needs to be put into the gene expression paper?
+%I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is slowly getting done.
 
-
-I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is slowly getting done.
-
-%I was also wondering if I should be fitting a regression to the \dn, \ds, and $\omega$ data to see how those three values change (if at all) with genomic position? although to me the graphs look pretty non-linear.
-% YES DO THIS ^
 
 
 %\begin{itemize}
@@ -337,19 +356,45 @@ I have also been working to put the \dn, \ds, and $\omega$ values for each gene 
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-I hope to have the re-running of the selection and substitutions analysis done by the end of the week (hopefully!!! but there are always issues that are slowing down my progress).
+This week I overall want to fix/figure out why there are a bunch of weird things happening with the substitution and selection results.
+The goal is to get this all fixed so this weekend and next week I can re-run the analysis.
 
-I would like to double check the results of the selection and substitutions analysis to make sure that it all went well (and hopefully fixed some of the issues I was having before like \strep having \ds $>$ \dn)
+I want to continue to work out why \ecoli is missing so much data.
 
-If possible I would also like to have a dot plot for the inversions and gene expression analysis.
+I would also like to investigate why \smel Chromosome has a bunch of zero values for \ds and $\omega$.
 
-
+I would also like to figure out why \strep has \dn $>$ \ds.
 
 \section*{Next Week}
 
-Next Week + the week after is the conference and travelling for me. My goal is to read a bunch of papers and make notes on them while I am away.
+I hope to have the re-running of the selection and substitutions analysis done by the end of the week (hopefully!!! but there are always issues that are slowing down my progress).
+
+While all that is running, I need to keep working on the inversions and gene expression stuff.
 
 \newpage
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
+			\midrule
+			\ecol Chromosome & 3.557\e{-7}*** &  NS \\
+			\bass Chromosome & \cc-7.804\e{-8}***  & \cc -3.170\e{8}* \\
+			\strep Chromosome & 4.545\e{-8}***  & 1.584\e{-7}*** \\
+			\smel Chromosome & \cc -9.183\e{-8}***  & \cc -1.718\e{-7}*** \\
+			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-7}*** \\
+			\smel pSymB & 1.655\e{-7}*** & 4.105\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
 
 \begin{table}[h]
 	\centering
@@ -395,18 +440,60 @@ Next Week + the week after is the conference and travelling for me. My goal is t
 	\caption{\label{tab:gene_exp_mean} Arithmetic gene expression calculated across all genes in each replicon. Expression values are represented in Counts Per Million.}
 \end{table}
 
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lrrrrrr}
+			\toprule
+			& \multicolumn{3}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
+			\cmidrule{2-7}
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Bacteria and Replicon &  dS & dN & $\omega$ & dS & dN & $\omega$ \\
+			\midrule
+			\ecol Chromosome & 1.3694 & 0.1433& 3.2789 & 0.7445 & 0.0752 & 1.5618 \\
+			\bass Chromosome & 4.4557& 0.2755& 8.9584& 0.7947 & 0.1140& 4.8677\\
+			\strep Chromosome &  0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
+			\smel Chromosome &  0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
+			\smel pSymA & 1.0602 & 0.7451& 5.1290& 0.4100 & 0.0863 & 0.8311\\
+			\smel pSymB & 3.3091 & 0.0260& 0.3878& 0.1436 & 0.0100 & 0.1950\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
+\end{table}
+ \newpage
 
-Violin plots for per gene dN, dS, and $\omega$:
+%Violin plots for per gene dN, dS, and $\omega$:
+
+\clearpage
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ALL_BAC_dN_dS_omega_violinplots_11Jul19.pdf}
 
-Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
+\newpage
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/ecoli_dN_dS_omega_dist_11Jul19.pdf}
+
+\newpage
+
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/bass_dN_dS_omega_dist_11Jul19.pdf}
+\newpage
+
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/strep_dN_dS_omega_dist_11Jul19.pdf}
+
+\newpage
+
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/sinoC_dN_dS_omega_dist_11Jul19.pdf}
+
+\newpage
+
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymA_dN_dS_omega_dist_11Jul19.pdf}
+
+\newpage
+
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_11Jul19.pdf}
 
 %Below is a summary of what has been thrown out because of reasons (for one particular Block with an alignment length of 252,304 which includes gaps):
@@ -428,31 +515,6 @@ Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
 %		\end{minipage}}
 %	\end{table}	
 
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrrrrr}
-			\toprule
-			& \multicolumn{3}{c}{Gene Average} & \multicolumn{3}{c}{Genome Average}\\
-			\cmidrule{2-7}
-%			\cmidrule{8-10}
-%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-%			\cmidrule{2-3}
-%			\cmidrule{4-7}
-			Bacteria and Replicon &  dS & dN & $\omega$ & dS & dN & $\omega$ \\
-			\midrule
-			\ecol Chromosome & 1.3694 & 0.1433& 3.2789 & 0.7445 & 0.0752 & 1.5618 \\
-			\bass Chromosome & 4.4557& 0.2755& 8.9584& 0.7947 & 0.1140& 4.8677\\
-			\strep Chromosome &  0.1924 & 0.3201& 2.6404& 0.1775 & 0.3017 & 2.4358 \\
-			\smel Chromosome &  0.0134  & 0.0014& 0.0844& 0.0134& 0.0013& 0.0930 \\
-			\smel pSymA & 1.0602 & 0.7451& 5.1290& 0.4100 & 0.0863 & 0.8311\\
-			\smel pSymB & 3.3091 & 0.0260& 0.3878& 0.1436 & 0.0100 & 0.1950\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
-\end{table}
 
 %\begin{table}[h]
 %	\centering
@@ -480,27 +542,6 @@ Genome Distribution for per 10kb dN, dS, and $\omega$ averages:
 %	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacteria on a per gene and per genome basis. Averages are weighted by gene length for the per gene averages, and by section length for the per genome averages.}
 %\end{table}
 
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
-			\midrule
-			\ecol Chromosome & 3.557\e{-7}*** &  NS \\
-			\bass Chromosome & \cc-7.804\e{-8}***  & \cc -3.170\e{8}* \\
-			\strep Chromosome & 4.545\e{-8}***  & 1.584\e{-7}*** \\
-			\smel Chromosome & \cc -9.183\e{-8}***  & \cc -1.718\e{-7}*** \\
-			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-7}*** \\
-			\smel pSymB & 1.655\e{-7}*** & 4.105\e{-7}***\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-	
 
 %Sub density graphs with coding and non-coding information
 
