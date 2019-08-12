@@ -261,11 +261,24 @@
 	
 \section*{Last Week}
 
-Last week I was working on addressing some of the weird things about the substitution analysis.
-I was mostly looking into why \ecoli looks like it is missing a whole bunch of data in the \dn, \ds, $\omega$ genome distribution graphs.
-I already talked to you about this but it looks like it is because some genes have a ``join'' in the gene location and because of pseudo genes.
-So I had to re-code how the gene start and stop positions are being gathered.
-I am still making sure that this does not mess up any analysis down the line and that this will fix the issue with \pa also missing a big chunk of data.
+Last week I finally fixed the previous issue where pseudogenes and genes with ``joins'' in them were messing up my code.
+With this, I decided to more accurately describe the coding and non-coding sections of the genome.
+All coding regions will now be referred to as protein coding regions, and non-coding regions will be referred to as non-protein coding regions.
+So all intergenic, RNA, and pseudogenes are classified as non-coding regions.
+I started to re-run the selection and substitution analysis on Thursday.
+\strep takes a really really long time to run because it has the most blocks (and the biggest genome) so it is still running through the both analysis.
+All the other bacteria are done with the substitutions analysis and the graphs and results can be found below.
+
+I hit a small snag in the selection analysis, it looks like the alignments that are outputted from my program do not all have a multiple of 3 as its length.
+I am currently looking into this. Hopefully I can solve this issue by today and have the results for the selection analysis by the end of the week.
+
+
+I also wanted your opinion about something that was mentioned at the conference.
+Someone asked me if I was including RNA in my ``coding'' sections? Because RNA often is under different selective pressures than coding or other ``non-coding'' sections, they suggested that I do my analysis on just all RNA to see if there is any sort of trend with respect to distance from the origin.
+I was wondering what you think about this and if you think it is worth it for me to do?
+
+I have begun compiling my committee report for Aug 26th. I am hoping to send it out to everyone by Monday Aug 19th, so there is time to read it before the meeting.
+
 
 %\textbf{dN, dS, $\omega$:}
 
@@ -356,20 +369,18 @@ I am still making sure that this does not mess up any analysis down the line and
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-This week I overall want to fix/figure out why there are a bunch of weird things happening with the substitution and selection results.
-The goal is to get this all fixed so this weekend and next week I can re-run the analysis.
+This week I need to figure out why there are non-multiple of 3 genes being outputted by my analysis (which should not be happening).
+Once this is complete, I can continue to re-run the selection analysis.
 
-I want to continue to work out why \ecoli is missing so much data.
+I would like to finish my committee report by the end of the weekend. 
 
-I would also like to investigate why \smel Chromosome has a bunch of zero values for \ds and $\omega$.
+While all that is running, I need to keep working on the inversions and gene expression stuff.
 
-I would also like to figure out why \strep has \dn $>$ \ds.
 
 \section*{Next Week}
 
-I hope to have the re-running of the selection and substitutions analysis done by the end of the week (hopefully!!! but there are always issues that are slowing down my progress).
+Assuming the re-running of my analysis is complete, I would like to work intensely on the inversions and gene expression stuff and get a good chunk of that started.
 
-While all that is running, I need to keep working on the inversions and gene expression stuff.
 
 \newpage
 
@@ -381,10 +392,9 @@ While all that is running, I need to keep working on the inversions and gene exp
 			\toprule
 			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
 			\midrule
-			\ecol Chromosome & 3.557\e{-7}*** &  NS \\
-			\bass Chromosome & \cc-7.804\e{-8}***  & \cc -3.170\e{8}* \\
-			\strep Chromosome & 4.545\e{-8}***  & 1.584\e{-7}*** \\
-			\smel Chromosome & \cc -9.183\e{-8}***  & \cc -1.718\e{-7}*** \\
+			\ecol Chromosome & \cc -1.313\e{-7}*** & NS \\
+			\strep Chromosome & &\\
+			\smel Chromosome & \cc -9.185\e{-8}***  & \cc -1.718\e{-7}*** \\
 			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-7}*** \\
 			\smel pSymB & 1.655\e{-7}*** & 4.105\e{-7}***\\
 			\bottomrule
