@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  12 AUG 2019 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  14 AUG 2019 15:23
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -744,7 +744,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
  [1{C:/Users/Daniella/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2] [3] [4]
+] [2] [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf, id
 =25, 505.89pt x 505.89pt>
@@ -768,6 +772,12 @@ Overfull \hbox (28.0pt too wide) in paragraph at lines 511--512
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf, id=
 26, 505.89pt x 505.89pt>
+Overfull \vbox (48.01112pt too high) has occurred while \output is active []
+
+
+[5 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7
+Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf>
+]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
 _7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf
  Graphic file (type pdf)
@@ -786,9 +796,7 @@ Overfull \hbox (28.0pt too wide) in paragraph at lines 513--514
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf, id
-=27, 505.89pt x 505.89pt> [5 <C:/Users/Daniella/Documents/Sinorhizobium2015/Fig
-s/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirecti
-onality_colour_9Aug19.pdf>]
+=36, 505.89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
 _7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pd
 f Graphic file (type pdf)
@@ -862,10 +870,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf>
 ] [10] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16545 strings out of 493673
- 340811 string characters out of 3141142
- 383850 words of memory out of 3000000
- 19535 multiletter control sequences out of 15000+200000
+ 16546 strings out of 493673
+ 340829 string characters out of 3141142
+ 383858 words of memory out of 3000000
+ 19536 multiletter control sequences out of 15000+200000
  12699 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,830b,305s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -878,7 +886,7 @@ Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
 ers/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users
 /Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
 Daniella/Downloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Daniella_Thesis_Update.pdf (10 pages, 135734 bytes).
+Output written on Daniella_Thesis_Update.pdf (10 pages, 136478 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
