@@ -161,17 +161,32 @@
 %	
 %	\item \sout{put everything in list into supplementary file for subs paper}
 %	
-	\item \sout{write dN/dS methods}
-	
-	\item \sout{write dN/dS results}
-	
-	\item \sout{write dN/dS discussion}
-	
-	\item \sout{write dN/dS into conclusion}
-	
+%	\item \sout{write dN/dS methods}
+%	
+%	\item \sout{write dN/dS results}
+%	
+%	\item \sout{write dN/dS discussion}
+%	
+%	\item \sout{write dN/dS into conclusion}
+%	
 %	\item \sout{new bar graph with coding and non-coding sites separated}
 %	
-	\item \sout{spatial analysis of \dn, \ds, and $\omega$}
+%	\item \sout{spatial analysis of \dn, \ds, and $\omega$}
+
+	\item causes for weird selection and subs results in \strep
+	\begin{itemize}
+		\item see how often class 4 arises in strep to see what is going on in later portion of the genome (to see if annotation is really a problem)
+		
+		\item split up the strep data into core and non core and see if results are the same
+	\end{itemize}
+	
+	\item make graphs proportional to length of respective cod/non-cod regions
+	
+	\item test examples for genes near and far from terminus (robust log reg/results)
+	
+	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
+	
+	\item grey out outliers in subs graphs?
 	
 	\item mol clock for my analysis?
 	
@@ -204,25 +219,55 @@
 %	
 %	\item \sout{put notes from $\uparrow$ papers into word doc}
 %	
-	\item \sout{write abstract}
+%	\item \sout{write abstract}
+%	
+%	\item \sout{write intro}
+%	
+%	\item \sout{add stuff from outline to Data section}
+%	
+%	\item \sout{create graphs for expression distribution (no sub data)}
+%	
+%	\item \sout{add \# of genes to expression graphs (top)}
+%	
+%	\item \sout{average gene expression}
+%	
+%	\item \sout{write discussion}
+%	
+%	\item \sout{write conclusion}
+%	
+%	\item \sout{add into methods: filters for Hiseq, RT PCR and growth phases for data collection}
+%	
+	\item \sout{linear regression on 10kb regions}
 	
-	\item \sout{write intro}
+	\item put new 10kb lin reg and \# of genes over 10kb lin reg into paper
 	
-	\item \sout{add stuff from outline to Data section}
+	\item write about $\uparrow$ in methods and discussion
 	
-	\item \sout{create graphs for expression distribution (no sub data)}
+	\item put expression lin reg and \# coding sites log reg into supplement
 	
-	\item \sout{add \# of genes to expression graphs (top)}
-	
-	\item \sout{average gene expression}
-	
-	\item \sout{write discussion}
-	
-	\item \sout{write conclusion}
-	
-	\item \sout{add into methods: filters for Hiseq, RT PCR and growth phases for data collection}
+	\item write about $\uparrow$ in paper and how results are the same
 	
 	\item update supplementary figures/file
+	
+	\item correlation of gene expression across strains
+	
+	\item if necessary add a phylogenetic component to the analysis
+	
+	\item potentially remove genes that have been recently translocated from the analysis
+	
+	\item model gene exp + position + number of genes
+	
+	\item split up the strep data into core and non core and see if results are the same
+	
+	\item what is going on with \strep number of genes changing drastically from core to non-core
+	
+	\item codon bias?
+	
+	\item what is going on with really high gene expression bars
+	
+	\item edit paper
+	
+	\item submit paper
 	
 \end{itemize}
 
@@ -243,6 +288,8 @@
 	\item \sout{put notes from papers into doc}
 	\item \sout{use large PARSNP alignment to identify inversions}
 	\item confirm inversions with dot plot
+	\item make dot plot of just gene presence and absence matrix (instead of each site) to see if this will go better
+	\item look up inversions and small RNA's paper Marie was talking about at Committee meeting
 	\item write outline for letter
 	\item write Abstract
 	\item write intro
@@ -252,6 +299,11 @@
 	\item write discussion
 	\item write conclusion 
 	\item do same ancestral/phylogenetic analysis that I did in the subs paper 
+\end{itemize}
+
+\underline{General Things to Do:}
+\begin{itemize}
+	\item summarize references 40 and 56 from Committee meeting report (Brian was asking)
 \end{itemize}
 
 
@@ -383,6 +435,71 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 
 
 \newpage
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Gene Expression 10kb \\
+			\midrule
+			\ecol Chromosome & \cc -2.742\e{-5}**\\
+			\bass Chromosome & \cc -2.198\e{-5}*\\
+			\strep Chromosome & \cc -5.230\e{-7}*** \\
+			\smel Chromosome & NS\\
+			\smel pSymA & NS \\
+			\smel pSymB & NS \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_exp_10kb} Linear regression analysis of the median counts per million expression data for 10kb segments of the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+			\midrule
+			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.03\e{-5} & \cellcolor{black!16}1.28\e{-5} & \cellcolor{black!16}2.8\e{-6} \\
+			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.7\e{-5} & \cellcolor{black!16}2.0\e{-5} & \cellcolor{black!16}1.2\e{-6} \\
+			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.17\e{-6} & \cellcolor{black!16}1.04\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
+			\smel Chromosome & 3.97\e{-5} & 4.25\e{-5} & NS (3.5\e{-1})\\
+			\smel pSymA & 1.39\e{-3} & 2.53\e{-4} & 4.9\e{-8} \\
+			\smel pSymB & 1.46\e{-4} & 2.03\e{-4} & NS (5.34.7\e{-1})\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+\end{table}
+
+\begin{centering}
+	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_exp_tot_gene_num_bidirectionality_colour_5Jun19.pdf}
+\end{centering}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate \\
+			\midrule
+			\ecol Chromosome & NS\\
+			\cc \bass Chromosome & \cc -2.682\e{-6}*** \\
+			\strep Chromosome & -2.360\e{-6}***\\
+			\smel Chromosome & -2.074\e{-6}***\\
+			\smel pSymA & NS \\
+			\smel pSymB & -4.19\e{-6}*\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding genes per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 
 
 \begin{table}[h]
@@ -390,13 +507,13 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcc}
 			\toprule
-			Bacteria and Replicon & Coding Sequences & Non-Coding Sequences\\
+			Bacteria and Replicon & Protein Coding Sequences & Non-Protein Coding Sequences\\
 			\midrule
-			\ecol Chromosome & \cc -1.313\e{-7}*** & NS \\
-			\bass Chromosome & \cc -6.732\e{-8}*** & NS \\
-			\strep Chromosome & 4.989\e{-8}*** & 1.635\e{-7}***\\
-			\smel Chromosome & \cc -9.185\e{-8}***  & \cc -1.718\e{-7}*** \\
-			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-7}*** \\
+			\ecol Chromosome & \cc -1.354\e{-7}*** & NS \\
+			\bass Chromosome & \cc -6.735\e{-8}*** & NS \\
+			\strep Chromosome &  & 1.635\e{-7}***\\
+			\smel Chromosome & \cc -9.185\e{-8}***  & \cc -1.749\e{-7}*** \\
+			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-6}*** \\
 			\smel pSymB & 1.655\e{-7}*** & 4.105\e{-7}***\\
 			\bottomrule
 		\end{tabular}
@@ -407,24 +524,25 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 
 
 
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{lccc}
-%			\toprule
-%			Bacteria and Replicon &  \dn & \ds & $\omega$ \\
-%			\midrule
-%			\ecol Chromosome & NS & NS & 1.416\e{-4} \\
-%			\bass Chromosome & \cc -1.383\e{-6}*** & NS & \cc -1.309\e{-5}**\\
-%			\strep Chromosome & NS & NS & NS\\
-%			\smel pSymA & NS & NS & NS\\
-%			\smel pSymB & NS & NS & 1.167\e{-5}*\\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:dN_dS_lin_reg} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%\end{table}
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Bacteria and Replicon &  \dn & \ds & $\omega$ \\
+			\midrule
+			\ecol Chromosome & NS & NS & NS\\
+			\bass Chromosome & NS & NS & \cc -9.08\e{-6}*\\
+			\strep Chromosome & NS & NS & NS\\
+            \smel Chromoeom & NS & NS & NS \\
+			\smel pSymA & NS & NS & NS\\
+			\smel pSymB & NS & NS & 1.163\e{-5}*\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:dN_dS_lin_reg} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 
 
 
@@ -465,7 +583,7 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 			\midrule
 			\ecol Chromosome & 1.0468 & 0.1330 & 1.3183 & 0.6491 & 0.0364 & 0.2432 \\
 			\bass Chromosome & 4.652 & 0.2333 & 2.4200 & 1.0879 & 0.0703 & 0.3852\\
-			\strep Chromosome &   & & & &  &  \\
+			\strep Chromosome &  13.4950 & 2.0973 & 21.0423 & 5.1256 & 0.8911  & 8.9146  \\
 			\smel Chromosome &  0.0184  & 0.0012 & 0.1069 & 0.0187 & 0.0013 & 0.0962 \\
 			\smel pSymA & 1.0602 & 0.7451 & 5.1290 & 0.4100 & 0.0863 & 0.8311 \\
 			\smel pSymB & 3.2602 & 0.0256& 0.3878& 0.1436 & 0.0100 & 0.1943\\
@@ -681,25 +799,7 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 %\end{table}
 %
 %
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccc}
-			\toprule
-			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-			\midrule
-			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.03\e{-5} & \cellcolor{black!16}1.28\e{-5} & \cellcolor{black!16}2.8\e{-6} \\
-			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.7\e{-5} & \cellcolor{black!16}2.0\e{-5} & \cellcolor{black!16}1.2\e{-6} \\
-			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.17\e{-6} & \cellcolor{black!16}1.04\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
-			\smel Chromosome & 3.97\e{-5} & 4.25\e{-5} & NS (3.5\e{-1})\\
-			\smel pSymA & 1.39\e{-3} & 2.53\e{-4} & 4.9\e{-8} \\
-			\smel pSymB & 1.46\e{-4} & 2.03\e{-4} & NS (5.34.7\e{-1})\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-\end{table}
+
 
 %\begin{table}[b!]
 %	\centering
