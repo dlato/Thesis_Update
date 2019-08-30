@@ -438,6 +438,34 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lrrr}
+			\toprule
+			& \multicolumn{2}{c}{20kb Near} &\\
+			\cmidrule{2-3}
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Bacteria and Replicon &  Origin & Terminus& Average Substitution Rate\\
+			\midrule
+			\ecol Chromosome &  & &\\
+			\bass Chromosome & &&\\
+			\strep Chromosome & 3.145\e{-5}*** & NS &\\
+			\smel Chromosome &  & &\\
+			\smel pSymA & 1.425\e{-4}*** & \cc -1.867\e{-4}* &\\
+			\smel pSymB & \cc -4.669\e{-5}** & NS & \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lc}
 			\toprule
 			Bacteria and Replicon & Gene Expression 10kb \\
