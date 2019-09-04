@@ -180,9 +180,11 @@
 		\item split up the strep data into core and non core and see if results are the same
 	\end{itemize}
 	
-	\item make graphs proportional to length of respective cod/non-cod regions
+	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
 	
-	\item test examples for genes near and far from terminus (robust log reg/results)
+	\item \sout{test examples for genes near and far from terminus (robust log reg/results)}
+	
+	\item \sout{figure out why the data is weird for number of cod/non-cod sites}
 	
 	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
 	
@@ -304,6 +306,10 @@
 \underline{General Things to Do:}
 \begin{itemize}
 	\item summarize references 40 and 56 from Committee meeting report (Brian was asking)
+	
+	\item read and make notes on papers I found for dissertation intro
+	
+	
 \end{itemize}
 
 
@@ -313,24 +319,35 @@
 	
 \section*{Last Week}
 
-Last week I finally fixed the previous issue where pseudogenes and genes with ``joins'' in them were messing up my code.
-With this, I decided to more accurately describe the coding and non-coding sections of the genome.
-All coding regions will now be referred to as protein coding regions, and non-coding regions will be referred to as non-protein coding regions.
-So all intergenic, RNA, and pseudogenes are classified as non-coding regions.
-I started to re-run the selection and substitution analysis on Thursday.
-\strep takes a really really long time to run because it has the most blocks (and the biggest genome) so it is still running through the both analysis.
-All the other bacteria are done with the substitutions analysis and the graphs and results can be found below.
+\ch linear regression on 10kb regions for gene expression (to match number of genes lin reg)
 
-I hit a small snag in the selection analysis, it looks like the alignments that are outputted from my program do not all have a multiple of 3 as its length.
-I am currently looking into this. Hopefully I can solve this issue by today and have the results for the selection analysis by the end of the week.
+\ch test examples for genes near and far from terminus (robust log reg/results) for number of substitutions
+
+\ch make graphs proportional to length of respective cod/non-cod regions
+
+\ch figure out why the data is weird for number of cod/non-cod sites
+
+Last week I re-did the gene expression linear regression on 10kb regions instead of using each gene as one data point.
+This was so that the results are comparable to the number of genes linear regression which was also over 10kb chunks.
+I showed you this last week and the results are the same and look good!
+We decided to leave the graphs the same (not to divide the expression by the total number of genes in each 10kb section) because they are already the median expression value so it is already showing some sort of average.
+These results can be seen in Tables \ref{tab:lr_exp_10kb} and \ref{tab:lr_gene_num} as well as the per gene linear regression results in Table \ref{tab:lr_exp}.
+
+I also took 20kb close and far from the origin for each bacteria in both the protein coding and non-protein coding sections and performed a logistic regression on those sub-sections to see how number of substitutions correlates with distance from the origin of replication.
+The results can be found in Table \ref{tab:20kb_near_far_ori}.
+Most of the results are negative or not significant, but there are a few that are positive... Just wondering what you thoughts are on this? I will come talk to you about this later.
+
+I told you that there was issues with how my data was being read in and processed which was making the proportionate graphs look really wonky.
+Well, I fixed this! 
+Turns out my indexing was off and the substitutions data was starting from 0 where as the number of protein coding and non-protein coding sites was starting from 10000, and my code was freaking out when there were no substitutions (because of missing data).
+Additionally, these graphs were stacked bar graphs. So I have separated them out and made two graphs, one for protein coding and one for non-protein coding. 
+This is all fixed and I have some lovely graphs for you that make perfect sense.
+The non-protein coding regions have more substitutions than the protein coding regions, see Figures below.
 
 
 I also wanted your opinion about something that was mentioned at the conference.
 Someone asked me if I was including RNA in my ``coding'' sections? Because RNA often is under different selective pressures than coding or other ``non-coding'' sections, they suggested that I do my analysis on just all RNA to see if there is any sort of trend with respect to distance from the origin.
 I was wondering what you think about this and if you think it is worth it for me to do?
-
-I have begun compiling my committee report for Aug 26th. I am hoping to send it out to everyone by Monday Aug 19th, so there is time to read it before the meeting.
-
 
 %\textbf{dN, dS, $\omega$:}
 
@@ -421,39 +438,65 @@ I have begun compiling my committee report for Aug 26th. I am hoping to send it 
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-This week I need to figure out why there are non-multiple of 3 genes being outputted by my analysis (which should not be happening).
-Once this is complete, I can continue to re-run the selection analysis.
+The new weighted graph for \strep is looking a little weird so I need to look into this and make sure that I am not messing something up.
 
-I would like to finish my committee report by the end of the weekend. 
+I would like to check if all strains have roughly the same gene expression values per gene to ensure that they are comparable.
+I am not sure if I need to do this statistically or if I can just do it ``by eye''. Thoughts?
 
-While all that is running, I need to keep working on the inversions and gene expression stuff.
+You might have noticed that the logistic regression for number of substitutions near and far from the origin is missing values for the average substitutions. I still need to calculate this to ensure that the number of substitutions is higher near the origin than at the terminus.
+I plan on doing that this week.
 
+I would also like to perform a linear regression on the average (or total?) number of substitutions per 10kb section of the genome.
+This would be another check to ensure that the substitution results are robust.
 
 \section*{Next Week}
 
-Assuming the re-running of my analysis is complete, I would like to work intensely on the inversions and gene expression stuff and get a good chunk of that started.
+I would like to really investigate why \strep has such weird values for \dn, \ds, and $\omega$.
+I plan on first checking that for all the bacteria $\omega$ is not $>$ 1 for any gene.
+Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see what happens.
 
 
 \newpage
+%Sub density graphs with coding and non-coding information
+\newpage
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
+
+\newpage
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
+
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Setp19.pdf}
+
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
+
+
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lrrr}
+		\begin{tabular}{lcc|cc|cc|cc}
 			\toprule
-			& \multicolumn{2}{c}{20kb Near} &\\
-			\cmidrule{2-3}
+			& \multicolumn{4}{c|}{Protein Coding} &\multicolumn{4}{c}{Non-Protein Coding} \\
+			\cmidrule{2-9}
 			%			\cmidrule{8-10}
 			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
 			%			\cmidrule{2-3}
 			%			\cmidrule{4-7}
-			Bacteria and Replicon &  Origin & Terminus& Average Substitution Rate\\
+			& \multicolumn{2}{c|}{Correlation Coefficient} & \multicolumn{2}{c|}{Number of Substitutions} & \multicolumn{2}{c|}{Correlation Coefficient} & \multicolumn{2}{c}{Number of Substitutions} \\
+			& \multicolumn{2}{c|}{20kb Near} &\multicolumn{2}{c|}{per 20kb Near} & \multicolumn{2}{c|}{20kb Near} & \multicolumn{2}{c}{per 20kb Near}\\
+			\cmidrule{2-9}
+			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus& Origin & Terminus & Origin & Terminus\\
 			\midrule
-			\ecol Chromosome &  & &\\
-			\bass Chromosome & &&\\
-			\strep Chromosome & 3.145\e{-5}*** & NS &\\
-			\smel Chromosome &  & &\\
-			\smel pSymA & 1.425\e{-4}*** & \cc -1.867\e{-4}* &\\
-			\smel pSymB & \cc -4.669\e{-5}** & NS & \\
+			\ecol Chromosome &  \cc -3.018\e{-5}* & NS & && \cc -2.884\e{-5}**& \cc -5.276\e{-5}*& 1.085\e{-2} & 4.6\e{-3}\\
+			\bass Chromosome & &&&& NS & 5.960\e{-5}**& 4\e{-4} & 6.25\e{-3}\\
+			\strep Chromosome & \cc -1.988\e{-5}*** & \cc -5.986\e{-5}*** &&& 3.154\e{-5}*** & NS & 2.23\e{-2} & 2.4\e{-3}\\
+			\smel Chromosome & 5.109\e{-6}** & NS &&& NS & NS & 9\e{-4} & 1.5\e{-4}\\
+			\smel pSymA & NS & NS & 6.15\e{-3} & 1.9\e{-3}& 1.425\e{-4}*** & \cc -1.867\e{-4}*& 2.8\e{-3} & 5.5\e{-4}\\
+			\smel pSymB & NS & \cc -4.411\e{-5}*** & 3.37\e{-2}& 2.845\e{-2}& NS & \cc -4.669\e{-5}**& 7\e{-3} & 6.05\e{-3}\\
 			\bottomrule
 		\end{tabular}
 		
@@ -504,9 +547,9 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
 \end{table}
 
-\begin{centering}
-	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_exp_tot_gene_num_bidirectionality_colour_5Jun19.pdf}
-\end{centering}
+%\begin{centering}
+%	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_exp_tot_gene_num_bidirectionality_colour_5Jun19.pdf}
+%\end{centering}
 
 
 \begin{table}[h]
@@ -652,19 +695,7 @@ Assuming the re-running of my analysis is complete, I would like to work intense
 %
 %\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_11Jul19.pdf}
 
-%Sub density graphs with coding and non-coding information
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
-
-%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
-
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
 %
 %Gene expression graphs
 %
