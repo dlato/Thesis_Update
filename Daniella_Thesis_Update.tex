@@ -491,10 +491,10 @@ Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see wh
 			\cmidrule{2-9}
 			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus& Origin & Terminus & Origin & Terminus\\
 			\midrule
-			\ecol Chromosome &  \cc -3.018\e{-5}* & NS & && \cc -2.884\e{-5}**& \cc -5.276\e{-5}*& 1.085\e{-2} & 4.6\e{-3}\\
-			\bass Chromosome & &&&& NS & 5.960\e{-5}**& 4\e{-4} & 6.25\e{-3}\\
-			\strep Chromosome & \cc -1.988\e{-5}*** & \cc -5.986\e{-5}*** &&& 3.154\e{-5}*** & NS & 2.23\e{-2} & 2.4\e{-3}\\
-			\smel Chromosome & 5.109\e{-6}** & NS &&& NS & NS & 9\e{-4} & 1.5\e{-4}\\
+			\ecol Chromosome &  \cc -3.018\e{-5}* & NS & 2.87\e{-2} & 1.235\e{-2} & \cc -2.884\e{-5}**& \cc -5.276\e{-5}*& 1.085\e{-2} & 4.6\e{-3}\\
+			\bass Chromosome & -3.018\e{-5}* & NS & 2.87\e{-2} & 4.235\e{-2} & NS & 5.960\e{-5}**& 4\e{-4} & 6.25\e{-3}\\
+			\strep Chromosome & \cc -1.988\e{-5}*** & \cc -5.986\e{-5}*** & 1.265\e{-1} & 2.58\e{-2}& 3.154\e{-5}*** & NS & 2.23\e{-2} & 2.4\e{-3}\\
+			\smel Chromosome & 5.109\e{-6}** & NS & 4.1\e{-3} & 2\e{-4}& NS & NS & 9\e{-4} & 1.5\e{-4}\\
 			\smel pSymA & NS & NS & 6.15\e{-3} & 1.9\e{-3}& 1.425\e{-4}*** & \cc -1.867\e{-4}*& 2.8\e{-3} & 5.5\e{-4}\\
 			\smel pSymB & NS & \cc -4.411\e{-5}*** & 3.37\e{-2}& 2.845\e{-2}& NS & \cc -4.669\e{-5}**& 7\e{-3} & 6.05\e{-3}\\
 			\bottomrule
@@ -505,6 +505,27 @@ Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see wh
 \end{table}
 
 
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc|cc}
+			\toprule
+			& \multicolumn{2}{c|}{Protein Coding} &\multicolumn{2}{c}{Non-Protein Coding} \\
+			\cmidrule{2-5}
+			Bacteria and Replicon &  Weighted & Non-Weighted & Weighted & Non-Weighted\\
+			\midrule
+			\ecol Chromosome &   & & &\\
+			\bass Chromosome & NS & \cc -1.761\e{-4}** & NS & \cc -2.47\e{-5}** \\
+			\strep Chromosome & NS &\cc -4.382\e{-4}***& 1.87\e{-9}*& \cc -6.08\e{-5}***\\
+			\smel Chromosome &\cc -1.836\e{-10}* &\cc -1.467\e{-5}**& NS & NS\\
+			\smel pSymA & NS & NS &\cc -1.266\e{-8}**& \cc -6.74\e{-5}**\\
+			\smel pSymB & NS & NS & NS & NS\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lin_reg_10kb_subs} Linear regression on 10kb sections of the genome with increasing distance from the origin of replication after accounting for bidirectional replication. Weighted columns have the total number of substitutions in each 10kb section of the genome divided by the total number of protein coding and non-protein coding sites in the genome. Non-weighted columns are performing a linear regression on the total number of substitutions in each 10kb section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 
 \begin{table}[h]
 	\centering
