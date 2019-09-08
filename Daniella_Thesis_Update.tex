@@ -184,6 +184,10 @@
 	
 	\item \sout{test examples for genes near and far from terminus (robust log reg/results)}
 	
+	\item \sout{linear regression on 10kb regions for weighted and non-weighted substitutions}
+	
+	\item \sout{average number of substitutions in 20kb regions near and far from the origin}
+	
 	\item \sout{figure out why the data is weird for number of cod/non-cod sites}
 	
 	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
@@ -251,7 +255,12 @@
 	
 	\item update supplementary figures/file
 	
-	\item correlation of gene expression across strains
+	\item \sout{correlation of gene expression across strains}
+	\begin{itemize}
+		\item \sout{make graphs pretty and more informative with label names}
+		\item \sout{add them to supplement with a mini write up of what we did and why}
+		\item \sout{mention this in the actual paper}
+	\end{itemize}
 	
 	\item if necessary add a phylogenetic component to the analysis
 	
@@ -319,35 +328,40 @@
 	
 \section*{Last Week}
 
-\ch linear regression on 10kb regions for gene expression (to match number of genes lin reg)
+\ch linear regression on 10kb regions for substitutions (weighted and non-weighted) (Table \ref{tab:lin_reg_10kb_subs})
 
-\ch test examples for genes near and far from terminus (robust log reg/results) for number of substitutions
+\ch average number of substitutions in 20kb regions near and far from the origin (Table \ref{tab:20kb_near_far_ori})
 
-\ch make graphs proportional to length of respective cod/non-cod regions
+\ch add code to check protein cod subs $>$ non-protein coding subs
 
-\ch figure out why the data is weird for number of cod/non-cod sites
+\ch figured out weird \strep number of cod and non-cod sites (Figure below)
 
-Last week I re-did the gene expression linear regression on 10kb regions instead of using each gene as one data point.
-This was so that the results are comparable to the number of genes linear regression which was also over 10kb chunks.
-I showed you this last week and the results are the same and look good!
-We decided to leave the graphs the same (not to divide the expression by the total number of genes in each 10kb section) because they are already the median expression value so it is already showing some sort of average.
-These results can be seen in Tables \ref{tab:lr_exp_10kb} and \ref{tab:lr_gene_num} as well as the per gene linear regression results in Table \ref{tab:lr_exp}.
+\ch correlation of gene expression across strains (Figures  \ref{fig:ecoli_gene_exp_mean} and \ref{fig:bass_gene_exp_mean})
 
-I also took 20kb close and far from the origin for each bacteria in both the protein coding and non-protein coding sections and performed a logistic regression on those sub-sections to see how number of substitutions correlates with distance from the origin of replication.
-The results can be found in Table \ref{tab:20kb_near_far_ori}.
-Most of the results are negative or not significant, but there are a few that are positive... Just wondering what you thoughts are on this? I will come talk to you about this later.
+Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
+Mostly everything is not significant or negative which is good!
+The only weird thing is that \strep is positive in non-protein coding when looking at proportional number of substitutions, but is negative when looking at raw counts of substitutions.
+I did a linear regression on the number of protein coding and non-protein coding sites and there is a significant negative correlation between the number of sites and distance from the origin of replication.
+So I think that there are just less sites here so that is why the proportion of substitutions per site increases near the end, but the raw number of substitutions is low.
+I will come discuss this with you later.
 
-I told you that there was issues with how my data was being read in and processed which was making the proportionate graphs look really wonky.
-Well, I fixed this! 
-Turns out my indexing was off and the substitutions data was starting from 0 where as the number of protein coding and non-protein coding sites was starting from 10000, and my code was freaking out when there were no substitutions (because of missing data).
-Additionally, these graphs were stacked bar graphs. So I have separated them out and made two graphs, one for protein coding and one for non-protein coding. 
-This is all fixed and I have some lovely graphs for you that make perfect sense.
-The non-protein coding regions have more substitutions than the protein coding regions, see Figures below.
+I also calculated an average number of substitutions in 20kb regions near and far from the origin, these are found in Table \ref{tab:20kb_near_far_ori}.
+The origin does have a higher number of substitutions near the origin than compared to the terminus, which is great!
+However, the number of substitutions is higher in protein coding regions than in non-protein coding regions.
+I also wrote a little script to check if the proportional number of substitutions was higher in each 10kb region for non-protein coding v.s. protein coding, and I found the opposite.
+That the proportional number of substitutions (number of subs divided by number of sites) is higher in protein coding than non-protein coding in 60\% of the \ecol 10kb regions.
+I am still looking into this, I think that it may be something wrong with how I split up the alignments into protein coding and non-protein coding.
+So I need to look at this code carefully.
 
+I realized that for \strep, the weird number of protein coding and non-protein coding sites was because of zero substitutions in some sections messing up the proportional calculation.
+The new graph is below!
 
-I also wanted your opinion about something that was mentioned at the conference.
-Someone asked me if I was including RNA in my ``coding'' sections? Because RNA often is under different selective pressures than coding or other ``non-coding'' sections, they suggested that I do my analysis on just all RNA to see if there is any sort of trend with respect to distance from the origin.
-I was wondering what you think about this and if you think it is worth it for me to do?
+As I mentioned to you I looked into the correlation of gene expression across strains for that paper and it looks like all the datastes are roughly the same, which is great!
+\strep, and all the replicons of \smel only had one dataset, so I could not look into this with them.
+I thought that \strep had more than one dataset but I was wrong and accidentally counted one of the replicates as it's own dataset!
+The weird genes that had super high expression were all hypothetical proteins or unknown proteins.
+The graphs for \ecol and \bass are in Figures \ref{fig:ecoli_gene_exp_mean} and \ref{fig:bass_gene_exp_mean}.
+
 
 %\textbf{dN, dS, $\omega$:}
 
@@ -438,27 +452,39 @@ I was wondering what you think about this and if you think it is worth it for me
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-The new weighted graph for \strep is looking a little weird so I need to look into this and make sure that I am not messing something up.
-
-I would like to check if all strains have roughly the same gene expression values per gene to ensure that they are comparable.
-I am not sure if I need to do this statistically or if I can just do it ``by eye''. Thoughts?
-
-You might have noticed that the logistic regression for number of substitutions near and far from the origin is missing values for the average substitutions. I still need to calculate this to ensure that the number of substitutions is higher near the origin than at the terminus.
-I plan on doing that this week.
-
-I would also like to perform a linear regression on the average (or total?) number of substitutions per 10kb section of the genome.
-This would be another check to ensure that the substitution results are robust.
-
-\section*{Next Week}
 
 I would like to really investigate why \strep has such weird values for \dn, \ds, and $\omega$.
 I plan on first checking that for all the bacteria $\omega$ is not $>$ 1 for any gene.
 Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see what happens.
 
+As mentioned above I need to re-look at why the proportionate number of substitutions is higher in the protein coding regions than non-protein coding sections.
+I think this has to do with how I split up the alignment into cod and non-cod sections so I will be looking into this further this week.
+
+I would like to have the code ready for after I figure out the above stuff looking at 20 genes near and far from the origin to see what their \dn, \ds, and $\omega$ values look like. 
+
+\section*{Next Week}
+
+I would like to switch and work on the gene expression paper again.
+\begin{enumerate}
+	\item phylogenetic analysis with gene expression in \ecol?
+	\item remove genes that have been recently translocated from analysis?
+	\item model gene expression + position + number of genes
+	\item split up \strep data into core and non-core and see if the results are the same (do same for number of genes)
+\end{enumerate}
+
 
 \newpage
-%Sub density graphs with coding and non-coding information
-\newpage
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Ecoli_exp_normalization_combining_8Mar18/ecoli_median_mean_gene_exp_check.pdf}
+	\caption{\label{fig:ecoli_gene_exp_mean} Distribution of the median expression value for each \ecol dataset minus the mean expression value for that gene across all datasets. Each gene is shown on the x-axis and the log base 10 values are on the y-axis.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Bass_exp_normalization_combining_6Mar18/bass_median_mean_gene_exp_check.pdf}
+	\caption{\label{fig:bass_gene_exp_mean} Distribution of the median expression value for each \bass dataset minus the mean expression value for that gene across all datasets. Each gene is shown on the x-axis and the log base 10 values are on the y-axis.}
+\end{figure}	
+
+%subs density cod and non cod
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
 
@@ -466,7 +492,7 @@ Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see wh
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
 
-%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_sub_histogram_bidirectionality_colour_9Aug19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_6Sep19.pdf}
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Sep19.pdf}
 
@@ -514,7 +540,7 @@ Then calculating \dn, \ds, and $\omega$ by hand for a few \strep genes to see wh
 			\cmidrule{2-5}
 			Bacteria and Replicon &  Weighted & Non-Weighted & Weighted & Non-Weighted\\
 			\midrule
-			\ecol Chromosome &   & & &\\
+			\ecol Chromosome & \cc -1.622\e{-9}***  & \cc -1.852\e{-4}***& NS & \cc -2.238\e{-5}***\\
 			\bass Chromosome & NS & \cc -1.761\e{-4}** & NS & \cc -2.47\e{-5}** \\
 			\strep Chromosome & NS &\cc -4.382\e{-4}***& 1.87\e{-9}*& \cc -6.08\e{-5}***\\
 			\smel Chromosome &\cc -1.836\e{-10}* &\cc -1.467\e{-5}**& NS & NS\\
