@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  21 SEP 2019 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  21 SEP 2019 13:21
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -652,18 +652,18 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (Daniella_Thesis_Update.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -719,35 +719,35 @@ Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+LaTeX Font Info:    Try loading font information for U+msa on input line 117.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+LaTeX Font Info:    Try loading font information for U+msb on input line 117.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 114.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 117.
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 176.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 179.
 
 
 (C:\Users\Daniella\Downloads\MiKTeX\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
  [1{C:/Users/Daniella/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2] [3] [4]
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep
-19.pdf, id=24, 505.89pt x 505.89pt>
+19.pdf, id=25, 505.89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
 _7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 19Sep19.pdf Graphic file (type pdf)
@@ -757,10 +757,10 @@ _7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 9Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidir
-ectionality_colour_19Sep19.pdf used on input line 519.
+ectionality_colour_19Sep19.pdf used on input line 523.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 519--520
+Overfull \hbox (28.0pt too wide) in paragraph at lines 523--524
 [][] 
  []
 
@@ -769,7 +769,7 @@ od_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colou
 r_19Sep19.pdf>]
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep1
-9.pdf, id=40, 505.89pt x 505.89pt>
+9.pdf, id=41, 505.89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
 _7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_1
 7Sep19.pdf Graphic file (type pdf)
@@ -779,17 +779,17 @@ _7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_1
 Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidire
-ctionality_colour_17Sep19.pdf used on input line 523.
+ctionality_colour_17Sep19.pdf used on input line 527.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 523--524
+Overfull \hbox (28.0pt too wide) in paragraph at lines 527--528
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_9Sep1
-9.pdf, id=41, 505.89pt x 505.89pt>
+9.pdf, id=42, 505.89pt x 505.89pt>
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
 _7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 9Sep19.pdf Graphic file (type pdf)
@@ -799,17 +799,17 @@ _7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidir
-ectionality_colour_9Sep19.pdf used on input line 525.
+ectionality_colour_9Sep19.pdf used on input line 529.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 525--526
+Overfull \hbox (28.0pt too wide) in paragraph at lines 529--530
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep
-19.pdf, id=42, 505.89pt x 505.89pt> [7 <C:/Users/Daniella/Documents/Sinorhizobi
+19.pdf, id=43, 505.89pt x 505.89pt> [7 <C:/Users/Daniella/Documents/Sinorhizobi
 um2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_h
 istogram_bidirectionality_colour_17Sep19.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
@@ -821,17 +821,17 @@ _7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 9Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidir
-ectionality_colour_19Sep19.pdf used on input line 527.
+ectionality_colour_19Sep19.pdf used on input line 531.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 527--528
+Overfull \hbox (28.0pt too wide) in paragraph at lines 531--532
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep
-19.pdf, id=53, 505.89pt x 505.89pt> [8 <C:/Users/Daniella/Documents/Sinorhizobi
+19.pdf, id=54, 505.89pt x 505.89pt> [8 <C:/Users/Daniella/Documents/Sinorhizobi
 um2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_
 histogram_bidirectionality_colour_9Sep19.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
@@ -843,17 +843,17 @@ _7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 7Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidir
-ectionality_colour_17Sep19.pdf used on input line 529.
+ectionality_colour_17Sep19.pdf used on input line 533.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 529--530
+Overfull \hbox (28.0pt too wide) in paragraph at lines 533--534
 [][] 
  []
 
 
 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb
 19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep
-19.pdf, id=63, 505.89pt x 505.89pt> [9 <C:/Users/Daniella/Documents/Sinorhizobi
+19.pdf, id=64, 505.89pt x 505.89pt> [9 <C:/Users/Daniella/Documents/Sinorhizobi
 um2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_
 histogram_bidirectionality_colour_19Sep19.pdf>]
 File: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod
@@ -865,10 +865,10 @@ _7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_
 6Sep19.pdf>
 Package pdftex.def Info: C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub
 _graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidir
-ectionality_colour_16Sep19.pdf used on input line 531.
+ectionality_colour_16Sep19.pdf used on input line 535.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 531--532
+Overfull \hbox (28.0pt too wide) in paragraph at lines 535--536
 [][] 
  []
 
@@ -910,28 +910,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12] [13] [14] [15] [16] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16569 strings out of 493673
- 342065 string characters out of 3141142
- 406566 words of memory out of 3000000
- 19553 multiletter control sequences out of 15000+200000
- 15814 words of font info for 48 fonts, out of 3000000 for 9000
+ 16573 strings out of 493673
+ 342096 string characters out of 3141142
+ 406602 words of memory out of 3000000
+ 19556 multiletter control sequences out of 15000+200000
+ 16513 words of font info for 49 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,831b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Daniella\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\
-Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.p
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\
+Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.p
 k> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecrm1200.pk><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (16 pages, 181102 bytes).
+00\ecbx1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/Daniella/Downloads/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1
+/public/amsfonts/symbols/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (16 pages, 187814 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
+ 292 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

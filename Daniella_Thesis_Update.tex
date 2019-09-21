@@ -59,7 +59,7 @@
 \newcommand{\dn}{\textit{dN}\xspace}
 \newcommand{\ds}{\textit{dS}\xspace}
 \newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
-\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+%\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
 \newcommand{\sliv}{\textit{S.\,lividans}\xspace}
 \begin{document}
 %	Nov 30:	Create graphs with slopes for each COG
@@ -338,15 +338,18 @@
 \ch updated results from re-running substitutions analysis. (see tables below)
 
 \textbf{proportional coding subs $>$ proportional non-coding subs}
+
 So I thought that I fixed this, which I did in \pb, but when I re-ran the pipeline on the other bacteria the number of 10kb sections with proportionally more coding subs than non-coding subs still ranged from 14\% - 50\% of the 10kb sections.
 Looking into it a bit more, and it seems as though for the rest of the bacteria there is less data at a lot of the 10kb sections than there should be. 
 So I need to figure out what is happening here.
 
 \textbf{\dn/\ds $>$ 1 for some genes}
+
 Excluding \strep, the rest of the bacteria have very few ``genes'' that have have \dn/\ds $>$ 1 (~4\% of all ``genes'').
 Looking into this further these ``genes'' are actually segments of  genes that were really short (average of 33bp). This was because there were gaps in the genes so the rest of the gene got ``cut'' so it makes sense why these genes have such high $\omega$. I am not sure if we should be discarding these gene fragments from the analysis? Thoughts? 
 
 \textbf{Weird \strep selection issue}
+
 I already talked to you about this, but I looked into why \strep has so many genes with $\omega$ $>$ 1.
 The alignments are all correct and the genomic positions are all correct. So \p and MAFFT are grabbing the correct genomic sequence.
 I BLASTed a coding gene from one of the blocks and it does match with sequences from all the other species of \strep, however they are not found within the same block.
@@ -357,6 +360,7 @@ Additionally, the branch lengths between the \scoe and \sliv strains are very sm
 See below for what I plan to do next to fix all this.
 
 \textbf{Alignment split} 
+
 I noticed that one of the blocks in \strep failed to be split into coding and non-coding sections.
 I thought it was because I did not properly define an array v.s. a string for one of my variables, but I think something else is going on.
 Need to look into this more.
@@ -538,7 +542,7 @@ I would like to switch and work on the gene expression paper again.
 			\toprule
 			Bacteria and Replicon & Protein Coding Sequences & Non-Protein Coding Sequences\\
 			\midrule
-			\ecol Chromosome &  & NS \\
+			\ecol Chromosome & \cc -4.308\e{-8}*** & NS \\
 			\bass Chromosome & \cc -4.971\e{-8}*** & \cc -1.055\e{-7}*** \\
 			\strep Chromosome &  & \\
 			\smel Chromosome & \cc -1.903\e{-7}***  & \cc -2.900\e{-7}*** \\
@@ -571,11 +575,11 @@ I would like to switch and work on the gene expression paper again.
 			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus& Origin & Terminus & Origin & Terminus\\
 			\midrule
 			\ecol Chromosome &  \cc -2.889\e{-5}* & NS & 2.87\e{-2} & 4.24\e{-2} & \cc -4.316\e{-5}**& \cc -8.209\e{-5}*& 1.095\e{-2} & 4.45\e{-3} \\
-			\bass Chromosome & NS & 1.863\e{-5}* &  &  & 1.017\e{-4}* & 5.823\e{-5}***& 8\e{-4} & 6.75\e{-3}\\
+			\bass Chromosome & NS & 1.863\e{-5}* & 4.8\e{-3} & 3.06\e{-2} & 1.017\e{-4}* & 5.823\e{-5}***& 8\e{-4} & 6.75\e{-3}\\
 			\strep Chromosome && &  & &  &  &  & \\
 			\smel Chromosome & NS & NS & 4.05\e{-3} & 2\e{-4}& NS & NS & 9\e{-4} & 1.5\e{-4}\\
 			\smel pSymA & NS & NS & 6.15\e{-3} & 1.9\e{-3}& 1.403\e{-4}*** & \cc -2.220\e{-4}**& 2.8\e{-3} & 5.5\e{-4}\\
-			\smel pSymB &  &  & & & NS & \cc -4.557\e{-5}**& 5.1\e{-3} & 5.4\e{-3}\\
+			\smel pSymB & \cc -1.553\e{-5}* & \cc -4.908\e{-5}*** & 3.23\e{-2} & 2.36\e{-2} & NS & \cc -4.557\e{-5}**& 5.1\e{-3} & 5.4\e{-3}\\
 			\bottomrule
 		\end{tabular}
 		
