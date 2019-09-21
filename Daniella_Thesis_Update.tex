@@ -58,6 +58,9 @@
 \newcommand{\ch}{$\checkmark$}
 \newcommand{\dn}{\textit{dN}\xspace}
 \newcommand{\ds}{\textit{dS}\xspace}
+\newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
+\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\sliv}{\textit{S.\,lividans}\xspace}
 \begin{document}
 %	Nov 30:	Create graphs with slopes for each COG
 	
@@ -330,43 +333,34 @@
 
 \ch edits for gene expression intro
 
+\ch added some more references to the substitutions paper intro
+
+\ch updated results from re-running substitutions analysis. (see tables below)
 
 \textbf{proportional coding subs $>$ proportional non-coding subs}
-So I thought that I fixed this, which I did in \pb, but when I re-ran the pipeline on the other bacteria the number of 10kb sections with proportionally more coding subs than non-coding subs still ranged from 14\% - 50\% of the 10kb sections. 
+So I thought that I fixed this, which I did in \pb, but when I re-ran the pipeline on the other bacteria the number of 10kb sections with proportionally more coding subs than non-coding subs still ranged from 14\% - 50\% of the 10kb sections.
+Looking into it a bit more, and it seems as though for the rest of the bacteria there is less data at a lot of the 10kb sections than there should be. 
+So I need to figure out what is happening here.
 
+\textbf{\dn/\ds $>$ 1 for some genes}
+Excluding \strep, the rest of the bacteria have very few ``genes'' that have have \dn/\ds $>$ 1 (~4\% of all ``genes'').
+Looking into this further these ``genes'' are actually segments of  genes that were really short (average of 33bp). This was because there were gaps in the genes so the rest of the gene got ``cut'' so it makes sense why these genes have such high $\omega$. I am not sure if we should be discarding these gene fragments from the analysis? Thoughts? 
 
+\textbf{Weird \strep selection issue}
+I already talked to you about this, but I looked into why \strep has so many genes with $\omega$ $>$ 1.
+The alignments are all correct and the genomic positions are all correct. So \p and MAFFT are grabbing the correct genomic sequence.
+I BLASTed a coding gene from one of the blocks and it does match with sequences from all the other species of \strep, however they are not found within the same block.
+My speculation is that \p can not handle the slight differences between \sven and \scoe and \sliv and cuts the genome into too many blocks, classifying what genes are homologous.
+This can also be seen in the \p block alignments where it looks like there is a clear divide between the sequence content of \scoe and \sliv and all the \sven strains.
+There is also very few sections (just by looking at the alignment) where all 6 taxa have sequence data and no gaps.
+Additionally, the branch lengths between the \scoe and \sliv strains are very small compared to the branch lengths between all the \sven strains.
+See below for what I plan to do next to fix all this.
 
-Last week I did a lot of editing on the gene expression paper.
-I put the correlation of gene expression across samples into the supplement with an explanation in the main paper. 
-I also moved the linear regression done using each gene as a data point to the supplement (with an explanation in the main paper).
-I added in the results from the linear regression on the number of genes over 10kb regions and expression over 10kb regions to the main section of the paper and updated the methods section to account for this.
+\textbf{Alignment split} 
+I noticed that one of the blocks in \strep failed to be split into coding and non-coding sections.
+I thought it was because I did not properly define an array v.s. a string for one of my variables, but I think something else is going on.
+Need to look into this more.
 
-I have also decided to try out the graduate course (Stats 744). So far it is really really cool and I am learning a lot and I think will be really beneficial. 
-
-I looked into if in each 10kb section of the substitution graph there was an increased substitution rate in the protein coding sections versus the non-protein coding section.
-I discussed this with you, but there were cases where one site in my data can be coding in one taxa but non-coding in another taxa.
-I am for sure comparing homologous sequences so this has to do with the beginning of one genome being coding but the rest being non-coding. 
-When looking into this further I found that the reverse complement of each gene was not being printed out properly in the alignment files (when it splits up into protein coding and non-protein coding sections).
-I fixed this.
-I also found that for each site, the code was not printing out information for all the nodes in the tree unless there was a substitution when I made a little test example dataset.
-So I re-wrote my perl script in python and fixed this issue. So now for each site it will print null information if there was no substitution at a particular site, so I have information for all nodes in the tree for each site.
-I thought that this would solve the issue of having some 10kb sections with proportionally more coding substitutions than non-coding.
-So I re-ran the pipeline on \pb to see if it fixed the issue and there are about 23\% of 10kb sections that have the proportion of coding subs $>$ the proportion of non-coding subs.
-However, the difference between these rates is 0.001 or less.
-I checked if it was a sample size issue, and it was not. These 10kb sections have the same amount of information as the other 10kb sections. 
-So I am not sure what to do next, or if this is really an issue. I would appreciate any help.
-
-I wrote the code for grabbing the \dn, \ds, and $\omega$ for 20 genes near and far from the origin and doing a linear regression on those genes.
-I am not going to run this on all the replicons until I figure out what is going on with \strep. 
-
-I also started to look into why \strep is weird with the selection results and I looked into \ecoli genes that had an $\omega$ value $>$ 1.
-this was only about 4\% of genes and they were gene fragments that were really short (average of 33bp). This was because there were gaps in the genes so the rest of the gene got ``cut'' so it makes sense why these genes have such high $\omega$. I am not sure if we should be discarding these gene fragments from the analysis? Thoughts? 
-When I checked in with \strep, about 70\% of the genes had $\omega$ $>$ 1, which is a problem. But this is why the overall selection results for \strep are weird.
-The average length of these gene fragments is 254bp.
-So I first checked to make sure that I was grabbing the correct sequences from the \p annotation, and I am. All the positions in the headers of my MAFFT files match the actual genomic sequence at that position. So that is good.
-When I look at the alignments of these segments, they are pretty jumbled and there are a lot of substitutions happening that are changing the AA sequence.
-So I am a bit lost and do not know what else to check to make sure that these differences are real. Any help would be appreciated.
-I also see that all the venezuele strains have very similar sequences and the coelicolor and lividans strains have similar sequences to eachother. Not sure if this has anything to do with the substitutions.
 
 %Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
 %Mostly everything is not significant or negative which is good!
@@ -474,9 +468,15 @@ I also see that all the venezuele strains have very similar sequences and the co
 %aim to tick off 4 tasks a week
 %
 
-I would like to figure out why \strep has $\omega$ $>$ 1 for 70\% of its genes. Not sure how I should go about looking into this.
+\begin{itemize}
+	\item look for more \strep complete genomes to use in the analysis
+	\item look into gblocks to assess MAFFT alignments
+	\item check coding/non-coding code to see how often sites do not match up for \strep
+	\item check how often the tree for each block matches the overall tree for \strep
+	\item figure out what is going on with cod subs $>$ non-cod subs
+	\item deal with genes where $\omega$ $>$ 1
+\end{itemize}
 
-There is a portion of my substitutions code where I remove duplicates in my data, however, I think this is wrong and I need all the information across all nodes. So I would like to re run this for \pb and see if this is what is causing some of the 10kb sections to have proportionally more coding subs than non coding.
 
 \section*{Next Week}
 

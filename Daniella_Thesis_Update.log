@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  21 SEP 2019 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  21 SEP 2019 11:56
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -899,6 +899,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [11 <C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_
 7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_1
 6Sep19.pdf>]
@@ -909,7 +912,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Here is how much of TeX's memory you used:
  16569 strings out of 493673
  342065 string characters out of 3141142
- 400916 words of memory out of 3000000
+ 406566 words of memory out of 3000000
  19553 multiletter control sequences out of 15000+200000
  15814 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -926,7 +929,7 @@ ic/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public
 sfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (16 pages, 181996 bytes).
+Output written on Daniella_Thesis_Update.pdf (16 pages, 181102 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
