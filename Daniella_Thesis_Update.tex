@@ -526,9 +526,32 @@ I would like to switch and work on the gene expression paper again.
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Setp19.pdf}
+\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
 
 \includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep19.pdf}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Bacteria and Replicon & Protein Coding Sequences & Non-Protein Coding Sequences\\
+			\midrule
+			\ecol Chromosome &  & NS \\
+			\bass Chromosome & \cc -4.971\e{-8}*** & \cc -1.055\e{-7}*** \\
+			\strep Chromosome &  & \\
+			\smel Chromosome & \cc -1.903\e{-7}***  & \cc -2.900\e{-7}*** \\
+			\smel pSymA & \cc -6.642\e{-7}*** & \cc -1.263\e{-6}*** \\
+			\smel pSymB & 1.769\e{-7}*** & 4.771\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
 
 
 \begin{table}[h]
@@ -547,12 +570,12 @@ I would like to switch and work on the gene expression paper again.
 			\cmidrule{2-9}
 			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus& Origin & Terminus & Origin & Terminus\\
 			\midrule
-			\ecol Chromosome &  \cc -3.018\e{-5}* & NS & 2.87\e{-2} & 1.235\e{-2} & \cc -2.884\e{-5}**& \cc -5.276\e{-5}*& 1.085\e{-2} & 4.6\e{-3}\\
-			\bass Chromosome & -3.018\e{-5}* & NS & 2.87\e{-2} & 4.235\e{-2} & NS & 5.960\e{-5}**& 4\e{-4} & 6.25\e{-3}\\
-			\strep Chromosome & \cc -1.988\e{-5}*** & \cc -5.986\e{-5}*** & 1.265\e{-1} & 2.58\e{-2}& 3.154\e{-5}*** & NS & 2.23\e{-2} & 2.4\e{-3}\\
-			\smel Chromosome & 5.109\e{-6}** & NS & 4.1\e{-3} & 2\e{-4}& NS & NS & 9\e{-4} & 1.5\e{-4}\\
-			\smel pSymA & NS & NS & 6.15\e{-3} & 1.9\e{-3}& 1.425\e{-4}*** & \cc -1.867\e{-4}*& 2.8\e{-3} & 5.5\e{-4}\\
-			\smel pSymB & NS & \cc -4.411\e{-5}*** & 3.37\e{-2}& 2.845\e{-2}& NS & \cc -4.669\e{-5}**& 7\e{-3} & 6.05\e{-3}\\
+			\ecol Chromosome &  \cc -2.889\e{-5}* & NS & 2.87\e{-2} & 4.24\e{-2} & \cc -4.316\e{-5}**& \cc -8.209\e{-5}*& 1.095\e{-2} & 4.45\e{-3} \\
+			\bass Chromosome & NS & 1.863\e{-5}* &  &  & 1.017\e{-4}* & 5.823\e{-5}***& 8\e{-4} & 6.75\e{-3}\\
+			\strep Chromosome && &  & &  &  &  & \\
+			\smel Chromosome & NS & NS & 4.05\e{-3} & 2\e{-4}& NS & NS & 9\e{-4} & 1.5\e{-4}\\
+			\smel pSymA & NS & NS & 6.15\e{-3} & 1.9\e{-3}& 1.403\e{-4}*** & \cc -2.220\e{-4}**& 2.8\e{-3} & 5.5\e{-4}\\
+			\smel pSymB &  &  & & & NS & \cc -4.557\e{-5}**& 5.1\e{-3} & 5.4\e{-3}\\
 			\bottomrule
 		\end{tabular}
 		
@@ -570,11 +593,11 @@ I would like to switch and work on the gene expression paper again.
 			\cmidrule{2-5}
 			Bacteria and Replicon &  Weighted & Non-Weighted & Weighted & Non-Weighted\\
 			\midrule
-			\ecol Chromosome & \cc -1.622\e{-9}***  & \cc -1.852\e{-4}***& NS & \cc -2.238\e{-5}***\\
-			\bass Chromosome & NS & \cc -1.761\e{-4}** & NS & \cc -2.47\e{-5}** \\
-			\strep Chromosome & NS &\cc -4.382\e{-4}***& 1.87\e{-9}*& \cc -6.08\e{-5}***\\
-			\smel Chromosome &\cc -1.836\e{-10}* &\cc -1.467\e{-5}**& NS & NS\\
-			\smel pSymA & NS & NS &\cc -1.266\e{-8}**& \cc -6.74\e{-5}**\\
+			\ecol Chromosome & \cc -4.87\e{-10}**  & \cc -1.839\e{-4}***& NS & \cc -2.244\e{-5}***\\
+			\bass Chromosome & NS & \cc -2.031\e{-4}** & NS & \cc -2.885\e{-5}** \\
+			\strep Chromosome &  & & & \\
+			\smel Chromosome &\cc -1.341\e{-10}** &\cc -1.461\e{-5}**& \cc -3.490\e{-10}* & NS\\
+			\smel pSymA & NS & NS &\cc -1.144\e{-8}**& \cc -6.74\e{-5}**\\
 			\smel pSymB & NS & NS & NS & NS\\
 			\bottomrule
 		\end{tabular}
@@ -649,26 +672,6 @@ I would like to switch and work on the gene expression paper again.
 	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding genes per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Bacteria and Replicon & Protein Coding Sequences & Non-Protein Coding Sequences\\
-			\midrule
-			\ecol Chromosome & \cc -1.354\e{-7}*** & NS \\
-			\bass Chromosome & \cc -6.735\e{-8}*** & NS \\
-			\strep Chromosome & 4.105\e{-7}*** & 1.635\e{-7}***\\
-			\smel Chromosome & \cc -9.185\e{-8}***  & \cc -1.749\e{-7}*** \\
-			\smel pSymA & \cc -8.121\e{-7}*** & \cc -1.247\e{-6}*** \\
-			\smel pSymB & 1.655\e{-7}*** & 4.105\e{-7}***\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
 
 
 
