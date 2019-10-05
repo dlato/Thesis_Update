@@ -54,6 +54,7 @@
 \newcommand{\pb}{pSymB\xspace}
 \newcommand{\snat}{\textit{S.\,natalensis}\xspace}
 \newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\borrb}{\textit{Borrelia burgdorferi}\xspace}
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \newcommand{\ch}{$\checkmark$}
 \newcommand{\dn}{\textit{dN}\xspace}
@@ -331,51 +332,57 @@
 	
 \section*{Last Week}
 
-\ch edits to gene expression paper intro
+\ch compaired trimal and Gblocks
 
-\ch re-run selection analysis with fixed gene complement issue
+\ch look into other alignment assessment programs
 
-\ch look into/test Gblocks alignment assessment
+\ch how do algorithms for Gblocks and trimal work?
 
-\ch look into other \strep genomes available
+\ch min length for aligned segments
 
-\ch figure out why \strep failed to split the alignment into coding and non-coding
+\ch get pipeline for implementing Gblocks (additional steps)
 
+\ch write code to parse the Gblocks alignment and print out only the ``good'' sections of the aln
 
-\textbf{Gblocks}
-So I looked into Gblocks and what it does. It seems very similar to trimal, so it breaks the alignment up into good and bad segments.
-It spits out this big alignment into phylip interleaved format so it should be pretty easy to write a code to parse this and get the alignment into a format I can use.
-So for \strep, Gblocks will throw out between 10\% - 99\% of the alignment for all the blocks.
-It also had only 30\% of the blocks where 50\% or more of the sequence was kept.
-The segments of alignment that it kept were between 10bp - 500bp.
-Comparing this to \ecol, 67\% of the blocks had 50\% or more of the sequence kept and the segments of alignment that were kept were much longer than in \strep and ranged from 10bp - 30000bp.
-Some of these chunks (for \strep and \ecol) are really small and I think these small segments are also showing up in my code and giving weird selection coefficients.
-So I think having some sort of alignment length cut off, plus assessing the alignment with Gblocks will help eliminate these and then the selection results will hopefully look better and be more accurate.
+\ch more \strep genomes?
 
-I then looked closely at what Gblocks does v.s. what my code does.
-Most of the time my code and Gblocks lines up, BUT there are cases where I kept something that Gblocks tossed, and cases where Gblocks kept something that I tossed.
-So I am not sure what this means but I think using both will be the most stringent.
-
-I also looked at the smaller segments of the alignment of \ecol and found that the alignment was not aligning homologous sequences either, but only for the smaller segments.
-So I think we can't trust anything that is really short because we just can not be confident that it is correct.
+\ch other linear species?
 
 
-\textbf{\dn/\ds $>$ 1 for some genes}
+\textbf{Alignment Assessment}
+It looks like Gblocks and trimal do very similar things. Trimal will give a score for each site in the alignment and can also calculate this score over a sliding window.
+However, it seems like it will be hard to implement into my  pipeline because the output file is not in an easily parsible format.
+I decided to go with Gblocks because it will be easy to implement.
 
-As mentioned above, these really short segments are just inaccurate. So I think making a cut off and using Gblocks should hopefully fix this issue
+I looked into other alignment assessement programs and like I mentioned to you, the only ones that use a tree, re-align the sequences themselves.
+The idea is that you need an alignment to make a tree so the ones that assess the alignment but do not re-align are trying to be implemented even before you build a tree. We decided that not re-aligning with another program is best.
 
-\textbf{\strep Alternate Genomes}
+As I mentioned, trimal will calculate scores for each site or over a specified sliding window. It can calculated different scores, someusing the proportion of sequences with say a gap or the same base, and it also uses an identity matrix to calculate distances and then weights the score based on those.
+Gblocks is completely proportional. So x number of sequences need to have the same base for it to be considered ``conserved''. It also has cutoffs for the ``highly conserved'' category.
 
-I found a paper that shows multiple phylogenetic trees for \strep and found some consistent groupings of strains.
-I tried to find genomes related to \sven but when I did \p on these, there was still way too many blocks.
-I am going to talk to Marie to see if she has any insight on this.
-There may be more hope for genomes related to \scoe, so I am going to look into this more and see if I can get a \p alignment that is less crazy.
+As discussed, the short segments of the alignments are often inaccurate and not comparing homologous regions. So we decided to make each segment a minimum of 100bp long.
+This means that my code will go through the mafft alignment first, making sure that segments are comparing codon 1 with codon 1...etc. 
+And then those sections will be passed through Gblocks to ensure that they are min 100bp and well aligned.
 
-\textbf{Alignment split} 
+\textbf{Implementation of Gblocks}
+I tested out how to implement Gblocks into my current pipeline and worked out the kinks. It is really quick (seconds to assess all blocks) and can be implemented for all bacteria in both coding and non-coding.
+I also wrote a short code to parse the Gblocks output and print out the ``good'' segments of the alignment (python).
 
-The reason why one of the blocks for \strep failed to split is that the sequences are not homologous.
-The code is a bit complicated to explain but the reason that it failed is that some taxa had an extra ``gene'' than others.
-But again, this is because the sequences are not homologous so this should be fixed when I implement the above.
+\textbf{\strep Genomes}
+As I mentioned to you this week, I was looking into other \strep genomes that we could potentially use and it looks like there are 2 options for the analysis:
+
+\begin{enumerate}
+	\item only use 3 taxa, 2 strains of \sliv and 1 of \scoe, these have \textbf{6 blocks total}
+	\item only use 4 strains of \sven, these have \textbf{2 blocks total}
+\end{enumerate}
+
+So we need to decide if we want more rearrangements, or more taxa. I still need to think about this and decide.
+
+
+\textbf{Other Linear Genomes}
+I looked into other bacteria with at least one linear chromosome and it looks like \agro has a circular and a linear chrom, and \borrb has one linear chromosome.
+\agro has 15 complete ref genomes, and \borrb has 10 complete ref genomes.
+I aligned these last week with \p in multiple groupings to see if there are any that are similar enough but not too similar. I will report back on the results when they are done.
 
 
 %Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
@@ -483,23 +490,23 @@ But again, this is because the sequences are not homologous so this should be fi
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-
-\begin{itemize}
-	\item look for more \strep phylo trees and associated genomes (\scoe)
-	\item check coding/non-coding code to see how often sites do not match up for \strep
-	\item check how often the tree for each block matches the overall tree for \strep
-	\item figure out what is going on with cod subs $>$ non-cod subs
-\end{itemize}
-
-
-\section*{Next Week}
-
 I would like to switch and work on the gene expression paper again.
 \begin{enumerate}
 	\item phylogenetic analysis with gene expression in \ecol?
 	\item remove genes that have been recently translocated from analysis?
 	\item model gene expression + position + number of genes
 	\item split up \strep data into core and non-core and see if the results are the same (do same for number of genes)
+\end{enumerate}
+
+
+\section*{Next Week}
+Back to the substitutions project:
+\begin{enumerate}
+	\item  pick which group of \strep genomes to use
+	\item what to do about length cut off for the non-coding regions? am I putting this whole section in the supplement?
+	\item assess the \borrb mauve plots for similar seqs
+	\item align the \agro taxa into more specific phylo groups with mauve
+	\item  assess the agro mauve plots
 \end{enumerate}
 
 
@@ -536,19 +543,19 @@ I would like to switch and work on the gene expression paper again.
 
 %subs density cod and non cod
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
 
 \newpage
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_9Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_9Sep19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
 
-\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep19.pdf}
+%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep19.pdf}
 
 
 \begin{table}[h]
