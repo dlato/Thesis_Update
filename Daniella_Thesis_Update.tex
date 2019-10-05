@@ -248,15 +248,15 @@
 %	
 	\item \sout{linear regression on 10kb regions}
 	
-	\item put new 10kb lin reg and \# of genes over 10kb lin reg into paper
+	\item \sout{put new 10kb lin reg and \# of genes over 10kb lin reg into paper}
 	
-	\item write about $\uparrow$ in methods and discussion
+	\item \sout{write about $\uparrow$ in methods and discussion}
 	
-	\item put expression lin reg and \# coding sites log reg into supplement
+	\item \sout{put expression lin reg and \# coding sites log reg into supplement}
 	
-	\item write about $\uparrow$ in paper and how results are the same
+	\item \sout{write about $\uparrow$ in paper and how results are the same}
 	
-	\item update supplementary figures/file
+	\item \sout{update supplementary figures/file}
 	
 	\item \sout{correlation of gene expression across strains}
 	\begin{itemize}
@@ -331,39 +331,51 @@
 	
 \section*{Last Week}
 
-\ch edits for gene expression intro
+\ch edits to gene expression paper intro
 
-\ch added some more references to the substitutions paper intro
+\ch re-run selection analysis with fixed gene complement issue
 
-\ch updated results from re-running substitutions analysis. (see tables below)
+\ch look into/test Gblocks alignment assessment
 
-\textbf{proportional coding subs $>$ proportional non-coding subs}
+\ch look into other \strep genomes available
 
-So I thought that I fixed this, which I did in \pb, but when I re-ran the pipeline on the other bacteria the number of 10kb sections with proportionally more coding subs than non-coding subs still ranged from 14\% - 50\% of the 10kb sections.
-Looking into it a bit more, and it seems as though for the rest of the bacteria there is less data at a lot of the 10kb sections than there should be. 
-So I need to figure out what is happening here.
+\ch figure out why \strep failed to split the alignment into coding and non-coding
+
+
+\textbf{Gblocks}
+So I looked into Gblocks and what it does. It seems very similar to trimal, so it breaks the alignment up into good and bad segments.
+It spits out this big alignment into phylip interleaved format so it should be pretty easy to write a code to parse this and get the alignment into a format I can use.
+So for \strep, Gblocks will throw out between 10\% - 99\% of the alignment for all the blocks.
+It also had only 30\% of the blocks where 50\% or more of the sequence was kept.
+The segments of alignment that it kept were between 10bp - 500bp.
+Comparing this to \ecol, 67\% of the blocks had 50\% or more of the sequence kept and the segments of alignment that were kept were much longer than in \strep and ranged from 10bp - 30000bp.
+Some of these chunks (for \strep and \ecol) are really small and I think these small segments are also showing up in my code and giving weird selection coefficients.
+So I think having some sort of alignment length cut off, plus assessing the alignment with Gblocks will help eliminate these and then the selection results will hopefully look better and be more accurate.
+
+I then looked closely at what Gblocks does v.s. what my code does.
+Most of the time my code and Gblocks lines up, BUT there are cases where I kept something that Gblocks tossed, and cases where Gblocks kept something that I tossed.
+So I am not sure what this means but I think using both will be the most stringent.
+
+I also looked at the smaller segments of the alignment of \ecol and found that the alignment was not aligning homologous sequences either, but only for the smaller segments.
+So I think we can't trust anything that is really short because we just can not be confident that it is correct.
+
 
 \textbf{\dn/\ds $>$ 1 for some genes}
 
-Excluding \strep, the rest of the bacteria have very few ``genes'' that have have \dn/\ds $>$ 1 (~4\% of all ``genes'').
-Looking into this further these ``genes'' are actually segments of  genes that were really short (average of 33bp). This was because there were gaps in the genes so the rest of the gene got ``cut'' so it makes sense why these genes have such high $\omega$. I am not sure if we should be discarding these gene fragments from the analysis? Thoughts? 
+As mentioned above, these really short segments are just inaccurate. So I think making a cut off and using Gblocks should hopefully fix this issue
 
-\textbf{Weird \strep selection issue}
+\textbf{\strep Alternate Genomes}
 
-I already talked to you about this, but I looked into why \strep has so many genes with $\omega$ $>$ 1.
-The alignments are all correct and the genomic positions are all correct. So \p and MAFFT are grabbing the correct genomic sequence.
-I BLASTed a coding gene from one of the blocks and it does match with sequences from all the other species of \strep, however they are not found within the same block.
-My speculation is that \p can not handle the slight differences between \sven and \scoe and \sliv and cuts the genome into too many blocks, classifying what genes are homologous.
-This can also be seen in the \p block alignments where it looks like there is a clear divide between the sequence content of \scoe and \sliv and all the \sven strains.
-There is also very few sections (just by looking at the alignment) where all 6 taxa have sequence data and no gaps.
-Additionally, the branch lengths between the \scoe and \sliv strains are very small compared to the branch lengths between all the \sven strains.
-See below for what I plan to do next to fix all this.
+I found a paper that shows multiple phylogenetic trees for \strep and found some consistent groupings of strains.
+I tried to find genomes related to \sven but when I did \p on these, there was still way too many blocks.
+I am going to talk to Marie to see if she has any insight on this.
+There may be more hope for genomes related to \scoe, so I am going to look into this more and see if I can get a \p alignment that is less crazy.
 
 \textbf{Alignment split} 
 
-I noticed that one of the blocks in \strep failed to be split into coding and non-coding sections.
-I thought it was because I did not properly define an array v.s. a string for one of my variables, but I think something else is going on.
-Need to look into this more.
+The reason why one of the blocks for \strep failed to split is that the sequences are not homologous.
+The code is a bit complicated to explain but the reason that it failed is that some taxa had an extra ``gene'' than others.
+But again, this is because the sequences are not homologous so this should be fixed when I implement the above.
 
 
 %Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
@@ -473,12 +485,10 @@ Need to look into this more.
 %
 
 \begin{itemize}
-	\item look for more \strep complete genomes to use in the analysis
-	\item look into gblocks to assess MAFFT alignments
+	\item look for more \strep phylo trees and associated genomes (\scoe)
 	\item check coding/non-coding code to see how often sites do not match up for \strep
 	\item check how often the tree for each block matches the overall tree for \strep
 	\item figure out what is going on with cod subs $>$ non-cod subs
-	\item deal with genes where $\omega$ $>$ 1
 \end{itemize}
 
 
