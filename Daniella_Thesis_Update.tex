@@ -511,6 +511,30 @@ Back to the substitutions project:
 
 
 \newpage
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+			\midrule
+		\ecol Chromosome & -5.29\e{-5} & 1.66\e{-5} & $<$2\e{-16}  \\
+			\bass Chromosome &  -9.8\e{-5} & 2.4\e{-5} & 6.2\e{-4}\\
+			\strep Chromosome & -1.307\e{-6} & 1.72\e{-7} & 1.3\e{-13}\\
+			\smel Chromosome & 8.81\e{-6} & 4.06\e{-5} & NS (8.3\e{-1})\\
+			\smel pSymA & 1.33\e{-3} & 4.3\e{-4} & 3\e{-3}\\
+			\smel pSymB & 9.55\e{-5} & 2.1\e{-4} & NS (7.5\e{-1})\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_normalized_exp} Linear regression analysis of normalized expression and distance from the origin of replication. The noramlized expression values were calculated by dividing the total counts per million expression value per 10kb section of the genome by the total number of genes in the respective 10kb section. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. NS indicates Not Significant at P $\le$ 0.05.}
+\end{table}
+
+
+
+
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
