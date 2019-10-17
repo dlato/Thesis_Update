@@ -332,58 +332,48 @@
 	
 \section*{Last Week}
 
-\ch compaired trimal and Gblocks
+\ch gene expression edits/wrote more
 
-\ch look into other alignment assessment programs
+\ch take into account number of genes (normalized gene expression based on this)
 
-\ch how do algorithms for Gblocks and trimal work?
+\ch figure out what is going on with \strep number of genes drastically increasing after core region
 
-\ch min length for aligned segments
+\ch investigate really high gene expression bars in all bacteria
 
-\ch get pipeline for implementing Gblocks (additional steps)
+\ch start new graph with negative positions (subs and gene expression)
 
-\ch write code to parse the Gblocks alignment and print out only the ``good'' sections of the aln
+\textbf{Gene Expression Paper}
+I did a lot of work over the weekend editing my gene expression paper and adding in more information. 
+I have another few sections ready for you to edit, so let me know if you want me to send those to you.
 
-\ch more \strep genomes?
+\textbf{\strep uneven number of gene}
+Trying to figure out why there seemed to be such a jump in the total number of genes for my gene expression data at around 2260000 from the origin (bidirectionally).
+Looking into this I realised that it is because this is where  the end of the short arm of the chromosome ends.
+So, because I am calculating my positions bidirectionally, they are ``folding'' the two chromosome arms together, artificially increasing the total number of genes in that section of the graph.
+I separated this out into each of the replicon halves, and still got the same answer, where the total number of substitutions were larger near the origin of replication and smaller near the terminus.
+This also sparked discussion about how I should be visualising this.
+There are some papers that use negative numbers to indicate the left half of the replichore and positive numbers to indicate the right half of the replichore, leaving the origin of replication somewhere in the middle of the graph.
+I am fine with presenting the data this way, but then I think that I should be doing my regression analysis on both replichore halves separately, because I can't really treat it all as one if I am showing the graph with negative and positive numbers. 
+Thoughts?
+%As discussed, the short segments of the alignments are often inaccurate and not comparing homologous regions. So we decided to make each segment a minimum of 100bp long.
+%This means that my code will go through the mafft alignment first, making sure that segments are comparing codon 1 with codon 1...etc. 
+%And then those sections will be passed through Gblocks to ensure that they are min 100bp and well aligned.
 
-\ch other linear species?
-
-
-\textbf{Alignment Assessment}
-It looks like Gblocks and trimal do very similar things. Trimal will give a score for each site in the alignment and can also calculate this score over a sliding window.
-However, it seems like it will be hard to implement into my  pipeline because the output file is not in an easily parsible format.
-I decided to go with Gblocks because it will be easy to implement.
-
-I looked into other alignment assessement programs and like I mentioned to you, the only ones that use a tree, re-align the sequences themselves.
-The idea is that you need an alignment to make a tree so the ones that assess the alignment but do not re-align are trying to be implemented even before you build a tree. We decided that not re-aligning with another program is best.
-
-As I mentioned, trimal will calculate scores for each site or over a specified sliding window. It can calculated different scores, someusing the proportion of sequences with say a gap or the same base, and it also uses an identity matrix to calculate distances and then weights the score based on those.
-Gblocks is completely proportional. So x number of sequences need to have the same base for it to be considered ``conserved''. It also has cutoffs for the ``highly conserved'' category.
-
-As discussed, the short segments of the alignments are often inaccurate and not comparing homologous regions. So we decided to make each segment a minimum of 100bp long.
-This means that my code will go through the mafft alignment first, making sure that segments are comparing codon 1 with codon 1...etc. 
-And then those sections will be passed through Gblocks to ensure that they are min 100bp and well aligned.
-
-\textbf{Implementation of Gblocks}
-I tested out how to implement Gblocks into my current pipeline and worked out the kinks. It is really quick (seconds to assess all blocks) and can be implemented for all bacteria in both coding and non-coding.
-I also wrote a short code to parse the Gblocks output and print out the ``good'' segments of the alignment (python).
-
-\textbf{\strep Genomes}
-As I mentioned to you this week, I was looking into other \strep genomes that we could potentially use and it looks like there are 2 options for the analysis:
-
-\begin{enumerate}
-	\item only use 3 taxa, 2 strains of \sliv and 1 of \scoe, these have \textbf{6 blocks total}
-	\item only use 4 strains of \sven, these have \textbf{2 blocks total}
-\end{enumerate}
-
-So we need to decide if we want more rearrangements, or more taxa. I still need to think about this and decide.
+\textbf{High Gene expression bars in all bacteria?}
+I looked into the high gene expression bars in all the bacteria and found that they are mostly full of ribosomal proteins, DNA replication and repair proteins, and translation modification (see below Table \ref{tab:high_exp_bars}).
+This is consistent across all the bacteria! Which makes sense why these bars are so much higher than the others!
+It is super interesting that these are not always found near the origin of replication!
+I added this explanation into my paper draft.
 
 
-\textbf{Other Linear Genomes}
-I looked into other bacteria with at least one linear chromosome and it looks like \agro has a circular and a linear chrom, and \borrb has one linear chromosome.
-\agro has 15 complete ref genomes, and \borrb has 10 complete ref genomes.
-I aligned these last week with \p in multiple groupings to see if there are any that are similar enough but not too similar. I will report back on the results when they are done.
-
+\textbf{Normalising by number of genes}
+I have been thinking about the number of genes in each 10kb section and how this may potentially be impacting/biasing my gene expression results.
+So I decided to do a better normalisation of the gene expression and the number of genes.
+I took the total expression value per 10kb chunk of the genome (added up all gene expression values for each 10kb region), then divided this by the total number of protein coding genes in that section.
+I then did a linear regression on these values, and still obtained the same result (Table coming soon).
+Not sure which of these tables should be the ``main result'' found in the paper and which should be supplemental? thoughts?
+I was also thinking that I should probably have one graph with these normalised by gene number values, to avoid having two graphs ontop of eachother (one for gene expression and one for the total number of genes). 
+Thoughts?
 
 %Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
 %Mostly everything is not significant or negative which is good!
@@ -490,27 +480,88 @@ I aligned these last week with \p in multiple groupings to see if there are any 
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-I would like to switch and work on the gene expression paper again.
-\begin{enumerate}
-	\item phylogenetic analysis with gene expression in \ecol?
-	\item remove genes that have been recently translocated from analysis?
-	\item model gene expression + position + number of genes
-	\item split up \strep data into core and non-core and see if the results are the same (do same for number of genes)
-\end{enumerate}
-
-
-\section*{Next Week}
 Back to the substitutions project:
 \begin{enumerate}
 	\item  pick which group of \strep genomes to use
 	\item what to do about length cut off for the non-coding regions? am I putting this whole section in the supplement?
 	\item assess the \borrb mauve plots for similar seqs
 	\item align the \agro taxa into more specific phylo groups with mauve
-	\item  assess the agro mauve plots
+	\item assess the agro mauve plots
+	\item run \ecol through the new pipeline to work out any kinks
+\end{enumerate}
+
+
+\section*{Next Week}
+Substitutions project continued:
+\begin{enumerate}
+	\item run either \strep or one of the other linear bacteria through the substitutions pipeline
+	\item run the rest of the bacteria through the new pipeline
+	\item new graphs for gene expression? (negative positions)
+	\item new graphs for substitutions? (negative positions), write new (and better) code for this
 \end{enumerate}
 
 
 \newpage
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrr}
+			\toprule
+			Bacteria and Replicon & Genomic Position (bp) & Protein/Gene Examples \\
+			\midrule
+			\ecol Chromosome & 0 - 10000 & DNA replication and repair\\
+			& & ATP-proton motive force\\
+			& & ATP biosynthesis\\
+			& & transport\\
+			& 470000 - 480000 & DNA replication and repair\\
+			& & tRNA synthesis\\
+			& & Ribosomal proteins\\
+			& & Putative transport\\
+			& 610000 - 620000 & Ribosomal protein\\
+			& & Translation modification\\
+			& & tRNA modification\\
+			& & RNA synthesis\\
+			\midrule
+			\bass Chromosome & 0 - 10000 & tRNA modification\\
+			& & Ribosomal proteins\\
+			& & DNA gyrase\\
+			& & rRNA small subunit methylation\\
+			& 130000 - 140000 & Ribosomal proteins\\
+			& & Elongation factor\\
+			& 730000 - 740000 & tRNA subunit\\
+			& & Transcription regulation\\
+			& & Glycolysis\\
+			& 1220000 - 1230000 & Pyruvate kinase\\
+			& & Sporulation membrane proteins \\
+			& & ATP-binding\\
+			& & Regulation protein\\
+			\midrule
+			\strep Chromosome & 1590000 - 1600000 & Ribosomal proteins\\
+			& & Hypothetical proteins\\
+			& 1690000 - 1700000 & Ribosomal proteins\\
+			\midrule
+			\smel Chromosome &  1480000 - 1490000 & Ribosomal proteins\\
+			& & Structural elements\\
+			& & Transmembrane proteins\\
+			\midrule
+			\smel pSymA & 660000 - 680000 & Hypothetical proteins\\
+			& & Unknown proteins\\
+			& & Small molecule metabolism \\
+			\midrule
+			\smel pSymB & 290000 - 300000 & Cell Division\\
+			& & Small molecule metabolism\\
+			& & Cell processes\\
+			& 800000 - 810000 & Small molecule metabolism\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:high_exp_bars} Table of high median CPM (Counts per Million) gene expression over 10kb genomic regions for each bacterial replicon and the associated proteins/gene functions found in that region. The genomic position begins at the origin of replication and continues in both directions until the terminus of replication (bidirectional replication).}
+\end{table}
+
+
+
+
 
 \begin{table}[h]
 	\centering
