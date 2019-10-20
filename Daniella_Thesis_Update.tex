@@ -268,17 +268,17 @@
 	
 	\item if necessary add a phylogenetic component to the analysis
 	
-	\item potentially remove genes that have been recently translocated from the analysis
+	\item \sout{potentially remove genes that have been recently translocated from the analysis}
 	
-	\item model gene exp + position + number of genes
+	\item \sout{model gene exp + position + number of genes}
 	
-	\item split up the strep data into core and non core and see if results are the same
+	\item \sout{split up the strep data into core and non core and see if results are the same}
 	
-	\item what is going on with \strep number of genes changing drastically from core to non-core
+	\item \sout{what is going on with \strep number of genes changing drastically from core to non-core}
 	
 	\item codon bias?
 	
-	\item what is going on with really high gene expression bars
+	\item \sout{what is going on with really high gene expression bars}
 	
 	\item edit paper
 	
@@ -332,48 +332,33 @@
 	
 \section*{Last Week}
 
-\ch gene expression edits/wrote more
+\ch pick which \strep group of species to use
 
-\ch take into account number of genes (normalized gene expression based on this)
+\ch make tree for new \strep species
 
-\ch figure out what is going on with \strep number of genes drastically increasing after core region
+\ch assess and re-align the \agro strains
 
-\ch investigate really high gene expression bars in all bacteria
+\ch assess \borrb \p alignments
 
-\ch start new graph with negative positions (subs and gene expression)
+\ch finalise Gblocks pipeline, run \ecol through Gblocks pipeline to work out any kinks
 
-\textbf{Gene Expression Paper}
-I did a lot of work over the weekend editing my gene expression paper and adding in more information. 
-I have another few sections ready for you to edit, so let me know if you want me to send those to you.
+\textbf{\strep}
+I decided that using species for \strep that had more rearrangements was better than using more taxa.
+So I will be using the one \scoe and two \sliv genomes for my analysis.
+I started this by creating a new tree with branchelengths and bootstrap values for this taxa. 
 
-\textbf{\strep uneven number of gene}
-Trying to figure out why there seemed to be such a jump in the total number of genes for my gene expression data at around 2260000 from the origin (bidirectionally).
-Looking into this I realised that it is because this is where  the end of the short arm of the chromosome ends.
-So, because I am calculating my positions bidirectionally, they are ``folding'' the two chromosome arms together, artificially increasing the total number of genes in that section of the graph.
-I separated this out into each of the replicon halves, and still got the same answer, where the total number of substitutions were larger near the origin of replication and smaller near the terminus.
-This also sparked discussion about how I should be visualising this.
-There are some papers that use negative numbers to indicate the left half of the replichore and positive numbers to indicate the right half of the replichore, leaving the origin of replication somewhere in the middle of the graph.
-I am fine with presenting the data this way, but then I think that I should be doing my regression analysis on both replichore halves separately, because I can't really treat it all as one if I am showing the graph with negative and positive numbers. 
-Thoughts?
+\textbf{Other Linear Bacteria \p Alignments}
+I assessed the \p alignments for \borrb and all of the strains are too similar and \p can only find one LCB. So I can not use this bacteria.
+I also assessed the \p alignments for \agro and found that there were combinations of the strains that yielded between 32-66 LCBs.
+This could be an option for my analysis. However, if I decide to use \agro then I think I will have to analize the circular and linear chromosomes, I can not just pick one.
+So, we decided to put this portion of the project on hold for now and focus on fixing the \strep issues.
 %As discussed, the short segments of the alignments are often inaccurate and not comparing homologous regions. So we decided to make each segment a minimum of 100bp long.
 %This means that my code will go through the mafft alignment first, making sure that segments are comparing codon 1 with codon 1...etc. 
 %And then those sections will be passed through Gblocks to ensure that they are min 100bp and well aligned.
 
-\textbf{High Gene expression bars in all bacteria?}
-I looked into the high gene expression bars in all the bacteria and found that they are mostly full of ribosomal proteins, DNA replication and repair proteins, and translation modification (see below Table \ref{tab:high_exp_bars}).
-This is consistent across all the bacteria! Which makes sense why these bars are so much higher than the others!
-It is super interesting that these are not always found near the origin of replication!
-I added this explanation into my paper draft.
-
-
-\textbf{Normalising by number of genes}
-I have been thinking about the number of genes in each 10kb section and how this may potentially be impacting/biasing my gene expression results.
-So I decided to do a better normalisation of the gene expression and the number of genes.
-I took the total expression value per 10kb chunk of the genome (added up all gene expression values for each 10kb region), then divided this by the total number of protein coding genes in that section.
-I then did a linear regression on these values, and still obtained the same result (Table coming soon).
-Not sure which of these tables should be the ``main result'' found in the paper and which should be supplemental? thoughts?
-I was also thinking that I should probably have one graph with these normalised by gene number values, to avoid having two graphs ontop of eachother (one for gene expression and one for the total number of genes). 
-Thoughts?
+\textbf{Gblocks pipeline}
+Last week I finalised incorporating Gblocks into my pipeline and ran it on \ecol just to work out any final kinks.
+I began re-running the substitution analysis on all the bacterial strains last week and will continue to run that this week.
 
 %Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
 %Mostly everything is not significant or negative which is good!
@@ -480,26 +465,26 @@ Thoughts?
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-Back to the substitutions project:
+Substitutions project:
 \begin{enumerate}
-	\item  pick which group of \strep genomes to use
 	\item what to do about length cut off for the non-coding regions? am I putting this whole section in the supplement?
-	\item assess the \borrb mauve plots for similar seqs
-	\item align the \agro taxa into more specific phylo groups with mauve
-	\item assess the agro mauve plots
-	\item run \ecol through the new pipeline to work out any kinks
-\end{enumerate}
-
-
-\section*{Next Week}
-Substitutions project continued:
-\begin{enumerate}
-	\item run either \strep or one of the other linear bacteria through the substitutions pipeline
-	\item run the rest of the bacteria through the new pipeline
+	\item get new tree picture for ne \strep genomes
+	\item finish re-running subs analysis on all bacteria
+	\item re-run dN/dS analysis on all bacteria
 	\item new graphs for gene expression? (negative positions)
 	\item new graphs for substitutions? (negative positions), write new (and better) code for this
 \end{enumerate}
 
+
+\section*{Next Week}
+Gene Expression:
+\begin{enumerate}
+	\item non-linear model for gene expression to look at periodicity?
+	\item new graphs for gene expression? (negative positions)
+	\item new graphs for substitutions? (negative positions), write new (and better) code for this
+	\item  look into journal requirements for submission
+	\item write cover letter for gene expression paper
+\end{enumerate}
 
 \newpage
 \begin{table}[h]
