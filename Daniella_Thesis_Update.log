@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  28 OCT 2019 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  1 NOV 2019 16:26
 entering extended mode
 **Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -836,10 +836,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [10 <./pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2
 3Oct19.pdf>] [11] [12] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 16564 strings out of 493673
- 339941 string characters out of 3141142
+ 16563 strings out of 493673
+ 339926 string characters out of 3141142
  392914 words of memory out of 3000000
- 19549 multiletter control sequences out of 15000+200000
+ 19548 multiletter control sequences out of 15000+200000
  15814 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,12n,86p,831b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -850,14 +850,11 @@ niella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
 \ecti1200.pk> <C:\Users\Daniella\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\ecrm1200.pk><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/amsfont
-s/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (12 pages, 170333 bytes).
+/amsfonts/cm/cmsy10.pfb><C:/Users/Daniella/Downloads/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (12 pages, 143844 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
+ 238 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
