@@ -332,36 +332,36 @@
 	
 \section*{Last Week}
 
-\ch length cutoff for non-coding sections
+\ch new phylo tree picture for new \strep analysis (see below fig)
 
-\ch re-run subs analysis
+\ch edited gene expression paper and updated results/figs 
 
-\ch new graphs for gene expression data
+\ch protein coding subs $>$ non-protein coding subs
 
-\ch talked to Marie about \strep
+\ch wrote new script for subs analysis
 
-\ch started selection analysis
+\textbf{Gene Expression Paper}
+I made a \texttt{GitHub} link for the gene expression paper that has the supplementary information on it.
+I also edited the intro and discussion.
+I made a plot of the coefficient estimates for the gene expression linear regression to see if you like these better for the paper compared to a table of values. Thoughts? (see fig below)
 
-\textbf{Subs analysis}
-I re-did the analysis for the substitutions part of my thesis.
-I had the results all laid out but my new laptop died so I didn't have time to put it all together here.
-But as soon as I have the results together I will let you know!
-From what I remember it looks roughly the same as before.
-We decided to use the same cutoff for the non-coding sections (100bp) as for the coding sections.
+Last week when I re-did the gene expression graphs, I noticed that my code for doing the bidirectionality of replication was wrong so I fixed this and re-ran everything.
+However, the results changed ever so slightly and most of the replicons are not significant (see Table \ref{tab:lr_exp_10Kbp}).
+When looking at the graphs I think that this is because some of the high gene expression bars (like in \ecol) are driving the linear regression.
+So I am not sure if I should be removing outliers? Thoughts?
 
-I also made new gene expression graphs for all the bacteria which has a more efficient code, but also has \strep having negative numbers to make the graph clearer.
-Again, once I get my laptop sorted I will show you these figures.
-The only graph that was not working was the \smel chrom. 
+I also noticed that \strep does not really have any weirdly high expression bars like the other replicons. So I am not sure if I still need to give examples of what genes are in those sections?
 
-\textbf{Talk with Marie}
-I spoke with Marie about the \strep and she suggested as an alternative solution to look at just the core genome of \strep.
-There are a lot of papers that state that the core is similar but the terminal ends are just really out of wack. So she thinks it would not be too hard to justify.
-She sent me some papers with other phylogenies of \strep so I am going to have a look at the to see if I can find any appropriate groupings with more genomes.
+\textbf{protein coding subs $>$ non-protein coding subs}
+I did some research about what proportion of a bacterial genome is protein coding and it looks like between 40-90\% with an average of 88\%. These numbers often include pseudogenes as protein coding, which I am not.
+My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am not that far off so I think things are fine!
 
-\textbf{Selection analysis}
-I started to re-do this analysis with the incorporation of Gblocks, but have hit some snags.
-Because these sequences need to begin with the start of a codon, and end with the end of a codon, I am having trouble making this happen.
-Hopefully I can figure this out this week. 
+
+\textbf{Substitution analysis}
+As I was re-running this analysis I decided to re-write the R portion of my analysis into one concise script.
+As I was doing this I also changed the \strep figures to have negative genomic positions and overall my code runs faster.
+I also realised I was removing outliers in places where I should not have, so I have fixed that.  
+I am not sure if I should be removing outliers in the various 10kb linear regressions. Thoughts?
 
 
 
@@ -473,29 +473,52 @@ Hopefully I can figure this out this week.
 %
 Substitutions project:
 \begin{enumerate}
-	\item get new tree picture for ne \strep genomes
 	\item figure out issue with alignment length for selection analysis
 	\item re-run selection analysis
-	\item figure out why \smel chromosome gene expression graph is not working
 \end{enumerate}
 
 
 \section*{Next Week}
 Gene Expression:
 \begin{enumerate}
-	\item new graphs for substitutions? (negative positions), write new (and better) code for this
 	\item  look into journal requirements for submission
 	\item write cover letter for gene expression paper
 	\item substitutions paper edits
 \end{enumerate}
 
 \newpage
-\includegraphics[width=\textwidth]{ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_24Oct19.pdf}
-\includegraphics[width=\textwidth]{bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_23Oct19.pdf}
-\includegraphics[width=\textwidth]{strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_28Oct19.pdf}
-\includegraphics[width=\textwidth]{sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_24Oct19.pdf}
-\includegraphics[width=\textwidth]{pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_23Oct19.pdf}
-\includegraphics[width=\textwidth]{pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_23Oct19.pdf}
+
+\includegraphics[width=\textwidth]{strep_figtree_fig_28Oct19.pdf}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Gene Expression 10Kbp \\
+			\midrule
+			\ecol Chromosome & NS\\
+			\bass Chromosome & \cc -2.36\e{-5}*\\
+			\strep Chromosome & NS \\
+			\smel Chromosome & NS\\
+			\smel pSymA & 8.98\e{-4}** \\
+			\smel pSymB & NS \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_exp_10Kbp} Linear regression analysis of the median counts per million expression data for 10Kbp segments of the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\includegraphics[width=\textwidth]{all_gene_exp_coef_plot.pdf}
+
+
+\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_2Nov19.pdf}
+\includegraphics[width=\textwidth]{bass_weighted_subs_bidirectionality_colour_2Nov19.pdf}
+%\includegraphics[width=\textwidth]{strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_2Nov19.pdf}
+\includegraphics[width=\textwidth]{sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf}
+\includegraphics[width=\textwidth]{pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf}
+\includegraphics[width=\textwidth]{pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf}
 
 
 %\begin{table}[h]
@@ -636,12 +659,12 @@ Gene Expression:
 			\toprule
 			Bacteria and Replicon & Protein Coding Sequences\\
 			\midrule
-			\ecol Chromosome &  \\
-			\bass Chromosome & \\
+			\ecol Chromosome & -2.99\e{-8}*** \\
+			\bass Chromosome & -8.05\e{-8}***\\
 			\strep Chromosome &\\
-			\smel Chromosome & \\
-			\smel pSymA & \\
-			\smel pSymB & \\
+			\smel Chromosome & -4.32\e{-7}***\\
+			\smel pSymA & -5.00\e{-7}*** \\
+			\smel pSymB & 1.77\e{-7}***\\
 			\bottomrule
 		\end{tabular}
 		
@@ -668,12 +691,12 @@ Gene Expression:
 			\cmidrule{2-5}
 			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus\\
 			\midrule
-			\ecol Chromosome &  & &  & \\
-			\bass Chromosome &  &  & & \\
+			\ecol Chromosome & -1.21\e{-5}** & -2.68\e{-5}* & 5.95\e{-3} & 7.03\e{-3} \\
+			\bass Chromosome & NS & -4.25\e{-5}** & 1.97\e{-3} & 8.75\e{-3} \\
 			\strep Chromosome &  &  &  & \\
-			\smel Chromosome &  &  &  &\\
-			\smel pSymA &  &  & & \\
-			\smel pSymB & & &  &  \\
+			\smel Chromosome & NS & NS & 9.85\e{-5}  & 5.18\e{-5}\\
+			\smel pSymA & NS  & NS & 9.61\e{-4} & 3.53\e{-3}\\
+			\smel pSymB & -2.29\e{-5}*** & -5.60\e{-5}*** & 1.98\e{-3} &  1.22\e{-3} \\
 			\bottomrule
 		\end{tabular}
 		
@@ -691,12 +714,12 @@ Gene Expression:
 			\cmidrule{2-3}
 			Bacteria and Replicon &  Weighted & Non-Weighted\\
 			\midrule
-			\ecol Chromosome &   & \\
-			\bass Chromosome &  &  \\
+			\ecol Chromosome & -3.31\e{-10}**  & -1.93\e{-4}***\\
+			\bass Chromosome & 1.01\e{-9}*** &  -2.08\e{-4}***\\
 			\strep Chromosome && \\
-			\smel Chromosome & &\\
-			\smel pSymA &  & \\
-			\smel pSymB &  & \\
+			\smel Chromosome & -1.49\e{-10}*** & -1.82\e{-5}***\\
+			\smel pSymA & NS  & -1.17\e{-4}* \\
+			\smel pSymB & NS & NS \\
 			\bottomrule
 		\end{tabular}
 		
@@ -712,12 +735,12 @@ Gene Expression:
 			\toprule
 			Bacteria and Replicon & Coefficient Estimate \\
 			\midrule
-			\ecol Chromosome & \\
-			\bass Chromosome & \\
+			\ecol Chromosome & -2.50\e{-2}*** \\
+			\bass Chromosome & -1.99\e{-2}**\\
 			\strep Chromosome & \\
-			\smel Chromosome &\\
-			\smel pSymA &  \\
-			\smel pSymB & \\
+			\smel Chromosome & -1.90\e{-2}***\\
+			\smel pSymA & -2.44\e{-2}*  \\
+			\smel pSymB & NS \\
 			\bottomrule
 		\end{tabular}
 		
