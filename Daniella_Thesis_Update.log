@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  2 NOV 2019 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  3 NOV 2019 11:24
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -916,7 +916,15 @@ pdf)
 Package pdftex.def Info: bass_weighted_subs_bidirectionality_colour_2Nov19.pdf 
  used on input line 517.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=42, 505.89pt x 505.
+<strep_weighted_subs_bidirectionality_colour_3Nov19.pdf, id=42, 505.89pt x 505.
+89pt>
+File: strep_weighted_subs_bidirectionality_colour_3Nov19.pdf Graphic file (type
+ pdf)
+<use strep_weighted_subs_bidirectionality_colour_3Nov19.pdf>
+Package pdftex.def Info: strep_weighted_subs_bidirectionality_colour_3Nov19.pdf
+  used on input line 518.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=43, 505.89pt x 505.
 89pt>
 File: sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
  pdf)
@@ -924,7 +932,7 @@ File: sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
 Package pdftex.def Info: sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf
   used on input line 519.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=43, 505.89pt x 505.
+<pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=44, 505.89pt x 505.
 89pt>
 File: pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
  pdf)
@@ -932,7 +940,7 @@ File: pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
 Package pdftex.def Info: pSymA_weighted_subs_bidirectionality_colour_2Nov19.pdf
   used on input line 520.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=44, 505.89pt x 505.
+<pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=45, 505.89pt x 505.
 89pt>
 File: pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
  pdf)
@@ -947,8 +955,9 @@ Overfull \hbox (28.0pt too wide) in paragraph at lines 516--522
 
 [6 <./all_gene_exp_coef_plot.pdf>] [7 <./ecoli_weighted_subs_bidirectionality_c
 olour_2Nov19.pdf>] [8 <./bass_weighted_subs_bidirectionality_colour_2Nov19.pdf>
-] [9 <./sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf>] [10 <./pSymA_w
-eighted_subs_bidirectionality_colour_2Nov19.pdf>]
+] [9 <./strep_weighted_subs_bidirectionality_colour_3Nov19.pdf>] [10 <./sinoC_w
+eighted_subs_bidirectionality_colour_2Nov19.pdf>] [11 <./pSymA_weighted_subs_bi
+directionality_colour_2Nov19.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -961,13 +970,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf>] [12] [13]
+[12 <./pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf>] [13] [14]
 (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 17223 strings out of 492895
- 356857 string characters out of 3123735
+ 17228 strings out of 492895
+ 357170 string characters out of 3123735
  420845 words of memory out of 3000000
- 20735 multiletter control sequences out of 15000+200000
+ 20739 multiletter control sequences out of 15000+200000
  16127 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,86p,857b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -985,9 +994,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
 >
-Output written on Daniella_Thesis_Update.pdf (13 pages, 159371 bytes).
+Output written on Daniella_Thesis_Update.pdf (14 pages, 170277 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
+ 296 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
