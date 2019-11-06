@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  3 NOV 2019 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  6 NOV 2019 08:44
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -970,33 +970,36 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [12 <./pSymB_weighted_subs_bidirectionality_colour_2Nov19.pdf>] [13] [14]
-(Daniella_Thesis_Update.aux) ) 
+[15] (Daniella_Thesis_Update.aux) ) 
 Here is how much of TeX's memory you used:
- 17228 strings out of 492895
- 357170 string characters out of 3123735
- 420845 words of memory out of 3000000
- 20739 multiletter control sequences out of 15000+200000
+ 17229 strings out of 492895
+ 357188 string characters out of 3123735
+ 420854 words of memory out of 3000000
+ 20740 multiletter control sequences out of 15000+200000
  16127 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,86p,857b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/p
-k/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2
-.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\synch\Ap
-pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\User
-s\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk
-><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
->
-Output written on Daniella_Thesis_Update.pdf (14 pages, 170277 bytes).
+ <C:\Users\synch\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\synch\AppData\Local\MiK
+TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData
+\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\syn
+ch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:
+\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm12
+00.pk><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/synch/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/sy
+nch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb>
+Output written on Daniella_Thesis_Update.pdf (15 pages, 171602 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
+ 299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
