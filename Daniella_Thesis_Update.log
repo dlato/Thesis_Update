@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  7 NOV 2019 09:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  7 NOV 2019 15:47
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -924,12 +924,12 @@ File: strep_weighted_subs_bidirectionality_colour_3Nov19.pdf Graphic file (type
 Package pdftex.def Info: strep_weighted_subs_bidirectionality_colour_3Nov19.pdf
   used on input line 518.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf, id=43, 505.89pt x 505.
+<sinoC_weighted_subs_bidirectionality_colour_7Nov19.pdf, id=43, 505.89pt x 505.
 89pt>
-File: sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf Graphic file (type
+File: sinoC_weighted_subs_bidirectionality_colour_7Nov19.pdf Graphic file (type
  pdf)
-<use sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf>
-Package pdftex.def Info: sinoC_weighted_subs_bidirectionality_colour_2Nov19.pdf
+<use sinoC_weighted_subs_bidirectionality_colour_7Nov19.pdf>
+Package pdftex.def Info: sinoC_weighted_subs_bidirectionality_colour_7Nov19.pdf
   used on input line 519.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <pSymA_weighted_subs_bidirectionality_colour_6Nov19.pdf, id=44, 505.89pt x 505.
@@ -956,7 +956,7 @@ Overfull \hbox (28.0pt too wide) in paragraph at lines 516--522
 [6 <./all_gene_exp_coef_plot.pdf>] [7 <./ecoli_weighted_subs_bidirectionality_c
 olour_6Nov19.pdf>] [8 <./bass_weighted_subs_bidirectionality_colour_6Nov19.pdf>
 ] [9 <./strep_weighted_subs_bidirectionality_colour_3Nov19.pdf>] [10 <./sinoC_w
-eighted_subs_bidirectionality_colour_2Nov19.pdf>] [11 <./pSymA_weighted_subs_bi
+eighted_subs_bidirectionality_colour_7Nov19.pdf>] [11 <./pSymA_weighted_subs_bi
 directionality_colour_6Nov19.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -997,7 +997,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/
 Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/sy
 nch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb>
-Output written on Daniella_Thesis_Update.pdf (15 pages, 171124 bytes).
+Output written on Daniella_Thesis_Update.pdf (15 pages, 171140 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
