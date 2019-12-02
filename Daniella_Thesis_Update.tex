@@ -281,9 +281,9 @@
 	
 	\item \sout{what is going on with really high gene expression bars}
 	
-	\item edit paper
+	\item \sout{edit paper}
 	
-	\item submit paper
+	\item \sout{submit paper}
 	
 \end{itemize}
 
@@ -333,35 +333,37 @@
 	
 \section*{Last Week}
 
-\ch looked into phylogenetic papers on \strep that Marie sent me
+\ch submit gene expression paper!
 
-\ch re-run \strep analysis (was using the wrong tree last time)
+\ch figure out why Gblocks is missing some bad alignments
 
-\ch tweak the selection distribution figures (fix labelling on axis)
-
-\ch gene expression paper latex template working
-
-\ch gene expression paper edits and minor formatting fixes
+\ch start to re-run selection and substitutions analysis
 
 \textbf{Gene Expression Paper}
 
-I sent you the latest draft of the paper which is formatted properly in the latex template that the journal provides.
-I spent most of the week getting this to work, editing and tweaking other minor formatting issues.
+We submitted! Yay! 
 
-I also noticed that \strep does not really have any weirdly high expression bars like the other replicons. So I am not sure if I still need to give examples of what genes are in those sections?
+
+\textbf{Substitution + Selection analysis}
+
+After re-doing the analysis I noticed that there was still a lot of \strep genes that had an $\omega$ $>$ 1.
+Doing some research into these genes I found that they were very poorly aligned sections that Gblocks missed.
+I tried playing with the parameters for Gblocks to fix this but with no success. i
+I then looked into trimal and it does what we want and there is a -strictplus option that will render these alignments as bad sections.
+I ran this on the \strep sequences and it removed a significant portion of the genes that had $\omega$ $>$ 1!
+There were still about 20 genes left that had $\omega$ $>$ 1.
+Looking into these more closely it seems as though PAML comes up with a dS rate even if there are no synonymous substitutions.
+There were also some cases where there was a small sample size of substitutions and therefore showing values of $\omega$ $>$ 1.
+We discussed that I would go through all these by hand to see if we can manually discard them because of the reasons mentioned above.
+I started to re-run both the selection and substitutions analysis using trimal to determine good and bad alignments.
+
+We also decided that ambiguous nucleotides will be removed from the analysis.
 
 \textbf{protein coding subs $>$ non-protein coding subs}
 
 I did some research about what proportion of a bacterial genome is protein coding and it looks like between 40-90\% with an average of 88\%. These numbers often include pseudogenes as protein coding, which I am not.
 My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am not that far off so I think things are fine!
 
-
-\textbf{Substitution + Selection analysis}
-
-I realized that I was using the wrong phylogenetic tree for the \strep analysis, so I need to re-do this (and the selection analysis) over again.
-I started this late last week and this should be done by the end of this week at the latest.
-
-I also slightly changed the selection genomic distribution figures (edited axis names). These are found in the attached supplement file. 
 
 
 
@@ -472,42 +474,16 @@ I also slightly changed the selection genomic distribution figures (edited axis 
 %aim to tick off 4 tasks a week
 %
 \begin{enumerate}
-	\item write cover letter for gene expression paper
-	\item gene expression paper data + code up on github
-	\item finish all final formatting for gene expression paper so all I have to do is click submit!
+	\item re-run substitution analysis
+	\item re-run selection analysis
+	\item look at genes with $\omega$ $>$ 1 by hand
 \end{enumerate}
 
 
 \section*{Next Week}
-\begin{enumerate}
-	\item analize selection results
-	\item analize substitutions results
-	\item substitutions paper edits
-\end{enumerate}
+I will be away so I was planing on writing the intro of my thesis to take a break from my regular analysis.
 
 \newpage
-
-%\includegraphics[width=\textwidth]{strep_figtree_fig_28Oct19.pdf}
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			Bacteria and Replicon & Gene Expression 10Kbp \\
-			\midrule
-			\ecol Chromosome & NS\\
-			\bass Chromosome & \cc -2.36\e{-5}*\\
-			\strep Chromosome & NS \\
-			\smel Chromosome & NS\\
-			\smel pSymA & 8.98\e{-4}** \\
-			\smel pSymB & NS \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:lr_exp_10Kbp} Linear regression analysis of the median counts per million expression data for 10Kbp segments of the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
 
 %\includegraphics[width=\textwidth]{all_gene_exp_coef_plot.pdf}
 
