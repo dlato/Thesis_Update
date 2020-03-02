@@ -178,12 +178,22 @@
 %	
 %	\item \sout{spatial analysis of \dn, \ds, and $\omega$}
 
-	\item causes for weird selection and subs results in \strep
-	\begin{itemize}
-		\item see how often class 4 arises in strep to see what is going on in later portion of the genome (to see if annotation is really a problem)
-		
-		\item split up the strep data into core and non core and see if results are the same
-	\end{itemize}
+%	\item causes for weird selection and subs results in \strep
+%	\begin{itemize}
+%		\item see how often class 4 arises in strep to see what is going on in later portion of the genome (to see if annotation is really a problem)
+%		
+%		\item split up the strep data into core and non core and see if results are the same
+%	\end{itemize}
+
+    \item why does sinoC have omega lin reg = 0 near and far from the origin?
+    
+    \item create new graphs for selection analysis
+    
+    \item find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)
+    
+    \item discuss removing omega outliers in methods
+    
+    \item double check that the ter and ori and max genome pos are correct
 	
 	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
 	
@@ -248,42 +258,47 @@
 %	
 %	\item \sout{add into methods: filters for Hiseq, RT PCR and growth phases for data collection}
 %	
-	\item \sout{linear regression on 10kb regions}
-	
-	\item \sout{put new 10kb lin reg and \# of genes over 10kb lin reg into paper}
-	
-	\item \sout{write about $\uparrow$ in methods and discussion}
-	
-	\item \sout{put expression lin reg and \# coding sites log reg into supplement}
-	
-	\item \sout{write about $\uparrow$ in paper and how results are the same}
-	
-	\item \sout{update supplementary figures/file}
-	
-	\item \sout{correlation of gene expression across strains}
-	\begin{itemize}
-		\item \sout{make graphs pretty and more informative with label names}
-		\item \sout{add them to supplement with a mini write up of what we did and why}
-		\item \sout{mention this in the actual paper}
-	\end{itemize}
-	
+%	\item \sout{linear regression on 10kb regions}
+%	
+%	\item \sout{put new 10kb lin reg and \# of genes over 10kb lin reg into paper}
+%	
+%	\item \sout{write about $\uparrow$ in methods and discussion}
+%	
+%	\item \sout{put expression lin reg and \# coding sites log reg into supplement}
+%	
+%	\item \sout{write about $\uparrow$ in paper and how results are the same}
+%	
+%	\item \sout{update supplementary figures/file}
+%	
+%	\item \sout{correlation of gene expression across strains}
+%	\begin{itemize}
+%		\item \sout{make graphs pretty and more informative with label names}
+%		\item \sout{add them to supplement with a mini write up of what we did and why}
+%		\item \sout{mention this in the actual paper}
+%	\end{itemize}
+%	
 	\item if necessary add a phylogenetic component to the analysis
-	
-	\item \sout{potentially remove genes that have been recently translocated from the analysis}
-	
-	\item \sout{model gene exp + position + number of genes}
-	
-	\item \sout{split up the strep data into core and non core and see if results are the same}
-	
-	\item \sout{what is going on with \strep number of genes changing drastically from core to non-core}
+%	
+%	\item \sout{potentially remove genes that have been recently translocated from the analysis}
+%	
+%	\item \sout{model gene exp + position + number of genes}
+%	
+%	\item \sout{split up the strep data into core and non core and see if results are the same}
+%	
+%	\item \sout{what is going on with \strep number of genes changing drastically from core to non-core}
 	
 	\item codon bias?
 	
-	\item \sout{what is going on with really high gene expression bars}
-	
-	\item \sout{edit paper}
-	
-	\item \sout{submit paper}
+%	\item \sout{what is going on with really high gene expression bars}
+%	
+%	\item \sout{edit paper}
+%	
+%	\item \sout{submit paper}
+    
+    \item make corrections based on Brian's edits
+    
+    \item create a clean copy of the paper (no strikeout) for re-submission
+
 	
 \end{itemize}
 
@@ -297,12 +312,13 @@
 %	\item \sout{read papers about inversions}
 %	
 %	
-	\item \sout{check if opposite strand in \p means an inversions (check visual matches the xmfa)}
-	
-	\item \sout{check if PARSNP and \p both identify the same inversions (check xmfa file)}
+%	\item \sout{check if opposite strand in \p means an inversions (check visual matches the xmfa)}
+%	
+%	\item \sout{check if PARSNP and \p both identify the same inversions (check xmfa file)}
 	\item create latex template for paper
-	\item \sout{put notes from papers into doc}
-	\item \sout{use large PARSNP alignment to identify inversions}
+%	\item \sout{put notes from papers into doc}
+%	\item \sout{use large PARSNP alignment to identify inversions}
+
 	\item confirm inversions with dot plot
 	\item make dot plot of just gene presence and absence matrix (instead of each site) to see if this will go better
 	\item look up inversions and small RNA's paper Marie was talking about at Committee meeting
@@ -321,8 +337,6 @@
 \begin{itemize}
 	\item summarize references 40 and 56 from Committee meeting report (Brian was asking)
 	
-	\item read and make notes on papers I found for dissertation intro
-	
 	
 \end{itemize}
 
@@ -333,27 +347,47 @@
 	
 \section*{Last Week}
 
-\ch finish re-running selection and substitutions analysis! 
+\ch finished writing first draft of thesis intro!
 
-\ch look into genes that have $\omega$ $>$ 1
+\ch first draft for lab meeting presentation
 
-\textbf{Substitution + Selection analysis}
+\ch first version of new selection graphs
 
-This new analysis using trimal to cut out bad blocks is done! The results are found in the tables below. (I have not downloaded the figures yet.)
-There are sill a few genes that have $\omega$ $>$ 1 in each of the bacterial replicons.
-I looked at all of them by hand and there are on average about 5 substitutions per ``gene'' with $\omega$ $>$ 1, with one gene having max of 15 substitutions.
-There were quite a few cases where there were no synonymous substitutions, but there was still an estimated dS $>$ 0.
-Mostly the ratio of \# of non-synonymous substitutions to synonymous substitutions was 3.75:1 or lower.
-So I think we are dealing with very few sites and thats why the ratio is skewed.
-What do you think? We can talk more about this when I get back next week.
+\ch implemented Brian's comments/concerns on reviewers comments
+
+\ch figure out why sinoC has so many omega values $=$ 0
 
 
+I have not written one of these in a while, but I am trying to get back into the swing of things.
+I finished a first draft of my intro for my dissertation!
+It still needs to be edited a lot and probably shortened but at least all the ideas are out there!
+
+I have finished the first draft of my lab meeting presentation. I need to practice it a lot and will probably have to change/add some slides.
+
+I showed you the first version of the selection graphs that I made last week, and based on our discussion will be altering them this week.
+
+As we discussed, I made all the changes you asked me to for the Gene Expression paper.
+I will be correcting the new comments you gave me today and hopefully we can re-submit this week!
+
+For the selection analysis in the Substitution paper, it seems that \smel Chromosome genuienly has a lot of values where \dn $=$ 0 and therefore $\omega$ $=$ 0.
+These are making all the graphs look weird (with respect to the outliers and the box plots) so I need to figure out a way to deal with this.
 
 
-\textbf{protein coding subs $>$ non-protein coding subs}
 
-I did some research about what proportion of a bacterial genome is protein coding and it looks like between 40-90\% with an average of 88\%. These numbers often include pseudogenes as protein coding, which I am not.
-My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am not that far off so I think things are fine!
+%\textbf{Substitution + Selection analysis}
+%
+%This new analysis using trimal to cut out bad blocks is done! The results are found in the %tables below. (I have not downloaded the figures yet.)
+%There are sill a few genes that have $\omega$ $>$ 1 in each of the bacterial replicons.
+%I looked at all of them by hand and there are on average about 5 substitutions per ``gene'' with $\omega$ $>$ 1, with one gene having max of 15 substitutions.
+%There were quite a few cases where there were no synonymous substitutions, but there was still an estimated dS $>$ 0.
+%Mostly the ratio of \# of non-synonymous substitutions to synonymous substitutions was 3.75:1 or lower.
+%So I think we are dealing with very few sites and thats why the ratio is skewed.
+%What do you think? We can talk more about this when I get back next week.
+%
+%\textbf{protein coding subs $>$ non-protein coding subs}
+%
+%I did some research about what proportion of a bacterial genome is protein coding and it looks like between 40-90\% with an average of 88\%. These numbers often include pseudogenes as protein coding, which I am not.
+%My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am not that far off so I think things are fine!
 
 
 
@@ -464,11 +498,21 @@ My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
-Working on writing a first draft of my thesis intro and trying to get the McMaster \LaTeX template working.
+\begin{itemize}
+	\item make new corrections for Gene Expression paper
+	\item get proper copy of gene expression paper ready (+ update stuff on \texttt{GitHub} supplementary folder)
+	\item re-submit gene expression paper
+	\item new selection graphs
+	\item practice/perfect lab meeting presentation
+\end{itemize}
 
 
 \section*{Next Week}
-I will be back and continuing to work on the substitutions/selection analysis working out any kinks.
+\begin{itemize}
+	\item why \smel chromosome has an omega linear regression of 0 near and far from the origin
+	\item find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
+	\item double check that I am using the correct ori, ter and max genome pos
+\end{itemize}
 
 \newpage
 
