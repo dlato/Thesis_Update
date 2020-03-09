@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  2 MAR 2020 09:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.4)  9 MAR 2020 09:48
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
-LaTeX2e <2020-02-02> patch level 3
-L3 programming layer <2020-02-21>
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-02-25>
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
@@ -38,7 +38,7 @@ basics and keyval usage)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
 y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlfi
 le.sty"
@@ -66,7 +66,7 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen140
 \Gm@layouthoffset=\dimen141
 \Gm@layoutvoffset=\dimen142
-\Gm@dimlist=\toks15
+\Gm@dimlist=\toks16
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
 cfg"))
@@ -173,9 +173,9 @@ def"
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box45
-\AM@global@opts=\toks16
+\AM@global@opts=\toks17
 \AM@pagecnt=\count181
-\AM@toc@title=\toks17
+\AM@toc@title=\toks18
 \c@AM@survey=\count182
 \AM@templatesizebox=\box46
 )
@@ -188,12 +188,12 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen149
 \ar@mcellbox=\box47
 \extrarowheight=\dimen150
-\NC@list=\toks18
+\NC@list=\toks19
 \extratabsurround=\skip61
 \backup@length=\skip62
 \ar@cellbox=\box48
 )
-\everycr=\toks19
+\everycr=\toks20
 \minrowclearance=\skip63
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.st
@@ -213,7 +213,7 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LT@rows=\count185
 \c@LT@tables=\count186
 \c@LT@chunks=\count187
-\LT@p@ftn=\toks20
+\LT@p@ftn=\toks21
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.
 sty"
@@ -377,7 +377,7 @@ tikz.sty"
 cs.sty"
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 futil-common.tex"
-\pgfutil@everybye=\toks21
+\pgfutil@everybye=\toks22
 \pgfutil@tempdima=\dimen169
 \pgfutil@tempdimb=\dimen170
 
@@ -408,12 +408,12 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 fkeys.code.tex"
-\pgfkeys@pathtoks=\toks22
-\pgfkeys@temptoks=\toks23
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 fkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks24
+\pgfkeys@tmptoks=\toks25
 ))
 \pgf@x=\dimen171
 \pgf@y=\dimen172
@@ -431,9 +431,9 @@ fkeysfiltered.code.tex"
 \c@pgf@countb=\count269
 \c@pgf@countc=\count270
 \c@pgf@countd=\count271
-\t@pgf@toka=\toks25
-\t@pgf@tokb=\toks26
-\t@pgf@tokc=\toks27
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
 \pgf@sys@id@count=\count272
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
@@ -475,9 +475,9 @@ parser.code.tex"
 \pgfmath@dimen=\dimen181
 \pgfmath@count=\count275
 \pgfmath@box=\box54
-\pgfmath@toks=\toks28
-\pgfmath@stack@operand=\toks29
-\pgfmath@stack@operation=\toks30
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 functions.code.tex"
@@ -639,8 +639,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 .code.tex")
 \pgffor@iter=\dimen264
 \pgffor@skip=\dimen265
-\pgffor@stack=\toks31
-\pgffor@toks=\toks32
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz\tikz.code.tex"
@@ -704,7 +704,7 @@ File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \UL@box=\box64
 \UL@hyphenbox=\box65
 \UL@skip=\skip69
-\UL@hook=\toks33
+\UL@hook=\toks34
 \UL@height=\dimen279
 \UL@pe=\count289
 \UL@pixel=\dimen280
@@ -762,7 +762,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks34
+\@emptytoks=\toks35
 \ex@=\dimen290
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
@@ -794,21 +794,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip17
 \c@parentequation=\count298
 \dspbrk@lvl=\count299
-\tag@help=\toks35
+\tag@help=\toks36
 \row@=\count300
 \column@=\count301
 \maxfields@=\count302
-\andhelp@=\toks36
+\andhelp@=\toks37
 \eqnshift@=\dimen293
 \alignsep@=\dimen294
 \tagshift@=\dimen295
 \tagwidth@=\dimen296
 \totwidth@=\dimen297
 \lineht@=\dimen298
-\@envbody=\toks37
+\@envbody=\toks38
 \multlinegap=\skip71
 \multlinetaggap=\skip72
-\mathdisplay@stack=\toks38
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
@@ -827,15 +827,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks39
-\thm@bodyfont=\toks40
-\thm@headfont=\toks41
-\thm@notefont=\toks42
-\thm@headpunct=\toks43
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
 \thm@preskip=\skip73
 \thm@postskip=\skip74
 \thm@headsep=\skip75
-\dth@everypar=\toks44
+\dth@everypar=\toks45
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\mathrsfs.
 sty"
@@ -852,7 +852,7 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
-File: l3backend-pdfmode.def 2020-02-21 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count303
 \l__pdf_internal_box=\box70
 ) (Daniella_Thesis_Update.aux)
@@ -918,12 +918,12 @@ df.mkii"
 \scratchbox=\box71
 \nofMPsegments=\count305
 \nofMParguments=\count306
-\everyMPshowfont=\toks45
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count307
 \MPscratchDim=\dimen300
 \MPnumerator=\count308
 \makeMPintoPDFobject=\count309
-\everyMPtoPDFconversion=\toks46
+\everyMPtoPDFconversion=\toks47
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -981,12 +981,102 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/synch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-[2]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-03.
- ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [3]
+[2] [3] [4]
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC
+_dN_dS_omega_violinplots_5Mar20.pdf, id=32, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/AL
+L_BAC_dN_dS_omega_violinplots_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL
+_BAC_dN_dS_omega_violinplots_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/ALL_BAC_dN_dS_omega_violinplots_5Mar20.pdf  used on input line
+ 531.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC
+_dN_dS_omega_strip_plots_5Mar20.pdf, id=33, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/AL
+L_BAC_dN_dS_omega_strip_plots_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL
+_BAC_dN_dS_omega_strip_plots_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/ALL_BAC_dN_dS_omega_strip_plots_5Mar20.pdf  used on input line
+ 532.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 531--533
+[][]
+ []
+
+[5 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_
+BAC_dN_dS_omega_violinplots_5Mar20.pdf>]
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_d
+N_dS_omega_dist_5Mar20.pdf, id=49, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ec
+oli_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/eco
+li_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 534.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN
+_dS_omega_dist_5Mar20.pdf, id=50, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ba
+ss_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
+s_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 535.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
+N_dS_omega_dist_5Mar20.pdf, id=51, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/st
+rep_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
+ep_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 536.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
+N_dS_omega_dist_5Mar20.pdf, id=52, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/si
+noC_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
+oC_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 537.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_d
+N_dS_omega_dist_5Mar20.pdf, id=53, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
+ymA_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
+mA_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 538.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_d
+N_dS_omega_dist_5Mar20.pdf, id=54, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
+ymB_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
+mB_dN_dS_omega_dist_5Mar20.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 539.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 534--540
+[][]
+ []
+
+[6 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_
+BAC_dN_dS_omega_strip_plots_5Mar20.pdf>] [7 <C:/Users/synch/Documents/PhD/Subst
+itutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf>]
+[8 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass
+_dN_dS_omega_dist_5Mar20.pdf>] [9 <C:/Users/synch/Documents/PhD/Substitutions_p
+aper/GBE_paper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf>] [10 <C:/Users/sy
+nch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_d
+ist_5Mar20.pdf>] [11 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_pape
+r_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -999,42 +1089,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1189.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1189.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
+mB_dN_dS_omega_dist_5Mar20.pdf>] [13] [14] [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1208.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1208.
  (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1189.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1189.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1208.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1208.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1189.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1208.
  ) 
 Here is how much of TeX's memory you used:
- 21162 strings out of 481511
- 418716 string characters out of 2911892
- 673392 words of memory out of 3000000
- 35957 multiletter control sequences out of 15000+200000
- 544386 words of font info for 59 fonts, out of 3000000 for 9000
+ 21199 strings out of 481311
+ 423051 string characters out of 2908124
+ 674318 words of memory out of 3000000
+ 36198 multiletter control sequences out of 15000+200000
+ 544073 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,90p,865b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,12n,90p,866b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ectt1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/synch/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/sync
-h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (6 pages, 103380 bytes).
+ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecti1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/synch/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/synch/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sy
+nch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (15 pages, 8809330 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

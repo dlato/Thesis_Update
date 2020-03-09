@@ -295,9 +295,9 @@
 %	
 %	\item \sout{submit paper}
     
-    \item make corrections based on Brian's edits
+    \item \sout{make corrections based on Brian's edits}
     
-    \item create a clean copy of the paper (no strikeout) for re-submission
+    \item \sout{create a clean copy of the paper (no strikeout) for re-submission}
 
 	
 \end{itemize}
@@ -347,32 +347,43 @@
 	
 \section*{Last Week}
 
-\ch finished writing first draft of thesis intro!
+\ch lab meeting presentation
 
-\ch first draft for lab meeting presentation
+\ch made edits to gene expression paper you suggested
 
-\ch first version of new selection graphs
+\ch made clean copy of gene expression paper with no red/blue marks
 
-\ch implemented Brian's comments/concerns on reviewers comments
+\ch checked high \dn \ds values (they are real!)
 
-\ch figure out why sinoC has so many omega values $=$ 0
+\ch made new selection graphs
 
+\ch still getting Queenie to do some stuff for the inversions and gene expression chapter
 
-I have not written one of these in a while, but I am trying to get back into the swing of things.
-I finished a first draft of my intro for my dissertation!
-It still needs to be edited a lot and probably shortened but at least all the ideas are out there!
+\ch wrote a bunch for the substitutions paper
 
-I have finished the first draft of my lab meeting presentation. I need to practice it a lot and will probably have to change/add some slides.
-
-I showed you the first version of the selection graphs that I made last week, and based on our discussion will be altering them this week.
-
-As we discussed, I made all the changes you asked me to for the Gene Expression paper.
-I will be correcting the new comments you gave me today and hopefully we can re-submit this week!
-
-For the selection analysis in the Substitution paper, it seems that \smel Chromosome genuienly has a lot of values where \dn $=$ 0 and therefore $\omega$ $=$ 0.
-These are making all the graphs look weird (with respect to the outliers and the box plots) so I need to figure out a way to deal with this.
+\ch double check that I am using the correct ori, ter and max genome pos
 
 
+I made all the appropriate changes for the gene expression paper that you suggested and looked it over again and made sure that we are discussing all the points mentioned by the reviewers. 
+As discussed on friday, I hope that we can re-submit this afternoon.
+
+I looked into some of the very high values fo \dn and \ds in some of the bacteria and they indeed seem to be real! 
+The genes that I looked at had a lot of either synonymous or non-synonymous changes that is really causing \dn or \ds to be high!
+I plan on putting an example of a gene with high substitutions in the supplement to illusturate this.
+However, this means that the selection values do truly range wildly, which makes it hard to display without a log scale.
+
+I fixed the distribution graphs for the selection values, and they now include all data points plus averages over 100Kbp.
+These graphs are found below. Outliers are in grey, actual data points are in beige, average values are in dark brown, and the trendline connecting the average values is in blue.
+I need to pick better colours for the outliers and actual data points because they are too similar.
+It looks like for \smel there are a lot of gaps in the data across the genome, so I need to look into this more.
+
+I also attempted to re-do the selection summary graphs (boxplots) to make them a bit more accurate with the log scale and wide range of values.
+The zero and high values are real so we can not classify them as outliers, and removing them from the graph does not change anything (the graph still looks skewed). My two options are below, and I was wondering which one you thought was better? The violin plot does not include the zero values so its still not super representative.
+
+Queenie is still coming around! Although it is very slow going because she is not coming in all that often. Right now she is working on just organizing the gene expression data and normalizing it.
+
+I also did a lot of random writing for the substitutions paper, adding in changes to methods, outliers, updating graphs ... etc.
+I would like to have a completed draft by the end of the semester at the latest.
 
 %\textbf{Substitution + Selection analysis}
 %
@@ -499,25 +510,33 @@ These are making all the graphs look weird (with respect to the outliers and the
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item make new corrections for Gene Expression paper
-	\item get proper copy of gene expression paper ready (+ update stuff on \texttt{GitHub} supplementary folder)
-	\item re-submit gene expression paper
-	\item new selection graphs
-	\item practice/perfect lab meeting presentation
+	\item submit gene expression paper
+	\item change colours for outlier and actual data in selection distribution graphs
+	\item why \smel chromosome has an omega linear regression of 0 near and far from the origin
+	\item find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
+	\item make changes to first year presentation
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item why \smel chromosome has an omega linear regression of 0 near and far from the origin
-	\item find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
-	\item double check that I am using the correct ori, ter and max genome pos
+	\item try re-doing violin plots with log(x +1) to see if zeros will be included in the violin (selection analysis)
+	\item find a block where mauve aligns non-homologous regions and put into supplement
+	\item define a theme for the substitutions graphs (and selection graphs) and re-do these and put in paper
+	\item Why does \smel (and \bass) have ``missing data'' in selection distribution graphs
 \end{itemize}
 
 \newpage
 
-%\includegraphics[width=\textwidth]{all_gene_exp_coef_plot.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC_dN_dS_omega_violinplots_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC_dN_dS_omega_strip_plots_5Mar20.pdf}
 
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf}
+\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf}
 
 %\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_6Nov19.pdf}
 %\includegraphics[width=\textwidth]{bass_weighted_subs_bidirectionality_colour_6Nov19.pdf}
