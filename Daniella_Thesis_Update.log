@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 MAR 2020 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 MAR 2020 13:56
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -982,137 +982,131 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 [2] [3]
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC
-_dN_dS_omega_violinplots_5Mar20.pdf, id=29, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/AL
-L_BAC_dN_dS_omega_violinplots_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL
-_BAC_dN_dS_omega_violinplots_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ALL_BAC_dN_dS_omega_violinplots_5Mar20.pdf  used on input line
- 522.
+<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_NO_
+OUTLIERS.pdf, id=29, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
+s_NO_OUTLIERS.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
+_NO_OUTLIERS.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
+dS_omega_violinplots_NO_OUTLIERS.pdf  used on input line 525.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC
-_dN_dS_omega_strip_plots_5Mar20.pdf, id=30, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/AL
-L_BAC_dN_dS_omega_strip_plots_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL
-_BAC_dN_dS_omega_strip_plots_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ALL_BAC_dN_dS_omega_strip_plots_5Mar20.pdf  used on input line
- 523.
+<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_out
+lier_pts_and_violin.pdf, id=30, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
+s_outlier_pts_and_violin.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
+_outlier_pts_and_violin.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
+dS_omega_violinplots_outlier_pts_and_violin.pdf  used on input line 526.
+(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_out
+lier_pts_no_outliers_violin.pdf, id=31, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
+s_outlier_pts_no_outliers_violin.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
+_outlier_pts_no_outliers_violin.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
+dS_omega_violinplots_outlier_pts_no_outliers_violin.pdf  used on input line 527
+.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 522--524
+Overfull \hbox (28.0pt too wide) in paragraph at lines 525--528
 [][]
  []
 
-[4 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_
-BAC_dN_dS_omega_violinplots_5Mar20.pdf>]
+[4 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_
+NO_OUTLIERS.pdf>] [5 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_
+omega_violinplots_outlier_pts_and_violin.pdf>]
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_d
-N_dS_omega_dist_5Mar20.pdf, id=46, 505.89pt x 505.89pt>
+N_dS_omega_dist_5Mar20.pdf, id=62, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ec
 oli_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/eco
 li_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 525.
+aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 529.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN
-_dS_omega_dist_5Mar20.pdf, id=47, 505.89pt x 505.89pt>
+_dS_omega_dist_5Mar20.pdf, id=63, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ba
 ss_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
 s_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 526.
+aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 530.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
-N_dS_omega_dist_5Mar20.pdf, id=48, 505.89pt x 505.89pt>
+N_dS_omega_dist_5Mar20.pdf, id=64, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/st
 rep_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
 ep_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 527.
+aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 531.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
-N_dS_omega_dist_5Mar20.pdf, id=49, 505.89pt x 505.89pt>
+N_dS_omega_dist_5Mar20.pdf, id=65, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/si
 noC_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
 oC_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 528.
+aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 532.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_d
-N_dS_omega_dist_5Mar20.pdf, id=50, 505.89pt x 505.89pt>
+N_dS_omega_dist_5Mar20.pdf, id=66, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
 ymA_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mA_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 529.
+aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 533.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_d
-N_dS_omega_dist_5Mar20.pdf, id=51, 505.89pt x 505.89pt>
+N_dS_omega_dist_5Mar20.pdf, id=67, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
 ymB_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mB_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 530.
+aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 534.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 525--531
+Overfull \hbox (28.0pt too wide) in paragraph at lines 529--535
 [][]
  []
 
-[5 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_
-BAC_dN_dS_omega_strip_plots_5Mar20.pdf>] [6 <C:/Users/synch/Documents/PhD/Subst
-itutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf>]
-[7 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass
-_dN_dS_omega_dist_5Mar20.pdf>] [8 <C:/Users/synch/Documents/PhD/Substitutions_p
-aper/GBE_paper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf>] [9 <C:/Users/syn
-ch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_di
-st_5Mar20.pdf>] [10 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper
-_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf>]
+[6 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_
+outlier_pts_no_outliers_violin.pdf>] [7 <C:/Users/synch/Documents/PhD/Substitut
+ions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf>] [8 <C:/Use
+rs/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_ome
+ga_dist_5Mar20.pdf>] [9 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
+aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf>] [10 <C:/Users/synch/Docume
+nts/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_5Mar20
+.pdf>] [11 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/f
+igs/pSymA_dN_dS_omega_dist_5Mar20.pdf>] [12 <C:/Users/synch/Documents/PhD/Subst
+itutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1204.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1204.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
-mB_dN_dS_omega_dist_5Mar20.pdf>] [12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1199.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1199.
- (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1199.
+(Daniella_Thesis_Update.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1204.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1204.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1204.
  ) 
 Here is how much of TeX's memory you used:
- 21201 strings out of 481511
- 423078 string characters out of 2911892
- 676397 words of memory out of 3000000
- 35982 multiletter control sequences out of 15000+200000
+ 21195 strings out of 481511
+ 423455 string characters out of 2911892
+ 674023 words of memory out of 3000000
+ 35981 multiletter control sequences out of 15000+200000
  544849 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,90p,866b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,12n,90p,779b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ecbx1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -1120,15 +1114,11 @@ ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
 /pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX
 \2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/sync
-h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (14 pages, 8812360 bytes).
+h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.
+pfb>
+Output written on Daniella_Thesis_Update.pdf (12 pages, 11159661 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
