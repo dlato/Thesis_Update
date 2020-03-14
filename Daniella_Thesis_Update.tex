@@ -185,15 +185,15 @@
 %		\item split up the strep data into core and non core and see if results are the same
 %	\end{itemize}
 
-    \item why does sinoC have omega lin reg = 0 near and far from the origin?
+    \item \sout{why does sinoC have omega lin reg = 0 near and far from the origin?}
     
     \item create new graphs for selection analysis
     
-    \item find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)
+    \item \sout{find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)}
     
-    \item discuss removing omega outliers in methods
+    \item \sout{discuss removing omega outliers in methods}
     
-    \item double check that the ter and ori and max genome pos are correct
+    \item \sout{double check that the ter and ori and max genome pos are correct}
 	
 	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
 	
@@ -347,43 +347,37 @@
 	
 \section*{Last Week}
 
-\ch lab meeting presentation
+\ch re-submit gene expression paper! Woo!
 
-\ch made edits to gene expression paper you suggested
+\ch change colours for outlier and actual data in selection distribution graphs
 
-\ch made clean copy of gene expression paper with no red/blue marks
+\ch why \smel chromosome has an omega linear regression of 0 near and far from the origin
 
-\ch checked high \dn \ds values (they are real!)
+\ch find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
 
-\ch made new selection graphs
+\ch figure out how to deal with significant number of duplicates in one GEO gene expression dataset (for inversions analysis)
 
-\ch still getting Queenie to do some stuff for the inversions and gene expression chapter
+\ch begin making changes to first year presentation
 
-\ch wrote a bunch for the substitutions paper
+\ch minor edits to selection graphs
 
-\ch double check that I am using the correct ori, ter and max genome pos
+We resubmitted the gene expression paper! Woo!
 
+\textcolor{red}{add in graphs and ask brian which he likes best}
 
-I made all the appropriate changes for the gene expression paper that you suggested and looked it over again and made sure that we are discussing all the points mentioned by the reviewers. 
-As discussed on friday, I hope that we can re-submit this afternoon.
+I changed the colours for the selection graphs to make it a bit easier to see the outliers. 
+I also made minor edits to the graphs like making sure the trendline means are in the middle of the genomic region they are averaging (instead of at the beginning).
+I also attempted to see if R will plot a trendline if one of the points is zero, and it will not, at least not on a log scale. So we are stuck with some segments of the graph ``missing'' a line. But, the mean points are still at zero so the information that the average selection value is zero in these genomic regions is still visible.
+I also tried to plot the selection values as log(x +1) to try and include the zeros, but it did not work, everything was still squished to the x-axis. So I will have to make a note in my captions about the number of zero values in each graph.
 
-I looked into some of the very high values fo \dn and \ds in some of the bacteria and they indeed seem to be real! 
-The genes that I looked at had a lot of either synonymous or non-synonymous changes that is really causing \dn or \ds to be high!
-I plan on putting an example of a gene with high substitutions in the supplement to illusturate this.
-However, this means that the selection values do truly range wildly, which makes it hard to display without a log scale.
+I also looked into why the \smel  chromosome had linear regression of zero near and far from the origin, and it is because all the values in these regions are zero. Any non-zero values were labelled as outliers. Not sure how we should be explaining this in the paper or if we should be altering some part of the analysis? \textbf{Thoughts?}
 
-I fixed the distribution graphs for the selection values, and they now include all data points plus averages over 100Kbp.
-These graphs are found below. Outliers are in grey, actual data points are in beige, average values are in dark brown, and the trendline connecting the average values is in blue.
-I need to pick better colours for the outliers and actual data points because they are too similar.
-It looks like for \smel there are a lot of gaps in the data across the genome, so I need to look into this more.
+I also chose a particularly high substitutions bar from the substitutions graphs to add into the supplement as an example showing that whatever remaining high numbers of substitutions are left, are actually real! I also added info about this in the main portion of the paper.
 
-I also attempted to re-do the selection summary graphs (boxplots) to make them a bit more accurate with the log scale and wide range of values.
-The zero and high values are real so we can not classify them as outliers, and removing them from the graph does not change anything (the graph still looks skewed). My two options are below, and I was wondering which one you thought was better? The violin plot does not include the zero values so its still not super representative.
+I started to make changes to the first year bioinformatics lecture, however, in light of the school cancelling all in-person classes, I assume this will be postponed until the fall. 
 
-Queenie is still coming around! Although it is very slow going because she is not coming in all that often. Right now she is working on just organizing the gene expression data and normalizing it.
+I also spoke with you about the duplicated genes in one of the GEO datasets for the inversion analysis. I contacted the author and they said that I can just add up all the raw read values to get the total for that gene. So this is what Queenie is working on as well as normalizing all the gene expression data.
 
-I also did a lot of random writing for the substitutions paper, adding in changes to methods, outliers, updating graphs ... etc.
-I would like to have a completed draft by the end of the semester at the latest.
 
 %\textbf{Substitution + Selection analysis}
 %
@@ -510,17 +504,12 @@ I would like to have a completed draft by the end of the semester at the latest.
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item submit gene expression paper
-	\item change colours for outlier and actual data in selection distribution graphs
-	\item why \smel chromosome has an omega linear regression of 0 near and far from the origin
-	\item find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
 	\item make changes to first year presentation
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item try re-doing violin plots with log(x +1) to see if zeros will be included in the violin (selection analysis)
 	\item find a block where mauve aligns non-homologous regions and put into supplement
 	\item define a theme for the substitutions graphs (and selection graphs) and re-do these and put in paper
 	\item Why does \smel (and \bass) have ``missing data'' in selection distribution graphs
