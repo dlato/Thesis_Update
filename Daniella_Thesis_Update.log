@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 MAR 2020 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 MAR 2020 12:44
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -990,7 +990,7 @@ L_BAC_dN_dS_omega_violinplots_5Mar20.pdf Graphic file (type pdf)
 _BAC_dN_dS_omega_violinplots_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/ALL_BAC_dN_dS_omega_violinplots_5Mar20.pdf  used on input line
- 520.
+ 522.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ALL_BAC
 _dN_dS_omega_strip_plots_5Mar20.pdf, id=30, 505.89pt x 505.89pt>
@@ -1000,10 +1000,10 @@ L_BAC_dN_dS_omega_strip_plots_5Mar20.pdf Graphic file (type pdf)
 _BAC_dN_dS_omega_strip_plots_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/ALL_BAC_dN_dS_omega_strip_plots_5Mar20.pdf  used on input line
- 521.
+ 523.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 520--522
+Overfull \hbox (28.0pt too wide) in paragraph at lines 522--524
 [][]
  []
 
@@ -1016,7 +1016,7 @@ oli_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/eco
 li_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 523.
+aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 525.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN
 _dS_omega_dist_5Mar20.pdf, id=47, 505.89pt x 505.89pt>
@@ -1025,7 +1025,7 @@ ss_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
 s_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 524.
+aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 526.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
 N_dS_omega_dist_5Mar20.pdf, id=48, 505.89pt x 505.89pt>
@@ -1034,7 +1034,7 @@ rep_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
 ep_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 525.
+aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 527.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
 N_dS_omega_dist_5Mar20.pdf, id=49, 505.89pt x 505.89pt>
@@ -1043,7 +1043,7 @@ noC_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
 oC_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 526.
+aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 528.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_d
 N_dS_omega_dist_5Mar20.pdf, id=50, 505.89pt x 505.89pt>
@@ -1052,7 +1052,7 @@ ymA_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mA_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 527.
+aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 529.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_d
 N_dS_omega_dist_5Mar20.pdf, id=51, 505.89pt x 505.89pt>
@@ -1061,10 +1061,10 @@ ymB_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mB_dN_dS_omega_dist_5Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 528.
+aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 530.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-Overfull \hbox (28.0pt too wide) in paragraph at lines 523--529
+Overfull \hbox (28.0pt too wide) in paragraph at lines 525--531
 [][]
  []
 
@@ -1094,16 +1094,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mB_dN_dS_omega_dist_5Mar20.pdf>] [12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1197.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1197.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1199.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1199.
  (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1197.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1199.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1199.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1197.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1199.
  ) 
 Here is how much of TeX's memory you used:
  21201 strings out of 481511
@@ -1126,9 +1126,9 @@ cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (14 pages, 8811779 bytes).
+Output written on Daniella_Thesis_Update.pdf (14 pages, 8812360 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
+ 346 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
