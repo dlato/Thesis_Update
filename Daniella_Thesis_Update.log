@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  18 MAR 2020 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  18 MAR 2020 15:41
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -108,6 +108,32 @@ s
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
 )
+("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count178
+\c@continuedfloat=\count179
+)
+("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
+.sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count180
+\c@subtable=\count181
+)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
@@ -120,15 +146,15 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count178
-\calc@Bcount=\count179
-\calc@Adimen=\dimen145
-\calc@Bdimen=\dimen146
+\calc@Acount=\count182
+\calc@Bcount=\count183
+\calc@Adimen=\dimen152
+\calc@Bdimen=\dimen153
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count180
+\calc@Ccount=\count184
 \calc@Cskip=\skip60
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eso-pic\eso-pic.st
@@ -165,8 +191,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-\AM@pagewidth=\dimen147
-\AM@pageheight=\dimen148
+\AM@pagewidth=\dimen154
+\AM@pageheight=\dimen155
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\pppdftex.
 def"
@@ -174,9 +200,9 @@ File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box45
 \AM@global@opts=\toks16
-\AM@pagecnt=\count181
+\AM@pagecnt=\count185
 \AM@toc@title=\toks17
-\c@AM@survey=\count182
+\c@AM@survey=\count186
 \AM@templatesizebox=\box46
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.
@@ -185,9 +211,9 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen149
+\col@sep=\dimen156
 \ar@mcellbox=\box47
-\extrarowheight=\dimen150
+\extrarowheight=\dimen157
 \NC@list=\toks18
 \extratabsurround=\skip61
 \backup@length=\skip62
@@ -203,16 +229,16 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip65
 \LTpre=\skip66
 \LTpost=\skip67
-\LTchunksize=\count183
-\LTcapwidth=\dimen151
+\LTchunksize=\count187
+\LTcapwidth=\dimen158
 \LT@head=\box49
 \LT@firsthead=\box50
 \LT@foot=\box51
 \LT@lastfoot=\box52
-\LT@cols=\count184
-\LT@rows=\count185
-\c@LT@tables=\count186
-\c@LT@chunks=\count187
+\LT@cols=\count188
+\LT@rows=\count189
+\c@LT@tables=\count190
+\c@LT@chunks=\count191
 \LT@p@ftn=\toks20
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.
@@ -255,9 +281,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 s.sty"
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen152
-\Hy@linkcounter=\count188
-\Hy@pagecounter=\count189
+\@linkdim=\dimen159
+\Hy@linkcounter=\count192
+\Hy@pagecounter=\count193
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.de
 f"
@@ -273,7 +299,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count190
+\Hy@SavedSpaceFactor=\count194
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -281,13 +307,13 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count191
+\c@Hy@tempcnt=\count195
  ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen153
+\XeTeXLinkMargin=\dimen160
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.st
 y"
@@ -298,9 +324,9 @@ tcalc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count192
-\Field@Width=\dimen154
-\Fld@charsize=\dimen155
+\Fld@menulength=\count196
+\Field@Width=\dimen161
+\Fld@charsize=\dimen162
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -310,9 +336,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6455.
 Package hyperref Info: PDF/A mode OFF on input line 6460.
 LaTeX Info: Redefining \ref on input line 6500.
 LaTeX Info: Redefining \pageref on input line 6504.
-\Hy@abspage=\count193
-\c@Item=\count194
-\c@Hfootnote=\count195
+\Hy@abspage=\count197
+\c@Item=\count198
+\c@Hfootnote=\count199
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -325,8 +351,8 @@ d.sty"
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count196
-\c@bookmark@seq@number=\count197
+\Fld@listcount=\count266
+\c@bookmark@seq@number=\count267
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\rer
 unfilecheck.sty"
@@ -344,23 +370,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
 sty"
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen156
-\lightrulewidth=\dimen157
-\cmidrulewidth=\dimen158
-\belowrulesep=\dimen159
-\belowbottomsep=\dimen160
-\aboverulesep=\dimen161
-\abovetopsep=\dimen162
-\cmidrulesep=\dimen163
-\cmidrulekern=\dimen164
-\defaultaddspace=\dimen165
-\@cmidla=\count198
-\@cmidlb=\count199
-\@aboverulesep=\dimen166
-\@belowrulesep=\dimen167
-\@thisruleclass=\count266
-\@lastruleclass=\count267
-\@thisrulewidth=\dimen168
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
+\@cmidla=\count268
+\@cmidlb=\count269
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
+\@thisruleclass=\count270
+\@lastruleclass=\count271
+\@thisrulewidth=\dimen175
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
@@ -378,8 +404,8 @@ cs.sty"
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 futil-common.tex"
 \pgfutil@everybye=\toks21
-\pgfutil@tempdima=\dimen169
-\pgfutil@tempdimb=\dimen170
+\pgfutil@tempdima=\dimen176
+\pgfutil@tempdimb=\dimen177
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 futil-common-lists.tex"))
@@ -415,26 +441,26 @@ fkeys.code.tex"
 fkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks24
 ))
-\pgf@x=\dimen171
-\pgf@y=\dimen172
-\pgf@xa=\dimen173
-\pgf@ya=\dimen174
-\pgf@xb=\dimen175
-\pgf@yb=\dimen176
-\pgf@xc=\dimen177
-\pgf@yc=\dimen178
-\pgf@xd=\dimen179
-\pgf@yd=\dimen180
+\pgf@x=\dimen178
+\pgf@y=\dimen179
+\pgf@xa=\dimen180
+\pgf@ya=\dimen181
+\pgf@xb=\dimen182
+\pgf@yb=\dimen183
+\pgf@xc=\dimen184
+\pgf@yc=\dimen185
+\pgf@xd=\dimen186
+\pgf@yd=\dimen187
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count268
-\c@pgf@countb=\count269
-\c@pgf@countc=\count270
-\c@pgf@countd=\count271
+\c@pgf@counta=\count272
+\c@pgf@countb=\count273
+\c@pgf@countc=\count274
+\c@pgf@countd=\count275
 \t@pgf@toka=\toks25
 \t@pgf@tokb=\toks26
 \t@pgf@tokc=\toks27
-\pgf@sys@id@count=\count272
+\pgf@sys@id@count=\count276
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgf.cfg"
@@ -453,8 +479,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count273
-\pgfsyssoftpath@bigbuffer@items=\count274
+\pgfsyssoftpath@smallbuffer@items=\count277
+\pgfsyssoftpath@bigbuffer@items=\count278
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgfsysprotocol.code.tex"
@@ -472,8 +498,8 @@ calc.code.tex"
 util.code.tex")
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 parser.code.tex"
-\pgfmath@dimen=\dimen181
-\pgfmath@count=\count275
+\pgfmath@dimen=\dimen188
+\pgfmath@count=\count279
 \pgfmath@box=\box54
 \pgfmath@toks=\toks28
 \pgfmath@stack@operand=\toks29
@@ -499,39 +525,39 @@ functions.misc.code.tex")
 functions.integerarithmetics.code.tex")))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 float.code.tex"
-\c@pgfmathroundto@lastzeros=\count276
+\c@pgfmathroundto@lastzeros=\count280
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.
 code.tex")
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen182
-\pgf@picmaxx=\dimen183
-\pgf@picminy=\dimen184
-\pgf@picmaxy=\dimen185
-\pgf@pathminx=\dimen186
-\pgf@pathmaxx=\dimen187
-\pgf@pathminy=\dimen188
-\pgf@pathmaxy=\dimen189
-\pgf@xx=\dimen190
-\pgf@xy=\dimen191
-\pgf@yx=\dimen192
-\pgf@yy=\dimen193
-\pgf@zx=\dimen194
-\pgf@zy=\dimen195
+\pgf@picminx=\dimen189
+\pgf@picmaxx=\dimen190
+\pgf@picminy=\dimen191
+\pgf@picmaxy=\dimen192
+\pgf@pathminx=\dimen193
+\pgf@pathmaxx=\dimen194
+\pgf@pathminy=\dimen195
+\pgf@pathmaxy=\dimen196
+\pgf@xx=\dimen197
+\pgf@xy=\dimen198
+\pgf@yx=\dimen199
+\pgf@yy=\dimen256
+\pgf@zx=\dimen257
+\pgf@zy=\dimen258
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen196
-\pgf@path@lasty=\dimen197
+\pgf@path@lastx=\dimen259
+\pgf@path@lasty=\dimen260
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen198
-\pgf@shorten@start@additional=\dimen199
+\pgf@shorten@end@additional=\dimen261
+\pgf@shorten@start@additional=\dimen262
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorescopes.code.tex"
@@ -539,19 +565,19 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box55
 \pgf@hbox=\box56
 \pgf@layerbox@main=\box57
-\pgf@picture@serial@count=\count277
+\pgf@picture@serial@count=\count281
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen256
+\pgflinewidth=\dimen263
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen257
-\pgf@pt@y=\dimen258
-\pgf@pt@temp=\dimen259
+\pgf@pt@x=\dimen264
+\pgf@pt@y=\dimen265
+\pgf@pt@temp=\dimen266
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorequick.code.tex"
@@ -568,14 +594,14 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen260
+\pgfarrowsep=\dimen267
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen261
-\pgf@sys@shading@range@num=\count278
-\pgf@shadingcount=\count279
+\pgf@max=\dimen268
+\pgf@sys@shading@range@num=\count282
+\pgf@shadingcount=\count283
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoreimage.code.tex"
@@ -614,8 +640,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
 pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen262
-\pgf@nodesepend=\dimen263
+\pgf@nodesepstart=\dimen269
+\pgf@nodesepend=\dimen270
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
 pgfcomp-version-1-18.sty"
@@ -637,8 +663,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 .code.tex")
-\pgffor@iter=\dimen264
-\pgffor@skip=\dimen265
+\pgffor@iter=\dimen271
+\pgffor@skip=\dimen272
 \pgffor@stack=\toks31
 \pgffor@toks=\toks32
 ))
@@ -649,34 +675,34 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
 flibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count280
-\pgfplotmarksize=\dimen266
+\pgf@plot@mark@count=\count284
+\pgfplotmarksize=\dimen273
 )
-\tikz@lastx=\dimen267
-\tikz@lasty=\dimen268
-\tikz@lastxsaved=\dimen269
-\tikz@lastysaved=\dimen270
-\tikz@lastmovetox=\dimen271
-\tikz@lastmovetoy=\dimen272
-\tikzleveldistance=\dimen273
-\tikzsiblingdistance=\dimen274
+\tikz@lastx=\dimen274
+\tikz@lasty=\dimen275
+\tikz@lastxsaved=\dimen276
+\tikz@lastysaved=\dimen277
+\tikz@lastmovetox=\dimen278
+\tikz@lastmovetoy=\dimen279
+\tikzleveldistance=\dimen280
+\tikzsiblingdistance=\dimen281
 \tikz@figbox=\box60
 \tikz@figbox@bg=\box61
 \tikz@tempbox=\box62
 \tikz@tempbox@bg=\box63
-\tikztreelevel=\count281
-\tikznumberofchildren=\count282
-\tikznumberofcurrentchild=\count283
-\tikz@fig@count=\count284
+\tikztreelevel=\count285
+\tikznumberofchildren=\count286
+\tikznumberofcurrentchild=\count287
+\tikz@fig@count=\count288
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
 odulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count285
-\pgfmatrixcurrentcolumn=\count286
-\pgf@matrix@numberofcolumns=\count287
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
 )
-\tikz@expandcount=\count288
+\tikz@expandcount=\count292
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibrarytopaths.code.tex"
@@ -695,22 +721,22 @@ File: tikzlibraryquotes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
 flibraryarrows.meta.code.tex"
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen275
-\pgfarrowlength=\dimen276
-\pgfarrowwidth=\dimen277
-\pgfarrowlinewidth=\dimen278
+\pgfarrowinset=\dimen282
+\pgfarrowlength=\dimen283
+\pgfarrowwidth=\dimen284
+\pgfarrowlinewidth=\dimen285
 )))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ulem\ulem.sty"
 \UL@box=\box64
 \UL@hyphenbox=\box65
 \UL@skip=\skip69
 \UL@hook=\toks33
-\UL@height=\dimen279
-\UL@pe=\count289
-\UL@pixel=\dimen280
+\UL@height=\dimen286
+\UL@pe=\count293
+\UL@pixel=\dimen287
 \ULC@box=\box66
 Package: ulem 2019/11/18
-\ULdepth=\dimen281
+\ULdepth=\dimen288
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibrarydecorations.markings.code.tex"
@@ -718,14 +744,14 @@ r/tikz/libraries\tikzlibrarydecorations.markings.code.tex"
 r/tikz/libraries\tikzlibrarydecorations.code.tex"
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
 oduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen282
-\pgfdecoratedremainingdistance=\dimen283
-\pgfdecoratedinputsegmentcompleteddistance=\dimen284
-\pgfdecoratedinputsegmentremainingdistance=\dimen285
-\pgf@decorate@distancetomove=\dimen286
-\pgf@decorate@repeatstate=\count290
-\pgfdecorationsegmentamplitude=\dimen287
-\pgfdecorationsegmentlength=\dimen288
+\pgfdecoratedcompleteddistance=\dimen289
+\pgfdecoratedremainingdistance=\dimen290
+\pgfdecoratedinputsegmentcompleteddistance=\dimen291
+\pgfdecoratedinputsegmentremainingdistance=\dimen292
+\pgf@decorate@distancetomove=\dimen293
+\pgf@decorate@repeatstate=\count294
+\pgfdecorationsegmentamplitude=\dimen294
+\pgfdecorationsegmentlength=\dimen295
 )
 \tikz@lib@dec@box=\box67
 )
@@ -742,7 +768,7 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
 flibraryarrows.code.tex"
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen289
+\arrowsize=\dimen296
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lscape.st
 y"
@@ -763,48 +789,48 @@ Package: amstext 2000/06/29 v2.01 AMS text
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks34
-\ex@=\dimen290
+\ex@=\dimen297
 ))
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
 "
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen291
+\pmbraise@=\dimen298
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
 "
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count291
+\inf@bad=\count295
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count292
-\leftroot@=\count293
+\uproot@=\count296
+\leftroot@=\count297
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count294
-\DOTSCASE@=\count295
+\classnum@=\count298
+\DOTSCASE@=\count299
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box68
 \strutbox@=\box69
-\big@size=\dimen292
+\big@size=\dimen299
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count296
-\c@MaxMatrixCols=\count297
+\macc@depth=\count300
+\c@MaxMatrixCols=\count301
 \dotsspace@=\muskip17
-\c@parentequation=\count298
-\dspbrk@lvl=\count299
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
 \tag@help=\toks35
-\row@=\count300
-\column@=\count301
-\maxfields@=\count302
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
 \andhelp@=\toks36
-\eqnshift@=\dimen293
-\alignsep@=\dimen294
-\tagshift@=\dimen295
-\tagwidth@=\dimen296
-\totwidth@=\dimen297
-\lineht@=\dimen298
+\eqnshift@=\dimen300
+\alignsep@=\dimen301
+\tagshift@=\dimen302
+\tagwidth@=\dimen303
+\totwidth@=\dimen304
+\lineht@=\dimen305
 \@envbody=\toks37
 \multlinegap=\skip71
 \multlinetaggap=\skip72
@@ -853,27 +879,27 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-21 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count303
+\l__kernel_color_stack_int=\count307
 \l__pdf_internal_box=\box70
 ) (Daniella_Thesis_Update.aux)
 \openout1 = `Daniella_Thesis_Update.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -913,16 +939,16 @@ LaTeX Font Info:    ... okay on input line 66.
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
-\scratchdimen=\dimen299
+\scratchcounter=\count308
+\scratchdimen=\dimen306
 \scratchbox=\box71
-\nofMPsegments=\count305
-\nofMParguments=\count306
+\nofMPsegments=\count309
+\nofMParguments=\count310
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count307
-\MPscratchDim=\dimen300
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen307
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks46
 )
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
@@ -931,6 +957,15 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ltcaption.
+sty"
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box72
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdflscape\pdflscap
@@ -938,7 +973,7 @@ e.sty"
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 68.
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -952,171 +987,168 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count310
+\c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
  (Daniella_Thesis_Update.out) (Daniella_Thesis_Update.out)
 \@outlinefile=\write4
 \openout4 = `Daniella_Thesis_Update.out'.
 
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Trying to load font information for U+msa on input line 119
+LaTeX Font Info:    Trying to load font information for U+msa on input line 121
 .
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 119
+LaTeX Font Info:    Trying to load font information for U+msb on input line 121
 .
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12
+1.
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/synch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
 [2] [3]
-<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_NO_
-OUTLIERS.pdf, id=28, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
-s_NO_OUTLIERS.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
-_NO_OUTLIERS.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
-dS_omega_violinplots_NO_OUTLIERS.pdf  used on input line 513.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_out
-lier_pts_and_violin.pdf, id=29, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
-s_outlier_pts_and_violin.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
-_outlier_pts_and_violin.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
-dS_omega_violinplots_outlier_pts_and_violin.pdf  used on input line 514.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_out
-lier_pts_no_outliers_violin.pdf, id=30, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplot
-s_outlier_pts_no_outliers_violin.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots
-_outlier_pts_no_outliers_violin.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_
-dS_omega_violinplots_outlier_pts_no_outliers_violin.pdf  used on input line 515
-.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-Overfull \hbox (28.0pt too wide) in paragraph at lines 513--516
-[][]
- []
-
-[4 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_
-NO_OUTLIERS.pdf>] [5 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_
-omega_violinplots_outlier_pts_and_violin.pdf>]
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_d
-N_dS_omega_dist_5Mar20.pdf, id=61, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ec
-oli_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/eco
-li_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf  used on input line 517.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN
-_dS_omega_dist_5Mar20.pdf, id=62, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ba
-ss_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
-s_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf  used on input line 518.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
-N_dS_omega_dist_5Mar20.pdf, id=63, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/st
-rep_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
-ep_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf  used on input line 519.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
-N_dS_omega_dist_5Mar20.pdf, id=64, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/si
-noC_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
-oC_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf  used on input line 520.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_d
-N_dS_omega_dist_5Mar20.pdf, id=65, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
-ymA_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
-mA_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf  used on input line 521.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_d
-N_dS_omega_dist_5Mar20.pdf, id=66, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pS
-ymB_dN_dS_omega_dist_5Mar20.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
-mB_dN_dS_omega_dist_5Mar20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf  used on input line 522.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-Overfull \hbox (28.0pt too wide) in paragraph at lines 517--523
-[][]
- []
-
-[6 <C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_
-outlier_pts_no_outliers_violin.pdf>] [7 <C:/Users/synch/Documents/PhD/Substitut
-ions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf>] [8 <C:/Use
-rs/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_ome
-ga_dist_5Mar20.pdf>] [9 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf>] [10 <C:/Users/synch/Docume
-nts/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_5Mar20
-.pdf>] [11 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/f
-igs/pSymA_dN_dS_omega_dist_5Mar20.pdf>] [12 <C:/Users/synch/Documents/PhD/Subst
-itutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1192.
-
-(Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1192.
+<C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20.pdf,
+ id=28, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20
+.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20.
+pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS
+_omega_dist_18Mar20.pdf  used on input line 518.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<ecoli_missing_data_check_dot_plot_18Mar20.pdf, id=29, 505.89pt x 505.89pt>
+File: ecoli_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use ecoli_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: ecoli_missing_data_check_dot_plot_18Mar20.pdf  used on
+ input line 524.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.pdf, 
+id=30, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.
+pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.p
+df>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_
+omega_dist_18Mar20.pdf  used on input line 535.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<bass_missing_data_check_dot_plot_18Mar20.pdf, id=31, 505.89pt x 505.89pt>
+File: bass_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use bass_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: bass_missing_data_check_dot_plot_18Mar20.pdf  used on 
+input line 541.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS_omega_dist_18Mar20.pdf,
+ id=32, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS_omega_dist_18Mar20
+.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS_omega_dist_18Mar20.
+pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS
+_omega_dist_18Mar20.pdf  used on input line 552.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<strep_missing_data_check_dot_plot_18Mar20.pdf, id=33, 505.89pt x 505.89pt>
+File: strep_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use strep_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: strep_missing_data_check_dot_plot_18Mar20.pdf  used on
+ input line 558.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20.pdf,
+ id=34, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20
+.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20.
+pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS
+_omega_dist_18Mar20.pdf  used on input line 569.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<sinoC_missing_data_check_dot_plot_18Mar20.pdf, id=35, 505.89pt x 505.89pt>
+File: sinoC_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use sinoC_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: sinoC_missing_data_check_dot_plot_18Mar20.pdf  used on
+ input line 575.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20.pdf,
+ id=36, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20
+.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20.
+pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS
+_omega_dist_18Mar20.pdf  used on input line 586.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<pSymA_missing_data_check_dot_plot_18Mar20.pdf, id=37, 505.89pt x 505.89pt>
+File: pSymA_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use pSymA_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: pSymA_missing_data_check_dot_plot_18Mar20.pdf  used on
+ input line 592.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS_omega_dist_18Mar20.pdf,
+ id=38, 505.89pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS_omega_dist_18Mar20
+.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS_omega_dist_18Mar20.
+pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS
+_omega_dist_18Mar20.pdf  used on input line 603.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+<pSymB_missing_data_check_dot_plot_18Mar20.pdf, id=39, 505.89pt x 505.89pt>
+File: pSymB_missing_data_check_dot_plot_18Mar20.pdf Graphic file (type pdf)
+<use pSymB_missing_data_check_dot_plot_18Mar20.pdf>
+Package pdftex.def Info: pSymB_missing_data_check_dot_plot_18Mar20.pdf  used on
+ input line 609.
+(pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
+ [4 <C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20.
+pdf> <./ecoli_missing_data_check_dot_plot_18Mar20.pdf> <C:/Users/synch/Document
+s/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.pdf> <./bass_missing_data_che
+ck_dot_plot_18Mar20.pdf>] [5 <C:/Users/synch/Documents/PhD/Thesis_Update/strep_
+dN_dS_omega_dist_18Mar20.pdf> <./strep_missing_data_check_dot_plot_18Mar20.pdf>
+ <C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20.pdf
+> <./sinoC_missing_data_check_dot_plot_18Mar20.pdf>] [6 <C:/Users/synch/Documen
+ts/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20.pdf> <./pSymA_missing_data_
+check_dot_plot_18Mar20.pdf> <C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_d
+N_dS_omega_dist_18Mar20.pdf> <./pSymB_missing_data_check_dot_plot_18Mar20.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1284.
+ (Daniella_Thesis_Update.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1284.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1284.
  ) 
 Here is how much of TeX's memory you used:
- 21193 strings out of 481511
- 423433 string characters out of 2911892
- 674023 words of memory out of 3000000
- 35980 multiletter control sequences out of 15000+200000
- 544073 words of font info for 58 fonts, out of 3000000 for 9000
+ 22429 strings out of 481511
+ 444799 string characters out of 2911892
+ 695878 words of memory out of 3000000
+ 37208 multiletter control sequences out of 15000+200000
+ 545625 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,90p,779b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,11n,90p,779b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecti1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/synch/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/synch/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (12 pages, 11154691 bytes).
+ecbx1095.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm1095.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\synch\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/synch/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb>
+Output written on Daniella_Thesis_Update.pdf (6 pages, 2898427 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
+ 349 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

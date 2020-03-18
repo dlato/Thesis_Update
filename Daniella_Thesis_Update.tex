@@ -3,6 +3,8 @@
 \usepackage[margin=0.75in]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{xspace}
 %\usepackage{underscore}
 \usepackage{pdfpages}
@@ -509,17 +511,107 @@ I am still working this out.
 \end{itemize}
 
 \newpage
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20.pdf}
+		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\label{fig:e1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{ecoli_missing_data_check_dot_plot_18Mar20}
+		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\label{fig:e2}
+	\end{subfigure}
+	\label{fig:ecoli}
+\end{figure}
 
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_NO_OUTLIERS.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_outlier_pts_and_violin.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Thesis_Update/ALL_BAC_dN_dS_omega_violinplots_outlier_pts_no_outliers_violin.pdf}
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.pdf}
+		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\label{fig:b1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{bass_missing_data_check_dot_plot_18Mar20}
+		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\label{fig:b2}
+	\end{subfigure}
+	\label{fig:bass}
+\end{figure}
 
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_5Mar20.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_omega_dist_5Mar20.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_5Mar20.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_5Mar20.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_dN_dS_omega_dist_5Mar20.pdf}
-\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_5Mar20.pdf}
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS_omega_dist_18Mar20.pdf}
+		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\label{fig:s1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{strep_missing_data_check_dot_plot_18Mar20}
+		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\label{fig:s2}
+	\end{subfigure}
+	\label{fig:strep}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20.pdf}
+		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\label{fig:sC1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{sinoC_missing_data_check_dot_plot_18Mar20}
+		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\label{fig:sC2}
+	\end{subfigure}
+	\label{fig:sinoC}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20.pdf}
+	\caption{Selection data \textbf{accounting} for bidirectional replication}
+	\label{fig:sA1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{pSymA_missing_data_check_dot_plot_18Mar20}
+	\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+	\label{fig:sA2}
+\end{subfigure}
+\label{fig:pSymA}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS_omega_dist_18Mar20.pdf}
+		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\label{fig:sB1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{pSymB_missing_data_check_dot_plot_18Mar20}
+		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\label{fig:sB2}
+	\end{subfigure}
+	\label{fig:pSymB}
+\end{figure}
 
 %below is commented out since Mar 14, 2020
 %%\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_6Nov19.pdf}
