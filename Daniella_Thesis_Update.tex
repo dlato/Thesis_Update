@@ -347,40 +347,28 @@
 	
 \section*{Last Week}
 
-\ch re-submit gene expression paper! Woo!
+\ch  define a theme for the substitutions graphs (and selection graphs)
 
-\ch change colours for outlier and actual data in selection distribution graphs
+\ch Added selection values summary plot (violin plots) to supplement with caption to explain all the intricacies of the plot
 
-\ch why \smel chromosome has an omega linear regression of 0 near and far from the origin
+\ch attempted to use the median instead of the mean for the \smel chromosome plot (did not make a difference)
 
-\ch find high substitution bar in \strep as a supplementary example for the paper (to show that high subs that are left are real!)
+\ch check into high \ds values for \strep
 
-\ch figure out how to deal with significant number of duplicates in one GEO gene expression dataset (for inversions analysis)
+\ch why does it look like some bac have missing data (i.e. \bass, \smel chrom ...etc.)
 
-\ch begin making changes to first year presentation
 
-\ch minor edits to selection graphs
+I added in the version of the violin plot that you liked to the supplementary material of the manuscript and made an appropriate caption for it. This might get moved to the main paper later, but we will see!
 
-I made 3 different versions of the summary graphs for the selection analysis (see below).
-One has all outliers completely removed from the graph (``without outliers in anything'').
-One has all outliers included in everything (``with outliers in everything'').
-And the last option has the outliers shaded in grey, but NOT included in the violin portion of the plots (``with outliers in pts, no outliers in violin'').
-I am not sure which is the best option that is clearly showing accurate information and not confusing. \textbf{Thoughts?}
-Additionally, I can not make the zero values included in the violin plots so they will have to be mentioned in the caption.
+I tried to use the median of each 100Kbp region as points for the trend lines in the selection distribution graph for \smel chromosome, but it did not make a difference in making the graph ``look'' nicer or more accurate. So I will be sticking with what I did previously.
 
-I changed the colours for the selection graphs to make it a bit easier to see the outliers. 
-I also made minor edits to the graphs like making sure the trendline means are in the middle of the genomic region they are averaging (instead of at the beginning).
-I also attempted to see if R will plot a trendline if one of the points is zero, and it will not, at least not on a log scale. So we are stuck with some segments of the graph ``missing'' a line. But, the mean points are still at zero so the information that the average selection value is zero in these genomic regions is still visible.
-I also tried to plot the selection values as log(x +1) to try and include the zeros, but it did not work, everything was still squished to the x-axis. So I will have to make a note in my captions about the number of zero values in each graph.
+I looked into the two sections of the \strep selection distribution graph that had very high \ds values and they are real! These are genes that just have a lot of synonymous changes and only one non-synonymous change!
 
-I also looked into why the \smel  chromosome had linear regression of zero near and far from the origin, and it is because all the values in these regions are zero. Any non-zero values were labelled as outliers. Not sure how we should be explaining this in the paper or if we should be altering some part of the analysis? \textbf{Thoughts?}
-
-I also chose a particularly high substitutions bar from the substitutions graphs to add into the supplement as an example showing that whatever remaining high numbers of substitutions are left, are actually real! I also added info about this in the main portion of the paper.
-
-I started to make changes to the first year bioinformatics lecture, however, in light of the school cancelling all in-person classes, I assume this will be postponed until the fall. 
-
-I also spoke with you about the duplicated genes in one of the GEO datasets for the inversion analysis. I contacted the author and they said that I can just add up all the raw read values to get the total for that gene. So this is what Queenie is working on as well as normalizing all the gene expression data.
-
+For the portions of the selection distribution graphs that look like there are large chunks of data missing, it looks like this is actually missing data.
+This is what I spent most of my week trying to figure out (past me was not as good at keeping notes as current me).
+I am working to figure out where this data was ``thrown out''.
+I think it might have been at the stage where any block with a tree that was significantly different (via SH-Test in RAxML) was chucked.
+I am still working this out.
 
 %\textbf{Substitution + Selection analysis}
 %
@@ -516,7 +504,7 @@ I also spoke with you about the duplicated genes in one of the GEO datasets for 
 \section*{Next Week}
 \begin{itemize}
 	\item find a block where mauve aligns non-homologous regions and put into supplement
-	\item define a theme for the substitutions graphs (and selection graphs) and re-do these and put in paper
+	\item re-do substitutions and selection graphs (with new theme) and these and put in paper
 	\item look into whats up with \smel chrom bc it does not look right at all
 \end{itemize}
 
