@@ -187,29 +187,29 @@
 %		\item split up the strep data into core and non core and see if results are the same
 %	\end{itemize}
 
-    \item \sout{why does sinoC have omega lin reg = 0 near and far from the origin?}
-    
-    \item create new graphs for selection analysis
-    
-    \item \sout{find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)}
-    
-    \item \sout{discuss removing omega outliers in methods}
-    
-    \item \sout{double check that the ter and ori and max genome pos are correct}
-	
-	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
-	
-	\item \sout{test examples for genes near and far from terminus (robust log reg/results)}
-	
-	\item \sout{linear regression on 10kb regions for weighted and non-weighted substitutions}
-	
-	\item \sout{average number of substitutions in 20kb regions near and far from the origin}
-	
-	\item \sout{figure out why the data is weird for number of cod/non-cod sites}
-	
+%    \item \sout{why does sinoC have omega lin reg = 0 near and far from the origin?}
+%    
+ %   \item create new graphs for selection analysis
+%    
+%    \item \sout{find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)}
+%    
+%    \item \sout{discuss removing omega outliers in methods}
+%    
+%    \item \sout{double check that the ter and ori and max genome pos are correct}
+%	
+%	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
+%	
+%	\item \sout{test examples for genes near and far from terminus (robust log reg/results)}
+%	
+%	\item \sout{linear regression on 10kb regions for weighted and non-weighted substitutions}
+%	
+%	\item \sout{average number of substitutions in 20kb regions near and far from the origin}
+%	
+%	\item \sout{figure out why the data is weird for number of cod/non-cod sites}
+%	
 	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
-	
-	\item \sout{grey out outliers in subs graphs?}
+%	
+%	\item \sout{grey out outliers in subs graphs?}
 	
 	\item mol clock for my analysis?
 	
@@ -296,10 +296,10 @@
 %	\item \sout{edit paper}
 %	
 %	\item \sout{submit paper}
-    
-    \item \sout{make corrections based on Brian's edits}
-    
-    \item \sout{create a clean copy of the paper (no strikeout) for re-submission}
+%    
+%    \item \sout{make corrections based on Brian's edits}
+%    
+%    \item \sout{create a clean copy of the paper (no strikeout) for re-submission}
 
 	
 \end{itemize}
@@ -351,6 +351,8 @@
 
 \ch make an R theme for the graphs so they all look the same
 
+\ch updated the \strep selection figures to have negative positions (to match the substitution graph)
+
 \ch re-run the necessary substitution and selection analysis
 
 \ch made some edits to the ancestral reconstruction figure in the paper to make it more apparent that it extends for the whole sequence (and not just 9 nucleotides)
@@ -358,6 +360,8 @@
 \ch Look into why \smel Chromosome looks odd
 
 \ch supplementary example of non-homologous alignment
+
+\ch add in reviewers comments from gene expression paper about why we chose these bacteria to substitution paper
 
 I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
 Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
@@ -372,6 +376,10 @@ When we look at the \smel Chromosome alignment (Figure \ref{fig:sinoC_mauve}), w
 This is especially curious because there appears to be no different in the average number of substitutions in the \smel chromosome (Table \ref{tab:avg_subs}).
 It could be that all the variation is being considered an ``outlier'' because most of the values are zero (because they are so smilar)?
 \textbf{I am really confused about why the selection graph for \smel Chromosome looks so odd and the only explination I can come up with is that the sequences are just really really similar. Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
+
+Another thing I notices while looking into the selection analysis for \smel chromosome is that sometiems PAML puts a \ds value of 0.0001 even though there are no substitutions at all.
+I am not sure how often this happens and if these values (0.0001) are only associated with no substitutions.
+\textbf{Thoughts on what to do with these values?}
 
 I found an example of the \texttt{MAFFT} alignment where non-homologous genes were aligned to put in the supplement as an illustrative example.
 
@@ -502,18 +510,18 @@ I found an example of the \texttt{MAFFT} alignment where non-homologous genes we
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item find a block where mauve aligns non-homologous regions and put into supplement
-	\item re-do selection and substitutions analysis (if necessary, because of not throwing out blocks with different trees than the overall tree)
-\item re-do substitutions and selection graphs (with new theme) and these and put in paper
+	\item continue look into whats up with \smel chrom bc it does not look right at all
+	\item make small changes based on Brian's comments from questions above
+	\item update methods in paper draft (make sure they are the same as what I actually did bc things have changed a lot)
+	\item create a script that will match up homologous genes from different \ecoli genomes for Queenie to use for the inversions project
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-
-\item look into whats up with \smel chrom bc it does not look right at all
-\item update methods in paper draft (make sure they are the same as what I actually did bc things have changed a lot)
-\item add reviewers comments from gene expression paper into this one (most will apply)
+\item add to intro/discussion about how lots of people have found opposing substitutions trends that do not match previous expectations
+\item create table explaining what genes are present in high substitutions bars (like in gene exp paper) for supplement
+\item  continue to update methods for substitutions paper
 \end{itemize}
 
 \newpage
