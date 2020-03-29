@@ -349,51 +349,33 @@
 	
 \section*{Last Week}
 
-\ch  define a theme for the substitutions graphs (and selection graphs)
+\ch make an R theme for the graphs so they all look the same
 
-\ch Added selection values summary plot (violin plots) to supplement with caption to explain all the intricacies of the plot
+\ch re-run the necessary substitution and selection analysis
 
-\ch attempted to use the median instead of the mean for the \smel chromosome plot (did not make a difference)
+\ch made some edits to the ancestral reconstruction figure in the paper to make it more apparent that it extends for the whole sequence (and not just 9 nucleotides)
 
-\ch check into high \ds values for \strep
+\ch Look into why \smel Chromosome looks odd
 
-\ch why does it look like some bac have missing data (i.e. \bass, \smel chrom ...etc.)
+\ch supplementary example of non-homologous alignment
+
+I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
+Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
+I spent most of this week re-running these analysis with the correct number of blocks.
+The new figures and results can be found below and in the attached Supplementary File for the paper. Nothing has changed significantly.
+\smel chromosome looks really terrible. All non-outlier points for \dn and $\omega$ are zero values. Therefore a regression is pointless and makes the selection graph look really odd.
+I started to look into this but it looks like the \smel chromosomes are just so similar that there are hardly any substitutions.
+This is particularly evident when you look at the backbone of the \p alignment (which shows similar sequences).
+When looking at the \ecoli alignement (Figure \ref{fig:ecoli_mauve}) we see that the backbone is very ``spiky'' indicating regions where the nucleotides are not similar.
+The same can be said for the \strep genomes (Figure \ref{fig:strep_mauve}), even though these are more similar to each other than the \ecoli genomes. 
+When we look at the \smel Chromosome alignment (Figure \ref{fig:sinoC_mauve}), we see that the backbone is almost completely flat, meaning that there is hardly any variation in the nucleotide sequence.
+This is especially curious because there appears to be no different in the average number of substitutions in the \smel chromosome (Table \ref{tab:avg_subs}).
+It could be that all the variation is being considered an ``outlier'' because most of the values are zero (because they are so smilar)?
+\textbf{I am really confused about why the selection graph for \smel Chromosome looks so odd and the only explination I can come up with is that the sequences are just really really similar. Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
+
+I found an example of the \texttt{MAFFT} alignment where non-homologous genes were aligned to put in the supplement as an illustrative example.
 
 
-I added in the version of the violin plot that you liked to the supplementary material of the manuscript and made an appropriate caption for it. This might get moved to the main paper later, but we will see!
-
-I tried to use the median of each 100Kbp region as points for the trend lines in the selection distribution graph for \smel chromosome, but it did not make a difference in making the graph ``look'' nicer or more accurate. So I will be sticking with what I did previously.
-
-I looked into the two sections of the \strep selection distribution graph that had very high \ds values and they are real! These are genes that just have a lot of synonymous changes and only one non-synonymous change!
-
-For the portions of the selection distribution graphs that look like there are large chunks of data missing, it looks like this is actually missing data.
-This is what I spent most of my week trying to figure out (past me was not as good at keeping notes as current me).
-This ``missing data'' was discarded at the stage where any block with a tree that was significantly different from the overall tree (via SH-Test in RAxML) was chucked.
-I had to re-do the calculations for which block trees did not match the overall tree.
-Below is Table \ref{fig:treetopresults}, showing the results from the SH-test.
-For \strep, there are only 3 taxa and you therefore can not perform an SH-test (it needs minimum of 4).
-I am not sure what to do because in the case of \ecol and the chrom of \smel, about 25\% of the whole alignment is thrown out. I am not sure if we need to do this step since we are now being very conservative with which alignments we are keeping later on (trimal + my code). Since the test can not be done on \strep, I am  also not sure if we should use it for the other replicons. \textbf{Thoughts?}
-
-
-	\begin{table}[h]
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccc}
-			\toprule
-			Bacteria Replicon & \multicolumn{1}{p{3cm}}{\centering \# of Total LCBs \\ with Identical Tree} & 
-			\multicolumn{1}{p{3cm}}{\centering \# of Total LCBs \\ with Non- identical Tree} & 
-			\multicolumn{1}{p{3cm}}{\centering \% of Total Alignment Discarded} \\  
-			\midrule
-			\ecol Chromosome & 30 & 7 & 25.44\%\\
-			\bass Chromosome & 10 & 2 & 21.62\%\\
-			\strep Chromosome & NA & NA & NA\\
-			\smel Chromosome & 9 & 2 & 25.06\%\\
-			\smel \pa & 35 & 0 & 0\%\\
-			\smel \pb & 8 & 0 & 0\%\\
-			\bottomrule
-		\end{tabular}
-	}%resize box
-	\caption{\label{fig:treetopresults} Number of Locally Colinear Blocks that had identical topologies to the ``super sequence'' tree, not identical to the ``super sequence'' tree, and the proportion of the total alignment that was represented by the non-identical tree topologies. Topologies that were not identical were determined to be different at the 5\% significant value using an SH-test in \texttt{RAxML} \textcolor{red}{cite raxml here!}. The SH-Test could not be preformed on \strep as there were only three taxa present and \texttt{RAxML} needs a minimum of 4 taxa for the test \textcolor{red}{cite raxml}.}
-\end{table}
 
 %\textbf{Substitution + Selection analysis}
 %
@@ -536,17 +518,103 @@ I am not sure what to do because in the case of \ecol and the chrom of \smel, ab
 
 \newpage
 \begin{figure}
+	\includegraphics[width=0.9\linewidth]{./ecoli_Mauve_alignment_pic_26Mar20.jpg}
+	\caption{\label{fig:ecoli_mauve}\p alignment of \ecoli genomes highlighting the ``backbone'' of the alignment (matching regions).}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./sinoC_Mauve_alignment_pic_26Mar20.jpg}
+	\caption{\label{fig:sinoC_mauve}\p alignment of \smel Chromosomes highlighting the ``backbone'' of the alignment (matching regions).}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./strep_mauve_backbone_aln_pic_27Mar20.jpg}
+	\caption{\label{fig:strep_mauve}\p alignment of \strep genomes highlighting the ``backbone'' of the alignment (matching regions).}
+\end{figure}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Protein Coding Sequences\\
+			\midrule
+			\ecol Chromosome & \cc -1.43\e{-8}*** \\
+			\bass Chromosome & \cc -5.55\e{-8}***\\
+			\strep Chromosome & 7.49\e{-8}*** \\
+			\smel Chromosome & \cc -5.99\e{-7}***  \\
+			\smel pSymA & \cc -5.18\e{-7}*** \\
+			\smel pSymB & 1.67\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.48\textwidth}{!}{%
+		\begin{tabular}{lr}
+			\toprule
+			Bacteria and Replicon &Average Number of \\
+			&Substitutions per bp \\
+			\midrule
+			\ecol Chromosome & 1.97\e{-4}\\
+			\bass Chromosome & 1.93\e{-4}\\
+			\strep Chromosome & 2.74\e{-6}\\
+			\smel Chromosome & 9.72\e{-5}\\
+			\smel pSymA & 6.54\e{-5}\\
+			\smel pSymB & 1.99\e{-4}\\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:avg_subs}\small Average number of protein coding substitutions calculated per base across all bacterial replicons. Outliers and missing data was not included in the calculation.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lrrr}
+			\toprule
+			&\multicolumn{3}{c}{Genome Average}\\
+			\cmidrule{2-4}
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Bacteria and Replicon &  dS & dN & $\omega$ \\
+			\midrule
+			\ecol Chromosome & 0.2387 & 0.0101 & 0.0441 \\
+			\bass Chromosome &  0.4201 & 0.0243 & 0.0714\\
+			\strep Chromosome & 0.0458  & 0.0011 & 0335 \\
+			\smel Chromosome &  0.0029 & 0 & 0 \\
+			\smel pSymA &  0.0874 & 0.0099 & 0.1645 \\
+			\smel pSymB &  0.0940 & 0.0084 & 0.1142\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
+\end{table}
+
+
+
+
+\begin{figure}
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/ecoli_dN_dS_omega_dist_18Mar20.pdf}
-		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
 		\label{fig:e1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{ecoli_missing_data_check_dot_plot_18Mar20}
-		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
 		\label{fig:e2}
 	\end{subfigure}
 	\label{fig:ecoli}
@@ -556,14 +624,14 @@ I am not sure what to do because in the case of \ecol and the chrom of \smel, ab
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/bass_dN_dS_omega_dist_18Mar20.pdf}
-		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
 		\label{fig:b1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{bass_missing_data_check_dot_plot_18Mar20}
-		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
 		\label{fig:b2}
 	\end{subfigure}
 	\label{fig:bass}
@@ -573,14 +641,14 @@ I am not sure what to do because in the case of \ecol and the chrom of \smel, ab
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/strep_dN_dS_omega_dist_18Mar20.pdf}
-		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
 		\label{fig:s1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{strep_missing_data_check_dot_plot_18Mar20}
-		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
 		\label{fig:s2}
 	\end{subfigure}
 	\label{fig:strep}
@@ -590,52 +658,54 @@ I am not sure what to do because in the case of \ecol and the chrom of \smel, ab
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/sinoC_dN_dS_omega_dist_18Mar20.pdf}
-		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
 		\label{fig:sC1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{sinoC_missing_data_check_dot_plot_18Mar20}
-		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
 		\label{fig:sC2}
 	\end{subfigure}
 	\label{fig:sinoC}
 \end{figure}
 
 \begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/pSymA_dN_dS_omega_dist_18Mar20.pdf}
-	\caption{Selection data \textbf{accounting} for bidirectional replication}
-	\label{fig:sA1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[width=0.9\linewidth]{pSymA_missing_data_check_dot_plot_18Mar20}
-	\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
-	\label{fig:sA2}
-\end{subfigure}
-\label{fig:pSymA}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
+		\label{fig:sP1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
+		\label{fig:sP2}
+	\end{subfigure}
+	\label{fig:pSymA}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Thesis_Update/pSymB_dN_dS_omega_dist_18Mar20.pdf}
-		\caption{Selection data \textbf{accounting} for bidirectional replication}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+		\caption{}
 		\label{fig:sB1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=0.9\linewidth]{pSymB_missing_data_check_dot_plot_18Mar20}
-		\caption{Selection data with NO bidirectional replication accounted for. To show where missing data is}
+		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_26Mar20.pdf}
+		\caption{}
 		\label{fig:sB2}
 	\end{subfigure}
 	\label{fig:pSymB}
 \end{figure}
+
+
 
 %below is commented out since Mar 14, 2020
 %%\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_6Nov19.pdf}
