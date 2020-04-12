@@ -349,38 +349,29 @@
 	
 \section*{Last Week}
 
-\ch remove horizontal reference lines in \dn and \ds portion of graphs
+\ch added a table of high substitutions bars and what genes were in them to supplement
 
-\ch change all \ds values of 0.0001 to 0
+\ch deal with properly removing outliers in subs analysis
 
-\ch check into why number of subs near the ter is higher than near the origin
+\ch updated outlier removal in methods
 
-\ch calculate proper near/far from ori substitutions linear regression 
+\ch accounted for your comments in my methods
 
-\ch edit/update methods
+\ch re-did the average substitution calculation
 
-\ch write code to get block information needed for Queenie
+\ch added some supporting info about other opposing molecular trends that people found to my intro and discussion
 
-I double checked that all \ds values of 0.0001 actually do correspond to no synonymous substitutions.
-These have all be changed to values of 0 in all bacterial replicons.
-\textbf{Should I write in my methods that sometimes codeml will put 0.0001 as a value for \ds even if there are no synonymous substitutions? and that we made these 0.0001 values zero?}
+When I was making the table for the contents of the higher substitutions bars for each replicon, I noticed that for all the replicons of \smel, there were a LOT of misc features listed in the gbk file.
+I need to look into this more but this might be why things are so weird with the \smel chromosome, I did not include misc features in my analysis, and if everything is listed as a misc feature, then that leaves very little data.
+I need to look into this more.
 
-When going through the latest results from the substitutions and selection analysis I noticed that the number of subs near the terminus was higher than near the origin, even though the overall trend is that the number of subs decreases when moving away from the origin.
-This is found in \ecol, \bass, \strep and \pa.
-So I think what is happening is that when you look locally (a small region, like 20Kbp) then we are seeing that the weighted number of subs near the origin in higher than the weighted 20Kbp number of subs near the terminus. But globally, when we look at the whole genome, we still see a decreasing trend.
-I think that I will need to re-work my discussion to talk about this.
-I also noticed that outliers were NOT removed in my near/far from the origin calculations.
-The way that I am calculating outliers is by considering a whole bar in my subs graphs (so weighted subs over each 10Kbp, light grey bars in my graphs) as an outlier.
-\textbf{Therefore, should I be removing ALL points (substitutions and no substitutions, or just subs?) in that bar and just skip to the next 10Kbp bar and consider that part of the 20Kbp ``near'' the origin? Should I not remove any outliers? Should I be calculating outliers another way, like using only binary data (is that even possible?)?}
+I properly removed all outliers for the substitutions analysis.
+This is what I spent most of the week on because my brain was really slow this week so it took me a while to conceptually figure it all out.
+All the outliers are properly removed now and the results/methods are updated in the paper draft.
 
-When checking into why the substitutions near the terminus were higher than near the origin, I realized that for \strep the calculations of what was ``near'' and ``far'' from the origin were wrong.
-They were just calculating the two ends of the chromosome not near zero.
-So I fixed this and re-did that portion of the analysis.
-
-I made a lot of minor edits to the methods section, adding in new methods and generally updating. I sent you the latest draft of this and will be making revisions based on your comments this week.
-
-I wrote a script to get all of the necessary Block information for the PARSNP alignments so Queenie can eventually use this data frame to find/confirm homologous genes between each of the \ecoli genomes in the inversions. 
-
+I made corrections based on your comments on my methods section and sent you a revised version.
+During this I realized that the way I was calculating the average number of substitutions per site for each genome was weird and wrong (as you pointed out).
+So I re-did this calculation and updated the results and methods.
 
 %I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
 %Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
@@ -522,22 +513,19 @@ I am still really confused about why the selection graph for \smel Chromosome lo
 %
 \begin{itemize}
 	\item continue look into whats up with \smel chrom bc it does not look right at all
-\item add to intro/discussion about how lots of people have found opposing substitutions trends that do not match previous expectations
-\item create table explaining what genes are present in high substitutions bars (like in gene exp paper) for supplement
-\item  revise methods based on Brian's edits
-\item 
+\item look into the numerous misc features in \smel
+\item change caption for selection distribution figures so that they match how many bp the averages were calculated over (PA and PB are different)
+\item fix the results to properly talk about the selection and substitution figs
+\item make a comment about why there are two lines in the box plot (one at 0 and one at about 0.0001), in caption? or discussion?
+\item add that high dS values are also real and due to real changes where most of the gene is syn changes with very few non-syn changes and therefore it skews the whole calculation, creating a very high dS value. mention supplemental high subs bar
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-\item find and look at notes from Why genes evolve faster on secondary chromosomes in bacteria (see what I can add to intro)
-\item make sure weighted and non weighted calculations match up with the same sign
-\item change caption for selection distribution figures so that they match how many bp the averages were calculated over (PA and PB are different)
-\item fix the methods / discussion to properly talk about the selection figs
-\item make a comment about why there are two lines in the box plot (one at 0 and one at about 0.0001), in caption? or discussion?
-\item add that high dS values are also real and due to real changes where most of the gene is syn changes with very few non-syn changes and therefore it skews the whole calculation, creating a very high dS value. mention supplemental high subs bar
 \item think about if the selection distribution figs or the summary selection fig should be in the main paper
+\item re-word captions for all figures so they make sense with current figures
+\item fix discussion
 \end{itemize}
 
 \newpage
