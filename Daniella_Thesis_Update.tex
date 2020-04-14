@@ -530,89 +530,9 @@ I am still really confused about why the selection graph for \smel Chromosome lo
 
 \newpage
 \begin{figure}
-	\includegraphics[width=0.9\linewidth]{./ecoli_Mauve_alignment_pic_26Mar20.jpg}
-	\caption{\label{fig:ecoli_mauve}\p alignment of \ecoli genomes highlighting the ``backbone'' of the alignment (matching regions).}
+	\includegraphics[width=0.9\linewidth]{./sinoC_total_num_sites_graph.pdf}
+	\caption{\label{fig:sinoC_tot_sites} Distribution of total number of substitution data points per 10Kbp in genome.}
 \end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./sinoC_Mauve_alignment_pic_26Mar20.jpg}
-	\caption{\label{fig:sinoC_mauve}\p alignment of \smel Chromosomes highlighting the ``backbone'' of the alignment (matching regions).}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./strep_mauve_backbone_aln_pic_27Mar20.jpg}
-	\caption{\label{fig:strep_mauve}\p alignment of \strep genomes highlighting the ``backbone'' of the alignment (matching regions).}
-\end{figure}
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			Bacteria and Replicon & Protein Coding Sequences\\
-			\midrule
-			\ecol Chromosome & \cc -1.43\e{-8}*** \\
-			\bass Chromosome & \cc -5.55\e{-8}***\\
-			\strep Chromosome & 7.49\e{-8}*** \\
-			\smel Chromosome & \cc -5.99\e{-7}***  \\
-			\smel pSymA & \cc -5.18\e{-7}*** \\
-			\smel pSymB & 1.67\e{-7}***\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.48\textwidth}{!}{%
-		\begin{tabular}{lr}
-			\toprule
-			Bacteria and Replicon &Average Number of \\
-			&Substitutions per bp \\
-			\midrule
-			\ecol Chromosome & 1.97\e{-4}\\
-			\bass Chromosome & 1.93\e{-4}\\
-			\strep Chromosome & 2.74\e{-6}\\
-			\smel Chromosome & 9.72\e{-5}\\
-			\smel pSymA & 6.54\e{-5}\\
-			\smel pSymB & 1.99\e{-4}\\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:avg_subs}\small Average number of protein coding substitutions calculated per base across all bacterial replicons. Outliers and missing data was not included in the calculation.}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lrrr}
-			\toprule
-			&\multicolumn{3}{c}{Genome Average}\\
-			\cmidrule{2-4}
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Bacteria and Replicon &  dS & dN & $\omega$ \\
-			\midrule
-			\ecol Chromosome & 0.2387 & 0.0101 & 0.0441 \\
-			\bass Chromosome &  0.4201 & 0.0243 & 0.0714\\
-			\strep Chromosome & 0.0458  & 0.0011 & 0.0335 \\
-			\smel Chromosome &  0.0029 & 0 & 0 \\
-			\smel pSymA &  0.0835 & 0.0099 & 0.1645 \\
-			\smel pSymB &  0.0940 & 0.0084 & 0.1142\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
-\end{table}
-
-
 
 \begin{figure}
 	\centering
@@ -714,6 +634,122 @@ I am still really confused about why the selection graph for \smel Chromosome lo
 		\label{fig:sB2}
 	\end{subfigure}
 	\label{fig:pSymB}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOT DATA PTS PER 10Kbp
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./ecoli_total_num_sites_graph.pdf}
+	\caption{\label{fig:ecoli_tot_sites} Distribution of total number of  substitution  data points per 10Kbp in genome.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./bass_total_num_sites_graph.pdf}
+	\caption{\label{fig:bass_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./strep_total_num_sites_graph.pdf}
+	\caption{\label{fig:strep_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./pSymA_total_num_sites_graph.pdf}
+	\caption{\label{fig:pa_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./pSymB_total_num_sites_graph.pdf}
+	\caption{\label{fig:pb_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Protein Coding Sequences\\
+			\midrule
+			\ecol Chromosome & \cc -1.43\e{-8}*** \\
+			\bass Chromosome & \cc -5.55\e{-8}***\\
+			\strep Chromosome & 7.49\e{-8}*** \\
+			\smel Chromosome & \cc -5.99\e{-7}***  \\
+			\smel pSymA & \cc -5.18\e{-7}*** \\
+			\smel pSymB & 1.67\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.48\textwidth}{!}{%
+		\begin{tabular}{lr}
+			\toprule
+			Bacteria and Replicon &Average Number of \\
+			&Substitutions per bp \\
+			\midrule
+			\ecol Chromosome & 1.97\e{-4}\\
+			\bass Chromosome & 1.93\e{-4}\\
+			\strep Chromosome & 2.74\e{-6}\\
+			\smel Chromosome & 9.72\e{-5}\\
+			\smel pSymA & 6.54\e{-5}\\
+			\smel pSymB & 1.99\e{-4}\\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:avg_subs}\small Average number of protein coding substitutions calculated per base across all bacterial replicons. Outliers and missing data was not included in the calculation.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lrrr}
+			\toprule
+			&\multicolumn{3}{c}{Genome Average}\\
+			\cmidrule{2-4}
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Bacteria and Replicon &  dS & dN & $\omega$ \\
+			\midrule
+			\ecol Chromosome & 0.2387 & 0.0101 & 0.0441 \\
+			\bass Chromosome &  0.4201 & 0.0243 & 0.0714\\
+			\strep Chromosome & 0.0458  & 0.0011 & 0.0335 \\
+			\smel Chromosome &  0.0029 & 0 & 0 \\
+			\smel pSymA &  0.0835 & 0.0099 & 0.1645 \\
+			\smel pSymB &  0.0940 & 0.0084 & 0.1142\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
+\end{table}
+
+
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./ecoli_Mauve_alignment_pic_26Mar20.jpg}
+	\caption{\label{fig:ecoli_mauve}\p alignment of \ecoli genomes highlighting the ``backbone'' of the alignment (matching regions).}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./sinoC_Mauve_alignment_pic_26Mar20.jpg}
+	\caption{\label{fig:sinoC_mauve}\p alignment of \smel Chromosomes highlighting the ``backbone'' of the alignment (matching regions).}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./strep_mauve_backbone_aln_pic_27Mar20.jpg}
+	\caption{\label{fig:strep_mauve}\p alignment of \strep genomes highlighting the ``backbone'' of the alignment (matching regions).}
 \end{figure}
 
 
