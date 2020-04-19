@@ -349,29 +349,55 @@
 	
 \section*{Last Week}
 
-\ch added a table of high substitutions bars and what genes were in them to supplement
+\ch look into what is up with the chromosome of \smel
 
-\ch deal with properly removing outliers in subs analysis
+Edits to the Substitution Paper:
 
-\ch updated outlier removal in methods
+\ch change selection and substitution figure captions
 
-\ch accounted for your comments in my methods
+\ch comment about 0.0001 lines in selection plots
 
-\ch re-did the average substitution calculation
+\ch add that high values of \ds are real
 
-\ch added some supporting info about other opposing molecular trends that people found to my intro and discussion
+\ch edits to methods based on Brian's comments
 
-When I was making the table for the contents of the higher substitutions bars for each replicon, I noticed that for all the replicons of \smel, there were a LOT of misc features listed in the gbk file.
-I need to look into this more but this might be why things are so weird with the \smel chromosome, I did not include misc features in my analysis, and if everything is listed as a misc feature, then that leaves very little data.
-I need to look into this more.
+\ch finish personal edits to results section to send to Brian
 
-I properly removed all outliers for the substitutions analysis.
-This is what I spent most of the week on because my brain was really slow this week so it took me a while to conceptually figure it all out.
-All the outliers are properly removed now and the results/methods are updated in the paper draft.
+\ch edits to results based on Brian's edits
 
-I made corrections based on your comments on my methods section and sent you a revised version.
-During this I realized that the way I was calculating the average number of substitutions per site for each genome was weird and wrong (as you pointed out).
-So I re-did this calculation and updated the results and methods.
+\ch think about and write/edit future directions in discussion
+
+\ch think about and edit broad questions in intro and discussion
+
+\ch think about and write/edit weakness in discussion
+
+Continuing to look into what is going on with the selection stuff in \smel chromosome and basically the only thing I can see is that \smel chromosome is really really similar between these taxa.
+I looked at the \p alignment plots of \smel replicons, and it basically tells the same story.
+the two plasmids have more variation in the backbone (which parts are similar between the taxa) than the chromosome.
+
+I also looked at the misc\_features in each of the bacterial replicons because these are NOT included as part of my analysis.
+\smel as a whole (all replicons) has about 75-76\% of its genes as misc\_features, where as all the others are much less (\ecol $=$ 0.5\%, \bass $=$ 1.6\% and \strep $=$ 46\%).
+The two bacteria that have lower substitutions (\strep and \smel) are the ones with more misc\_features, but since the secondary replicons of \smel have about the same percentage of misc\_features as the chromosome, I do not think that the misc\_features are influencing why the chromosome of \smel is so weird.
+
+I looked at \dn, \ds, and $\omega$ values between the chromosome of \smel and the secondary replicons (looking at sections of the alignment by hand) and again, it all is real. The massive amounts of zero values for \dn and $\omega$ in the chromosome are real. So it again looks like the chromosome just has less variation.
+However, the issue is that because there are so many zero values for $\omega$ in the chromosome, anything where $\omega$ is $>$ zero is considered an outlier. Which makes all the calculations for linear regressions and such very off.
+But we can't really do anything about this because we would then have to change the way outliers are calculated for all the bacteria.
+Additionally, in the genes where $\omega$ is $>$ 0 in the chromosome, there are still VERY few substitutions compared to genes where $\omega$ $>$ 0 in the other bacteria/replicons.
+So again, it looks like the chromosome of \smel just has less variation.
+
+I created graphs showing the number of sites per 10Kbp for the substitutions analysis to see if maybe the chromosome of \smel was under represented (Figures \ref{fig:ecoli_tot_sites} - \ref{fig:pb_tot_sites}).
+From these graphs, we can see that all the bacteria have some areas where there are an under representation of sites in different places in the genomes.
+So I do not think that lack of data is the cause for the weirdness in the chromosome of \smel.
+
+Even when looking at the average number of substitutions per genome, we see that the chromosome of \smel has the fewest substitutions.
+\strep is on the same order of magnitude, which to a degree makes sense because it is also very similar (based on the \p alignment), but is also puzzling because \strep appears to not have these issues.
+
+I added \agro as a taxa to the \smel chromosome analysis to test if this changes the values of \dn, \ds, and $\omega$ to be similar in magnitude to the other bacteria (at your request), see Table \ref{tab:dN_dS_ratios}.
+we see that \ds is 3 orders of magnitude bigger than \ds, but all the $\omega$ values are $<$ 1 (even outliers), which I suppose sort of makes sense because these taxa are more distantly related than the taxa in the other bacterial analysis.
+\textbf{Should I instead use a different \s species to add to the analysis? What are your thoughts on all of this extra digging I have done regarding why the chromosome of \smel looks so weird?}
+
+I made lots of little edits and wrote more for the substitution paper (see above checklist).
+
 
 %I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
 %Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
