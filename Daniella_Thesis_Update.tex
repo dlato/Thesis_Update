@@ -349,52 +349,33 @@
 	
 \section*{Last Week}
 
-\ch look into what is up with the chromosome of \smel
+\ch supplemental selection analysis including outliers for \smel chromosome
 
 Edits to the Substitution Paper:
 
-\ch change selection and substitution figure captions
+\ch discuss selection linear regression results
 
-\ch comment about 0.0001 lines in selection plots
+\ch alter main focus of paper in discussion and conclusion
 
-\ch add that high values of \ds are real
+\ch interpret all other results
 
-\ch edits to methods based on Brian's comments
+\ch edit discussion and conclusion for flow
 
-\ch finish personal edits to results section to send to Brian
+\ch add in genome clustering figure to supplement to help explain that analysis
 
-\ch edits to results based on Brian's edits
+\ch put new supplementary tables on git
 
-\ch think about and write/edit future directions in discussion
+\ch bacteria names are italic in references
 
-\ch think about and edit broad questions in intro and discussion
+\ch check all references work
 
-\ch think about and write/edit weakness in discussion
+\ch edit abstract and intro
 
-Continuing to look into what is going on with the selection stuff in \smel chromosome and basically the only thing I can see is that \smel chromosome is really really similar between these taxa.
-I looked at the \p alignment plots of \smel replicons, and it basically tells the same story.
-the two plasmids have more variation in the backbone (which parts are similar between the taxa) than the chromosome.
+\ch edit methods
 
-I also looked at the misc\_features in each of the bacterial replicons because these are NOT included as part of my analysis.
-\smel as a whole (all replicons) has about 75-76\% of its genes as misc\_features, where as all the others are much less (\ecol $=$ 0.5\%, \bass $=$ 1.6\% and \strep $=$ 46\%).
-The two bacteria that have lower substitutions (\strep and \smel) are the ones with more misc\_features, but since the secondary replicons of \smel have about the same percentage of misc\_features as the chromosome, I do not think that the misc\_features are influencing why the chromosome of \smel is so weird.
+\ch edit results
 
-I looked at \dn, \ds, and $\omega$ values between the chromosome of \smel and the secondary replicons (looking at sections of the alignment by hand) and again, it all is real. The massive amounts of zero values for \dn and $\omega$ in the chromosome are real. So it again looks like the chromosome just has less variation.
-However, the issue is that because there are so many zero values for $\omega$ in the chromosome, anything where $\omega$ is $>$ zero is considered an outlier. Which makes all the calculations for linear regressions and such very off.
-But we can't really do anything about this because we would then have to change the way outliers are calculated for all the bacteria.
-Additionally, in the genes where $\omega$ is $>$ 0 in the chromosome, there are still VERY few substitutions compared to genes where $\omega$ $>$ 0 in the other bacteria/replicons.
-So again, it looks like the chromosome of \smel just has less variation.
-
-I created graphs showing the number of sites per 10Kbp for the substitutions analysis to see if maybe the chromosome of \smel was under represented (Figures \ref{fig:ecoli_tot_sites} - \ref{fig:pb_tot_sites}).
-From these graphs, we can see that all the bacteria have some areas where there are an under representation of sites in different places in the genomes.
-So I do not think that lack of data is the cause for the weirdness in the chromosome of \smel.
-
-Even when looking at the average number of substitutions per genome, we see that the chromosome of \smel has the fewest substitutions.
-\strep is on the same order of magnitude, which to a degree makes sense because it is also very similar (based on the \p alignment), but is also puzzling because \strep appears to not have these issues.
-
-I added \agro as a taxa to the \smel chromosome analysis to test if this changes the values of \dn, \ds, and $\omega$ to be similar in magnitude to the other bacteria (at your request), see Table \ref{tab:dN_dS_ratios}.
-we see that \ds is 3 orders of magnitude bigger than \ds, but all the $\omega$ values are $<$ 1 (even outliers), which I suppose sort of makes sense because these taxa are more distantly related than the taxa in the other bacterial analysis.
-\textbf{Should I instead use a different \s species to add to the analysis? What are your thoughts on all of this extra digging I have done regarding why the chromosome of \smel looks so weird?}
+\ch check black and white look of figures (and alter colours/shapes as necessary) 
 
 I made lots of little edits and wrote more for the substitution paper (see above checklist).
 
