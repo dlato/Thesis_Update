@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  26 APR 2020 10:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  26 APR 2020 10:58
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1056,7 +1056,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./dN_dS_omega_dist.pdf, id=55, 505.89pt x 505.89pt>
 File: ./dN_dS_omega_dist.pdf Graphic file (type pdf)
 <use ./dN_dS_omega_dist.pdf>
-Package pdftex.def Info: ./dN_dS_omega_dist.pdf  used on input line 646.
+Package pdftex.def Info: ./dN_dS_omega_dist.pdf  used on input line 643.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_w
 eighted_subs_bidirectionality_colour_26Mar20.pdf, id=56, 505.89pt x 505.89pt>
@@ -1066,7 +1066,7 @@ oli_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 li_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/ecoli_weighted_subs_bidirectionality_colour_26Mar20.pdf  used 
-on input line 654.
+on input line 651.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_d
 N_dS_omega_dist_31Mar20.pdf, id=57, 505.89pt x 505.89pt>
@@ -1075,7 +1075,7 @@ oli_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/eco
 li_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/ecoli_dN_dS_omega_dist_31Mar20.pdf  used on input line 660.
+aper_format/figs/ecoli_dN_dS_omega_dist_31Mar20.pdf  used on input line 657.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_we
 ighted_subs_bidirectionality_colour_26Mar20.pdf, id=58, 505.89pt x 505.89pt>
@@ -1085,7 +1085,7 @@ ss_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 s_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/bass_weighted_subs_bidirectionality_colour_26Mar20.pdf  used o
-n input line 671.
+n input line 668.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN
 _dS_omega_dist_31Mar20.pdf, id=59, 505.89pt x 505.89pt>
@@ -1094,7 +1094,7 @@ ss_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
 s_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/bass_dN_dS_omega_dist_31Mar20.pdf  used on input line 677.
+aper_format/figs/bass_dN_dS_omega_dist_31Mar20.pdf  used on input line 674.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_w
 eighted_subs_bidirectionality_colour_26Mar20.pdf, id=60, 505.89pt x 505.89pt>
@@ -1104,7 +1104,7 @@ rep_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 ep_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/strep_weighted_subs_bidirectionality_colour_26Mar20.pdf  used 
-on input line 688.
+on input line 685.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
 N_dS_omega_dist_31Mar20.pdf, id=61, 505.89pt x 505.89pt>
@@ -1113,7 +1113,7 @@ rep_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
 ep_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_31Mar20.pdf  used on input line 694.
+aper_format/figs/strep_dN_dS_omega_dist_31Mar20.pdf  used on input line 691.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_w
 eighted_subs_bidirectionality_colour_26Mar20.pdf, id=62, 505.89pt x 505.89pt>
@@ -1123,7 +1123,7 @@ noC_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 oC_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/sinoC_weighted_subs_bidirectionality_colour_26Mar20.pdf  used 
-on input line 705.
+on input line 702.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
 N_dS_omega_dist_31Mar20.pdf, id=63, 505.89pt x 505.89pt>
@@ -1132,7 +1132,7 @@ noC_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
 oC_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/sinoC_dN_dS_omega_dist_31Mar20.pdf  used on input line 711.
+aper_format/figs/sinoC_dN_dS_omega_dist_31Mar20.pdf  used on input line 708.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_w
 eighted_subs_bidirectionality_colour_26Mar20.pdf, id=64, 505.89pt x 505.89pt>
@@ -1142,7 +1142,7 @@ ymA_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 mA_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/pSymA_weighted_subs_bidirectionality_colour_26Mar20.pdf  used 
-on input line 722.
+on input line 719.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_d
 N_dS_omega_dist_31Mar20.pdf, id=65, 505.89pt x 505.89pt>
@@ -1151,7 +1151,7 @@ ymA_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mA_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymA_dN_dS_omega_dist_31Mar20.pdf  used on input line 728.
+aper_format/figs/pSymA_dN_dS_omega_dist_31Mar20.pdf  used on input line 725.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_w
 eighted_subs_bidirectionality_colour_26Mar20.pdf, id=66, 505.89pt x 505.89pt>
@@ -1161,7 +1161,7 @@ ymB_weighted_subs_bidirectionality_colour_26Mar20.pdf Graphic file (type pdf)
 mB_weighted_subs_bidirectionality_colour_26Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/pSymB_weighted_subs_bidirectionality_colour_26Mar20.pdf  used 
-on input line 739.
+on input line 736.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_d
 N_dS_omega_dist_31Mar20.pdf, id=67, 505.89pt x 505.89pt>
@@ -1170,43 +1170,43 @@ ymB_dN_dS_omega_dist_31Mar20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSy
 mB_dN_dS_omega_dist_31Mar20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/pSymB_dN_dS_omega_dist_31Mar20.pdf  used on input line 745.
+aper_format/figs/pSymB_dN_dS_omega_dist_31Mar20.pdf  used on input line 742.
 (pdftex.def)             Requested size: 227.64894pt x 227.64839pt.
 <./ecoli_total_num_sites_graph.pdf, id=68, 505.89pt x 505.89pt>
 File: ./ecoli_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./ecoli_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./ecoli_total_num_sites_graph.pdf  used on input line 
-757.
+754.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <./bass_total_num_sites_graph.pdf, id=69, 505.89pt x 505.89pt>
 File: ./bass_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./bass_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./bass_total_num_sites_graph.pdf  used on input line 7
-62.
+59.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <./strep_total_num_sites_graph.pdf, id=70, 505.89pt x 505.89pt>
 File: ./strep_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./strep_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./strep_total_num_sites_graph.pdf  used on input line 
-767.
+764.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <./sinoC_total_num_sites_graph.pdf, id=71, 505.89pt x 505.89pt>
 File: ./sinoC_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./sinoC_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./sinoC_total_num_sites_graph.pdf  used on input line 
-772.
+769.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <./pSymA_total_num_sites_graph.pdf, id=72, 505.89pt x 505.89pt>
 File: ./pSymA_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./pSymA_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./pSymA_total_num_sites_graph.pdf  used on input line 
-778.
+775.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 <./pSymB_total_num_sites_graph.pdf, id=73, 505.89pt x 505.89pt>
 File: ./pSymB_total_num_sites_graph.pdf Graphic file (type pdf)
 <use ./pSymB_total_num_sites_graph.pdf>
 Package pdftex.def Info: ./pSymB_total_num_sites_graph.pdf  used on input line 
-783.
+780.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 
 
@@ -1216,19 +1216,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ./ecoli_Mauve_alignment_pic_26Mar20.jpg Graphic file (type jpg)
 <use ./ecoli_Mauve_alignment_pic_26Mar20.jpg>
 Package pdftex.def Info: ./ecoli_Mauve_alignment_pic_26Mar20.jpg  used on input
- line 834.
+ line 831.
 (pdftex.def)             Requested size: 455.2979pt x 353.4038pt.
 <./sinoC_Mauve_alignment_pic_26Mar20.jpg, id=75, 775.89874pt x 602.25pt>
 File: ./sinoC_Mauve_alignment_pic_26Mar20.jpg Graphic file (type jpg)
 <use ./sinoC_Mauve_alignment_pic_26Mar20.jpg>
 Package pdftex.def Info: ./sinoC_Mauve_alignment_pic_26Mar20.jpg  used on input
- line 839.
+ line 836.
 (pdftex.def)             Requested size: 455.2979pt x 353.4038pt.
 <./strep_mauve_backbone_aln_pic_27Mar20.jpg, id=76, 790.955pt x 436.63126pt>
 File: ./strep_mauve_backbone_aln_pic_27Mar20.jpg Graphic file (type jpg)
 <use ./strep_mauve_backbone_aln_pic_27Mar20.jpg>
 Package pdftex.def Info: ./strep_mauve_backbone_aln_pic_27Mar20.jpg  used on in
-put line 844.
+put line 841.
 (pdftex.def)             Requested size: 455.2979pt x 251.34084pt.
 [5] [6] [7 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/f
 igs/sinoC_dN_dS_omega_dist_NO_OUTLIERS_23Apr20.pdf>] [8 <./dN_dS_omega_dist.pdf
@@ -1256,11 +1256,11 @@ m_sites_graph.pdf>] [16 <./pSymA_total_num_sites_graph.pdf>] [17 <./pSymB_total
 _num_sites_graph.pdf>] [18 <./ecoli_Mauve_alignment_pic_26Mar20.jpg>] [19 <./si
 noC_Mauve_alignment_pic_26Mar20.jpg>] [20 <./strep_mauve_backbone_aln_pic_27Mar
 20.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1518.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1518.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1515.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1515.
  (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1518.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1518.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1515.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1515.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
@@ -1269,7 +1269,7 @@ Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1518.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1515.
  ) 
 Here is how much of TeX's memory you used:
  22580 strings out of 481511
@@ -1299,9 +1299,9 @@ synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (20 pages, 3707215 bytes).
+Output written on Daniella_Thesis_Update.pdf (20 pages, 3707940 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
+ 651 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
