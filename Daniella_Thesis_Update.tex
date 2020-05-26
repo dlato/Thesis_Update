@@ -230,7 +230,7 @@
 %	\item \sout{check if opposite strand in \p means an inversions (check visual matches the xmfa)}
 %	
 %	\item \sout{check if PARSNP and \p both identify the same inversions (check xmfa file)}
-	\item create latex template for paper
+	\item \sout{create latex template for paper}
 %	\item \sout{put notes from papers into doc}
 %	\item \sout{use large PARSNP alignment to identify inversions}
 
@@ -239,7 +239,7 @@
 	\item look up inversions and small RNA's paper Marie was talking about at Committee meeting
 	\item write outline for letter
 	\item write Abstract
-	\item write intro
+	\item \sout{write intro}
 	\item write methods
 	\item compile tables (supplementary)
 	\item write results
@@ -262,27 +262,41 @@
 	
 \section*{Last Week}
 
-\ch Downloaded proteomes for Inversions blast analysis
+Substitutions:
 
-\ch detailed list of things for Queenie to do
+\ch finished Brian's second round of edits on the whole paper
 
-\ch (virtual) meeting with Queenie to update her on next steps for the inversions project
+Inversions $+$ Gene Expression:
 
-\ch organize inversion paper notes into broad categories for intro
+\ch get GitHub set up on the cluster
 
-\ch outline for inversions paper
+\ch make Queenie instructions on how to use GitHub on her laptop (Rstudio and cluster)
 
-\ch wrote first rough draft of intro for inversions paper
+\ch updated methods with removed O7 strain (discussed months ago but I forgot to actually do it)
 
-\ch Brian's edits to substitution paper
+\ch continued to look into blast
 
-Most of last week I spent getting Queenie caught up on the inversions project.
-She is still excited to work on it and we will be meeting twice a week (virtually) to discuss her progress.
-So far she is working on combining the dataframes with information on gene expression and gene position.
+General:
 
-I finished the edits you asked me to make on the substitutions paper and have attached the latest draft to this email.
-\textbf{If you could look over this again that would be great!}
+\ch complete formatting for gene expression paper in dissertation
 
+\ch got abbreviations to work in dissertation file!
+
+\textbf{Substitution Paper:}
+I made some more minor edits to the substitutions paper based on your comments: minor edits, changed the title, (attempt at) shortened the discussion.
+\textbf{If you could look over this again (mostly the discussion and title) that would be great! And the cover letter.}
+
+\textbf{Inversions + Gene Expression:}
+Queenie is slowly working away at the tasks I gave her: verifying that gene expression is consistent across datasets for each strain and combining the parsnp inversions information with the gene expression $+$ genome position data frame.
+I have also tried to encourage her to use GitHub so that I can keep track of her code (right now it is just on her laptop so I have no idea what she is doing).
+So I have gotten that set up on the machines and have instructed her on how to make it work with Rstudio (her preferred method for using R) so that I can keep track of what she is doing!
+I also continued to look into blast for confirming inversions.
+The only thing I am struggling with is what parameters to choose for the blast. \textbf{Which parameters do you think would be the best for this analysis?}
+
+
+Still not sure what to do with the BW25113 data (some is mapped to K-12, not BW25113) and if we should include it or not.
+There are a total of 6 inversions between  K-12 MG1655 and BW25113 (out of a total of 715). They vary in length from 22bp-272bp (all but one are between 22bp-38bp). I suppose we do not NEED this strain since it is so similar to K-12. K-12 MG1655,  BW25113 and K-12 DH10B are all very similar. Most inversions happen between these three and the ATCC strain. I think the original thought was that we wanted to include as many strains as possible, even if they were similar because it could potentially help later on with future analysis. If we do get rid of the  BW25113 strain, then we are only dealing with 3 strains total for this analysis, which is not necessarily bad since the similarity between the K-12 strains makes them essentially the same, which would happen regardless of if BW25113 is included or not.
+\textbf{What do you think?}
 
 %I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
 %Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
@@ -424,18 +438,20 @@ I finished the edits you asked me to make on the substitutions paper and have at
 %
 \begin{itemize}
 	\item check on Queenie's progress and double check her normalization code
-	\item look over requirements for GBE submission and create a folder/complete draft of the paper to be submitted
-	\item write cover letter for substitutions paper submission
-	\item work on code to grab gene info for inversions project
+	\item Queenie should be done graphs to check that expression between samples is comparable
+	\item Get Queenie started on combining information about Parsnp inversions and gene expression data
+	\item figure out what I need to blast for the reciprocal part of the blast
+	\item continue with blast (extract info from blast results)
+	\item edit cover letter for substitution paper
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item submit substitutions paper
-	\item begin to look into how to perform blast to confirm inversions
-	\item start writing methods for the inversions and gene expression paper
 	\item help queenie with anything else she might need
+	\item continue to work on blast (reciprocal part of blast hit and extract info from blast)
+	\item edit dissertation intro
+	\item submit substitutions paper
 \end{itemize}
 
 \newpage
