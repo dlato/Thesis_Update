@@ -264,39 +264,84 @@
 
 Substitutions:
 
-\ch finished Brian's second round of edits on the whole paper
+\ch finished Brian's third round of edits on the whole paper
+
+\ch finished edits to cover letter
+
+\ch test for how big the substitutions slope can get
 
 Inversions $+$ Gene Expression:
 
 \ch get GitHub set up on the cluster
 
-\ch make Queenie instructions on how to use GitHub on her laptop (Rstudio and cluster)
+\ch get Queenie set up on GitHub on cluster
 
-\ch updated methods with removed O7 strain (discussed months ago but I forgot to actually do it)
+\ch started combining gene expression and PARSNP info
 
-\ch continued to look into blast
+\ch continuing to run BLAST with various parameters
 
-General:
+\ch decided to keep BW1255 strain, but use K-12 gene annotation
 
-\ch complete formatting for gene expression paper in dissertation
+%General:
 
-\ch got abbreviations to work in dissertation file!
 
-\textbf{Substitution Paper:}
-I made some more minor edits to the substitutions paper based on your comments: minor edits, changed the title, (attempt at) shortened the discussion.
-\textbf{If you could look over this again (mostly the discussion and title) that would be great! And the cover letter.}
+\textbf{Substitution Paper:} 
+I made all the necessary edits to the paper and cover letter (attached in the email).
+If you are good with it, I think it is ready for submission!
+
+I also did the test for looking at the substitutions slope and how large it can be.
+I did this by taking the largest non-outlier bar (weighted total substitutions/10Kbp) and set the position to 0, then making another fake point with position at the terminus and a substitutions value of 0, then computing a regression.
+The results can be found in Table \ref{tab:bigslope} and the actual slope values can be found in Table \ref{tab:cod_non_cod_log_reg}. \textcolor{red}{INSERT TABLE HERE}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{ll}
+			\toprule
+			Bacteria and Replicon &  Test Regression slope \\
+			\midrule
+			\ecol Chromosome &  \\
+			\bass Chromosome &  \\
+			\strep Chromosome & \\
+			\smel Chromosome & \\
+			\smel pSymA &  \\
+			\smel pSymB &  \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:bigslope} Values of regression slope for each replicon using two points: 1) Highest weighted value of the number of substitutions / 10Kbp at position zero and 2) weighted value of the number of substitutions / 10Kbp of zero at the terminus. Simple linear regression was calculated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Protein Coding Sequences\\
+			\midrule
+			\ecol Chromosome & \cc -2.19\e{-8}*** \\
+			\bass Chromosome & \cc -6.02\e{-8}***\\
+			\strep Chromosome & 5.34\e{-8}*** \\
+			\smel Chromosome & \cc -3.80\e{-7}***  \\
+			\smel pSymA & \cc -3.15\e{-7}*** \\
+			\smel pSymB & 1.67\e{-7}***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 
 \textbf{Inversions + Gene Expression:}
 Queenie is slowly working away at the tasks I gave her: verifying that gene expression is consistent across datasets for each strain and combining the parsnp inversions information with the gene expression $+$ genome position data frame.
-I have also tried to encourage her to use GitHub so that I can keep track of her code (right now it is just on her laptop so I have no idea what she is doing).
-So I have gotten that set up on the machines and have instructed her on how to make it work with Rstudio (her preferred method for using R) so that I can keep track of what she is doing!
-I also continued to look into blast for confirming inversions.
-The only thing I am struggling with is what parameters to choose for the blast. \textbf{Which parameters do you think would be the best for this analysis?}
+I have been working on the blast portion of this project and running blast with multiple parameters to see what we get.
 
-
-Still not sure what to do with the BW25113 data (some is mapped to K-12, not BW25113) and if we should include it or not.
-There are a total of 6 inversions between  K-12 MG1655 and BW25113 (out of a total of 715). They vary in length from 22bp-272bp (all but one are between 22bp-38bp). I suppose we do not NEED this strain since it is so similar to K-12. K-12 MG1655,  BW25113 and K-12 DH10B are all very similar. Most inversions happen between these three and the ATCC strain. I think the original thought was that we wanted to include as many strains as possible, even if they were similar because it could potentially help later on with future analysis. If we do get rid of the  BW25113 strain, then we are only dealing with 3 strains total for this analysis, which is not necessarily bad since the similarity between the K-12 strains makes them essentially the same, which would happen regardless of if BW25113 is included or not.
-\textbf{What do you think?}
+For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
+Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
+I have asked Queenie to see how often the genome positions for the same gene (in the gbk file) differ between BW and K-12, so we can get a sense/justify if this is the correct decision.
 
 %I created a new theme for the selection and substitution graphs so that they all look relatively the same (similar margins, font size..etc).
 %Last week when I was re-doing the SH-Test (to see which block trees were different from the overall tree), I realized that some of these blocks were not removed from the analysis in \ecol, \smel Chromosome and \pa.
@@ -440,9 +485,7 @@ There are a total of 6 inversions between  K-12 MG1655 and BW25113 (out of a tot
 	\item check on Queenie's progress and double check her normalization code
 	\item Queenie should be done graphs to check that expression between samples is comparable
 	\item Get Queenie started on combining information about Parsnp inversions and gene expression data
-	\item figure out what I need to blast for the reciprocal part of the blast
 	\item continue with blast (extract info from blast results)
-	\item edit cover letter for substitution paper
 \end{itemize}
 
 
@@ -627,27 +670,6 @@ There are a total of 6 inversions between  K-12 MG1655 and BW25113 (out of a tot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			Bacteria and Replicon & Protein Coding Sequences\\
-			\midrule
-			\ecol Chromosome & \cc -1.43\e{-8}*** \\
-			\bass Chromosome & \cc -5.55\e{-8}***\\
-			\strep Chromosome & 7.49\e{-8}*** \\
-			\smel Chromosome & \cc -5.99\e{-7}***  \\
-			\smel pSymA & \cc -5.18\e{-7}*** \\
-			\smel pSymB & 1.67\e{-7}***\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
 
 \begin{table}[h]
 	\centering
