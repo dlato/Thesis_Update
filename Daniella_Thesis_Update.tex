@@ -291,7 +291,7 @@ If you are good with it, I think it is ready for submission!
 
 I also did the test for looking at the substitutions slope and how large it can be.
 I did this by taking the largest non-outlier bar (weighted total substitutions/10Kbp) and set the position to 0, then making another fake point with position at the terminus and a substitutions value of 0, then computing a regression.
-The results can be found in Table \ref{tab:bigslope} and the actual slope values can be found in Table \ref{tab:cod_non_cod_log_reg}. \textcolor{red}{INSERT TABLE HERE}
+The results can be found in Table \ref{tab:bigslope} and the actual slope values can be found in Table \ref{tab:cod_non_cod_log_reg}.
 
 \begin{table}[h]
 	\centering
@@ -300,17 +300,17 @@ The results can be found in Table \ref{tab:bigslope} and the actual slope values
 			\toprule
 			Bacteria and Replicon &  Test Regression slope \\
 			\midrule
-			\ecol Chromosome &  \\
-			\bass Chromosome &  \\
-			\strep Chromosome & \\
-			\smel Chromosome & \\
-			\smel pSymA &  \\
-			\smel pSymB &  \\
+			\ecol Chromosome & -2.94\e{-9} \\
+			\bass Chromosome &  -5.08\e{-9}\\
+			\strep Chromosome & -3.92\e{-10}\\
+			\smel Chromosome & -3.32\e{-10}\\
+			\smel pSymA & -5.66\e{-9} \\
+			\smel pSymB &  -5.65\e{-9}\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:bigslope} Values of regression slope for each replicon using two points: 1) Highest weighted value of the number of substitutions / 10Kbp at position zero and 2) weighted value of the number of substitutions / 10Kbp of zero at the terminus. Simple linear regression was calculated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:bigslope} Values of regression slope for each replicon using two points: 1) Highest weighted value of the number of substitutions / 10Kbp at position zero and 2) weighted value of the number of substitutions / 10Kbp of zero at the terminus. Simple linear regression was calculated. All results have no residuals (no residual degrees of freedom) because there are only two points on the line.}
 \end{table}
 
 
