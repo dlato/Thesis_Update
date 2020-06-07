@@ -274,25 +274,32 @@ Substitutions:
 
 Inversions $+$ Gene Expression:
 
-\ch started combining gene expression and PARSNP info
-
 \ch finished running BLAST with various parameters
 
 \ch Queenie: created graph to compare gene expression between datasets from the same strain
 
+\ch Queenie: combined gene expression and PARSNP block/genome position info
+
 %General:
 
 \textbf{Inversions + Gene Expression:}
+
 Queenie created a graph comparing the expression values between datasets from the same strain (similar to what we did for the gene expression paper) and this is in Figure \ref{fig:exp_cor}.
 The values look like they are all mixing well together so I think it is fine that we take the average expression value of all the datasets for each gene.
 
 
-Queenie is slowly working away at the tasks I gave her: verifying that gene expression is consistent across datasets for each strain and combining the parsnp inversions information with the gene expression $+$ genome position data frame.
-I have been working on the blast portion of this project and running blast with multiple parameters to see what we get.
+Queenie is slowly working away at the tasks I gave her and has combined the gene expression and PARSNP block/genome position info.
+As she was doing this, she brought up a lot of little things (A LOT of genes being split between two blocks) and we realized that there was an issue with the NCBI accession number naming being inconsistent.
+This has since been fixed, and she will be re-doing her data exploration to see if any of the weird things she was encountering (genes being split between blocks) is fixed.
 
 For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
 Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
 I have asked Queenie to see how often the genome positions for the same gene (in the gbk file) differ between BW and K-12, so we can get a sense/justify if this is the correct decision.
+
+I have been working on the blast portion of this analysis (verifying the PASNP output).
+It is taking me a long time because my blast knowledge is rusty, but I think that I have run all the blast's that I need to and I am now working on a script to extract the reciprocal best blast hits.
+I am first trying to get the best hit for each gene between each of the strains.
+I am having a little trouble being able to identify what hit came from which strain in my database, but I think I am just missing something or doing something wrong, so I will figure this out!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
