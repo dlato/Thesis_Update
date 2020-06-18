@@ -269,9 +269,7 @@ Substitutions:
 
 Inversions $+$ Gene Expression:
 
-\ch link blast ID to gbk ids
-
-\ch find reciprocal best blast hits (minus dealing with multiple RBBHs)
+\ch done with reciprocal best blast hits (including dealing with multiple best hits)
 
 \ch Queenie: looked into overlapping blocks occurrences
 
@@ -280,6 +278,20 @@ General:
 \ch edited one section of dissertation intro
 
 \textbf{Inversions + Gene Expression:}
+
+I have finally finished my code for getting the reciprocal best blast hits and deal with multiple best hits.
+\textbf{Could you let me know if my method seems ok and logical?}
+\begin{enumerate}
+	\item Find all best hits for each query protein (in AvsB and BvsA blast output). This is based on the lowest e-value score.
+	\item If there are multiple best hits (i.e. multiple subject proteins have the same lowest e-value score), calculate the difference in genomic position between the two genes.
+	\item The single best hit is determined by the lowest difference in genomic positions (my attempt at synteny)
+	\item Find all instances where the best hit for blast A (AvsB) query c is subject d and the best hit for blast B (BvsA) query d is subject c (reciprocal part of the rbbh) 
+\end{enumerate}
+I was unsure how to best assess synteny because it is supposed to be gene order, but each blast hit only tells you one gene that the query matches to. So I decided to use genomic position (from the gbk files) to tell me if these genes are in the same part of the genome. 
+Usually this is accurate and will select the hit that is the same gene (same gene name, protein seq...etc).
+However, there are a few cases where a different subject gene is selected because it is closer in genomic position compared to the subject gene with the same gene (same gene name, protein seq..etc).
+\textbf{Thoughts on me using the genomic position difference between the query and subject genes as a good measure of synteny?}
+
 
 Queenie looked into how often blocks overlap but are not completely within another block (~5.4\%). From these blocks, ~26\% - ~ 37.3\% of genes are split between two blocks. I think that this is likely PARSNP not always getting the end/start position of a block completely correct. I am having Queenie check what kinds of genes are being split (paeudo genes..etc)
 and if these genes are within an inversion or not.
