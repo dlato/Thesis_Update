@@ -292,6 +292,10 @@ Usually this is accurate and will select the hit that is the same gene (same gen
 However, there are a few cases where a different subject gene is selected because it is closer in genomic position compared to the subject gene with the same gene (same gene name, protein seq..etc).
 \textbf{Thoughts on me using the genomic position difference between the query and subject genes as a good measure of synteny?}
 
+Additionally, the proteomes of the \ecol strains are very redundant.
+So in the case of \ecol K-12 DH10B, the proteome used was for \ecol K-12 W3110 and for \ecol BW25113 the proteome use was \ecol K-12 MG1655, and finally for \ecol ATCC the proteome used was \ecol CFT073.
+This was because the proteomes are redundant and the second proteome had more complete information about gene names. 
+\textbf{Does this make sense and seem like a sound thing to do?}
 
 Queenie looked into how often blocks overlap but are not completely within another block (~5.4\%). From these blocks, ~26\% - ~ 37.3\% of genes are split between two blocks. I think that this is likely PARSNP not always getting the end/start position of a block completely correct. I am having Queenie check what kinds of genes are being split (paeudo genes..etc)
 and if these genes are within an inversion or not.
