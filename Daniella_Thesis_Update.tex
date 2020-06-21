@@ -261,11 +261,8 @@
 
 	
 \section*{Last Week}
-Substitutions:
+%Substitutions:
 
-\ch Submitted! Woo!
-
-\ch double check github is up to date
 
 Inversions $+$ Gene Expression:
 
@@ -273,9 +270,9 @@ Inversions $+$ Gene Expression:
 
 \ch Queenie: looked into overlapping blocks occurrences
 
-General:
+%General:
 
-\ch edited one section of dissertation intro
+%\ch 
 
 \textbf{Inversions + Gene Expression:}
 
@@ -297,18 +294,16 @@ So in the case of \ecol K-12 DH10B, the proteome used was for \ecol K-12 W3110 a
 This was because the proteomes are redundant and the second proteome had more complete information about gene names. 
 \textbf{Does this make sense and seem like a sound thing to do?}
 
-Queenie looked into how often blocks overlap but are not completely within another block (~5.4\%). From these blocks, ~26\% - ~ 37.3\% of genes are split between two blocks. I think that this is likely PARSNP not always getting the end/start position of a block completely correct. I am having Queenie check what kinds of genes are being split (paeudo genes..etc)
-and if these genes are within an inversion or not.
+Queenie looked into various aspects of the PARSNP blocks and found that most blocks have an average space between them  of ~700bp. This makes me nervous for when a gene is split between two blocks because if it is split between two blocks that have space between them then we can't really do anything with that gene. So Queenie is checking how often this happens.
+It looks like for the overlapping blocks they overlap by a maximum of ~550bp. So if we did ignore these regions I think it is not too bad and we would not lose too much data! I am getting Queenie to quantify how much data this would actually be.
+
+It looks like ATCC is the only strain that has inversions in the overlapping regions (2/8 blocks that are overlapping have an inversion).
+Queenie will be looking into these overlapping regions and genes that are split between two blocks to see what kinds of genes they are so we can decided what to do with these regions/genes.
+
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
 %Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
 %I have asked Queenie to see how often the genome positions for the same gene (in the gbk file) differ between BW and K-12, so we can get a sense/justify if this is the correct decision.
-
-I have been working on the blast portion of this analysis (verifying the PASNP output).
-I have a code that will retrieve the reciprocal best blast hits and print out the gbk gene name (to help with comparison to the parsnp output).
-However, it appears as though the gene names from blast do not always match what is in the gbk file. This might be a version thing so I will keep looking into it.
-
-We also discussed creating a map between BW and K-12 to show which genes are similar. I will be working on that this week.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -481,8 +476,8 @@ We also discussed creating a map between BW and K-12 to show which genes are sim
 %
 \begin{itemize}
 	\item create map between BW and K-12 genes
-	\item figure out how to assess synteny when the gene names do not match
 	\item get Queenie started on creating lists of which genes match (from all strains) in the parsnp alignment
+	\item Queenie to create a toy dataframe that I can begin working on the analysis of comparing inverted and non-inverted sections of the genome
 \end{itemize}
 
 
@@ -490,567 +485,24 @@ We also discussed creating a map between BW and K-12 to show which genes are sim
 \begin{itemize}
 	\item edit another section of dissertation intro
 	\item get Queenie to create a plot of the inversions
-	\item continue to work on blast synteny and BW/K-12 map
+	\item continue to work on blast BW/K-12 map
 \end{itemize}
 
-\newpage
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./K12MG_graph.pdf}
-	\caption{\label{fig:exp_cor} }
-\end{figure}
-
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lrrr}
-			\toprule
-			&\multicolumn{3}{c}{Genome Average}\\
-			\cmidrule{2-4}
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Bacteria and Replicon &  dS & dN & $\omega$ \\
-			\midrule
-			\textbf{\smel Chrom + \agro} & 12.5529 & 0.0553 & 0.0265 \\
-			\ecol Chromosome & 0.2387 & 0.0101 & 0.0441 \\
-			\bass Chromosome &  0.4201 & 0.0243 & 0.0714\\
-			\strep Chromosome & 0.0458  & 0.0011 & 0.0335 \\
-			\smel Chromosome &  0.0029 & 0 & 0 \\
-			\smel pSymA &  0.0835 & 0.0099 & 0.1645 \\
-			\smel pSymB &  0.0940 & 0.0084 & 0.1142\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
-\end{table}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./dN_dS_omega_dist.pdf}
-	\caption{\label{fig:sinoC_agro_selection} \dn, \ds, and $\omega$ values for \smel chromosomes and \textbf{\agro}.}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:e1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:e2}
-	\end{subfigure}
-	\label{fig:ecoli}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:b1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:b2}
-	\end{subfigure}
-	\label{fig:bass}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:s1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:s2}
-	\end{subfigure}
-	\label{fig:strep}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:sC1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:sC2}
-	\end{subfigure}
-	\label{fig:sinoC}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:sP1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:sP2}
-	\end{subfigure}
-	\label{fig:pSymA}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_weighted_subs_bidirectionality_colour_26Mar20.pdf}
-		\caption{}
-		\label{fig:sB1}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_31Mar20.pdf}
-		\caption{}
-		\label{fig:sB2}
-	\end{subfigure}
-	\label{fig:pSymB}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TOT DATA PTS PER 10Kbp
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./ecoli_total_num_sites_graph.pdf}
-	\caption{\label{fig:ecoli_tot_sites} Distribution of total number of  substitution  data points per 10Kbp in genome.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./bass_total_num_sites_graph.pdf}
-	\caption{\label{fig:bass_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./strep_total_num_sites_graph.pdf}
-	\caption{\label{fig:strep_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./sinoC_total_num_sites_graph.pdf}
-	\caption{\label{fig:sinoC_tot_sites} Distribution of total number of substitution data points per 10Kbp in genome.}
-\end{figure}
-
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./pSymA_total_num_sites_graph.pdf}
-	\caption{\label{fig:pa_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./pSymB_total_num_sites_graph.pdf}
-	\caption{\label{fig:pb_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.48\textwidth}{!}{%
-		\begin{tabular}{lr}
-			\toprule
-			Bacteria and Replicon &Average Number of \\
-			&Substitutions per bp \\
-			\midrule
-			\ecol Chromosome & 1.97\e{-4}\\
-			\bass Chromosome & 1.93\e{-4}\\
-			\strep Chromosome & 2.74\e{-6}\\
-			\smel Chromosome & 9.72\e{-5}\\
-			\smel pSymA & 6.54\e{-5}\\
-			\smel pSymB & 1.99\e{-4}\\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:avg_subs}\small Average number of protein coding substitutions calculated per base across all bacterial replicons. Outliers and missing data was not included in the calculation.}
-\end{table}
-
-
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./ecoli_Mauve_alignment_pic_26Mar20.jpg}
-	\caption{\label{fig:ecoli_mauve}\p alignment of \ecoli genomes highlighting the ``backbone'' of the alignment (matching regions).}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./sinoC_Mauve_alignment_pic_26Mar20.jpg}
-	\caption{\label{fig:sinoC_mauve}\p alignment of \smel Chromosomes highlighting the ``backbone'' of the alignment (matching regions).}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./strep_mauve_backbone_aln_pic_27Mar20.jpg}
-	\caption{\label{fig:strep_mauve}\p alignment of \strep genomes highlighting the ``backbone'' of the alignment (matching regions).}
-\end{figure}
-
-
-
-%below is commented out since Mar 14, 2020
-%%\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_6Nov19.pdf}
-%%\includegraphics[width=\textwidth]{bass_weighted_subs_bidirectionality_colour_6Nov19.pdf}
-%%\includegraphics[width=\textwidth]{strep_weighted_subs_bidirectionality_colour_8Nov19.pdf}
-%%\includegraphics[width=\textwidth]{sinoC_weighted_subs_bidirectionality_colour_8Nov19.pdf}
-%%\includegraphics[width=\textwidth]{pSymA_weighted_subs_bidirectionality_colour_6Nov19.pdf}
-%%\includegraphics[width=\textwidth]{pSymB_weighted_subs_bidirectionality_colour_6Nov19.pdf}
+%\newpage
 %
-%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lcrr}
-%%			\toprule
-%%			Bacteria and Replicon & Genomic Position (bp) & Protein/Gene Examples \\
-%%			\midrule
-%%			\ecol Chromosome & 0 - 10000 & DNA replication and repair\\
-%%			& & ATP-proton motive force\\
-%%			& & ATP biosynthesis\\
-%%			& & transport\\
-%%			& 470000 - 480000 & DNA replication and repair\\
-%%			& & tRNA synthesis\\
-%%			& & Ribosomal proteins\\
-%%			& & Putative transport\\
-%%			& 610000 - 620000 & Ribosomal protein\\
-%%			& & Translation modification\\
-%%			& & tRNA modification\\
-%%			& & RNA synthesis\\
-%%			\midrule
-%%			\bass Chromosome & 0 - 10000 & tRNA modification\\
-%%			& & Ribosomal proteins\\
-%%			& & DNA gyrase\\
-%%			& & rRNA small subunit methylation\\
-%%			& 130000 - 140000 & Ribosomal proteins\\
-%%			& & Elongation factor\\
-%%			& 730000 - 740000 & tRNA subunit\\
-%%			& & Transcription regulation\\
-%%			& & Glycolysis\\
-%%			& 1220000 - 1230000 & Pyruvate kinase\\
-%%			& & Sporulation membrane proteins \\
-%%			& & ATP-binding\\
-%%			& & Regulation protein\\
-%%			\midrule
-%%			\strep Chromosome & 1590000 - 1600000 & Ribosomal proteins\\
-%%			& & Hypothetical proteins\\
-%%			& 1690000 - 1700000 & Ribosomal proteins\\
-%%			\midrule
-%%			\smel Chromosome &  1480000 - 1490000 & Ribosomal proteins\\
-%%			& & Structural elements\\
-%%			& & Transmembrane proteins\\
-%%			\midrule
-%%			\smel pSymA & 660000 - 680000 & Hypothetical proteins\\
-%%			& & Unknown proteins\\
-%%			& & Small molecule metabolism \\
-%%			\midrule
-%%			\smel pSymB & 290000 - 300000 & Cell Division\\
-%%			& & Small molecule metabolism\\
-%%			& & Cell processes\\
-%%			& 800000 - 810000 & Small molecule metabolism\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:high_exp_bars} Table of high median CPM (Counts per Million) gene expression over 10kb genomic regions for each bacterial replicon and the associated proteins/gene functions found in that region. The genomic position begins at the origin of replication and continues in both directions until the terminus of replication (bidirectional replication).}
-%%\end{table}
-%%
-%%
-%%
-%%
-%%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lccc}
-%%			\toprule
-%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-%%			\midrule
-%%		\ecol Chromosome & -5.29\e{-5} & 1.66\e{-5} & $<$2\e{-16}  \\
-%%			\bass Chromosome &  -9.8\e{-5} & 2.4\e{-5} & 6.2\e{-4}\\
-%%			\strep Chromosome & -1.307\e{-6} & 1.72\e{-7} & 1.3\e{-13}\\
-%%			\smel Chromosome & 8.81\e{-6} & 4.06\e{-5} & NS (8.3\e{-1})\\
-%%			\smel pSymA & 1.33\e{-3} & 4.3\e{-4} & 3\e{-3}\\
-%%			\smel pSymB & 9.55\e{-5} & 2.1\e{-4} & NS (7.5\e{-1})\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:lr_normalized_exp} Linear regression analysis of normalized expression and distance from the origin of replication. The noramlized expression values were calculated by dividing the total counts per million expression value per 10kb section of the genome by the total number of genes in the respective 10kb section. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. NS indicates Not Significant at P $\le$ 0.05.}
-%%\end{table}
-%%
-%%
-%%
-%%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lccc|ccc}
-%%			\toprule
-%%			& \multicolumn{3}{c|}{Near Origin} & \multicolumn{3}{c}{Near Terminus} \\
-%%				\cmidrule{2-7}
-%%			Bacteria and Replicon &  \dn & \ds & $\omega$ &  \dn & \ds & $\omega$ \\
-%%			\midrule
-%%			\ecol Chromosome & NS & NS & NS& 
-%%								NS& NS& NS\\
-%%			\bass Chromosome & NS & NS &  NS&
-%%								NS& NS& NS \\
-%%			\strep Chromosome & --- & --- & ---&
-%%								---& ---& ---\\
-%%			\smel Chromosome & 3.77\e{-8}** & 3.54\e{-7}** & 1.23\e{-6}** &
-%%								 NS& NS& NS\\
-%%			\smel pSymA & NS & NS & 3.42\e{-5}*&
-%%							 NS& NS& NS\\
-%%			\smel pSymB & NS & NS & NS&
-%%						 -3.24\e{-7}**& 8.33\e{-6}***& NS\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:dN_dS_20genes} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon for the 20 genes closest and 20 genes farthest from the origin of replication. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%%\end{table}
-%%
-%%
-%%
-%%%subs density cod and non cod
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
-%%
-%%\newpage
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_9Sep19.pdf}
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
-%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep19.pdf}
-%%
-%%
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{lc}
-%			\toprule
-%			Bacteria and Replicon & Protein Coding Sequences\\
-%			\midrule
-%			\ecol Chromosome & -1.98\e{-8}*** \\
-%			\bass Chromosome & -5.55\e{-8}***\\
-%			\strep Chromosome & 7.49\e{-8}***\\
-%			\smel Chromosome & -4.19\e{-7}***\\
-%			\smel pSymA & -5.18\e{-7}*** \\
-%			\smel pSymB & 1.67\e{-7}***\\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%\end{table}
-%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./K12MG_graph.pdf}
+%	\caption{\label{fig:exp_cor} }
+%\end{figure}
 %
 %
 %
 %\begin{table}[h]
 %	\centering
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{lcc|cc}
-%			\toprule
-%			& \multicolumn{4}{c}{Protein Coding} \\
-%			\cmidrule{2-5}
-%			%			\cmidrule{8-10}
-%			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-%			%			\cmidrule{2-3}
-%			%			\cmidrule{4-7}
-%			& \multicolumn{2}{c|}{Correlation Coefficient} & \multicolumn{2}{c}{Number of Substitutions} \\
-%			& \multicolumn{2}{c|}{20kb Near} &\multicolumn{2}{c}{per 20kb Near}\\
-%			\cmidrule{2-5}
-%			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus\\
-%			\midrule
-%			\ecol Chromosome & NS & NS & 5.62\e{-3} & 6.66\e{-3} \\
-%			\bass Chromosome & NS & -8.37\e{-5}*** & 1.95\e{-3} & 9.10\e{-3} \\
-%			\strep Chromosome & 7.91\e{-5}*** & -1.32\e{-4}*** & 6.74\e{-4} & 6.73\e{-3} \\
-%			\smel Chromosome & 8.26\e{-5}* & NS & 9.79\e{-5}  & 5.07\e{-5}\\
-%			\smel pSymA & NS  & NS & 9.75\e{-4} & 3.23\e{-3}\\
-%			\smel pSymB & -1.44\e{-5}* & -6.32\e{-5}*** & 1.96\e{-3} &  1.24\e{-3} \\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%\end{table}
-%
-%
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
-%		\begin{tabular}{lcc}
-%			\toprule
-%			& \multicolumn{2}{c}{Protein Coding}  \\
-%			\cmidrule{2-3}
-%			Bacteria and Replicon &  Weighted & Non-Weighted\\
-%			\midrule
-%			\ecol Chromosome & -2.28\e{-10}***  & -1.65\e{-4}***\\
-%			\bass Chromosome & -7.96\e{-10}** &  -1.73\e{-4}**\\
-%			\strep Chromosome & 2.38\e{-11}*& NS \\
-%			\smel Chromosome & -1.05\e{-10}*** & -1.24\e{-5}***\\
-%			\smel pSymA & NS  & NS \\
-%			\smel pSymB & NS & NS \\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:lin_reg_10kb_subs} Linear regression on 10kb sections of the genome with increasing distance from the origin of replication after accounting for bidirectional replication. Weighted columns have the total number of substitutions in each 10kb section of the genome divided by the total number of protein coding and non-protein coding sites in the genome. Non-weighted columns are performing a linear regression on the total number of substitutions in each 10kb section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%\end{table}
-%
-%
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
-%	\begin{tabular}{lc}
-%			\toprule
-%			Bacteria and Replicon & Coefficient Estimate \\
-%			\midrule
-%			\ecol Chromosome & -2.32\e{-2}*** \\
-%			\bass Chromosome & -1.93\e{-2}**\\
-%			\strep Chromosome & -1.24\e{-3}***\\
-%			\smel Chromosome & -1.88\e{-2}***\\
-%			\smel pSymA & -2.50\e{-2}*  \\
-%			\smel pSymB & NS \\
-%			\bottomrule
-%		\end{tabular}
-%		
-%	}%resizebox
-%	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding sites per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%\end{table}
-%
-%
-%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lc}
-%%			\toprule
-%%			Bacteria and Replicon & Gene Expression 10kb \\
-%%			\midrule
-%%			\ecol Chromosome & \cc -2.742\e{-5}**\\
-%%			\bass Chromosome & \cc -2.198\e{-5}*\\
-%%			\strep Chromosome & \cc -5.230\e{-7}*** \\
-%%			\smel Chromosome & NS\\
-%%			\smel pSymA & NS \\
-%%			\smel pSymB & NS \\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:lr_exp_10kb} Linear regression analysis of the median counts per million expression data for 10kb segments of the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%%\end{table}
-%%
-%%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lccc}
-%%			\toprule
-%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
-%%			\midrule
-%%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.03\e{-5} & \cellcolor{black!16}1.28\e{-5} & \cellcolor{black!16}2.8\e{-6} \\
-%%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.7\e{-5} & \cellcolor{black!16}2.0\e{-5} & \cellcolor{black!16}1.2\e{-6} \\
-%%			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.17\e{-6} & \cellcolor{black!16}1.04\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
-%%			\smel Chromosome & 3.97\e{-5} & 4.25\e{-5} & NS (3.5\e{-1})\\
-%%			\smel pSymA & 1.39\e{-3} & 2.53\e{-4} & 4.9\e{-8} \\
-%%			\smel pSymB & 1.46\e{-4} & 2.03\e{-4} & NS (5.34.7\e{-1})\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-%%\end{table}
-%%
-%%%\begin{centering}
-%%%	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_exp_tot_gene_num_bidirectionality_colour_5Jun19.pdf}
-%%%\end{centering}
-%%
-%%
-%%
-%%
-%%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lccc}
-%%			\toprule
-%%			Bacteria and Replicon &  \dn & \ds & $\omega$ \\
-%%			\midrule
-%%			\ecol Chromosome & NS & NS & NS\\
-%%			\bass Chromosome & NS & NS & \cc -9.08\e{-6}*\\
-%%			\strep Chromosome & NS & NS & NS\\
-%%            \smel Chromoeom & NS & NS & NS \\
-%%			\smel pSymA & NS & NS & NS\\
-%%			\smel pSymB & NS & NS & 1.163\e{-5}*\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:dN_dS_lin_reg} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-%%\end{table}
-%%
-%%
-%%
-%%
-%%
-%%\begin{table}[h]
-%%	\centering
-%%	\resizebox{\textwidth}{!}{%
-%%		\begin{tabular}{lr}
-%%			\toprule
-%%			Bacteria and Replicon & Average Expression Value (CPM)\\
-%%			\midrule
-%%			\ecol Chromosome & 160.500\\
-%%			\bass Chromosome &  176.400\\
-%%			\strep Chromosome &  6.084\\
-%%			\smel Chromosome &  271.400\\
-%%			\smel pSymA & 690.100\\
-%%			\smel pSymB & 595.700\\
-%%			\bottomrule
-%%		\end{tabular}
-%%		
-%%	}%resizebox
-%%	\caption{\label{tab:gene_exp_mean} Arithmetic gene expression calculated across all genes in each replicon. Expression values are represented in Counts Per Million.}
-%%\end{table}
-%%
-%\begin{table}[h]
-%	\centering
-%	\resizebox{\textwidth}{!}{%
+%	\resizebox{0.5\textwidth}{!}{%
 %		\begin{tabular}{lrrr}
 %			\toprule
-%			& \multicolumn{3}{c}{Gene/Genome Average} \\
-%			%weighted
+%			&\multicolumn{3}{c}{Genome Average}\\
 %			\cmidrule{2-4}
 %			%			\cmidrule{8-10}
 %			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
@@ -1058,97 +510,272 @@ We also discussed creating a map between BW and K-12 to show which genes are sim
 %			%			\cmidrule{4-7}
 %			Bacteria and Replicon &  dS & dN & $\omega$ \\
 %			\midrule
-%			\ecol Chromosome & 0.2351 & 0.0101 & 0.0444 \\
-%			\bass Chromosome & 0.4201 & 0.0243 & 0.0714 \\
-%			\strep Chromosome &  0.0458 & 0.0011 & 0.0335  \\
-%			\smel Chromosome &  9.0094  & 0.0001 & 0.0015 \\
-%			\smel pSymA & 0.0872 & 0.0099 & 0.1642 \\
-%			\smel pSymB & 0.0940 & 0.0084 & 0.1142 \\
+%			\textbf{\smel Chrom + \agro} & 12.5529 & 0.0553 & 0.0265 \\
+%			\ecol Chromosome & 0.2387 & 0.0101 & 0.0441 \\
+%			\bass Chromosome &  0.4201 & 0.0243 & 0.0714\\
+%			\strep Chromosome & 0.0458  & 0.0011 & 0.0335 \\
+%			\smel Chromosome &  0.0029 & 0 & 0 \\
+%			\smel pSymA &  0.0835 & 0.0099 & 0.1645 \\
+%			\smel pSymB &  0.0940 & 0.0084 & 0.1142\\
 %			\bottomrule
 %		\end{tabular}
 %		
 %	}%resizebox
 %	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
 %\end{table}
-%% \newpage
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./dN_dS_omega_dist.pdf}
+%	\caption{\label{fig:sinoC_agro_selection} \dn, \ds, and $\omega$ values for \smel chromosomes and \textbf{\agro}.}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:e1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ecoli_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:e2}
+%	\end{subfigure}
+%	\label{fig:ecoli}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:b1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:b2}
+%	\end{subfigure}
+%	\label{fig:bass}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:s1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:s2}
+%	\end{subfigure}
+%	\label{fig:strep}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:sC1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:sC2}
+%	\end{subfigure}
+%	\label{fig:sinoC}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:sP1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymA_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:sP2}
+%	\end{subfigure}
+%	\label{fig:pSymA}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_weighted_subs_bidirectionality_colour_26Mar20.pdf}
+%		\caption{}
+%		\label{fig:sB1}
+%	\end{subfigure}%
+%	\begin{subfigure}{.5\textwidth}
+%		\centering
+%		\includegraphics[width=0.9\linewidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/pSymB_dN_dS_omega_dist_31Mar20.pdf}
+%		\caption{}
+%		\label{fig:sB2}
+%	\end{subfigure}
+%	\label{fig:pSymB}
+%\end{figure}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TOT DATA PTS PER 10Kbp
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./ecoli_total_num_sites_graph.pdf}
+%	\caption{\label{fig:ecoli_tot_sites} Distribution of total number of  substitution  data points per 10Kbp in genome.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./bass_total_num_sites_graph.pdf}
+%	\caption{\label{fig:bass_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./strep_total_num_sites_graph.pdf}
+%	\caption{\label{fig:strep_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./sinoC_total_num_sites_graph.pdf}
+%	\caption{\label{fig:sinoC_tot_sites} Distribution of total number of substitution data points per 10Kbp in genome.}
+%\end{figure}
+%
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./pSymA_total_num_sites_graph.pdf}
+%	\caption{\label{fig:pa_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./pSymB_total_num_sites_graph.pdf}
+%	\caption{\label{fig:pb_tot_sites} Distribution of total number of substitution  data points per 10Kbp in genome.}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%\begin{table}[h]
+%	\centering
+%	\resizebox{0.48\textwidth}{!}{%
+%		\begin{tabular}{lr}
+%			\toprule
+%			Bacteria and Replicon &Average Number of \\
+%			&Substitutions per bp \\
+%			\midrule
+%			\ecol Chromosome & 1.97\e{-4}\\
+%			\bass Chromosome & 1.93\e{-4}\\
+%			\strep Chromosome & 2.74\e{-6}\\
+%			\smel Chromosome & 9.72\e{-5}\\
+%			\smel pSymA & 6.54\e{-5}\\
+%			\smel pSymB & 1.99\e{-4}\\
+%			\bottomrule
+%		\end{tabular}
+%	}%resizebox
+%	\caption{\label{tab:avg_subs}\small Average number of protein coding substitutions calculated per base across all bacterial replicons. Outliers and missing data was not included in the calculation.}
+%\end{table}
+%
+%
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./ecoli_Mauve_alignment_pic_26Mar20.jpg}
+%	\caption{\label{fig:ecoli_mauve}\p alignment of \ecoli genomes highlighting the ``backbone'' of the alignment (matching regions).}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./sinoC_Mauve_alignment_pic_26Mar20.jpg}
+%	\caption{\label{fig:sinoC_mauve}\p alignment of \smel Chromosomes highlighting the ``backbone'' of the alignment (matching regions).}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./strep_mauve_backbone_aln_pic_27Mar20.jpg}
+%	\caption{\label{fig:strep_mauve}\p alignment of \strep genomes highlighting the ``backbone'' of the alignment (matching regions).}
+%\end{figure}
+%
+%
+%
+%%below is commented out since Mar 14, 2020
+%%%\includegraphics[width=\textwidth]{ecoli_weighted_subs_bidirectionality_colour_6Nov19.pdf}
+%%%\includegraphics[width=\textwidth]{bass_weighted_subs_bidirectionality_colour_6Nov19.pdf}
+%%%\includegraphics[width=\textwidth]{strep_weighted_subs_bidirectionality_colour_8Nov19.pdf}
+%%%\includegraphics[width=\textwidth]{sinoC_weighted_subs_bidirectionality_colour_8Nov19.pdf}
+%%%\includegraphics[width=\textwidth]{pSymA_weighted_subs_bidirectionality_colour_6Nov19.pdf}
+%%%\includegraphics[width=\textwidth]{pSymB_weighted_subs_bidirectionality_colour_6Nov19.pdf}
 %%
-%%%Violin plots for per gene dN, dS, and $\omega$:
-%%%
-%%%\clearpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ALL_BAC_dN_dS_omega_violinplots_11Jul19.pdf}
-%%%
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/ecoli_dN_dS_omega_dist_11Jul19.pdf}
-%%%
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/bass_dN_dS_omega_dist_11Jul19.pdf}
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/strep_dN_dS_omega_dist_11Jul19.pdf}
-%%%
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/sinoC_dN_dS_omega_dist_11Jul19.pdf}
-%%%
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymA_dN_dS_omega_dist_11Jul19.pdf}
-%%%
-%%%\newpage
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_11Jul19.pdf}
-%%
-%%
-%%%
-%%%Gene expression graphs
-%%%
-%%%% Gene Exp graphs
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19.pdf}
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-%%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
-%%%
-%%%
-%%%
-%%%
-%%%\includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
-%%%
-%%%\includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
-%%%
 %%
 %%%\begin{table}[h]
 %%%	\centering
 %%%	\resizebox{\textwidth}{!}{%
-%%%		\begin{tabular}{lccrr}
+%%%		\begin{tabular}{lcrr}
 %%%			\toprule
-%%%			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \% of Subs Coding & \% of Subs Non-Coding\\
+%%%			Bacteria and Replicon & Genomic Position (bp) & Protein/Gene Examples \\
 %%%			\midrule
-%%%			\ecol Chromosome & 86.47\% & 13.53\% & 5.00\% & 8.96\% \\ % 4013445/4641652 & 200860 & 56265 
-%%%			\bass Chromosome & 87.49\% & 12.51\% & 7.31\% & 6.42\%\\ %3688210/4215606 & 269482 & 33846
-%%%			\strep Chromosome & 89.03\% & 10.97\% & 13.74\% & 14.91\%\\ % 7716382/8667507 & 1060278 & 141828
-%%%			\smel Chromosome & 86.27\% & 13.73\% & 0.19\% & 0.22\%\\ % 3152315/3654135 & 6023 & 1088
-%%%			\smel pSymA & 83.34\% & 16.66\% & 2.84\% & 4.58\%\\ % 1128615/1354226 & 225611/1354226 & 32040 & 10333
-%%%			\smel pSymB & 88.81\% & 11.19\% & 2.78\% & 3.44\%\\ % 1495047/1683333 & 41532 & 6483
+%%%			\ecol Chromosome & 0 - 10000 & DNA replication and repair\\
+%%%			& & ATP-proton motive force\\
+%%%			& & ATP biosynthesis\\
+%%%			& & transport\\
+%%%			& 470000 - 480000 & DNA replication and repair\\
+%%%			& & tRNA synthesis\\
+%%%			& & Ribosomal proteins\\
+%%%			& & Putative transport\\
+%%%			& 610000 - 620000 & Ribosomal protein\\
+%%%			& & Translation modification\\
+%%%			& & tRNA modification\\
+%%%			& & RNA synthesis\\
+%%%			\midrule
+%%%			\bass Chromosome & 0 - 10000 & tRNA modification\\
+%%%			& & Ribosomal proteins\\
+%%%			& & DNA gyrase\\
+%%%			& & rRNA small subunit methylation\\
+%%%			& 130000 - 140000 & Ribosomal proteins\\
+%%%			& & Elongation factor\\
+%%%			& 730000 - 740000 & tRNA subunit\\
+%%%			& & Transcription regulation\\
+%%%			& & Glycolysis\\
+%%%			& 1220000 - 1230000 & Pyruvate kinase\\
+%%%			& & Sporulation membrane proteins \\
+%%%			& & ATP-binding\\
+%%%			& & Regulation protein\\
+%%%			\midrule
+%%%			\strep Chromosome & 1590000 - 1600000 & Ribosomal proteins\\
+%%%			& & Hypothetical proteins\\
+%%%			& 1690000 - 1700000 & Ribosomal proteins\\
+%%%			\midrule
+%%%			\smel Chromosome &  1480000 - 1490000 & Ribosomal proteins\\
+%%%			& & Structural elements\\
+%%%			& & Transmembrane proteins\\
+%%%			\midrule
+%%%			\smel pSymA & 660000 - 680000 & Hypothetical proteins\\
+%%%			& & Unknown proteins\\
+%%%			& & Small molecule metabolism \\
+%%%			\midrule
+%%%			\smel pSymB & 290000 - 300000 & Cell Division\\
+%%%			& & Small molecule metabolism\\
+%%%			& & Cell processes\\
+%%%			& 800000 - 810000 & Small molecule metabolism\\
 %%%			\bottomrule
 %%%		\end{tabular}
 %%%		
 %%%	}%resizebox
-%%%	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+%%%	\caption{\label{tab:high_exp_bars} Table of high median CPM (Counts per Million) gene expression over 10kb genomic regions for each bacterial replicon and the associated proteins/gene functions found in that region. The genomic position begins at the origin of replication and continues in both directions until the terminus of replication (bidirectional replication).}
 %%%\end{table}
-%%
 %%%
 %%%
-%%
+%%%
 %%%
 %%%
 %%%\begin{table}[h]
@@ -1158,148 +785,367 @@ We also discussed creating a map between BW and K-12 to show which genes are sim
 %%%			\toprule
 %%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
 %%%			\midrule
-%%%			\ecol Chromosome & 2.496\e{-5} & 8.695\e{-6}& 0.0041 \\
-%%%			\bass Chromosome & 1.912\e{-6} & 8.753
-%%%			\e{-8} & $<$2\e{-16}\\
-%%%			\strep Chromosome & 2.984\e{-5} & 1.858\e{-6} & $<$2\e{-16}\\
-%%%			\smel Chromosome & 6.993\e{-6} & 6.205\e{-7} & $<$2\e{-16}\\
-%%%			\smel pSymA & -9.713\e{-7} & 3.212\e{-8} & $<$2\e{-16}\\
-%%%			\smel pSymB & 6.181\e{-7} & 2.253\e{-8} & $<$2\e{-16}\\
+%%%		\ecol Chromosome & -5.29\e{-5} & 1.66\e{-5} & $<$2\e{-16}  \\
+%%%			\bass Chromosome &  -9.8\e{-5} & 2.4\e{-5} & 6.2\e{-4}\\
+%%%			\strep Chromosome & -1.307\e{-6} & 1.72\e{-7} & 1.3\e{-13}\\
+%%%			\smel Chromosome & 8.81\e{-6} & 4.06\e{-5} & NS (8.3\e{-1})\\
+%%%			\smel pSymA & 1.33\e{-3} & 4.3\e{-4} & 3\e{-3}\\
+%%%			\smel pSymB & 9.55\e{-5} & 2.1\e{-4} & NS (7.5\e{-1})\\
 %%%			\bottomrule
 %%%		\end{tabular}
 %%%		
 %%%	}%resizebox
-%%%	\caption{\label{tab:cod_log_reg} Logistic regression analysis of the number of substitutions along all coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%	\caption{\label{tab:lr_normalized_exp} Linear regression analysis of normalized expression and distance from the origin of replication. The noramlized expression values were calculated by dividing the total counts per million expression value per 10kb section of the genome by the total number of genes in the respective 10kb section. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. NS indicates Not Significant at P $\le$ 0.05.}
 %%%\end{table}
+%%%
+%%%
+%%%
 %%%
 %%%\begin{table}[h]
 %%%	\centering
 %%%	\resizebox{\textwidth}{!}{%
-%%%		\begin{tabular}{lccc}
+%%%		\begin{tabular}{lccc|ccc}
 %%%			\toprule
-%%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%%%			& \multicolumn{3}{c|}{Near Origin} & \multicolumn{3}{c}{Near Terminus} \\
+%%%				\cmidrule{2-7}
+%%%			Bacteria and Replicon &  \dn & \ds & $\omega$ &  \dn & \ds & $\omega$ \\
 %%%			\midrule
-%%%			\ecol Chromosome & -1.397\e{-7} & 2.427\e{-9} & $<$ 2\e{-16} \\
-%%%			\bass Chromosome & -1.439\e{-8} & 1.569\e{-9} & $<$2\e{-16}\\
-%%%			\strep Chromosome & 1.689\e{-8} & 7.235\e{-10} & $<$2\e{-16}\\
-%%%			\smel Chromosome & -1.311\e{-6}& 3.393\e{-8}& $<$2\e{-16}\\
-%%%			\smel pSymA & -1.413\e{-7} & 3.762\e{-8} & 1.73\e{-4}\\
-%%%			\smel pSymB & 5.196\e{-7} & 4.769\e{-8} & $<$2\e{-16}\\
+%%%			\ecol Chromosome & NS & NS & NS& 
+%%%								NS& NS& NS\\
+%%%			\bass Chromosome & NS & NS &  NS&
+%%%								NS& NS& NS \\
+%%%			\strep Chromosome & --- & --- & ---&
+%%%								---& ---& ---\\
+%%%			\smel Chromosome & 3.77\e{-8}** & 3.54\e{-7}** & 1.23\e{-6}** &
+%%%								 NS& NS& NS\\
+%%%			\smel pSymA & NS & NS & 3.42\e{-5}*&
+%%%							 NS& NS& NS\\
+%%%			\smel pSymB & NS & NS & NS&
+%%%						 -3.24\e{-7}**& 8.33\e{-6}***& NS\\
 %%%			\bottomrule
 %%%		\end{tabular}
 %%%		
 %%%	}%resizebox
-%%%	\caption{\label{tab:non_cod_log_reg} Logistic regression analysis of the number of substitutions along all non-coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%	\caption{\label{tab:dN_dS_20genes} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon for the 20 genes closest and 20 genes farthest from the origin of replication. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 %%%\end{table}
+%%%
+%%%
+%%%
+%%%%subs density cod and non cod
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/ecoli_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
+%%%
+%%%\newpage
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/bass_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/strep_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_9Sep19.pdf}
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/sinoC_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_19Sep19.pdf}
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymA_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_17Sep19.pdf}
+%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/Sub_graphs_cod_non_cod_7Feb19/pSymB_chrom_cod_non_cod_weighted_sub_histogram_bidirectionality_colour_16Sep19.pdf}
+%%%
+%%%
+%%\begin{table}[h]
+%%	\centering
+%%	\resizebox{\textwidth}{!}{%
+%%		\begin{tabular}{lc}
+%%			\toprule
+%%			Bacteria and Replicon & Protein Coding Sequences\\
+%%			\midrule
+%%			\ecol Chromosome & -1.98\e{-8}*** \\
+%%			\bass Chromosome & -5.55\e{-8}***\\
+%%			\strep Chromosome & 7.49\e{-8}***\\
+%%			\smel Chromosome & -4.19\e{-7}***\\
+%%			\smel pSymA & -5.18\e{-7}*** \\
+%%			\smel pSymB & 1.67\e{-7}***\\
+%%			\bottomrule
+%%		\end{tabular}
+%%		
+%%	}%resizebox
+%%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+%%\end{table}
+%%
+%%
+%%
 %%
 %%\begin{table}[h]
 %%	\centering
-%%	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
-%%			\begin{tabular}{lll}
-%%				\toprule
-%%				Bacteria Strain/Species & GEO Accession Number & Date Accessed\\
-%%				\midrule
-%%				\ecol K12 MG1655  & GSE60522 & December 20, 2017\\
-%%				\ecol K12 MG1655 & GSE73673 & December 19, 2017\\
-%%				\ecol K12 MG1655 & GSE85914 & December 19, 2017\\
-%%				\ecol K12 MG1655 & GSE40313 & November 21, 2018\\
-%%				\ecol K12 MG1655 & GSE114917 & November 22, 2018\\
-%%				\ecol K12 MG1655 & GSE54199 & November 26, 2018\\
-%%				\ecol K12 DH10B & GSE98890 & December 19, 2017\\
-%%				\ecol BW25113 & GSE73673 & December 19, 2017 \\
-%%				\ecol BW25113 & GSE85914 & December 19, 2017 \\
-%%				\ecol O157:H7 & GSE46120 & August 28, 2018\\
-%%				\ecol ATCC 25922 & GSE94978 & November 23, 2018\\
-%%% ecoli has lots of aerobic anerobic...etc growth phases, and time periods
-%%				\midrule
-%%				\bass 168 & GSE104816 & December 14, 2017\\
-%%				\bass 168 & GSE67058 & December 16, 2017\\
-%%				\bass 168 & GSE93894 & December 15, 2017\\
-%%				\bass 168 & GSE80786 & November 16, 2018\\
-%%				% bass also has quite a few time dependent data sets, or separated by growth phase				
-%%				\midrule
-%%				\scoe A3 & GSE57268 & March 16, 2018\\
-%%				\snat HW-2 & GSE112559 & November 15, 2018\\
-%%				% strep has LOTS of time dependent data sets, but the other bac do not really have that				
-%%				\midrule
-%%				\smel 1021 Chromosome & GSE69880 & December 12, 2017\\
-%%				%				\smel 1021 Chromosome & GSE121228 & diff phases\\
-%%				\midrule
-%%				\smel 2011 \pa & NC\_020527 (Dr. Finan) & April 4, 2018 \\
-%%				\smel 1021 \pa & GSE69880 & November 15, 18\\
-%%				\midrule
-%%				\smel 2011 \pb & NC\_020560 (Dr. Finan) & April 4, 2018 \\
-%%				\smel 1021 \pb & GSE69880 & November 15, 18\\
-%%				\bottomrule
-%%				
-%%				
-%%			\end{tabular}
-%%			\caption{\label{tab:tableS1} Summary of strains and species found for each gene expression analysis. Gene Expression Omnibus accession numbers and date accessed are provided.}
-%%		\end{minipage}}
-%%	\end{table}	
+%%	\resizebox{\textwidth}{!}{%
+%%		\begin{tabular}{lcc|cc}
+%%			\toprule
+%%			& \multicolumn{4}{c}{Protein Coding} \\
+%%			\cmidrule{2-5}
+%%			%			\cmidrule{8-10}
+%%			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+%%			%			\cmidrule{2-3}
+%%			%			\cmidrule{4-7}
+%%			& \multicolumn{2}{c|}{Correlation Coefficient} & \multicolumn{2}{c}{Number of Substitutions} \\
+%%			& \multicolumn{2}{c|}{20kb Near} &\multicolumn{2}{c}{per 20kb Near}\\
+%%			\cmidrule{2-5}
+%%			Bacteria and Replicon &  Origin & Terminus& Origin & Terminus\\
+%%			\midrule
+%%			\ecol Chromosome & NS & NS & 5.62\e{-3} & 6.66\e{-3} \\
+%%			\bass Chromosome & NS & -8.37\e{-5}*** & 1.95\e{-3} & 9.10\e{-3} \\
+%%			\strep Chromosome & 7.91\e{-5}*** & -1.32\e{-4}*** & 6.74\e{-4} & 6.73\e{-3} \\
+%%			\smel Chromosome & 8.26\e{-5}* & NS & 9.79\e{-5}  & 5.07\e{-5}\\
+%%			\smel pSymA & NS  & NS & 9.75\e{-4} & 3.23\e{-3}\\
+%%			\smel pSymB & -1.44\e{-5}* & -6.32\e{-5}*** & 1.96\e{-3} &  1.24\e{-3} \\
+%%			\bottomrule
+%%		\end{tabular}
+%%		
+%%	}%resizebox
+%%	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+%%\end{table}
+%%
+%%
+%%\begin{table}[h]
+%%	\centering
+%%	\resizebox{\textwidth}{!}{%
+%%		\begin{tabular}{lcc}
+%%			\toprule
+%%			& \multicolumn{2}{c}{Protein Coding}  \\
+%%			\cmidrule{2-3}
+%%			Bacteria and Replicon &  Weighted & Non-Weighted\\
+%%			\midrule
+%%			\ecol Chromosome & -2.28\e{-10}***  & -1.65\e{-4}***\\
+%%			\bass Chromosome & -7.96\e{-10}** &  -1.73\e{-4}**\\
+%%			\strep Chromosome & 2.38\e{-11}*& NS \\
+%%			\smel Chromosome & -1.05\e{-10}*** & -1.24\e{-5}***\\
+%%			\smel pSymA & NS  & NS \\
+%%			\smel pSymB & NS & NS \\
+%%			\bottomrule
+%%		\end{tabular}
+%%		
+%%	}%resizebox
+%%	\caption{\label{tab:lin_reg_10kb_subs} Linear regression on 10kb sections of the genome with increasing distance from the origin of replication after accounting for bidirectional replication. Weighted columns have the total number of substitutions in each 10kb section of the genome divided by the total number of protein coding and non-protein coding sites in the genome. Non-weighted columns are performing a linear regression on the total number of substitutions in each 10kb section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+%%\end{table}
+%%
+%%
+%%\begin{table}[h]
+%%	\centering
+%%	\resizebox{\textwidth}{!}{%
+%%	\begin{tabular}{lc}
+%%			\toprule
+%%			Bacteria and Replicon & Coefficient Estimate \\
+%%			\midrule
+%%			\ecol Chromosome & -2.32\e{-2}*** \\
+%%			\bass Chromosome & -1.93\e{-2}**\\
+%%			\strep Chromosome & -1.24\e{-3}***\\
+%%			\smel Chromosome & -1.88\e{-2}***\\
+%%			\smel pSymA & -2.50\e{-2}*  \\
+%%			\smel pSymB & NS \\
+%%			\bottomrule
+%%		\end{tabular}
+%%		
+%%	}%resizebox
+%%	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding sites per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+%%\end{table}
 %%
 %%
 %%
-%%
-%%
-%%%\begin{table}[]
+%%%\begin{table}[h]
 %%%	\centering
 %%%	\resizebox{\textwidth}{!}{%
-%%%		\begin{tabular}{lcccccc}
+%%%		\begin{tabular}{lc}
 %%%			\toprule
-%%%			Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
-%%%	\midrule
-%%%	1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
-%%%	10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
-%%%	100bp & -1.764\e{-7}*** & -1.417\e{-8}*** & 1.448\e{-8}*** & -1.605\e{-6}*** & -1.166\e{-6}*** & 4.021\e{-7}*** \\
-%%%	1000bp & -1.784\e{-7}*** & -1.417\e{-8}*** & 1.505\e{-8}*** & -1.605\e{-6}*** & -1.153\e{-6}*** & 4.021\e{-7}***\\
-%%%	10000bp & -1.712\e{-7}*** & -3.496\e{-8}*** & 4.790\e{-8}*** & -1.605\e{-6}*** & -3.570\e{-8}* & 3.784\e{-7}*** \\
-%%%	100000bp & -2.061\e{-7}*** & -3.561\e{-8}*** & 4.167\e{-9}*** & -1.605\e{-6}*** & -4.676\e{-7}*** & 3.784\e{-7}***\\
-%%%	1000000bp & 4.229\e{-8}*** & -7.710\e{-9}*** & 6.083\e{-8}*** &-1.605\e{-6}*** & 4.285\e{-6}*** & -8.888\e{-7}*** \\
-%%%	\bottomrule
+%%%			Bacteria and Replicon & Gene Expression 10kb \\
+%%%			\midrule
+%%%			\ecol Chromosome & \cc -2.742\e{-5}**\\
+%%%			\bass Chromosome & \cc -2.198\e{-5}*\\
+%%%			\strep Chromosome & \cc -5.230\e{-7}*** \\
+%%%			\smel Chromosome & NS\\
+%%%			\smel pSymA & NS \\
+%%%			\smel pSymB & NS \\
+%%%			\bottomrule
 %%%		\end{tabular}
 %%%		
 %%%	}%resizebox
-%%%	\caption{\label{tab:clustering} Position clustering analysis. Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons to test position differences. Each row denotes different base pair distances that the positions were clustered together as. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the positions in the genome were determined to be the same at each position difference listed in the first column.}
+%%%	\caption{\label{tab:lr_exp_10kb} Linear regression analysis of the median counts per million expression data for 10kb segments of the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 %%%\end{table}
 %%%
 %%%
-%%
-%%
-%%%\begin{table}[b!]
+%%%\begin{table}[h]
 %%%	\centering
 %%%	\resizebox{\textwidth}{!}{%
 %%%		\begin{tabular}{lccc}
 %%%			\toprule
 %%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
 %%%			\midrule
-%%%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-1.394\e{-7} & \cellcolor{black!16}2.425\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
-%%%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-1.265\e{-8} & \cellcolor{black!16}1.562\e{-9} & \cellcolor{black!16}5.430\e{-16} \\
-%%%			\strep Chromosome & 1.736\e{-8} & 7.231\e{-10} & $<$2\e{-16}\\
-%%%			\cellcolor{black!16}\smel Chromosome & \cellcolor{black!16}-1.541\e{-6} & \cellcolor{black!16}3.042\e{-8} & \cellcolor{black!16}$<$2\e{-16}\\
-%%%			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-9.130\e{-7} & \cellcolor{black!16}1.975\e{-8} & \cellcolor{black!16}$<$2\e{-16} \\
-%%%			\smel pSymB & 2.488\e{-7} & 1.964\e{-8} & $<$2\e{-16}\\
+%%%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-6.03\e{-5} & \cellcolor{black!16}1.28\e{-5} & \cellcolor{black!16}2.8\e{-6} \\
+%%%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-9.7\e{-5} & \cellcolor{black!16}2.0\e{-5} & \cellcolor{black!16}1.2\e{-6} \\
+%%%			\cellcolor{black!16}\strep Chromosome & \cellcolor{black!16}-1.17\e{-6} & \cellcolor{black!16}1.04\e{-7} & \cellcolor{black!16}$<$2\e{-16}\\
+%%%			\smel Chromosome & 3.97\e{-5} & 4.25\e{-5} & NS (3.5\e{-1})\\
+%%%			\smel pSymA & 1.39\e{-3} & 2.53\e{-4} & 4.9\e{-8} \\
+%%%			\smel pSymB & 1.46\e{-4} & 2.03\e{-4} & NS (5.34.7\e{-1})\\
 %%%			\bottomrule
 %%%		\end{tabular}
 %%%		
 %%%	}%resizebox
-%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%	\caption{\label{tab:lr_exp} Linear regression analysis of the median counts per million expression data along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%\end{table}
+%%%
+%%%%\begin{centering}
+%%%%	\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_exp_tot_gene_num_bidirectionality_colour_5Jun19.pdf}
+%%%%\end{centering}
+%%%
+%%%
+%%%
+%%%
+%%%
+%%%\begin{table}[h]
+%%%	\centering
+%%%	\resizebox{\textwidth}{!}{%
+%%%		\begin{tabular}{lccc}
+%%%			\toprule
+%%%			Bacteria and Replicon &  \dn & \ds & $\omega$ \\
+%%%			\midrule
+%%%			\ecol Chromosome & NS & NS & NS\\
+%%%			\bass Chromosome & NS & NS & \cc -9.08\e{-6}*\\
+%%%			\strep Chromosome & NS & NS & NS\\
+%%%            \smel Chromoeom & NS & NS & NS \\
+%%%			\smel pSymA & NS & NS & NS\\
+%%%			\smel pSymB & NS & NS & 1.163\e{-5}*\\
+%%%			\bottomrule
+%%%		\end{tabular}
+%%%		
+%%%	}%resizebox
+%%%	\caption{\label{tab:dN_dS_lin_reg} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon on a per genome basis. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 %%%\end{table}
 %%%
 %%%
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18}
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18}
+%%%\begin{table}[h]
+%%%	\centering
+%%%	\resizebox{\textwidth}{!}{%
+%%%		\begin{tabular}{lr}
+%%%			\toprule
+%%%			Bacteria and Replicon & Average Expression Value (CPM)\\
+%%%			\midrule
+%%%			\ecol Chromosome & 160.500\\
+%%%			\bass Chromosome &  176.400\\
+%%%			\strep Chromosome &  6.084\\
+%%%			\smel Chromosome &  271.400\\
+%%%			\smel pSymA & 690.100\\
+%%%			\smel pSymB & 595.700\\
+%%%			\bottomrule
+%%%		\end{tabular}
+%%%		
+%%%	}%resizebox
+%%%	\caption{\label{tab:gene_exp_mean} Arithmetic gene expression calculated across all genes in each replicon. Expression values are represented in Counts Per Million.}
+%%%\end{table}
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18}
+%%\begin{table}[h]
+%%	\centering
+%%	\resizebox{\textwidth}{!}{%
+%%		\begin{tabular}{lrrr}
+%%			\toprule
+%%			& \multicolumn{3}{c}{Gene/Genome Average} \\
+%%			%weighted
+%%			\cmidrule{2-4}
+%%			%			\cmidrule{8-10}
+%%			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+%%			%			\cmidrule{2-3}
+%%			%			\cmidrule{4-7}
+%%			Bacteria and Replicon &  dS & dN & $\omega$ \\
+%%			\midrule
+%%			\ecol Chromosome & 0.2351 & 0.0101 & 0.0444 \\
+%%			\bass Chromosome & 0.4201 & 0.0243 & 0.0714 \\
+%%			\strep Chromosome &  0.0458 & 0.0011 & 0.0335  \\
+%%			\smel Chromosome &  9.0094  & 0.0001 & 0.0015 \\
+%%			\smel pSymA & 0.0872 & 0.0099 & 0.1642 \\
+%%			\smel pSymB & 0.0940 & 0.0084 & 0.1142 \\
+%%			\bottomrule
+%%		\end{tabular}
+%%		
+%%	}%resizebox
+%%	\caption{\label{tab:dN_dS_ratios} Weighted averages calculated for each bacterial replicon on a per genome basis using the gene length as the weight. Arithmetic mean calculated for the per gene averages for each bacterial replicon.}
+%%\end{table}
+%%% \newpage
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
+%%%%Violin plots for per gene dN, dS, and $\omega$:
+%%%%
+%%%%\clearpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_box_plots_15May19/ALL_BAC_dN_dS_omega_violinplots_11Jul19.pdf}
+%%%%
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/ecoli_dN_dS_omega_dist_11Jul19.pdf}
+%%%%
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/bass_dN_dS_omega_dist_11Jul19.pdf}
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/strep_dN_dS_omega_dist_11Jul19.pdf}
+%%%%
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/sinoC_dN_dS_omega_dist_11Jul19.pdf}
+%%%%
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymA_dN_dS_omega_dist_11Jul19.pdf}
+%%%%
+%%%%\newpage
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Figs/dN_dS_omega_genome_distribution_24May19/pSymB_dN_dS_omega_dist_11Jul19.pdf}
 %%%
-%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18}
 %%%
+%%%%
+%%%%Gene expression graphs
+%%%%
+%%%%% Gene Exp graphs
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_13Mar19.pdf}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/bass_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/strep_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/smel_chrom_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymA_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/Graphs/pSymB_sub_exp_histogram_bidirectionality_colour_4Mar19.pdf}
+%%%%
+%%%%
+%%%%
+%%%%
+%%%%\includegraphics[width=\textwidth]{Mauve_aln_pic_17Dec18.jpg}
+%%%%
+%%%%\includegraphics[width=\textwidth]{Parsnp_aln_pic_17Dec18.png}
+%%%%
+%%%
+%%%%\begin{table}[h]
+%%%%	\centering
+%%%%	\resizebox{\textwidth}{!}{%
+%%%%		\begin{tabular}{lccrr}
+%%%%			\toprule
+%%%%			Bacteria and Replicon & \% of Coding Sequences & \% of Non-Coding Sequences & \% of Subs Coding & \% of Subs Non-Coding\\
+%%%%			\midrule
+%%%%			\ecol Chromosome & 86.47\% & 13.53\% & 5.00\% & 8.96\% \\ % 4013445/4641652 & 200860 & 56265 
+%%%%			\bass Chromosome & 87.49\% & 12.51\% & 7.31\% & 6.42\%\\ %3688210/4215606 & 269482 & 33846
+%%%%			\strep Chromosome & 89.03\% & 10.97\% & 13.74\% & 14.91\%\\ % 7716382/8667507 & 1060278 & 141828
+%%%%			\smel Chromosome & 86.27\% & 13.73\% & 0.19\% & 0.22\%\\ % 3152315/3654135 & 6023 & 1088
+%%%%			\smel pSymA & 83.34\% & 16.66\% & 2.84\% & 4.58\%\\ % 1128615/1354226 & 225611/1354226 & 32040 & 10333
+%%%%			\smel pSymB & 88.81\% & 11.19\% & 2.78\% & 3.44\%\\ % 1495047/1683333 & 41532 & 6483
+%%%%			\bottomrule
+%%%%		\end{tabular}
+%%%%		
+%%%%	}%resizebox
+%%%%	\caption{\label{tab:cod_non_cod_proportions} Total proportion of coding and non-coding sites in each replicon and the percentage of those sites that have a substitution (multiple substitutions at one site are counted as two substitutions).}
+%%%%\end{table}
+%%%
+%%%%
+%%%%
+%%%
+%%%%
+%%%%
 %%%%\begin{table}[h]
 %%%%	\centering
 %%%%	\resizebox{\textwidth}{!}{%
@@ -1307,78 +1153,227 @@ We also discussed creating a map between BW and K-12 to show which genes are sim
 %%%%			\toprule
 %%%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
 %%%%			\midrule
-%%%%			\ecol Chromosome & -1.44\e{-7}& 2.01\e{-9} & $<$2\e{-16}\\
-%%%%			\bass Chromosome & -1.121\e{-7} & 3.41\e{-9} & $<$2\e{-16}\\
-%%%%			\strep Chromosome & 1.24\e{-8} & 7.2\e{-10} & $<$2\e{-16}\\
-%%%%			\smel Chromosome & -1.526\e{-6} & 3.02\e{-8} & $<$2\e{-16}\\
-%%%%			\smel pSymA & -1.058\e{-6}& 2.58\e{-8}& $<$2\e{-16}\\
-%%%%			\smel pSymB & 1.79\e{-7}& 1.84\e{-8}& 1.6\e{-10}\\
+%%%%			\ecol Chromosome & 2.496\e{-5} & 8.695\e{-6}& 0.0041 \\
+%%%%			\bass Chromosome & 1.912\e{-6} & 8.753
+%%%%			\e{-8} & $<$2\e{-16}\\
+%%%%			\strep Chromosome & 2.984\e{-5} & 1.858\e{-6} & $<$2\e{-16}\\
+%%%%			\smel Chromosome & 6.993\e{-6} & 6.205\e{-7} & $<$2\e{-16}\\
+%%%%			\smel pSymA & -9.713\e{-7} & 3.212\e{-8} & $<$2\e{-16}\\
+%%%%			\smel pSymB & 6.181\e{-7} & 2.253\e{-8} & $<$2\e{-16}\\
 %%%%			\bottomrule
 %%%%		\end{tabular}
 %%%%		
 %%%%	}%resizebox
-%%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons when 10,000bp sections of the genome are re-organized.}
+%%%%	\caption{\label{tab:cod_log_reg} Logistic regression analysis of the number of substitutions along all coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
 %%%%\end{table}
-%%%
-%%%
-%%%\begin{table}[]
-%%%	\centering
-%%%	\resizebox{1.2\textwidth}{!}{%
-%%%			\begin{tabular}{lcccccc}
-%%%\toprule
-%%%Origin Location & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
-%%%\midrule
-%%%Moved 100kb Left & -1.445\e{-7}*** & 4.374\e{-9}* &  6.909\e{-9}*** &  -1.316\e{-6}*** & -1.058\e{-6}*** & -2.009\e{-7}***\\
-%%%Moved 90kb Left & -1.544\e{-7}*** & -1.036\e{-7}*** & 5.677\e{-9}*** & -1.32\e{-6}*** & -1.246\e{-6}*** &-1.357\e{-7}***\\
-%%%Moved 80kb Left& -1.65\e{-7}*** & -1.072\e{-7}*** & 8.11\e{-9}*** & -1.338\e{-6}*** & -1.398\e{-6}*** & -6.57\e{-8}***\\
-%%%Moved 70kb Left& -1.667\e{-7}*** & -1.102\e{-7}*** & 6.716\e{-9}*** & -1.363\e{-6}*** & -1.405\e{-6}*** & 9.83\e{-8}\\
-%%%Moved 60kb Left& -1.64\e{-7}*** & -1.19\e{-7}*** & 8.7\e{-9}*** & -1.324\e{-6}*** & -1.394\e{-6}*** & 1.129\e{-7}***\\
-%%%Moved 50kb Left& -1.446\e{-7}*** & -1.211\e{-7}*** & 1.045\e{-8}*** & -1.36\e{-6}*** & -1.403\e{-6}*** & 1.521\e{-7}***\\
-%%%Moved 40kb Left& -1.4\e{-7}*** & -1.299\e{-7}*** & 1.214\e{-8}*** & -1.255\e{-6}*** & -1.422\e{-6}*** & 1.543\e{-7}***\\
-%%%Moved 30kb Left& -1.498\e{-7}*** & -1.292\e{-7}*** & 1.24\e{-8}*** & -1.26\e{-6}*** & -1.392\e{-6}*** & 1.63\e{-7}***\\
-%%%Moved 20kb Left& -1.51\e{-7}*** & -1.1\e{-7}*** & 1.395\e{-8}*** & -1.525\e{-6}*** & -1.412\e{-6}*** & 1.603\e{-7}***\\
-%%%Moved 10kb Left& -1.262\e{-7}*** & -2.602\e{-9} & 1.563\e{-8}*** &  -1.599\e{-6}*** &  -9.499\e{-7}*** & 2.973\e{-7}*** \\
-%%%Moved 10kb Right& -1.305\e{-7}*** & -2.045\e{-8}*** & 1.578\e{-8}*** & 1.614\e{-6}*** & -1.026\e{-6}*** & 3.505\e{-7}*** \\
-%%%Moved 20kb Right& -1.454\e{-7}*** & -1.006\e{-7}*** & 1.903\e{-8}*** & -1.634\e{-6}*** & -1.475\e{-6}*** & 1.649\e{-7}***\\
-%%%Moved 30kb Right& -1.548\e{-7}*** & -8.596\e{-8}*** & 2.046\e{-8}*** & -1.698\e{-6}*** & -1.417\e{-6}*** & 1.526\e{-7}***\\
-%%%Moved 40kb Right& -1.632\e{-7}*** & -8.378\e{-8}*** & 2.125\e{-8}*** & -1.719\e{-6}*** & -1.367\e{-6}*** & 1.589\e{-7}***\\
-%%%Moved 50kb Right& -1.856\e{-7}*** & -7.879\e{-8}*** & 1.957\e{-8}*** & -1.735\e{-6}*** & -1.277\e{-6}*** & 1.654\e{-7}***\\
-%%%Moved 60kb Right& -1.91\e{-7}*** & -6.98\e{-8}*** & 1.974\e{-8}*** & -1.788\e{-6}*** & -1.169\e{-6}*** & 1.645\e{-7}***\\
-%%%Moved 70kb Right& -1.892\e{-7}*** & -6.634\e{-8}*** & 1.934\e{-8}*** & -1.854\e{-6}*** & -1.059\e{-6}*** & 1.843\e{-7}***\\
-%%%Moved 80kb Right& -1.879\e{-7}** & -5.814\e{-8}*** & 2.313\e{-8}*** & -1.891\e{-6}*** & -9.07\e{-7}*** & 1.90\e{-7}***\\
-%%%Moved 90kb Right& -1.862\e{-7}*** & -4.314\e{-8}*** & 2.304\e{-8}*** & -1.865\e{-6}*** & -7.171\e{-7}*** & 2.415\e{-7}***\\
-%%%Moved 100kb Right& -1.799\e{-7}*** & -2.597\e{-8}*** &  1.945\e{-8}*** &  -1.525\e{-6}*** & -6.572\e{-7}*** & 3.095\e{-7}***\\
-%%%\bottomrule
-%%%\end{tabular}
-%%%		
-%%%	}%resizebox
-%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
-%%%\end{table}
-%%%
+%%%%
 %%%%\begin{table}[h]
+%%%%	\centering
 %%%%	\resizebox{\textwidth}{!}{%
 %%%%		\begin{tabular}{lccc}
 %%%%			\toprule
-%%%%			Bacteria Replicon & \multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Identical Tree} & 
-%%%%			\multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Not Identical Tree} & 
-%%%%			\multicolumn{1}{p{3cm}}{\centering \% of Total Alignment Discarded} \\  
+%%%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
 %%%%			\midrule
-%%%%			\ecol Chromosome & 81.58\% & 18.42\% & 25.18\%\\
-%%%%			\bass Chromosome & 83.33\% & 16.67\% & 19.37\%\\
-%%%%			\strep Chromosome & 96.53\% & 3.47\% & 12.42\%\\
-%%%%			\smel Chromosome & 81.82\% & 18.18\% & 25.42\%\\
-%%%%			\smel \pa & 100\% & 0\% & 0\%\\
-%%%%			\smel \pb & 100\% & 0\% & 0\%\\
+%%%%			\ecol Chromosome & -1.397\e{-7} & 2.427\e{-9} & $<$ 2\e{-16} \\
+%%%%			\bass Chromosome & -1.439\e{-8} & 1.569\e{-9} & $<$2\e{-16}\\
+%%%%			\strep Chromosome & 1.689\e{-8} & 7.235\e{-10} & $<$2\e{-16}\\
+%%%%			\smel Chromosome & -1.311\e{-6}& 3.393\e{-8}& $<$2\e{-16}\\
+%%%%			\smel pSymA & -1.413\e{-7} & 3.762\e{-8} & 1.73\e{-4}\\
+%%%%			\smel pSymB & 5.196\e{-7} & 4.769\e{-8} & $<$2\e{-16}\\
 %%%%			\bottomrule
 %%%%		\end{tabular}
-%%%%	}%resize box
+%%%%		
+%%%%	}%resizebox
+%%%%	\caption{\label{tab:non_cod_log_reg} Logistic regression analysis of the number of substitutions along all non-coding portions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%%\end{table}
+%%%
+%%%\begin{table}[h]
+%%%	\centering
+%%%	\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+%%%			\begin{tabular}{lll}
+%%%				\toprule
+%%%				Bacteria Strain/Species & GEO Accession Number & Date Accessed\\
+%%%				\midrule
+%%%				\ecol K12 MG1655  & GSE60522 & December 20, 2017\\
+%%%				\ecol K12 MG1655 & GSE73673 & December 19, 2017\\
+%%%				\ecol K12 MG1655 & GSE85914 & December 19, 2017\\
+%%%				\ecol K12 MG1655 & GSE40313 & November 21, 2018\\
+%%%				\ecol K12 MG1655 & GSE114917 & November 22, 2018\\
+%%%				\ecol K12 MG1655 & GSE54199 & November 26, 2018\\
+%%%				\ecol K12 DH10B & GSE98890 & December 19, 2017\\
+%%%				\ecol BW25113 & GSE73673 & December 19, 2017 \\
+%%%				\ecol BW25113 & GSE85914 & December 19, 2017 \\
+%%%				\ecol O157:H7 & GSE46120 & August 28, 2018\\
+%%%				\ecol ATCC 25922 & GSE94978 & November 23, 2018\\
+%%%% ecoli has lots of aerobic anerobic...etc growth phases, and time periods
+%%%				\midrule
+%%%				\bass 168 & GSE104816 & December 14, 2017\\
+%%%				\bass 168 & GSE67058 & December 16, 2017\\
+%%%				\bass 168 & GSE93894 & December 15, 2017\\
+%%%				\bass 168 & GSE80786 & November 16, 2018\\
+%%%				% bass also has quite a few time dependent data sets, or separated by growth phase				
+%%%				\midrule
+%%%				\scoe A3 & GSE57268 & March 16, 2018\\
+%%%				\snat HW-2 & GSE112559 & November 15, 2018\\
+%%%				% strep has LOTS of time dependent data sets, but the other bac do not really have that				
+%%%				\midrule
+%%%				\smel 1021 Chromosome & GSE69880 & December 12, 2017\\
+%%%				%				\smel 1021 Chromosome & GSE121228 & diff phases\\
+%%%				\midrule
+%%%				\smel 2011 \pa & NC\_020527 (Dr. Finan) & April 4, 2018 \\
+%%%				\smel 1021 \pa & GSE69880 & November 15, 18\\
+%%%				\midrule
+%%%				\smel 2011 \pb & NC\_020560 (Dr. Finan) & April 4, 2018 \\
+%%%				\smel 1021 \pb & GSE69880 & November 15, 18\\
+%%%				\bottomrule
+%%%				
+%%%				
+%%%			\end{tabular}
+%%%			\caption{\label{tab:tableS1} Summary of strains and species found for each gene expression analysis. Gene Expression Omnibus accession numbers and date accessed are provided.}
+%%%		\end{minipage}}
+%%%	\end{table}	
+%%%
+%%%
+%%%
+%%%
+%%%
+%%%%\begin{table}[]
+%%%%	\centering
+%%%%	\resizebox{\textwidth}{!}{%
+%%%%		\begin{tabular}{lcccccc}
+%%%%			\toprule
+%%%%			Position Difference & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+%%%%	\midrule
+%%%%	1bp & -1.394\e{-7}** & -2.538\e{-8}** & 1.736\e{-8}** & -1.541\e{-6}** & -9.130\e{-7}** & 2.488\e{-7}*** \\
+%%%%	10bp & -1.394\e{-7}*** & -2.518\e{-8}*** & -4.484\e{-9}*** & -1.627\e{-6}*** & -9.13\e{-7}*** & 3.487\e{-7}***\\
+%%%%	100bp & -1.764\e{-7}*** & -1.417\e{-8}*** & 1.448\e{-8}*** & -1.605\e{-6}*** & -1.166\e{-6}*** & 4.021\e{-7}*** \\
+%%%%	1000bp & -1.784\e{-7}*** & -1.417\e{-8}*** & 1.505\e{-8}*** & -1.605\e{-6}*** & -1.153\e{-6}*** & 4.021\e{-7}***\\
+%%%%	10000bp & -1.712\e{-7}*** & -3.496\e{-8}*** & 4.790\e{-8}*** & -1.605\e{-6}*** & -3.570\e{-8}* & 3.784\e{-7}*** \\
+%%%%	100000bp & -2.061\e{-7}*** & -3.561\e{-8}*** & 4.167\e{-9}*** & -1.605\e{-6}*** & -4.676\e{-7}*** & 3.784\e{-7}***\\
+%%%%	1000000bp & 4.229\e{-8}*** & -7.710\e{-9}*** & 6.083\e{-8}*** &-1.605\e{-6}*** & 4.285\e{-6}*** & -8.888\e{-7}*** \\
+%%%%	\bottomrule
+%%%%		\end{tabular}
+%%%%		
+%%%%	}%resizebox
+%%%%	\caption{\label{tab:clustering} Position clustering analysis. Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons to test position differences. Each row denotes different base pair distances that the positions were clustered together as. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the positions in the genome were determined to be the same at each position difference listed in the first column.}
 %%%%\end{table}
 %%%%
-%%%% 
+%%%%
 %%%
+%%%
+%%%%\begin{table}[b!]
+%%%%	\centering
+%%%%	\resizebox{\textwidth}{!}{%
+%%%%		\begin{tabular}{lccc}
+%%%%			\toprule
+%%%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%%%%			\midrule
+%%%%			\cellcolor{black!16}\ecol Chromosome & \cellcolor{black!16}-1.394\e{-7} & \cellcolor{black!16}2.425\e{-9} & \cellcolor{black!16}$<$2\e{-16} \\
+%%%%			\cellcolor{black!16}\bass Chromosome & \cellcolor{black!16}-1.265\e{-8} & \cellcolor{black!16}1.562\e{-9} & \cellcolor{black!16}5.430\e{-16} \\
+%%%%			\strep Chromosome & 1.736\e{-8} & 7.231\e{-10} & $<$2\e{-16}\\
+%%%%			\cellcolor{black!16}\smel Chromosome & \cellcolor{black!16}-1.541\e{-6} & \cellcolor{black!16}3.042\e{-8} & \cellcolor{black!16}$<$2\e{-16}\\
+%%%%			\cellcolor{black!16}\smel pSymA & \cellcolor{black!16}-9.130\e{-7} & \cellcolor{black!16}1.975\e{-8} & \cellcolor{black!16}$<$2\e{-16} \\
+%%%%			\smel pSymB & 2.488\e{-7} & 1.964\e{-8} & $<$2\e{-16}\\
+%%%%			\bottomrule
+%%%%		\end{tabular}
+%%%%		
+%%%%	}%resizebox
+%%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%%\end{table}
 %%%%
-%%%%\clearpage
 %%%%
 %%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/smel_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
 %%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymA_sub_exp_histogram_bidirectionality_colour_9Apr18}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/bass_chrom_sub_exp_histogram_bidirectionality_colour_5Apr18}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/ecoli_chrom_sub_exp_histogram_bidirectionality_colour_16Mar18}
+%%%%
+%%%%\includegraphics[width=\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Gene_Expression_8Dec17/Gene_Expression/strep_chrom_sub_exp_histogram_bidirectionality_colour_19Mar18}
+%%%%
+%%%%%\begin{table}[h]
+%%%%%	\centering
+%%%%%	\resizebox{\textwidth}{!}{%
+%%%%%		\begin{tabular}{lccc}
+%%%%%			\toprule
+%%%%%			Bacteria and Replicon & Coefficient Estimate & Standard Error & P-value \\
+%%%%%			\midrule
+%%%%%			\ecol Chromosome & -1.44\e{-7}& 2.01\e{-9} & $<$2\e{-16}\\
+%%%%%			\bass Chromosome & -1.121\e{-7} & 3.41\e{-9} & $<$2\e{-16}\\
+%%%%%			\strep Chromosome & 1.24\e{-8} & 7.2\e{-10} & $<$2\e{-16}\\
+%%%%%			\smel Chromosome & -1.526\e{-6} & 3.02\e{-8} & $<$2\e{-16}\\
+%%%%%			\smel pSymA & -1.058\e{-6}& 2.58\e{-8}& $<$2\e{-16}\\
+%%%%%			\smel pSymB & 1.79\e{-7}& 1.84\e{-8}& 1.6\e{-10}\\
+%%%%%			\bottomrule
+%%%%%		\end{tabular}
+%%%%%		
+%%%%%	}%resizebox
+%%%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons when 10,000bp sections of the genome are re-organized.}
+%%%%%\end{table}
+%%%%
+%%%%
+%%%%\begin{table}[]
+%%%%	\centering
+%%%%	\resizebox{1.2\textwidth}{!}{%
+%%%%			\begin{tabular}{lcccccc}
+%%%%\toprule
+%%%%Origin Location & \ecol Chromosome &\bass Chromosome & \strep Chromosome & \smel Chromosome &\smel pSymA & \smel pSymB\\
+%%%%\midrule
+%%%%Moved 100kb Left & -1.445\e{-7}*** & 4.374\e{-9}* &  6.909\e{-9}*** &  -1.316\e{-6}*** & -1.058\e{-6}*** & -2.009\e{-7}***\\
+%%%%Moved 90kb Left & -1.544\e{-7}*** & -1.036\e{-7}*** & 5.677\e{-9}*** & -1.32\e{-6}*** & -1.246\e{-6}*** &-1.357\e{-7}***\\
+%%%%Moved 80kb Left& -1.65\e{-7}*** & -1.072\e{-7}*** & 8.11\e{-9}*** & -1.338\e{-6}*** & -1.398\e{-6}*** & -6.57\e{-8}***\\
+%%%%Moved 70kb Left& -1.667\e{-7}*** & -1.102\e{-7}*** & 6.716\e{-9}*** & -1.363\e{-6}*** & -1.405\e{-6}*** & 9.83\e{-8}\\
+%%%%Moved 60kb Left& -1.64\e{-7}*** & -1.19\e{-7}*** & 8.7\e{-9}*** & -1.324\e{-6}*** & -1.394\e{-6}*** & 1.129\e{-7}***\\
+%%%%Moved 50kb Left& -1.446\e{-7}*** & -1.211\e{-7}*** & 1.045\e{-8}*** & -1.36\e{-6}*** & -1.403\e{-6}*** & 1.521\e{-7}***\\
+%%%%Moved 40kb Left& -1.4\e{-7}*** & -1.299\e{-7}*** & 1.214\e{-8}*** & -1.255\e{-6}*** & -1.422\e{-6}*** & 1.543\e{-7}***\\
+%%%%Moved 30kb Left& -1.498\e{-7}*** & -1.292\e{-7}*** & 1.24\e{-8}*** & -1.26\e{-6}*** & -1.392\e{-6}*** & 1.63\e{-7}***\\
+%%%%Moved 20kb Left& -1.51\e{-7}*** & -1.1\e{-7}*** & 1.395\e{-8}*** & -1.525\e{-6}*** & -1.412\e{-6}*** & 1.603\e{-7}***\\
+%%%%Moved 10kb Left& -1.262\e{-7}*** & -2.602\e{-9} & 1.563\e{-8}*** &  -1.599\e{-6}*** &  -9.499\e{-7}*** & 2.973\e{-7}*** \\
+%%%%Moved 10kb Right& -1.305\e{-7}*** & -2.045\e{-8}*** & 1.578\e{-8}*** & 1.614\e{-6}*** & -1.026\e{-6}*** & 3.505\e{-7}*** \\
+%%%%Moved 20kb Right& -1.454\e{-7}*** & -1.006\e{-7}*** & 1.903\e{-8}*** & -1.634\e{-6}*** & -1.475\e{-6}*** & 1.649\e{-7}***\\
+%%%%Moved 30kb Right& -1.548\e{-7}*** & -8.596\e{-8}*** & 2.046\e{-8}*** & -1.698\e{-6}*** & -1.417\e{-6}*** & 1.526\e{-7}***\\
+%%%%Moved 40kb Right& -1.632\e{-7}*** & -8.378\e{-8}*** & 2.125\e{-8}*** & -1.719\e{-6}*** & -1.367\e{-6}*** & 1.589\e{-7}***\\
+%%%%Moved 50kb Right& -1.856\e{-7}*** & -7.879\e{-8}*** & 1.957\e{-8}*** & -1.735\e{-6}*** & -1.277\e{-6}*** & 1.654\e{-7}***\\
+%%%%Moved 60kb Right& -1.91\e{-7}*** & -6.98\e{-8}*** & 1.974\e{-8}*** & -1.788\e{-6}*** & -1.169\e{-6}*** & 1.645\e{-7}***\\
+%%%%Moved 70kb Right& -1.892\e{-7}*** & -6.634\e{-8}*** & 1.934\e{-8}*** & -1.854\e{-6}*** & -1.059\e{-6}*** & 1.843\e{-7}***\\
+%%%%Moved 80kb Right& -1.879\e{-7}** & -5.814\e{-8}*** & 2.313\e{-8}*** & -1.891\e{-6}*** & -9.07\e{-7}*** & 1.90\e{-7}***\\
+%%%%Moved 90kb Right& -1.862\e{-7}*** & -4.314\e{-8}*** & 2.304\e{-8}*** & -1.865\e{-6}*** & -7.171\e{-7}*** & 2.415\e{-7}***\\
+%%%%Moved 100kb Right& -1.799\e{-7}*** & -2.597\e{-8}*** &  1.945\e{-8}*** &  -1.525\e{-6}*** & -6.572\e{-7}*** & 3.095\e{-7}***\\
+%%%%\bottomrule
+%%%%\end{tabular}
+%%%%		
+%%%%	}%resizebox
+%%%%	\caption{\label{tab:tabel2} Logistic regression analysis of the number of substitutions along the genome of the respective bacteria replicons. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', 0.05 $<$ 0.1 = `.', $>$ 0.1 = ` '. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectionality of replication.}
+%%%%\end{table}
+%%%%
+%%%%%\begin{table}[h]
+%%%%%	\resizebox{\textwidth}{!}{%
+%%%%%		\begin{tabular}{lccc}
+%%%%%			\toprule
+%%%%%			Bacteria Replicon & \multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Identical Tree} & 
+%%%%%			\multicolumn{1}{p{3cm}}{\centering \% of Total LCBs \\ with Not Identical Tree} & 
+%%%%%			\multicolumn{1}{p{3cm}}{\centering \% of Total Alignment Discarded} \\  
+%%%%%			\midrule
+%%%%%			\ecol Chromosome & 81.58\% & 18.42\% & 25.18\%\\
+%%%%%			\bass Chromosome & 83.33\% & 16.67\% & 19.37\%\\
+%%%%%			\strep Chromosome & 96.53\% & 3.47\% & 12.42\%\\
+%%%%%			\smel Chromosome & 81.82\% & 18.18\% & 25.42\%\\
+%%%%%			\smel \pa & 100\% & 0\% & 0\%\\
+%%%%%			\smel \pb & 100\% & 0\% & 0\%\\
+%%%%%			\bottomrule
+%%%%%		\end{tabular}
+%%%%%	}%resize box
+%%%%%\end{table}
+%%%%%
+%%%%% 
+%%%%
+%%%%%
+%%%%%\clearpage
+%%%%%
+%%%%%
+%%%%%
 \end{document}
