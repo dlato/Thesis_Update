@@ -266,39 +266,27 @@
 
 Inversions $+$ Gene Expression:
 
-\ch done with reciprocal best blast hits (including dealing with multiple best hits)
+\ch done with mapping BW genes to K-12MG genes
 
-\ch Queenie: looked into overlapping blocks occurrences
+\ch Queenie to create a toy dataframe that I can begin working on the analysis of comparing inverted and non-inverted sections of the genome
 
-%General:
+\ch Queenie: minimal genes found in overlapping regions (~0.5\%)
 
-%\ch 
+General:
+
+\ch Edited some of dissertation intro 
+
+
 
 \textbf{Inversions + Gene Expression:}
 
-I have finally finished my code for getting the reciprocal best blast hits and deal with multiple best hits.
-\textbf{Could you let me know if my method seems ok and logical?}
-\begin{enumerate}
-	\item Find all best hits for each query protein (in AvsB and BvsA blast output). This is based on the lowest e-value score.
-	\item If there are multiple best hits (i.e. multiple subject proteins have the same lowest e-value score), calculate the difference in genomic position between the two genes.
-	\item The single best hit is determined by the lowest difference in genomic positions (my attempt at synteny)
-	\item Find all instances where the best hit for blast A (AvsB) query c is subject d and the best hit for blast B (BvsA) query d is subject c (reciprocal part of the rbbh) 
-\end{enumerate}
-I was unsure how to best assess synteny because it is supposed to be gene order, but each blast hit only tells you one gene that the query matches to. So I decided to use genomic position (from the gbk files) to tell me if these genes are in the same part of the genome. 
-Usually this is accurate and will select the hit that is the same gene (same gene name, protein seq...etc).
-However, there are a few cases where a different subject gene is selected because it is closer in genomic position compared to the subject gene with the same gene (same gene name, protein seq..etc).
-\textbf{Thoughts on me using the genomic position difference between the query and subject genes as a good measure of synteny?}
+I finished mapping the BW genes to the K-12MG genes. So I now have a list of all the genes that are similar between those two strains. I have also repeated this for the other proteomes that were labelled as ``redundant'' so that I can ensure we are only looking at genes that actually exist in the strains we are looking at.
+I first aligned the two genomes for mapping with PARSNP. I think split the alignment into it's blocks, re-aligned with mafft and ran this through my substitutions code (which is fairly conservative) to find sections of the alignment which are well aligned (no gaps, start at the same codon position, min 100bp length) and then printed out which gene was in each of these sections from each genome. \textbf{does this sound like an ok plan? It is essentially using the same pipeline we used in the substitutions paper.}
 
-Additionally, the proteomes of the \ecol strains are very redundant.
-So in the case of \ecol K-12 DH10B, the proteome used was for \ecol K-12 W3110 and for \ecol BW25113 the proteome use was \ecol K-12 MG1655, and finally for \ecol ATCC the proteome used was \ecol CFT073.
-This was because the proteomes are redundant and the second proteome had more complete information about gene names. 
-\textbf{Does this make sense and seem like a sound thing to do?}
+Queenie quantified that there is only 0.05\% of genes that are found in overlapping regions which I think is fine to just chuck and not use in the analysis.
+There was not a lot of information about these genes (i.e. not peseudo genes) so I assume that the overlap is just PARSNP being unsure about the definitive borders of the blocks.
 
-Queenie looked into various aspects of the PARSNP blocks and found that most blocks have an average space between them  of ~700bp. This makes me nervous for when a gene is split between two blocks because if it is split between two blocks that have space between them then we can't really do anything with that gene. So Queenie is checking how often this happens.
-It looks like for the overlapping blocks they overlap by a maximum of ~550bp. So if we did ignore these regions I think it is not too bad and we would not lose too much data! I am getting Queenie to quantify how much data this would actually be.
-
-It looks like ATCC is the only strain that has inversions in the overlapping regions (2/8 blocks that are overlapping have an inversion).
-Queenie will be looking into these overlapping regions and genes that are split between two blocks to see what kinds of genes they are so we can decided what to do with these regions/genes.
+Queenie has set up a small ``toy'' dataframe with (some of) the gene expression and inversion info so I can start to play with this and develop some sort of analysis pipeline so that when the final dataframe is ready, we can run it through the analysis quickly!
 
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
@@ -475,9 +463,9 @@ Queenie will be looking into these overlapping regions and genes that are split 
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item create map between BW and K-12 genes
+	\item think about how I am defining inversions and if I should classify inversions based on each strain vs if there is an inversion present in the block
+	\item start playing with ``toy'' dataframe to determine analysis directions
 	\item get Queenie started on creating lists of which genes match (from all strains) in the parsnp alignment
-	\item Queenie to create a toy dataframe that I can begin working on the analysis of comparing inverted and non-inverted sections of the genome
 \end{itemize}
 
 
@@ -485,7 +473,7 @@ Queenie will be looking into these overlapping regions and genes that are split 
 \begin{itemize}
 	\item edit another section of dissertation intro
 	\item get Queenie to create a plot of the inversions
-	\item continue to work on blast BW/K-12 map
+	\item continue playing with ``toy'' dataframe to determine analysis directions
 \end{itemize}
 
 %\newpage
