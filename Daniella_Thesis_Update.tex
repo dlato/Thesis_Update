@@ -266,28 +266,35 @@
 
 Inversions $+$ Gene Expression:
 
-\ch done with mapping BW genes to K-12MG genes
+\ch figured out mapping issue with BW and K-12
 
-\ch Queenie to create a toy dataframe that I can begin working on the analysis of comparing inverted and non-inverted sections of the genome
+\ch classify inversions based on whole block and individual sequences within a block
 
-\ch Queenie: minimal genes found in overlapping regions (~0.5\%)
+\ch simple t-test and Wilcox test to compare inversions (all and within each block)
 
-General:
+\ch looked into overlapping regions in depth
 
-\ch Edited some of dissertation intro 
+\ch started to look at DESeq
+
+\ch Queenie: brought to my attention the issue with BW and K12 mapping
+
+%General:
+
+%\ch Edited some of dissertation intro 
 
 
 
 \textbf{Inversions + Gene Expression:}
 
-I finished mapping the BW genes to the K-12MG genes. So I now have a list of all the genes that are similar between those two strains. I have also repeated this for the other proteomes that were labelled as ``redundant'' so that I can ensure we are only looking at genes that actually exist in the strains we are looking at.
-I first aligned the two genomes for mapping with PARSNP. I think split the alignment into it's blocks, re-aligned with mafft and ran this through my substitutions code (which is fairly conservative) to find sections of the alignment which are well aligned (no gaps, start at the same codon position, min 100bp length) and then printed out which gene was in each of these sections from each genome. \textbf{does this sound like an ok plan? It is essentially using the same pipeline we used in the substitutions paper.}
+Queenie let me know that there was hardly any genes (~300) that mapped between BW and K12 so I looked into this and realized there was an issue with my code and genes that overlapped. I fixed this and now there are ~4000 genes that map between those two strains. Hooray!
 
-Queenie quantified that there is only 0.05\% of genes that are found in overlapping regions which I think is fine to just chuck and not use in the analysis.
-There was not a lot of information about these genes (i.e. not peseudo genes) so I assume that the overlap is just PARSNP being unsure about the definitive borders of the blocks.
+I also included information about if an entire block had an inversion and if each individual sequence in that block was apart of that inversion or not.
 
-Queenie has set up a small ``toy'' dataframe with (some of) the gene expression and inversion info so I can start to play with this and develop some sort of analysis pipeline so that when the final dataframe is ready, we can run it through the analysis quickly!
+I have been playing with the ``toy'' dataframe that Queenie made for me. I performed a simple t-test and Wilcox test comparing all inverted blocks to all non-inverted blocks. As well as comparing inverted and non-inverted sequences within each block. The results for this are irrelevant because this data set only has two of the 4 taxa. I mostly just wanted to get the code working so that when we do have the real dataset, the analysis will be speedy.
+I started looking into DESeq and how I could use inversions as a ``treatment'' to compare gene expression. But DESeq wants raw counts and the dataframe Queenie is working on is normalized CPM. So I will need to think about this more and figure out how to do this.
 
+I also looked into some of the overlapping blocks (from PARSNP) and it appears as though they are relatively small (containing one gene or less), and are mostly intergenic.
+So again, I think it will not be a huge issue if we just remove data from these overlapped regions.
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
 %Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
@@ -463,8 +470,10 @@ Queenie has set up a small ``toy'' dataframe with (some of) the gene expression 
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item think about how I am defining inversions and if I should classify inversions based on each strain vs if there is an inversion present in the block
-	\item start playing with ``toy'' dataframe to determine analysis directions
+	\item Discuss next committee meeting and exit seminar
+	\item t-test/Wilcox test comparing all individually inverted seqs with non-inverted ones
+	\item think about (and execute) how to run DESeq to compare inverted and non-inverted regions
+	\item get Queenie to remove overlapping regions from the dataframe
 	\item get Queenie started on creating lists of which genes match (from all strains) in the parsnp alignment
 \end{itemize}
 
@@ -473,7 +482,7 @@ Queenie has set up a small ``toy'' dataframe with (some of) the gene expression 
 \begin{itemize}
 	\item edit another section of dissertation intro
 	\item get Queenie to create a plot of the inversions
-	\item continue playing with ``toy'' dataframe to determine analysis directions
+	\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
 \end{itemize}
 
 %\newpage
