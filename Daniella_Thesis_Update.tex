@@ -266,17 +266,35 @@
 
 Inversions $+$ Gene Expression:
 
-\ch figured out mapping issue with BW and K-12
+\ch Queenie: complete dataframe for inversions and gene exp!
 
-\ch classify inversions based on whole block and individual sequences within a block
+\ch Queenie: working on getting summary statistics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
 
-\ch simple t-test and Wilcox test to compare inversions (all and within each block)
+\ch started to create mapping file to show which genes match in all the strains in each block (based on subst paper ``good'' alignments)
 
-\ch looked into overlapping regions in depth
+\ch started looking into genes that were missing from BW and K12MG mapping file
 
-\ch started to look at DESeq
+Subst Paper:
 
-\ch Queenie: brought to my attention the issue with BW and K12 mapping
+\ch added more recent references (chromids and plasmids)
+
+\ch add program parameters to main text
+
+\ch better explanation for removing \dn$=$\ds$=$0 and \dn$=$0
+
+\ch better explanation for normalization for number of sites
+
+\ch commented on multiple rep termini
+
+\ch addressed origin scaling figure
+
+\ch clearer figure captions
+
+\ch started running larger window size supplemental tests
+
+\ch \p for \smel chrom with 23 seqs (trying the analysis on this first)
+
+\ch research how many more complete genomes there are
 
 %General:
 
@@ -286,15 +304,12 @@ Inversions $+$ Gene Expression:
 
 \textbf{Inversions + Gene Expression:}
 
-Queenie let me know that there was hardly any genes (~300) that mapped between BW and K12 so I looked into this and realized there was an issue with my code and genes that overlapped. I fixed this and now there are ~4000 genes that map between those two strains. Hooray!
-
-I also included information about if an entire block had an inversion and if each individual sequence in that block was apart of that inversion or not.
-
-I have been playing with the ``toy'' dataframe that Queenie made for me. I performed a simple t-test and Wilcox test comparing all inverted blocks to all non-inverted blocks. As well as comparing inverted and non-inverted sequences within each block. The results for this are irrelevant because this data set only has two of the 4 taxa. I mostly just wanted to get the code working so that when we do have the real dataset, the analysis will be speedy.
 I started looking into DESeq and how I could use inversions as a ``treatment'' to compare gene expression. But DESeq wants raw counts and the dataframe Queenie is working on is normalized CPM. So I will need to think about this more and figure out how to do this.
 
-I also looked into some of the overlapping blocks (from PARSNP) and it appears as though they are relatively small (containing one gene or less), and are mostly intergenic.
-So again, I think it will not be a huge issue if we just remove data from these overlapped regions.
+Queenie is working on creating summary statistics and graphics for the inversions (how big are they, in what taxa..etc.). \textbf{If you have any things you would like to know regarding this, please let me know!}
+
+I have been trying to create a mapping of which genes match genes in all taxa (based on the alignment) so this can be used to compare genes in inverted and non inverted regions.
+
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
 %Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
@@ -345,7 +360,20 @@ So again, I think it will not be a huge issue if we just remove data from these 
 %It could be that all the variation is being considered an ``outlier'' because most of the values are zero (because they are so smilar)?
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
-%\textbf{Substitution + Selection analysis}
+\textbf{Substitution Paper}
+I have spent most of the week working on the simple revisions from the paper.
+Adding extra references, explanations, and small analysis (larger window size).
+
+I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
+I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
+I know we are doing everything we can to ensure that we are aligning homologous sequences..but I worry.
+Although, I am not sure how we would re-do everything while still accounting for genomic reorganization.
+I am hoping that using blast to verify the alignment in the inversions project will be helpful here.
+Maybe I could use this as proof to say that we blasted things and still it looks good (or removed things that were not RBBHs), not sure.
+\textbf{let me know what you think about completely re-hauling the methods.}
+
+
+
 %
 %This new analysis using trimal to cut out bad blocks is done! The results are found in the %tables below. (I have not downloaded the figures yet.)
 %There are sill a few genes that have $\omega$ $>$ 1 in each of the bacterial replicons.
@@ -470,17 +498,20 @@ So again, I think it will not be a huge issue if we just remove data from these 
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item Discuss next committee meeting and exit seminar
-	\item t-test/Wilcox test comparing all individually inverted seqs with non-inverted ones
-	\item think about (and execute) how to run DESeq to compare inverted and non-inverted regions
-	\item get Queenie to remove overlapping regions from the dataframe
-	\item get Queenie started on creating lists of which genes match (from all strains) in the parsnp alignment
+	\item complete mapping of all genes in all strains
+	\item get Queenie to use $\uparrow$ information in her summary statistics of inversions
+	\item get Queenie to start creating visualizations on the summary statistics for inversions
+	\item complete larger window size supplementary analysis
+	\item  keep working on scaling up the subst data
+	\item add in new paper notes to subst intro
+	
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item edit another section of dissertation intro
+	\item keep working on scaling up subst data
+	\item comment on repeated genes (TEs) in subst analysis and not using core genome
 	\item get Queenie to create a plot of the inversions
 	\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
 \end{itemize}
