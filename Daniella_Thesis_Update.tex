@@ -120,6 +120,21 @@
 
 \underline{Subs Paper Things to Do:}
 \begin{itemize}
+	\item  more genomes
+	\item new  outgroups? (too distant)
+	\item explain high dS values in \bass
+	\item potentially poor alignment and non-orthologous genes (core genome, change methods?)
+	\item non-parametirc analysis for subs
+	\item gap in \ecoli fig 5
+	\item new methods for trees
+	\item concerned about repeated genes (TEs) and not analyzing core genome
+	\item check if trimming respects coding frame
+	\item clear distinction between mutations and substitutions in intro (separate sections)
+	\item datasets from previous papers (repeat my analysis on them?)
+	\item why would uncharacterized proteins have higher subs rates?
+	\item $R^2$ values in regression analysis
+	\item update gene exp paper ref
+	
 %	\item \sout{ \# of coding and non-coding sites}
 %	
 %	\item \sout{\# of subs in each of $\uparrow$}
@@ -266,35 +281,28 @@
 
 Inversions $+$ Gene Expression:
 
-\ch Queenie: complete dataframe for inversions and gene exp!
+\ch created mapping file to show which genes match in all the strains in each block (based on subst paper ``good'' alignments)
 
-\ch Queenie: working on getting summary statistics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
+\ch Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
 
-\ch started to create mapping file to show which genes match in all the strains in each block (based on subst paper ``good'' alignments)
-
-\ch started looking into genes that were missing from BW and K12MG mapping file
+\ch Queenie: looking into which block do not have all taxa present (probably due to genes being split between block and therefore removed)
 
 Subst Paper:
 
-\ch added more recent references (chromids and plasmids)
+\ch started re-doing the analysis with 23 \smel genomes (there are not any more than this)
+\begin{itemize}
+	\item automated downloading genomes
+	\item ran \p
+	\item  started running mafft
+	\item started getting tree
+\end{itemize}
 
-\ch add program parameters to main text
+\ch completed supplemental analysis with multiple window sizes (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp and 400Kbp)
 
-\ch better explanation for removing \dn$=$\ds$=$0 and \dn$=$0
+\ch started writing re-submission cover letter and added explanations for changes I have made so far
 
-\ch better explanation for normalization for number of sites
 
-\ch commented on multiple rep termini
-
-\ch addressed origin scaling figure
-
-\ch clearer figure captions
-
-\ch started running larger window size supplemental tests
-
-\ch \p for \smel chrom with 23 seqs (trying the analysis on this first)
-
-\ch research how many more complete genomes there are
+\ch add in new paper notes to subst intro (more recent papers)
 
 %General:
 
@@ -304,11 +312,11 @@ Subst Paper:
 
 \textbf{Inversions + Gene Expression:}
 
-I started looking into DESeq and how I could use inversions as a ``treatment'' to compare gene expression. But DESeq wants raw counts and the dataframe Queenie is working on is normalized CPM. So I will need to think about this more and figure out how to do this.
-
-Queenie is working on creating summary statistics and graphics for the inversions (how big are they, in what taxa..etc.). \textbf{If you have any things you would like to know regarding this, please let me know!}
-
-I have been trying to create a mapping of which genes match genes in all taxa (based on the alignment) so this can be used to compare genes in inverted and non inverted regions.
+I did not spend a lot of time on this project this week (I was preoccupied with the subst paper).
+Queenie is slowly working through the summary graphics/stats about the inversions.
+She also found some blocks that did not have all taxa present, likely because there was only one gene in that block and it was removed because it was only partially found within a block.
+She is looking into this further and making sure that they are removed for legitimate reasons.
+\textbf{Do you think we need blocks were all taxa are present? How important do you think that is in this analysis?}
 
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
@@ -361,16 +369,25 @@ I have been trying to create a mapping of which genes match genes in all taxa (b
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
 \textbf{Substitution Paper}
-I have spent most of the week working on the simple revisions from the paper.
-Adding extra references, explanations, and small analysis (larger window size).
+I have spent most of the week working on the up scaling of the \smel analysis.
+There are a total of 23 complete \smel genomes. I am trying to include them all.
+The \p ran smoothly, but there is one really large block (435,873bp) that is taking days to run (3days and counting).
+My plan is to just ignore this block for now and keep working through the analysis (so I can get the code and steps figured out) and then re-do everything once it is done.
+\textbf{should I be concerned with how long this block is taking to re-align using mafft?}
 
-I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
-I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
-I know we are doing everything we can to ensure that we are aligning homologous sequences..but I worry.
-Although, I am not sure how we would re-do everything while still accounting for genomic reorganization.
-I am hoping that using blast to verify the alignment in the inversions project will be helpful here.
-Maybe I could use this as proof to say that we blasted things and still it looks good (or removed things that were not RBBHs), not sure.
-\textbf{let me know what you think about completely re-hauling the methods.}
+I had to re-write a lot of my code to make some steps more automated (which did not take me that long! I am improving!).
+I already discussed this with you, but phylip does not handle these large and numerous sequences well so I decided to switch to RAxML for building the trees.
+This seems to be going ok so far!
+
+
+
+%I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
+%I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
+%I know we are doing everything we can to ensure that we are aligning homologous sequences..but I worry.
+%Although, I am not sure how we would re-do everything while still accounting for genomic reorganization.
+%I am hoping that using blast to verify the alignment in the inversions project will be helpful here.
+%Maybe I could use this as proof to say that we blasted things and still it looks good (or removed things that were not RBBHs), not sure.
+%\textbf{let me know what you think about completely re-hauling the methods.}
 
 
 
@@ -498,19 +515,18 @@ Maybe I could use this as proof to say that we blasted things and still it looks
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item complete mapping of all genes in all strains
-	\item get Queenie to use $\uparrow$ information in her summary statistics of inversions
+	\item check why genes are ``missing'' from mapping file
+	\item think about how to incorporate DESeq into analysis (requires raw counts)
 	\item get Queenie to start creating visualizations on the summary statistics for inversions
-	\item complete larger window size supplementary analysis
-	\item  keep working on scaling up the subst data
-	\item add in new paper notes to subst intro
+	\item keep working on scaling up the subst data (complete trees (including SH test) and filtering/trimming mafft alignments)
+	\item get Queenie to create dataframe with raw expression data and inversions info
 	
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item keep working on scaling up subst data
+	\item keep working on scaling up subst data (complete until call ancestor step)
 	\item comment on repeated genes (TEs) in subst analysis and not using core genome
 	\item get Queenie to create a plot of the inversions
 	\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
