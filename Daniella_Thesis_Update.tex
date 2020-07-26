@@ -369,6 +369,17 @@ She is looking into this further and making sure that they are removed for legit
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
 \textbf{Substitution Paper}
+The one block (435,873bp) from the 23 \smel genome analysis finally finished running and it took 1 week to align.
+I looked at how large the blocks from the original analysis were for comparison, and there is a block from the \strep analysis that was 2Mbp long.
+I can not remember how long that took to run but probably just over a week.
+So I am not sure if this can be used as justification to say that this analysis takes to long.
+I also ran one block (136,217bp) through my code to identify if the codon positions line up and it took 3h. 
+Previously this would take 49min (with 4 genomes).
+Each block can be run in parallel so I suppose this will not take too much time. But I am not sure how this will scale with say 100 genomes.
+\textbf{What are your thoughts on these preliminary time constraints and scaling up the analysis?}
+
+
+
 I have spent most of the week working on the up scaling of the \smel analysis.
 There are a total of 23 complete \smel genomes. I am trying to include them all.
 The \p ran smoothly, but there is one really large block (435,873bp) that is taking days to run (3days and counting).
@@ -515,11 +526,13 @@ This seems to be going ok so far!
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item check why genes are ``missing'' from mapping file
+	\item check why genes are ``missing'' from mapping file (BW and K12)
 	\item think about how to incorporate DESeq into analysis (requires raw counts)
 	\item get Queenie to start creating visualizations on the summary statistics for inversions
 	\item keep working on scaling up the subst data (complete trees (including SH test) and filtering/trimming mafft alignments)
 	\item get Queenie to create dataframe with raw expression data and inversions info
+	\item look at duplicated rows for all genes/species mapping
+	\item think about if we can use/compare block with less than all taxa for inversions analysis
 	
 \end{itemize}
 
