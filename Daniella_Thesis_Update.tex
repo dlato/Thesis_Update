@@ -285,8 +285,9 @@ Inversions $+$ Gene Expression:
 
 \ch check why genes are ``missing'' from mapping file (BW and K12)
 
+\ch look at duplicated rows for all genes/species mapping
 
-\ch Queenie: looking into which block do not have all taxa present (probably due to genes being split between block and therefore removed)
+\ch think about if we can use/compare block with less than all taxa for inversions analysis
 
 Subst Paper:
 
@@ -308,18 +309,18 @@ Subst Paper:
 
 
 \textbf{Inversions + Gene Expression:}
+
 We decided to apply the same strict alignment trimming method to the PARSNP alignments to ensure that we are comparing homologous genes.
 This will reduce the amount of data that we have, but I think it is better to be able to compare gene expression between things we are sure are similar.
 I am working on applying this to the data now, and then Queenie will use these new segments to produce a dataframe with gene expression, genomic position, and inversion information.
 
+We decided to do the analysis multiple times for each instance of taxa present in each block.
+So for only blocks where all taxa are present, blocks where 3 or 4 taxa are present, and blocks where 3, 4, or 2 taxa are present.
+I will then compare the results to see if they differ.
+Queenie is working on producing those three dataframes for me.
 
-
-
-I did not spend a lot of time on this project this week (I was preoccupied with the subst paper).
-Queenie is slowly working through the summary graphics/stats about the inversions.
-She also found some blocks that did not have all taxa present, likely because there was only one gene in that block and it was removed because it was only partially found within a block.
-She is looking into this further and making sure that they are removed for legitimate reasons.
-\textbf{Do you think we need blocks were all taxa are present? How important do you think that is in this analysis?}
+I tried to run the R stats that I created using the test dataframe on the actual data and of course it did not work.
+So I need to figure out what happened.
 
 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
@@ -372,6 +373,7 @@ She is looking into this further and making sure that they are removed for legit
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
 \textbf{Substitution Paper}
+
 The one block (435,873bp) from the 23 \smel genome analysis finally finished running and it took 1 week to align.
 I looked at how large the blocks from the original analysis were for comparison, and there is a block from the \strep analysis that was 2Mbp long.
 I can not remember how long that took to run but probably just over a week.
@@ -519,25 +521,28 @@ Finally figured out how to
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
+	\item Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)	
+	\item Queenie: looking into which block do not have all taxa present (probably due to genes being split between block and therefore removed)
+	\item Queenie to complete visualizations on the summary statistics for inversions
+	\item Queenie to create dataframe with raw expression data and inversions info
+	\item Queenie to create dataframes with various taxa present
 	
-
+	\item keep working on scaling up the subst data (filtering/trimming mafft alignments and call ancestor)
 	\item think about how to incorporate DESeq into analysis (requires raw counts)
-	\item get Queenie to start creating visualizations on the summary statistics for inversions
-	\item keep working on scaling up the subst data (complete trees (including SH test) and filtering/trimming mafft alignments)
-	\item get Queenie to create dataframe with raw expression data and inversions info
-	\item look at duplicated rows for all genes/species mapping
-	\item think about if we can use/compare block with less than all taxa for inversions analysis
+	\item fix stats for Wilcox and t test (on actual df)
+	\item finish trimming of PARSNP aln (re-do mapping + block info file)
+	\item comment on repeated genes (TEs) in subst analysis and not using core genome
 	
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item keep working on scaling up subst data (complete until call ancestor step)
-	\item comment on repeated genes (TEs) in subst analysis and not using core genome
-	\item get Queenie to create a plot of the inversions
+	\item Queenie to create a plot of the inversions
+	\item Queenie to compare blast results and gene mapping
 	\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
+	\item keep working on scaling up the subst data (paml analysis and selection alignment trimming)
+	\item work on DESeq pipeline
 \end{itemize}
 
 %\newpage
