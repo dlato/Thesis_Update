@@ -281,9 +281,10 @@
 
 Inversions $+$ Gene Expression:
 
-\ch created mapping file to show which genes match in all the strains in each block (based on subst paper ``good'' alignments)
+\ch decided to be more strict with the inversions and apply the same alignment trimming method to the PARSNP blocks
 
-\ch Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
+\ch check why genes are ``missing'' from mapping file (BW and K12)
+
 
 \ch Queenie: looking into which block do not have all taxa present (probably due to genes being split between block and therefore removed)
 
@@ -291,18 +292,14 @@ Subst Paper:
 
 \ch started re-doing the analysis with 23 \smel genomes (there are not any more than this)
 \begin{itemize}
-	\item automated downloading genomes
-	\item ran \p
-	\item  started running mafft
-	\item started getting tree
+	\item figured out new RAxML pipeline for trees
+	\item bootstrapped tree with branchlengths
+	\item SH test on each block tree v.s. $\uparrow$ tree
+	\item started trimming alignment to find only the good sections
 \end{itemize}
 
-\ch completed supplemental analysis with multiple window sizes (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp and 400Kbp)
+\ch updated gene expression paper ref with proper volume and page numbers
 
-\ch started writing re-submission cover letter and added explanations for changes I have made so far
-
-
-\ch add in new paper notes to subst intro (more recent papers)
 
 %General:
 
@@ -311,6 +308,12 @@ Subst Paper:
 
 
 \textbf{Inversions + Gene Expression:}
+We decided to apply the same strict alignment trimming method to the PARSNP alignments to ensure that we are comparing homologous genes.
+This will reduce the amount of data that we have, but I think it is better to be able to compare gene expression between things we are sure are similar.
+I am working on applying this to the data now, and then Queenie will use these new segments to produce a dataframe with gene expression, genomic position, and inversion information.
+
+
+
 
 I did not spend a lot of time on this project this week (I was preoccupied with the subst paper).
 Queenie is slowly working through the summary graphics/stats about the inversions.
@@ -378,17 +381,7 @@ Previously this would take 49min (with 4 genomes).
 Each block can be run in parallel so I suppose this will not take too much time. But I am not sure how this will scale with say 100 genomes.
 \textbf{What are your thoughts on these preliminary time constraints and scaling up the analysis?}
 
-
-
-I have spent most of the week working on the up scaling of the \smel analysis.
-There are a total of 23 complete \smel genomes. I am trying to include them all.
-The \p ran smoothly, but there is one really large block (435,873bp) that is taking days to run (3days and counting).
-My plan is to just ignore this block for now and keep working through the analysis (so I can get the code and steps figured out) and then re-do everything once it is done.
-\textbf{should I be concerned with how long this block is taking to re-align using mafft?}
-
-I had to re-write a lot of my code to make some steps more automated (which did not take me that long! I am improving!).
-I already discussed this with you, but phylip does not handle these large and numerous sequences well so I decided to switch to RAxML for building the trees.
-This seems to be going ok so far!
+Finally figured out how to 
 
 
 
@@ -526,7 +519,9 @@ This seems to be going ok so far!
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item check why genes are ``missing'' from mapping file (BW and K12)
+	\item Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)
+	
+
 	\item think about how to incorporate DESeq into analysis (requires raw counts)
 	\item get Queenie to start creating visualizations on the summary statistics for inversions
 	\item keep working on scaling up the subst data (complete trees (including SH test) and filtering/trimming mafft alignments)
