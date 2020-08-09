@@ -276,37 +276,27 @@
 
 	
 \section*{Last Week}
-%Substitutions:
-
 
 Inversions $+$ Gene Expression:
 
-\ch fix stats for Wilcox and t test (on actual df)
+\ch Queenie: summary graphs and stats about the inversions
 
-\ch finish trimming of PARSNP aln (re-do mapping + block info file)
+\ch Queenie created dataframe with raw expression data and inversions info
 
+\ch Queenie created dataframes with various taxa present
 
+\ch Queenie: started to compare outputs from various blast parameters
 
+\ch preliminary analysis on dataframes with various taxa
 
-\ch decided to be more strict with the inversions and apply the same alignment trimming method to the PARSNP blocks
+\ch started implementing origin/bidirectional scaling of the inversion/gene expression values
 
-\ch check why genes are ``missing'' from mapping file (BW and K12)
-
-\ch look at duplicated rows for all genes/species mapping
-
-\ch think about if we can use/compare block with less than all taxa for inversions analysis
+\ch Attempt to create \p like picture of inversions
 
 Subst Paper:
 
-\ch started re-doing the analysis with 23 \smel genomes (there are not any more than this)
-\begin{itemize}
-	\item figured out new RAxML pipeline for trees
-	\item bootstrapped tree with branchlengths
-	\item SH test on each block tree v.s. $\uparrow$ tree
-	\item started trimming alignment to find only the good sections
-\end{itemize}
+\ch chose 26 random \ecol, 25 random \bass, and 26 random \strep genomes to begin looking at
 
-\ch updated gene expression paper ref with proper volume and page numbers
 
 
 %General:
@@ -317,19 +307,28 @@ Subst Paper:
 
 \textbf{Inversions + Gene Expression:}
 
-We decided to apply the same strict alignment trimming method to the PARSNP alignments to ensure that we are comparing homologous genes.
-This will reduce the amount of data that we have, but I think it is better to be able to compare gene expression between things we are sure are similar.
-I am working on applying this to the data now, and then Queenie will use these new segments to produce a dataframe with gene expression, genomic position, and inversion information.
+Queenie finished creating graphs summarizing the gene expression, length and position of inverted and non-inverted genomes.
+However, they are not really informative and I think might just be better as tables showing the averages.
+It appears as though only some blocks have significant differences in those categories so to try and show all blocks at once does not visually create any stark difference between inversions and non-inversions.
 
-We decided to do the analysis multiple times for each instance of taxa present in each block.
-So for only blocks where all taxa are present, blocks where 3 or 4 taxa are present, and blocks where 3, 4, or 2 taxa are present.
-I will then compare the results to see if they differ.
-Queenie is working on producing those three dataframes for me.
+Queenie also finished creating dataframes with multiple combinations of taxa present in each block so we could see if it made a difference.
+I have completed preliminary analysis on these dataframes and the numbers are very similar, so there might not be any huge difference in including blocks with less than all taxa (Table \ref{tab:multi_taxa_inver}).
 
-I tried to run the R stats that I created using the test dataframe on the actual data and of course it did not work.
-So I need to figure out what happened.
+Queenie has started to write code to compare the reciprocal best blast hits from the various parameters I chose.
+There were some interesting issues she brought up to me such as not all blast gene names are present in the genbank file.
+I am not sure what is going on here but the gene names just do not exist in the genbank file for some genes.
+\textbf{any thoughts on this? Should I be overly concerned?}
 
+I started to implement the same origin/bidirectional scaling code used in my other papers and noticed that the strand information was missing from the dataset. 
+I am getting Queenie to look into this.
 
+I tried to make a \p-like picture of the genomic inversions but had trouble.
+The PARSNP output can not be read into \p (still looking into this but it does not look possible) so I can not use \p to create the diagram.
+The visualization produced by PARSNP is not as useful because it does not clearly connect blocks that have been shuffled around the genome.
+I tried to look into a program called GenomeDiagram which was used in one of the Galardini papers on \s. 
+However, this required an updated version of BioPython on the machines and only reads in genbank files (from my knowladge) so I am not sure how to convert the PARSNP outputs to create the ``features'' needed to create the same diagram.
+The other option (which would be easiest) is to just use R to plot the x-y coordinates from matching genes (either from the blast output or my gene mapping code).
+\textbf{What are your thoughts on all of this?} 
 %For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
 %Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
 %I have asked Queenie to see how often the genome positions for the same gene (in the gbk file) differ between BW and K-12, so we can get a sense/justify if this is the correct decision.
@@ -381,16 +380,15 @@ So I need to figure out what happened.
 
 \textbf{Substitution Paper}
 
-The one block (435,873bp) from the 23 \smel genome analysis finally finished running and it took 1 week to align.
-I looked at how large the blocks from the original analysis were for comparison, and there is a block from the \strep analysis that was 2Mbp long.
-I can not remember how long that took to run but probably just over a week.
-So I am not sure if this can be used as justification to say that this analysis takes to long.
-I also ran one block (136,217bp) through my code to identify if the codon positions line up and it took 3h. 
-Previously this would take 49min (with 4 genomes).
-Each block can be run in parallel so I suppose this will not take too much time. But I am not sure how this will scale with say 100 genomes.
-\textbf{What are your thoughts on these preliminary time constraints and scaling up the analysis?}
+I think that the reason that the analysis looks ``fine'' for the 23 \smel genomes is that they are quite similar, and therefore aligning them does not pose any issues.
+So I decided to test out how long the alignment would take and how much would be trimmed with $~$25 random (complete) genomes from \ecol, \bass, and \strep.
+I have updated the \p time plots with the new values for \bass and \ecol (Figures \ref{mauve_60} and \ref{mauve_100}).
+The results are still roughly the same, that having about 60 sequences would take over a month to align.
+The alignments do appear to be ``messy'' with 96 block for \ecol (Figure \ref{ecoli26_mauve}) and 113 blocks for \bass (Figure \ref{bass25_mauve}).
 
-Finally figured out how to 
+I do not have a plot of how long the individual block re-alignments with \texttt{MAFFT} take (\textbf{I can make one if you think it is useful?}) but it takes about 5h for the longest \ecol block to align.
+
+Overall, I think that this provides some evidence that the more diverged the taxa are, the more messy the analysis becomes.
 
 
 
@@ -528,34 +526,69 @@ Finally figured out how to
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item Queenie: working on getting summary statistics/graphics for inversions (how many, how big, in what taxa, where are they located, expression averages..etc)	
-	\item Queenie: looking into which block do not have all taxa present (probably due to genes being split between block and therefore removed)
-	\item Queenie to complete visualizations on the summary statistics for inversions
-	\item Queenie to create dataframe with raw expression data and inversions info
-	\item Queenie to create dataframes with various taxa present
-	
-	\item keep working on scaling up the subst data (filtering/trimming mafft alignments and call ancestor)
-	\item think about how to incorporate DESeq into analysis (requires raw counts)
-	\item comment on repeated genes (TEs) in subst analysis and not using core genome
-	
+	\item Queenie: compare blast results and gene mapping
+	\item Queenie: combine gene mapping and gene info (from gbk)
+\item continue scaling up the \ecoli, \bass, and \strep genomes 
+\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
+\item work on DESeq pipeline
+\item find new outgroups for subst trees
+\item assess Queenie's results from various blast parameters
+
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
 	\item Queenie to create a plot of the inversions
-	\item Queenie to compare blast results and gene mapping
-	\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
-	\item keep working on scaling up the subst data (paml analysis and selection alignment trimming)
-	\item work on DESeq pipeline
+	\item Queenie: determine which RBBH's are the same as the homologous genes identified from the alignments
+	\item keep working on increased number of genomes for subst analysis
+	\item distinction between mutations and substitutions in subst paper intro
 \end{itemize}
 
-%\newpage
+\newpage
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_60.pdf}
+	\caption{\label{mauve_60}}	
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_100.pdf}
+	\caption{\label{mauve_100}}	
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg}
+	\caption{\label{ecoli26_mauve} \p visualization of 26 random genomes of \ecol.}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\textwidth]{25_Bass_chrom_mauve_pic_3Aug20.jpg}
+	\caption{\label{bass25_mauve} \p visualization of 25 random genomes of \bass.}
+\end{figure}
 %
-%\begin{figure}
-%	\includegraphics[width=0.9\linewidth]{./K12MG_graph.pdf}
-%	\caption{\label{fig:exp_cor} }
-%\end{figure}
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{./scatter_plot_test.pdf}
+	\caption{\label{fig:exp_inver_test} Test graphic for the visualization of inversions and distance from the origin of replication. Each dot represents a gene in a block where there is a significant difference in gene expression between inverted and non-inverted sequences within that block. The points are coloured based on if the inverted sequences have higher expression (``up'') or lower expression (``down'') compared to the non-inverted sequences. Genomic position is on the x-axis with NO bidirectional replication accounted for.}
+\end{figure}
+
+\begin{table}[t!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			& \multicolumn{3}{c}{\% of Blocks that are}  \\
+			\cmidrule{2-4}
+			Datasets:  & Inverted & Inverted and &Increased in Gene Expression\\
+			Taxa Per Block &  & Differentially Expressed&in the Inverted Sequences \\
+			\midrule
+			All 4 & 68.15 & 8.66&  60.61 \\
+			At least 3 & 68.23& 8.91 & 57.14\\
+			At least 2 & 68.02 & 8.96 & 58.33 \\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
+\end{table}
+
 %
 %
 %
