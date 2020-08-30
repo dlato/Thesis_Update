@@ -279,25 +279,23 @@
 
 Inversions $+$ Gene Expression:
 
-\ch Queenie: summary graphs and stats about the inversions
+\ch Queenie: comparison between blast parameters
 
-\ch Queenie created dataframe with raw expression data and inversions info
+\ch Queenie: compare blast and gene alignment homologs
 
-\ch Queenie created dataframes with various taxa present
-
-\ch Queenie: started to compare outputs from various blast parameters
-
-\ch preliminary analysis on dataframes with various taxa
-
-\ch started implementing origin/bidirectional scaling of the inversion/gene expression values
-
-\ch Attempt to create \p like picture of inversions
+\ch Queenie: start creating dataframe that is compatible with \texttt{limma}
 
 Subst Paper:
 
-\ch chose 26 random \ecol, 25 random \bass, and 26 random \strep genomes to begin looking at
+\ch working out complications in substitutions code with more genomes
 
+\ch new outgroups
 
+\ch new phylogenetic tree methods
+
+\ch new trees
+
+\ch updated $\uparrow$ all that in the paper and cover letter
 
 %General:
 
@@ -306,32 +304,14 @@ Subst Paper:
 
 
 \textbf{Inversions + Gene Expression:}
+Queenie has compared the various blast outputs and found them all to be pretty similar.
+A few of the various parameters are similar to the default blast parameters (in output) so these were not chosen.
+The others were very similar in output so we chose the one that had the most genes which is \texttt{diamond}'s \texttt{--more-sensitive} option.
+These parameters are what will be used to verify that the alignments are aligning homologous genes.
 
-Queenie finished creating graphs summarizing the gene expression, length and position of inverted and non-inverted genomes.
-However, they are not really informative and I think might just be better as tables showing the averages.
-It appears as though only some blocks have significant differences in those categories so to try and show all blocks at once does not visually create any stark difference between inversions and non-inversions.
+Queenie has begun comparing the blast output and the alignment homologs, however there are lots of issues with missing gene names/IDs and not being able to have a reliable comparison.
+We are still working through this.
 
-Queenie also finished creating dataframes with multiple combinations of taxa present in each block so we could see if it made a difference.
-I have completed preliminary analysis on these dataframes and the numbers are very similar, so there might not be any huge difference in including blocks with less than all taxa (Table \ref{tab:multi_taxa_inver}).
-
-Queenie has started to write code to compare the reciprocal best blast hits from the various parameters I chose.
-There were some interesting issues she brought up to me such as not all blast gene names are present in the genbank file.
-I am not sure what is going on here but the gene names just do not exist in the genbank file for some genes.
-\textbf{any thoughts on this? Should I be overly concerned?}
-
-I started to implement the same origin/bidirectional scaling code used in my other papers and noticed that the strand information was missing from the dataset. 
-I am getting Queenie to look into this.
-
-I tried to make a \p-like picture of the genomic inversions but had trouble.
-The PARSNP output can not be read into \p (still looking into this but it does not look possible) so I can not use \p to create the diagram.
-The visualization produced by PARSNP is not as useful because it does not clearly connect blocks that have been shuffled around the genome.
-I tried to look into a program called GenomeDiagram which was used in one of the Galardini papers on \s. 
-However, this required an updated version of BioPython on the machines and only reads in genbank files (from my knowladge) so I am not sure how to convert the PARSNP outputs to create the ``features'' needed to create the same diagram.
-The other option (which would be easiest) is to just use R to plot the x-y coordinates from matching genes (either from the blast output or my gene mapping code).
-\textbf{What are your thoughts on all of this?} 
-%For the BW1255 strain, since one of the data sets is mapped to the K-12 genome and the other is unclear of where it is mapped, I think that using the K-12 genome annotation for this strain is best.
-%Additionally, since the proteomes are redundant, I think we should have minimal issues using the K-12 annotation.
-%I have asked Queenie to see how often the genome positions for the same gene (in the gbk file) differ between BW and K-12, so we can get a sense/justify if this is the correct decision.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -380,17 +360,19 @@ The other option (which would be easiest) is to just use R to plot the x-y coord
 
 \textbf{Substitution Paper}
 
-I think that the reason that the analysis looks ``fine'' for the 23 \smel genomes is that they are quite similar, and therefore aligning them does not pose any issues.
-So I decided to test out how long the alignment would take and how much would be trimmed with $~$25 random (complete) genomes from \ecol, \bass, and \strep.
-I have updated the \p time plots with the new values for \bass and \ecol (Figures \ref{mauve_60} and \ref{mauve_100}).
-The results are still roughly the same, that having about 60 sequences would take over a month to align.
-The alignments do appear to be ``messy'' with 96 block for \ecol (Figure \ref{ecoli26_mauve}) and 113 blocks for \bass (Figure \ref{bass25_mauve}).
+I realized that with more genomes, there are more nuances with my substitutions code (the one that ensures we are comparing the same codon position).
+I am currently working out these kinks.
+However, based on what I am seeing so far, it looks like a lot of the sites are trimmed.
+So the more genomes you have, the worse \p is at catching homologous blocks, creating an unreliable alignment.
+I will be working on coming up with quantitative numbers for this theory.
 
-I do not have a plot of how long the individual block re-alignments with \texttt{MAFFT} take (\textbf{I can make one if you think it is useful?}) but it takes about 5h for the longest \ecol block to align.
+I have found new outgroups for each of the bacteria and re-done the phylogenetic trees using a \texttt{RAxML} pipeline.
+As expected, even with new outgroups and new methods, the tree topology for all the chromosomes is the same as before.
+\pa and \pb have slightly different topologies, but with more resolution.
+I have added all this to the paper and cover letter.
 
-Overall, I think that this provides some evidence that the more diverged the taxa are, the more messy the analysis becomes.
-
-
+As I mentioned at my committee meeting, there are 2 new \scoe genomes (published June 2020), so I am now including them in the analysis.
+I have done the alignment portion of this analysis and will continue to run these genomes through my pipeline.
 
 %I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
 %I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
@@ -526,22 +508,29 @@ Overall, I think that this provides some evidence that the more diverged the tax
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item Queenie: compare blast results and gene mapping
-	\item Queenie: combine gene mapping and gene info (from gbk)
-\item continue scaling up the \ecoli, \bass, and \strep genomes 
-\item think about (and execute) how to incorporate distance from the origin into the inversion analysis
-\item work on DESeq pipeline
-\item find new outgroups for subst trees
-\item assess Queenie's results from various blast parameters
+	\item Queenie: compare blast results and alignments
+	\item Queenie: new dataframe for \texttt{limma}
+\item write about TEs and repeated elements in cover letter
+\item continue working on subst code for more genomes
+\item fix gene mapping code based on $\uparrow$
+\item re-run inversions mapping based on $\uparrow$
+\item re-run subst analysis for all bac based on $\uparrow$
+\item non-parametric analysis for subs analysis
+\item quantify trimming loss (more subst genomes)
+%\item limma
+%\item list of genes that are DE in inversions
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item Queenie to create a plot of the inversions
-	\item Queenie: determine which RBBH's are the same as the homologous genes identified from the alignments
-	\item keep working on increased number of genomes for subst analysis
+	\item Queenie: new dataframe for \texttt{limma}
+	\item previous subst papers datasets (can I re-do?)
+	\item why do uncharacterized proteins have higher sub rates?
+	\item gap in \ecol fig 5
+	\item \bass high \ds values should not be present
+	\item blast to confirm homologs in subst analysis
 	\item distinction between mutations and substitutions in subst paper intro
 \end{itemize}
 
