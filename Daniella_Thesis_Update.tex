@@ -65,6 +65,8 @@
 \newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
 %\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
 \newcommand{\sliv}{\textit{S.\,lividans}\xspace}
+\newcommand{\bor}{\textit{Bordetella}\xspace}
+\newcommand{\xan}{\textit{Xanthomonas}\xspace}
 \begin{document}
 %	Nov 30:	Create graphs with slopes for each COG
 	
@@ -279,23 +281,21 @@
 
 Inversions $+$ Gene Expression:
 
-\ch Queenie: comparison between blast parameters
-
-\ch Queenie: compare blast and gene alignment homologs
+\ch Queenie: comparing blast and gene alignment homologs
 
 \ch Queenie: start creating dataframe that is compatible with \texttt{limma}
 
 Subst Paper:
 
-\ch working out complications in substitutions code with more genomes
+\ch re-running subst code (matching codon positions) for 25 \ecol and \bass genomes
 
-\ch new outgroups
+\ch re-running subst analysis (~6 genomes per bac) with new trees
 
-\ch new phylogenetic tree methods
+\ch started non-parametric analysis (subs $+$ \dn, \ds, and $\omega$)
 
-\ch new trees
+\ch previous datasets from other papers
 
-\ch updated $\uparrow$ all that in the paper and cover letter
+\ch new \strep analysis with 5 genomes (2 new \scoe genomes)
 
 %General:
 
@@ -304,11 +304,6 @@ Subst Paper:
 
 
 \textbf{Inversions + Gene Expression:}
-Queenie has compared the various blast outputs and found them all to be pretty similar.
-A few of the various parameters are similar to the default blast parameters (in output) so these were not chosen.
-The others were very similar in output so we chose the one that had the most genes which is \texttt{diamond}'s \texttt{--more-sensitive} option.
-These parameters are what will be used to verify that the alignments are aligning homologous genes.
-
 Queenie has begun comparing the blast output and the alignment homologs, however there are lots of issues with missing gene names/IDs and not being able to have a reliable comparison.
 We are still working through this.
 
@@ -366,13 +361,16 @@ However, based on what I am seeing so far, it looks like a lot of the sites are 
 So the more genomes you have, the worse \p is at catching homologous blocks, creating an unreliable alignment.
 I will be working on coming up with quantitative numbers for this theory.
 
-I have found new outgroups for each of the bacteria and re-done the phylogenetic trees using a \texttt{RAxML} pipeline.
-As expected, even with new outgroups and new methods, the tree topology for all the chromosomes is the same as before.
-\pa and \pb have slightly different topologies, but with more resolution.
-I have added all this to the paper and cover letter.
+I am re-doing the subst analysis with the new phylogenetic trees (from RAxML).
+The subst part of the analysis is at the regression stage, and the \dn, \ds, and $\omega$ portion is still at the gene alignment phase.
 
-As I mentioned at my committee meeting, there are 2 new \scoe genomes (published June 2020), so I am now including them in the analysis.
-I have done the alignment portion of this analysis and will continue to run these genomes through my pipeline.
+The new \strep analysis (with the two new \scoe genomes) is under way and at the same stage as the other bacteria above.
+
+One reviewer suggested that I use the same datasets from previous papers (Sharp et al., 2005, Cooper et al., 2010, Flynn et al., 2010, Morrow and Cooper 2012) to see if I am still seeing the same trends.
+I made a table of those studies below outlining which taxa they use and how many genomes (Table \ref{tab:datasets}).
+Most of these papers are dealing with completely different taxa than I am, and most of the genomes are complete reference genomes.
+I am not sure if it is worth it or necessary for me to do my analysis on these datasets to appease this reviewer.
+\textbf{What are your thoughts?}
 
 %I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
 %I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
@@ -511,12 +509,11 @@ I have done the alignment portion of this analysis and will continue to run thes
 	\item Queenie: compare blast results and alignments
 	\item Queenie: new dataframe for \texttt{limma}
 \item write about TEs and repeated elements in cover letter
-\item continue working on subst code for more genomes
-\item fix gene mapping code based on $\uparrow$
-\item re-run inversions mapping based on $\uparrow$
-\item re-run subst analysis for all bac based on $\uparrow$
+\item re-run inversions mapping based on correct subst code
+\item re-run subst analysis for 25genome bac based on correct subst code
 \item non-parametric analysis for subs analysis
 \item quantify trimming loss (more subst genomes)
+\item selection analysis for subst analysis (~6 genomes per bac)
 %\item limma
 %\item list of genes that are DE in inversions
 
@@ -535,6 +532,31 @@ I have done the alignment portion of this analysis and will continue to run thes
 \end{itemize}
 
 \newpage
+\begin{table}[t!]
+	\centering
+%	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{l|c|c}
+	\toprule
+	\textbf{Authors} & \textbf{Species Name} & \textbf{Genomic Structure}\\
+	\midrule
+	Galardini et al. 2013 & \s (14 genomes) & 1 chromosome, 2 plasmids\\
+	\midrule
+	Morrow et al. 2012 & \bur (4 genomes) & 3 chromosomes\\
+	\midrule
+	Cooper et al. 2010 & \begin{tabular}{@{}r@{}}\bur (6 genomes) \\ \bor (4 genomes) \\ \vib (4 genomes) \\ \xan (5 genomes) \end{tabular} & \begin{tabular}{@{}c@{}} 3 chromosomes \\ single circular chromosome \\ 2 chromosomes \\ single circular chromosome  \end{tabular} \\
+	\midrule
+	Couturier et al. 2006 & 126 species of bacteria (only chromosome) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular} \\
+	\midrule
+	Flynn et al. 2010 & \sul (6 genomes) & single circular chromosome \\
+	\midrule
+	Sharp et al. 2005 & 80 species of bacteria (genomic) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular}  \\
+	\bottomrule
+\end{tabular}
+\caption{\label{tab:datasets} Previous studies looking at substitutions/mutation rate.}
+%	}%resizebox
+\end{table}
+
+
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_60.pdf}
 	\caption{\label{mauve_60}}	
