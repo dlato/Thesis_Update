@@ -374,25 +374,17 @@ We would have to re-structure the pipeline completely if we wanted to include mo
 \textbf{What are you thoughts on all this? Do you think this will satisfy the reviewer? They did suggest to do a rigorous core genome analysis, which we said we did not do because we wanted to include as much info as possible. Should I be doing a core analysis with more genomes?}
 
 
+I did the non-linear subst analysis and to me it still looks variable and inconsistent between bacterial replicons (Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}).
+They do for the most part mirror the linear results (higher/lower subs near the origin and lower/higher subs near the terminus), but with some peaks and valleys in between.
+\textbf{What are your thoughts on this non-linear analysis?}
 
 
 
-I realized that with more genomes, there are more nuances with my substitutions code (the one that ensures we are comparing the same codon position).
-I am currently working out these kinks.
-However, based on what I am seeing so far, it looks like a lot of the sites are trimmed.
-So the more genomes you have, the worse \p is at catching homologous blocks, creating an unreliable alignment.
-I will be working on coming up with quantitative numbers for this theory.
 
 I am re-doing the subst analysis with the new phylogenetic trees (from RAxML).
 The subst part of the analysis is at the regression stage, and the \dn, \ds, and $\omega$ portion is still at the gene alignment phase.
 
 The new \strep analysis (with the two new \scoe genomes) is under way and at the same stage as the other bacteria above.
-
-One reviewer suggested that I use the same datasets from previous papers (Sharp et al., 2005, Cooper et al., 2010, Flynn et al., 2010, Morrow and Cooper 2012) to see if I am still seeing the same trends.
-I made a table of those studies below outlining which taxa they use and how many genomes (Table \ref{tab:datasets}).
-Most of these papers are dealing with completely different taxa than I am, and most of the genomes are complete reference genomes.
-I am not sure if it is worth it or necessary for me to do my analysis on these datasets to appease this reviewer.
-\textbf{What are your thoughts?}
 
 
 
@@ -586,6 +578,43 @@ I am not sure if it is worth it or necessary for me to do my analysis on these d
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_45.pdf}
 	\caption{\label{mauve_45}}	
 \end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\caption{\label{fig:ecoli_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\caption{\label{fig:bass_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\caption{\label{fig:sinoC_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\caption{\label{fig:pSymA_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\caption{\label{fig:pSymB_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
+	\end{center}
+\end{figure}
+
+
 
 %\begin{figure}
 %	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_100.pdf}
