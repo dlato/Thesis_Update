@@ -123,19 +123,19 @@
 \underline{Subs Paper Things to Do:}
 \begin{itemize}
 	\item  more genomes
-	\item new  outgroups? (too distant)
+	\item \sout{new  outgroups? (too distant)}
 	\item explain high dS values in \bass
 	\item potentially poor alignment and non-orthologous genes (core genome, change methods?)
-	\item non-parametirc analysis for subs
+	\item \sout{non-parametirc analysis for subs}
 	\item gap in \ecoli fig 5
-	\item new methods for trees
-	\item concerned about repeated genes (TEs) and not analyzing core genome
-	\item check if trimming respects coding frame
+	\item \sout{new methods for trees}
+	\item \sout{concerned about repeated genes (TEs) and not analyzing core genome}
+	\item \sout{check if trimming respects coding frame}
 	\item clear distinction between mutations and substitutions in intro (separate sections)
-	\item datasets from previous papers (repeat my analysis on them?)
+	\item \sout{datasets from previous papers (repeat my analysis on them?)}
 	\item why would uncharacterized proteins have higher subs rates?
-	\item $R^2$ values in regression analysis
-	\item update gene exp paper ref
+	\item \sout{$R^2$ values in regression analysis}
+	\item \sout{update gene exp paper ref}
 	
 %	\item \sout{ \# of coding and non-coding sites}
 %	
@@ -287,15 +287,17 @@ Inversions $+$ Gene Expression:
 
 Subst Paper:
 
-\ch re-running subst code (matching codon positions) for 25 \ecol and \bass genomes
+\ch Commented on using previous papers datasets (Cooper, Morrow, Sharp, Flynn ...etc)
 
-\ch re-running subst analysis (~6 genomes per bac) with new trees
+\ch completed non-linear (non-parametric?) analysis for subst
 
-\ch started non-parametric analysis (subs $+$ \dn, \ds, and $\omega$)
+\ch new subst analysis with new \texttt{RAxML} trees and \strep genomes is complete
 
-\ch previous datasets from other papers
+\ch Quantify 25 genomes alignment loss due to trimming
 
-\ch new \strep analysis with 5 genomes (2 new \scoe genomes)
+\ch \strep 25 genomes \p finished running (~30 days)
+
+
 
 %General:
 
@@ -304,8 +306,12 @@ Subst Paper:
 
 
 \textbf{Inversions + Gene Expression:}
-Queenie has begun comparing the blast output and the alignment homologs, however there are lots of issues with missing gene names/IDs and not being able to have a reliable comparison.
-We are still working through this.
+
+Queenie is just finishing up creating the final \texttt{limma} dataframe I asked for and creating the final list for differences in homologs between the \texttt{BLAST} output and my alignment code.
+However, due to missing gene names, it is sometimes not possible to compare my alignment code to the blast output.
+I was therefore considering only excluding homologs where blast and my alignment code were different.
+The rest are either matching, or there is a missing gene name/identifier so it can not be compared.
+\textbf{What do you think about only excluding mismatches between the blast output and my alignment code?}
 
 
 
@@ -360,7 +366,6 @@ I have added this to my \p computational time projections, but I think because t
 To me, this further shows that the more divergent the taxa are, the more infeasible \p computation time is, and therefore that it would take too long to align more genomes.
 \textbf{What are your thoughts on this?} 
 
-
 I have finished quantifying how much alignment we lose from our current conservative alignment trimming methods (to ensure homologous genes) when we increase the number of genomes.
 For 26 \bass genomes, we go from a total of 3849474bp before trimming to 4972bp after trimming.
 This resulted a 99.87\% loss of sites.
@@ -373,18 +378,15 @@ I think that this is fairly convincing as to why we can not do this particular a
 We would have to re-structure the pipeline completely if we wanted to include more genomes (potentially using just the core genome?).
 \textbf{What are you thoughts on all this? Do you think this will satisfy the reviewer? They did suggest to do a rigorous core genome analysis, which we said we did not do because we wanted to include as much info as possible. Should I be doing a core analysis with more genomes?}
 
-
 I did the non-linear subst analysis and to me it still looks variable and inconsistent between bacterial replicons (Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}).
 They do for the most part mirror the linear results (higher/lower subs near the origin and lower/higher subs near the terminus), but with some peaks and valleys in between.
 \textbf{What are your thoughts on this non-linear analysis?}
 
+I finished re-doing the subst analysis with the new phylogenetic trees and \strep genomes.
+The results (based on the graphs) seem the same. I have not re-entered the regression results into the paper yet, but I suspect they will be the same.
+The only thing that changed in this analysis were the branchlengts of most trees, the topology of \pa and \pb trees, and an increased amount of data used for all replicons (because all block trees matched the overall tree so nothing was thrown out, unlike before.).
+I will get these results to you as soon as I have them.
 
-
-
-I am re-doing the subst analysis with the new phylogenetic trees (from RAxML).
-The subst part of the analysis is at the regression stage, and the \dn, \ds, and $\omega$ portion is still at the gene alignment phase.
-
-The new \strep analysis (with the two new \scoe genomes) is under way and at the same stage as the other bacteria above.
 
 
 

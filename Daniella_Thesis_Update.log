@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  12 SEP 2020 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  13 SEP 2020 09:06
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1030,7 +1030,7 @@ _45.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_
 45.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/mauve
-_time_plot_extended_45.pdf  used on input line 578.
+_time_plot_extended_45.pdf  used on input line 580.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 <C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
 aterial/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf, id=43, 505.89pt x 505
@@ -1042,7 +1042,7 @@ e pdf)
 ry_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
 itutions/Supplementary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pd
-f  used on input line 584.
+f  used on input line 586.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 
@@ -1058,7 +1058,7 @@ ary_Material/figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type
 ry_Material/figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
 itutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf
-  used on input line 591.
+  used on input line 593.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1073,7 +1073,7 @@ e pdf)
 ry_Material/figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
 itutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pd
-f  used on input line 598.
+f  used on input line 600.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1088,7 +1088,7 @@ e pdf)
 ry_Material/figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
 itutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pd
-f  used on input line 605.
+f  used on input line 607.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1103,7 +1103,7 @@ e pdf)
 ry_Material/figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
 itutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pd
-f  used on input line 612.
+f  used on input line 614.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1112,24 +1112,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: 26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg Graphic file (type jpg)
 <use 26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg>
 Package pdftex.def Info: 26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg  used on inp
-ut line 625.
+ut line 627.
 (pdftex.def)             Requested size: 505.89pt x 866.47662pt.
 
-LaTeX Warning: Float too large for page by 204.41162pt on input line 627.
+LaTeX Warning: Float too large for page by 204.41162pt on input line 629.
 
 <25_Bass_chrom_mauve_pic_3Aug20.jpg, id=49, 1523.6925pt x 2509.375pt>
 File: 25_Bass_chrom_mauve_pic_3Aug20.jpg Graphic file (type jpg)
 <use 25_Bass_chrom_mauve_pic_3Aug20.jpg>
 Package pdftex.def Info: 25_Bass_chrom_mauve_pic_3Aug20.jpg  used on input line
- 629.
+ 631.
 (pdftex.def)             Requested size: 505.89pt x 833.1506pt.
 
-LaTeX Warning: Float too large for page by 171.0856pt on input line 631.
+LaTeX Warning: Float too large for page by 171.0856pt on input line 633.
 
 <./scatter_plot_test.pdf, id=50, 505.89pt x 505.89pt>
 File: ./scatter_plot_test.pdf Graphic file (type pdf)
 <use ./scatter_plot_test.pdf>
-Package pdftex.def Info: ./scatter_plot_test.pdf  used on input line 634.
+Package pdftex.def Info: ./scatter_plot_test.pdf  used on input line 636.
 (pdftex.def)             Requested size: 455.2979pt x 455.3045pt.
 [5] [6 <C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extend
 ed_45.pdf>] [7 <C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/
@@ -1143,17 +1143,17 @@ d_subs_nonpar_12Sep20.pdf>] [11 <C:/Users/synch/Documents/PhD/Spatial_Patterns_
 of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_12
 Sep20.pdf>] [12 <./26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg>] [13 <./25_Bass_c
 hrom_mauve_pic_3Aug20.jpg>] [14 <./scatter_plot_test.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1539.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1539.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1541.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1541.
 
 (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1539.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1539.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1541.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1541.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1539.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1541.
  ) 
 Here is how much of TeX's memory you used:
  22423 strings out of 481511
@@ -1175,9 +1175,9 @@ Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 r12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (14 pages, 7163352 bytes).
+Output written on Daniella_Thesis_Update.pdf (14 pages, 7167464 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
+ 382 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
