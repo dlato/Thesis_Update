@@ -355,6 +355,28 @@ We are still working through this.
 
 \textbf{Substitution Paper}
 
+The 26 \strep genomes (of unknown strain, therefore very divergent) \p has finished running! It took about a month.
+I have added this to my \p computational time projections, but I think because this point is so drastically different from the others, it pushes the estimated exponential line to infinity almost immediately, so my projected timeline does not include this point (Figure \ref{mauve_45}).
+To me, this further shows that the more divergent the taxa are, the more infeasible \p computation time is, and therefore that it would take too long to align more genomes.
+\textbf{What are your thoughts on this?} 
+
+
+I have finished quantifying how much alignment we lose from our current conservative alignment trimming methods (to ensure homologous genes) when we increase the number of genomes.
+For 26 \bass genomes, we go from a total of 3849474bp before trimming to 4972bp after trimming.
+This resulted a 99.87\% loss of sites.
+For the 25 \ecol genomes, we go from a total of 4378570bp before trimming to 26409bp after trimming.
+This resulted a 99.4\% loss of sites.
+I think the reason for the poor retention of sites is because \p has a really hard time coming up with appropriately aligned blocks when the genomes are divergent.
+These blocks are therefore not comparing homologous genes, and so most of the sites get thrown out based on our trimming methods.
+For the 23 \smel Chromosomes, I saw a loss of only 35\% of sites, which is comparable to what I found with only 6 genomes of \smel, where about 25\% of sites were lost.
+I think that this is fairly convincing as to why we can not do this particular analysis (the current pipeline) with more genomes.
+We would have to re-structure the pipeline completely if we wanted to include more genomes (potentially using just the core genome?).
+\textbf{What are you thoughts on all this? Do you think this will satisfy the reviewer? They did suggest to do a rigorous core genome analysis, which we said we did not do because we wanted to include as much info as possible. Should I be doing a core analysis with more genomes?}
+
+
+
+
+
 I realized that with more genomes, there are more nuances with my substitutions code (the one that ensures we are comparing the same codon position).
 I am currently working out these kinks.
 However, based on what I am seeing so far, it looks like a lot of the sites are trimmed.
@@ -371,6 +393,9 @@ I made a table of those studies below outlining which taxa they use and how many
 Most of these papers are dealing with completely different taxa than I am, and most of the genomes are complete reference genomes.
 I am not sure if it is worth it or necessary for me to do my analysis on these datasets to appease this reviewer.
 \textbf{What are your thoughts?}
+
+
+
 
 %I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
 %I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
@@ -558,14 +583,14 @@ I am not sure if it is worth it or necessary for me to do my analysis on these d
 
 
 \begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_60.pdf}
-	\caption{\label{mauve_60}}	
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_45.pdf}
+	\caption{\label{mauve_45}}	
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_100.pdf}
-	\caption{\label{mauve_100}}	
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_100.pdf}
+%	\caption{\label{mauve_100}}	
+%\end{figure}
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg}
