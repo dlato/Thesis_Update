@@ -527,53 +527,51 @@ I will get these results to you as soon as I have them.
 \begin{itemize}
 	\item Queenie: compare blast results and alignments
 	\item Queenie: new dataframe for \texttt{limma}
-\item write about TEs and repeated elements in cover letter
-\item re-run inversions mapping based on correct subst code
-\item re-run subst analysis for 25genome bac based on correct subst code
-\item non-parametric analysis for subs analysis
-\item quantify trimming loss (more subst genomes)
-\item selection analysis for subst analysis (~6 genomes per bac)
 %\item limma
 %\item list of genes that are DE in inversions
+\item continue to re-run the selection analysis with the new RAxML trees
+\item re-run the supplementary subst window analysis (with new trees)
+\item add new subst results (new tree) to main and supp of paper
+\item check into gap at beginning of \smel chrom subst graph
+
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item Queenie: new dataframe for \texttt{limma}
-	\item previous subst papers datasets (can I re-do?)
 	\item why do uncharacterized proteins have higher sub rates?
 	\item gap in \ecol fig 5
 	\item \bass high \ds values should not be present
 	\item blast to confirm homologs in subst analysis
 	\item distinction between mutations and substitutions in subst paper intro
+	\item update new code on git (subst paper)
 \end{itemize}
 
 \newpage
-\begin{table}[t!]
-	\centering
-%	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{l|c|c}
-	\toprule
-	\textbf{Authors} & \textbf{Species Name} & \textbf{Genomic Structure}\\
-	\midrule
-	Galardini et al. 2013 & \s (14 genomes) & 1 chromosome, 2 plasmids\\
-	\midrule
-	Morrow et al. 2012 & \bur (4 genomes) & 3 chromosomes\\
-	\midrule
-	Cooper et al. 2010 & \begin{tabular}{@{}r@{}}\bur (6 genomes) \\ \bor (4 genomes) \\ \vib (4 genomes) \\ \xan (5 genomes) \end{tabular} & \begin{tabular}{@{}c@{}} 3 chromosomes \\ single circular chromosome \\ 2 chromosomes \\ single circular chromosome  \end{tabular} \\
-	\midrule
-	Couturier et al. 2006 & 126 species of bacteria (only chromosome) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular} \\
-	\midrule
-	Flynn et al. 2010 & \sul (6 genomes) & single circular chromosome \\
-	\midrule
-	Sharp et al. 2005 & 80 species of bacteria (genomic) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular}  \\
-	\bottomrule
-\end{tabular}
-\caption{\label{tab:datasets} Previous studies looking at substitutions/mutation rate.}
-%	}%resizebox
-\end{table}
+%\begin{table}[t!]
+%	\centering
+%%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{l|c|c}
+%	\toprule
+%	\textbf{Authors} & \textbf{Species Name} & \textbf{Genomic Structure}\\
+%	\midrule
+%	Galardini et al. 2013 & \s (14 genomes) & 1 chromosome, 2 plasmids\\
+%	\midrule
+%	Morrow et al. 2012 & \bur (4 genomes) & 3 chromosomes\\
+%	\midrule
+%	Cooper et al. 2010 & \begin{tabular}{@{}r@{}}\bur (6 genomes) \\ \bor (4 genomes) \\ \vib (4 genomes) \\ \xan (5 genomes) \end{tabular} & \begin{tabular}{@{}c@{}} 3 chromosomes \\ single circular chromosome \\ 2 chromosomes \\ single circular chromosome  \end{tabular} \\
+%	\midrule
+%	Couturier et al. 2006 & 126 species of bacteria (only chromosome) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular} \\
+%	\midrule
+%	Flynn et al. 2010 & \sul (6 genomes) & single circular chromosome \\
+%	\midrule
+%	Sharp et al. 2005 & 80 species of bacteria (genomic) & \begin{tabular}{@{}c@{}}only primary chromosome \\ for multi-repliconic bacteria\end{tabular}  \\
+%	\bottomrule
+%\end{tabular}
+%\caption{\label{tab:datasets} Previous studies looking at substitutions/mutation rate.}
+%%	}%resizebox
+%\end{table}
 
 
 \begin{figure}
@@ -623,38 +621,38 @@ I will get these results to you as soon as I have them.
 %	\caption{\label{mauve_100}}	
 %\end{figure}
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg}
-	\caption{\label{ecoli26_mauve} \p visualization of 26 random genomes of \ecol.}
-\end{figure}
-\begin{figure}
-	\includegraphics[width=\textwidth]{25_Bass_chrom_mauve_pic_3Aug20.jpg}
-	\caption{\label{bass25_mauve} \p visualization of 25 random genomes of \bass.}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{26_Ecoli_chromosomes_mauve_pic_3Aug20.jpg}
+%	\caption{\label{ecoli26_mauve} \p visualization of 26 random genomes of \ecol.}
+%\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{25_Bass_chrom_mauve_pic_3Aug20.jpg}
+%	\caption{\label{bass25_mauve} \p visualization of 25 random genomes of \bass.}
+%\end{figure}
+%%
+%\begin{figure}
+%	\includegraphics[width=0.9\linewidth]{./scatter_plot_test.pdf}
+%	\caption{\label{fig:exp_inver_test} Test graphic for the visualization of inversions and distance from the origin of replication. Each dot represents a gene in a block where there is a significant difference in gene expression between inverted and non-inverted sequences within that block. The points are coloured based on if the inverted sequences have higher expression (``up'') or lower expression (``down'') compared to the non-inverted sequences. Genomic position is on the x-axis with NO bidirectional replication accounted for.}
+%\end{figure}
 %
-\begin{figure}
-	\includegraphics[width=0.9\linewidth]{./scatter_plot_test.pdf}
-	\caption{\label{fig:exp_inver_test} Test graphic for the visualization of inversions and distance from the origin of replication. Each dot represents a gene in a block where there is a significant difference in gene expression between inverted and non-inverted sequences within that block. The points are coloured based on if the inverted sequences have higher expression (``up'') or lower expression (``down'') compared to the non-inverted sequences. Genomic position is on the x-axis with NO bidirectional replication accounted for.}
-\end{figure}
-
-\begin{table}[t!]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lccc}
-			\toprule
-			& \multicolumn{3}{c}{\% of Blocks that are}  \\
-			\cmidrule{2-4}
-			Datasets:  & Inverted & Inverted and &Increased in Gene Expression\\
-			Taxa Per Block &  & Differentially Expressed&in the Inverted Sequences \\
-			\midrule
-			All 4 & 68.15 & 8.66&  60.61 \\
-			At least 3 & 68.23& 8.91 & 57.14\\
-			At least 2 & 68.02 & 8.96 & 58.33 \\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
-\end{table}
+%\begin{table}[t!]
+%	\centering
+%	\resizebox{\textwidth}{!}{%
+%		\begin{tabular}{lccc}
+%			\toprule
+%			& \multicolumn{3}{c}{\% of Blocks that are}  \\
+%			\cmidrule{2-4}
+%			Datasets:  & Inverted & Inverted and &Increased in Gene Expression\\
+%			Taxa Per Block &  & Differentially Expressed&in the Inverted Sequences \\
+%			\midrule
+%			All 4 & 68.15 & 8.66&  60.61 \\
+%			At least 3 & 68.23& 8.91 & 57.14\\
+%			At least 2 & 68.02 & 8.96 & 58.33 \\
+%			\bottomrule
+%		\end{tabular}
+%	}%resizebox
+%	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
+%\end{table}
 
 %
 %
