@@ -361,6 +361,26 @@ The rest are either matching, or there is a missing gene name/identifier so it c
 
 \textbf{Substitution Paper}
 
+The outliers that were determined for \bass subst analysis seem a bit off.
+The short bars near the origin were considered outliers because they fall within the lower extreme end of the distribution (Figure \ref{fig:bass_subs_bar}).
+This loss of data I suspect is what has caused the overall sign for the \bass number of subs and distance form the origin of replication to change (Table \ref{tab:cod_non_cod_log_reg}).
+\textbf{Do you think I should count these bars as outliers? Is it ``wrong'' to remove them when the same code was used to determine outliers for all the other replicons?}
+
+Looking at the selection values, \strep and \smel Chromosome have a lot of zero values (like last time) (Table \ref{tab:selection_outliers} and Figures \ref{fig:strep_selection} and \ref{fig:sinoC_selection}).
+However, previously ALL of the non-zero $\omega$ values for \smel chromosome were considered outliers because of the large number of zero $\omega$ values.
+We therefore decided to re-do the selection analysis for \smel chromosome without removing any outliers.
+Now with the new results (from the new RAxML trees) we have non-zero $\omega$ values that are not considered outliers, therefore we do not have the same problem as before.
+\textbf{Do you think it is necessary for me to re-do the \smel chromosome (and maybe the \strep) selection analysis without removing outliers?} The only reason we did it before was because there were no non-zero $\omega$ values that were not outliers.
+
+
+
+
+
+
+
+
+
+
 The 26 \strep genomes (of unknown strain, therefore very divergent) \p has finished running! It took about a month.
 I have added this to my \p computational time projections, but I think because this point is so drastically different from the others, it pushes the estimated exponential line to infinity almost immediately, so my projected timeline does not include this point (Figure \ref{mauve_45}).
 To me, this further shows that the more divergent the taxa are, the more infeasible \p computation time is, and therefore that it would take too long to align more genomes.
@@ -615,6 +635,70 @@ I will get these results to you as soon as I have them.
 \end{figure}
 
 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_weighted_subs_bidirectionality_bw_12Sep20.pdf}
+		\caption{\label{fig:bass_subs_bar} \bass subs graph}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_14Sep20.pdf}
+		\caption{\label{fig:strep_selection}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_dN_dS_omega_dist_14Sep20.pdf}
+		\caption{\label{fig:sinoC_selection}}
+	\end{center}
+\end{figure}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Bacteria and Replicon & \multicolumn{2}{c}{Protein Coding Sequences}\\
+			\cmidrule{2-3}
+			& Coefficient Estimate & $R^2$\\
+			\midrule
+			\ecol Chromosome & \cc -2.66\e{-8}*** &\\
+			\bass Chromosome & 2.76\e{-8}***&\\
+			\strep Chromosome & 7.19\e{-8}*** &\\
+			\smel Chromosome & \cc -6.57\e{-7}*** & \\
+			\smel pSymA & 2.74\e{-7}*** &\\
+			\smel pSymB & 1.09\e{-7}*** &\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:cod_non_cod_log_reg} \textcolor{orange}{one reviewer requested $R^2$ values for the regressions. For a logistic regression, the $R^2$ value is not explicitly calculated by the glm() function. Should I calculate this myself? Or do you think the reviewer only wanted the $R^2$ value on the linear regressions?} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\toprule
+			Bacteria and Replicon & Outliers (\%)   &  \multicolumn{3}{c}{Zero Value (\%)}  \\
+			&  &\dn & \ds & $\omega$ \\
+			\midrule
+			\ecol Chromosome & 7.49 & 13.82 & 1.05 & 13.82 \\
+			\bass Chromosome & 5.41 & 4.40 & 0.16 & 4.40 \\
+			\strep Chromosome & 8.84 & 50.70 & 28.21 & 50.70 \\
+			\smel Chromosome & 17.05 & 61.21 & 59.26 & 61.21\\
+			\smel pSymA & 6.69 & 11.28 & 9.75 & 11.28 \\
+			\smel pSymB & 6.16 & 13.17 & 5.22 & 13.17\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:selection_outliers} Percent of data that was calculated to be an outlier or had a selection variable (\dn, \ds, and $\omega$) value of zero.}
+\end{table}
 
 %\begin{figure}
 %	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_100.pdf}
