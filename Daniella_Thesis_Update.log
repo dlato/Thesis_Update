@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  24 SEP 2020 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  24 SEP 2020 14:12
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1109,14 +1109,14 @@ f  used on input line 628.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_we
-ighted_subs_bidirectionality_bw_12Sep20.pdf, id=53, 505.89pt x 505.89pt>
+ighted_subs_bidirectionality_colour_22Sep20.pdf, id=53, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ba
-ss_weighted_subs_bidirectionality_bw_12Sep20.pdf Graphic file (type pdf)
+ss_weighted_subs_bidirectionality_colour_22Sep20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
-s_weighted_subs_bidirectionality_bw_12Sep20.pdf>
+s_weighted_subs_bidirectionality_colour_22Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/bass_weighted_subs_bidirectionality_bw_12Sep20.pdf  used on in
-put line 636.
+aper_format/figs/bass_weighted_subs_bidirectionality_colour_22Sep20.pdf  used o
+n input line 636.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1156,13 +1156,14 @@ patial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighte
 d_subs_nonpar_22Sep20.pdf>] [11 <C:/Users/synch/Documents/PhD/Spatial_Patterns_
 of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22
 Sep20.pdf>] [12 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_for
-mat/figs/bass_weighted_subs_bidirectionality_bw_12Sep20.pdf>] [13 <C:/Users/syn
-ch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_di
-st_14Sep20.pdf>] [14 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_pape
-r_format/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf>]
+mat/figs/bass_weighted_subs_bidirectionality_colour_22Sep20.pdf>] [13 <C:/Users
+/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omeg
+a_dist_14Sep20.pdf>] [14 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_
+paper_format/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1619.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1619.
- (Daniella_Thesis_Update.aux)
+
+(Daniella_Thesis_Update.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1619.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1619.
 
@@ -1173,7 +1174,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1619.
  ) 
 Here is how much of TeX's memory you used:
  22426 strings out of 481511
- 447093 string characters out of 2911892
+ 447117 string characters out of 2911892
  697147 words of memory out of 3000000
  37183 multiletter control sequences out of 15000+200000
  545861 words of font info for 61 fonts, out of 3000000 for 9000
@@ -1194,7 +1195,7 @@ onts/cm/cmr12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (14 pages, 1267326 bytes).
+Output written on Daniella_Thesis_Update.pdf (14 pages, 1267332 bytes).
 PDF statistics:
  426 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
