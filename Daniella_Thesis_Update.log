@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  24 SEP 2020 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  24 SEP 2020 18:58
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1023,163 +1023,68 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 [2] [3] [4]
-<C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_45.p
-df, id=47, 505.89pt x 505.89pt>
-File: C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended
-_45.pdf Graphic file (type pdf)
-<use C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_
-45.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/mauve
-_time_plot_extended_45.pdf  used on input line 594.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-<C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
-aterial/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf, id=48, 505.89pt x 505
-.89pt>
-File: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplement
-ary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (typ
-e pdf)
-<use C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementa
-ry_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
-itutions/Supplementary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pd
-f  used on input line 600.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
-aterial/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=49, 505.89pt x 505.
-89pt>
-File: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplement
-ary_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type
- pdf)
-<use C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementa
-ry_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
-itutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf
-  used on input line 607.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
-aterial/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=50, 505.89pt x 505
-.89pt>
-File: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplement
-ary_Material/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (typ
-e pdf)
-<use C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementa
-ry_Material/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
-itutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pd
-f  used on input line 614.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
-aterial/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=51, 505.89pt x 505
-.89pt>
-File: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplement
-ary_Material/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (typ
-e pdf)
-<use C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementa
-ry_Material/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
-itutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pd
-f  used on input line 621.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_M
-aterial/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=52, 505.89pt x 505
-.89pt>
-File: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplement
-ary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (typ
-e pdf)
-<use C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementa
-ry_Material/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf>
-Package pdftex.def Info: C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Subst
-itutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pd
-f  used on input line 628.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bass_we
-ighted_subs_bidirectionality_colour_22Sep20.pdf, id=53, 505.89pt x 505.89pt>
+ighted_subs_bidirectionality_colour_22Sep20.pdf, id=48, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/ba
 ss_weighted_subs_bidirectionality_colour_22Sep20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/bas
 s_weighted_subs_bidirectionality_colour_22Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
 aper_format/figs/bass_weighted_subs_bidirectionality_colour_22Sep20.pdf  used o
-n input line 636.
+n input line 583.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_d
-N_dS_omega_dist_14Sep20.pdf, id=54, 505.89pt x 505.89pt>
+N_dS_omega_dist_14Sep20.pdf, id=49, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/st
 rep_dN_dS_omega_dist_14Sep20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/str
 ep_dN_dS_omega_dist_14Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/strep_dN_dS_omega_dist_14Sep20.pdf  used on input line 643.
+aper_format/figs/strep_dN_dS_omega_dist_14Sep20.pdf  used on input line 590.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sinoC_d
-N_dS_omega_dist_21Sep20.pdf, id=55, 505.89pt x 505.89pt>
+N_dS_omega_dist_21Sep20.pdf, id=50, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/si
 noC_dN_dS_omega_dist_21Sep20.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/sin
 oC_dN_dS_omega_dist_21Sep20.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_p
-aper_format/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf  used on input line 650.
+aper_format/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf  used on input line 597.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] [6 <C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extend
-ed_45.pdf>] [7 <C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/
-Supplementary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>]
-[8 <C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementar
-y_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [9 <C:/Users/synch
-/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/si
-noC_10KB_weighted_subs_nonpar_22Sep20.pdf>] [10 <C:/Users/synch/Documents/PhD/S
-patial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighte
-d_subs_nonpar_22Sep20.pdf>] [11 <C:/Users/synch/Documents/PhD/Spatial_Patterns_
-of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22
-Sep20.pdf>] [12 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_for
-mat/figs/bass_weighted_subs_bidirectionality_colour_22Sep20.pdf>] [13 <C:/Users
-/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omeg
-a_dist_14Sep20.pdf>] [14 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_
-paper_format/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1619.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1619.
-
-(Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1619.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1619.
+[5] [6 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_format/figs/
+bass_weighted_subs_bidirectionality_colour_22Sep20.pdf>] [7 <C:/Users/synch/Doc
+uments/PhD/Substitutions_paper/GBE_paper_format/figs/strep_dN_dS_omega_dist_14S
+ep20.pdf>] [8 <C:/Users/synch/Documents/PhD/Substitutions_paper/GBE_paper_forma
+t/figs/sinoC_dN_dS_omega_dist_21Sep20.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1566.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1566.
+ (Daniella_Thesis_Update.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1566.
 
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1619.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1566.
  ) 
 Here is how much of TeX's memory you used:
- 22426 strings out of 481511
- 447117 string characters out of 2911892
- 697147 words of memory out of 3000000
- 37183 multiletter control sequences out of 15000+200000
+ 22370 strings out of 481511
+ 442488 string characters out of 2911892
+ 686098 words of memory out of 3000000
+ 37147 multiletter control sequences out of 15000+200000
  545861 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,90p,1096b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,12n,90p,1095b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ecbi1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecbx1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -1195,9 +1100,9 @@ onts/cm/cmr12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (14 pages, 1267332 bytes).
+Output written on Daniella_Thesis_Update.pdf (8 pages, 1209541 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

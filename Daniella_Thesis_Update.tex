@@ -287,15 +287,9 @@ Inversions $+$ Gene Expression:
 
 Subst Paper:
 
-\ch Commented on using previous papers datasets (Cooper, Morrow, Sharp, Flynn ...etc)
+\ch finished re-running subst and selection analysis (with new RAxML trees)
 
-\ch completed non-linear (non-parametric?) analysis for subst
 
-\ch new subst analysis with new \texttt{RAxML} trees and \strep genomes is complete
-
-\ch Quantify 25 genomes alignment loss due to trimming
-
-\ch \strep 25 genomes \p finished running (~30 days)
 
 
 
@@ -307,11 +301,12 @@ Subst Paper:
 
 \textbf{Inversions + Gene Expression:}
 
-Queenie is just finishing up creating the final \texttt{limma} dataframe I asked for and creating the final list for differences in homologs between the \texttt{BLAST} output and my alignment code.
-However, due to missing gene names, it is sometimes not possible to compare my alignment code to the blast output.
-I was therefore considering only excluding homologs where blast and my alignment code were different.
-The rest are either matching, or there is a missing gene name/identifier so it can not be compared.
-\textbf{What do you think about only excluding mismatches between the blast output and my alignment code?}
+Queenie is still finishing things up but she is moving at a glacial pace.
+Which for now is fine because I am busy with the subst paper, but soon I will have to take over from her to get everything done.
+I had some issues with the gene mapping code but I fixed this.
+It was an issue where one gene is so large that it matches to multiple smaller genes in another taxa.
+For now I consider both of these a match and consider it a match to the blast results if blast also aligned either of those smaller genes.
+\textbf{What do you think about this?}
 
 
 
@@ -360,8 +355,12 @@ The rest are either matching, or there is a missing gene name/identifier so it c
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
 \textbf{Substitution Paper}
+I finished re-running the selection and subst analysis with the new RAxML trees.
+Everything is essentially the same, except for \bass where the logistic regression changed sign.
+I think this is because of the outliers.
+I want to send you the paper and results once all the revisions are done, \textbf{but if you want it earlier, let me know!}
 
-The outliers that were determined for \bass subst analysis seem a bit off.
+The outliers that were determined for the \bass subst analysis seem a bit off.
 The short bars near the origin were considered outliers because they fall within the lower extreme end of the distribution (Figure \ref{fig:bass_subs_bar}).
 This loss of data I suspect is what has caused the overall sign for the \bass number of subs and distance form the origin of replication to change (Table \ref{tab:cod_non_cod_log_reg}).
 \textbf{Do you think I should count these bars as outliers? Is it ``wrong'' to remove them when the same code was used to determine outliers for all the other replicons?}
@@ -392,20 +391,6 @@ This brings me to BLAST. I wanted to include an extra check for the alignments b
 However, this is proving to be very complicated.
 Sometimes there is no proteome available for the strains that I have, gene names are often missing from the genbank file (leaving me with no way to confirm if it is a match), and Queenie has been jumping through some hoops to get this all coded for me (and honestly I am not sure how scalable her code is with other taxa).
 We want to get the re-submission for this subst paper out ASAP and I am not sure how long (or how much of a headache) it will take me to implement blast into my pipeline, so I am wondering \textbf{if you think I should include this extra blast check? Should I say we checked a subset of the data with blast and things line up x\% of the time so we think our alignment is good? I am not sure what to do.}
-
-
-
-
-
-
-I finished re-doing the subst analysis with the new phylogenetic trees and \strep genomes.
-The results (based on the graphs) seem the same. I have not re-entered the regression results into the paper yet, but I suspect they will be the same.
-The only thing that changed in this analysis were the branchlengts of most trees, the topology of \pa and \pb trees, and an increased amount of data used for all replicons (because all block trees matched the overall tree so nothing was thrown out, unlike before.).
-I will get these results to you as soon as I have them.
-
-
-
-
 
 %I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
 %I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
@@ -537,7 +522,7 @@ I will get these results to you as soon as I have them.
 %However, after reading the articles I found that the substitution rate is higher than what was previously estimated using phylogenetic methods.
 %So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
-\section*{This Week}
+\section*{This Week (aka next week)}
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
@@ -545,23 +530,21 @@ I will get these results to you as soon as I have them.
 	\item Queenie: new dataframe for \texttt{limma}
 %\item limma
 %\item list of genes that are DE in inversions
-\item continue to re-run the selection analysis with the new RAxML trees
-\item re-run the supplementary subst window analysis (with new trees)
-\item add new subst results (new tree) to main and supp of paper
-\item check into gap at beginning of \smel chrom subst graph
-
-
+\item why do uncharacterized proteins have higher sub rates?
+\item \bass high \ds values should not be present
+\item start blast to confirm homologs in subst analysis?
+\item distinction between mutations and substitutions in subst paper intro
+\item update new code on git (subst paper)
 \end{itemize}
 
 
-\section*{Next Week}
+\section*{Next Week (aka 2 weeks)}
 \begin{itemize}
-	\item why do uncharacterized proteins have higher sub rates?
-	\item gap in \ecol fig 5
-	\item \bass high \ds values should not be present
-	\item blast to confirm homologs in subst analysis
-	\item distinction between mutations and substitutions in subst paper intro
-	\item update new code on git (subst paper)
+	\item finish blast to confirm homologs in subst analysis
+	\item final edits of subst paper
+	\item send subst paper to Brian to review
+	\item make $\uparrow$ changes to subst paper
+	\item submit subst paper!
 \end{itemize}
 
 \newpage
@@ -590,46 +573,10 @@ I will get these results to you as soon as I have them.
 %\end{table}
 
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_45.pdf}
-	\caption{\label{mauve_45}}	
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf}
-		\caption{\label{fig:ecoli_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf}
-		\caption{\label{fig:bass_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf}
-		\caption{\label{fig:sinoC_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf}
-		\caption{\label{fig:pSymA_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf}
-		\caption{\label{fig:pSymB_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
-	\end{center}
-\end{figure}
-
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Substitutions_paper/mauve_time_plot_extended_45.pdf}
+%	\caption{\label{mauve_45}}	
+%\end{figure}
 
 \begin{figure}[h]
 	\begin{center}
@@ -655,20 +602,20 @@ I will get these results to you as soon as I have them.
 \begin{table}[h]
 	\centering
 	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Bacteria and Replicon & \multicolumn{2}{c}{Protein Coding Sequences}\\
-			\cmidrule{2-3}
-			& Coefficient Estimate & $R^2$\\
-			\midrule
-			\ecol Chromosome & \cc -2.66\e{-8}*** &\\
-			\bass Chromosome & 2.76\e{-8}***&\\
-			\strep Chromosome & 7.19\e{-8}*** &\\
-			\smel Chromosome & \cc -6.57\e{-7}*** & \\
-			\smel pSymA & 2.74\e{-7}*** &\\
-			\smel pSymB & 1.09\e{-7}*** &\\
-			\bottomrule
-		\end{tabular}
+	\begin{tabular}{lcc}
+		\toprule
+		Bacteria and Replicon & \multicolumn{2}{c}{Protein Coding Sequences}\\
+		\cmidrule{2-3}
+		& Coefficient Estimate & $R^2$\\
+		\midrule
+		\ecol Chromosome & \cc -2.66\e{-8}*** &\\
+		\bass Chromosome & 2.76\e{-8}***&\\
+		\strep Chromosome & 7.21\e{-8}*** &\\
+		\smel Chromosome & \cc -6.57\e{-7}*** & \\
+		\smel pSymA & 2.74\e{-7}*** &\\
+		\smel pSymB & 1.10\e{-7}*** &\\
+		\bottomrule
+	\end{tabular}
 		
 	}%resizebox
 	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
