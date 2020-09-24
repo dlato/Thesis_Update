@@ -370,37 +370,33 @@ Looking at the selection values, \strep and \smel Chromosome have a lot of zero 
 However, previously ALL of the non-zero $\omega$ values for \smel chromosome were considered outliers because of the large number of zero $\omega$ values.
 We therefore decided to re-do the selection analysis for \smel chromosome without removing any outliers.
 Now with the new results (from the new RAxML trees) we have non-zero $\omega$ values that are not considered outliers, therefore we do not have the same problem as before.
-\textbf{Do you think it is necessary for me to re-do the \smel chromosome (and maybe the \strep) selection analysis without removing outliers?} The only reason we did it before was because there were no non-zero $\omega$ values that were not outliers.
+\textbf{Do you think it is necessary for me to re-do the \smel chromosome selection analysis without removing outliers?} The only reason we did it before was because there were no non-zero $\omega$ values that were not outliers.
 Either way, I think I need to address the large amount of zero values because it skews the trend lines for \dn, \ds, and $\omega$.
 
 
+One reviewers comments was on the high \ds values ($>$ 10), particularly in the \bass genome.
+I did address some of this in the supplement, but I guess it was not enough.
+I looked into these high values and there are 23 gene segments that have a \ds $>$ 10 in \bass.
+These segments range from 105bp-327bp, our minimum length is 100bp so these are close to that minimum.
+I looked into the highest \ds value and the alignment is not great, but is correct in the sense that it is what mauve and mafft have said should be aligned.
+It seems like even with our rigorous alignment trimming, some poor alignments still slip through the cracks.
+When I looked into the genes that are encoded in this segment of the genome, they align really really well (see email for attached Clustal Omega protein alignment) for some regions, but very poorly for others.
+It looks like some taxa have extra proteins while others are missing those proteins.
+I suspect this is what is causing the poor alignment.
+Based on the product names of the genes, it is hard to tell if they are truly similar.
+Some are listed as terminase, hypothetical proteins, phage like elements related to protein Xkdv.
+When looking at the genomic position of these proteins, they are all within the same 70,000bp of the genome in all taxa (the gene is about 2000bp long).
+\textbf{What do you think should be done about this?}
+
+This brings me to BLAST. I wanted to include an extra check for the alignments by verifying the genes with the reciprocal best blast hit results from the same taxa, just like what I am doing for my inversions and gene expression analysis.
+However, this is proving to be very complicated.
+Sometimes there is no proteome available for the strains that I have, gene names are often missing from the genbank file (leaving me with no way to confirm if it is a match), and Queenie has been jumping through some hoops to get this all coded for me (and honestly I am not sure how scalable her code is with other taxa).
+We want to get the re-submission for this subst paper out ASAP and I am not sure how long (or how much of a headache) it will take me to implement blast into my pipeline, so I am wondering \textbf{if you think I should include this extra blast check? Should I say we checked a subset of the data with blast and things line up x\% of the time so we think our alignment is good? I am not sure what to do.}
 
 
 
 
 
-
-
-The 26 \strep genomes (of unknown strain, therefore very divergent) \p has finished running! It took about a month.
-I have added this to my \p computational time projections, but I think because this point is so drastically different from the others, it pushes the estimated exponential line to infinity almost immediately, so my projected timeline does not include this point (Figure \ref{mauve_45}).
-To me, this further shows that the more divergent the taxa are, the more infeasible \p computation time is, and therefore that it would take too long to align more genomes.
-\textbf{What are your thoughts on this?} 
-
-I have finished quantifying how much alignment we lose from our current conservative alignment trimming methods (to ensure homologous genes) when we increase the number of genomes.
-For 26 \bass genomes, we go from a total of 3849474bp before trimming to 4972bp after trimming.
-This resulted a 99.87\% loss of sites.
-For the 25 \ecol genomes, we go from a total of 4378570bp before trimming to 26409bp after trimming.
-This resulted a 99.4\% loss of sites.
-I think the reason for the poor retention of sites is because \p has a really hard time coming up with appropriately aligned blocks when the genomes are divergent.
-These blocks are therefore not comparing homologous genes, and so most of the sites get thrown out based on our trimming methods.
-For the 23 \smel Chromosomes, I saw a loss of only 35\% of sites, which is comparable to what I found with only 6 genomes of \smel, where about 25\% of sites were lost.
-I think that this is fairly convincing as to why we can not do this particular analysis (the current pipeline) with more genomes.
-We would have to re-structure the pipeline completely if we wanted to include more genomes (potentially using just the core genome?).
-\textbf{What are you thoughts on all this? Do you think this will satisfy the reviewer? They did suggest to do a rigorous core genome analysis, which we said we did not do because we wanted to include as much info as possible. Should I be doing a core analysis with more genomes?}
-
-I did the non-linear subst analysis and to me it still looks variable and inconsistent between bacterial replicons (Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}).
-They do for the most part mirror the linear results (higher/lower subs near the origin and lower/higher subs near the terminus), but with some peaks and valleys in between.
-\textbf{What are your thoughts on this non-linear analysis?}
 
 I finished re-doing the subst analysis with the new phylogenetic trees and \strep genomes.
 The results (based on the graphs) seem the same. I have not re-entered the regression results into the paper yet, but I suspect they will be the same.
@@ -608,28 +604,28 @@ I will get these results to you as soon as I have them.
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:bass_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:sinoC_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:pSymA_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf}
+		\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Spatial_Patterns_of_Substitutions/Supplementary_Material/figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:pSymB_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
@@ -689,10 +685,10 @@ I will get these results to you as soon as I have them.
 			\midrule
 			\ecol Chromosome & 7.49 & 13.82 & 1.05 & 13.82 \\
 			\bass Chromosome & 5.41 & 4.40 & 0.16 & 4.40 \\
-			\strep Chromosome & 8.84 & 50.70 & 28.21 & 50.70 \\
+			\strep Chromosome & 4.74 & 25.70 & 14.48 & 25.70 \\
 			\smel Chromosome & 17.05 & 61.21 & 59.26 & 61.21\\
 			\smel pSymA & 6.69 & 11.28 & 9.75 & 11.28 \\
-			\smel pSymB & 6.16 & 13.17 & 5.22 & 13.17\\
+			\smel pSymB & 6.13 & 13.20 & 5.20 & 13.20\\
 			\bottomrule
 		\end{tabular}
 		
