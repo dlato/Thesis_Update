@@ -281,21 +281,21 @@
 
 Inversions $+$ Gene Expression:
 
+\ch preliminary DESeq analysis (with toy data frame)
+
+\ch Inversions and position preliminary figure
+
+\ch fixed indentation issue in gene mapping code
+
+\ch explored H-NS protein data
+
 %\ch Queenie: comparing blast and gene alignment homologs
 
 %\ch Queenie: start creating dataframe that is compatible with \texttt{limma}
 
 Subst Paper:
 
-\ch double checked some odd looking blocks in the analysis
-
-\ch new high subs example in supplement (\bass)
-
-\ch new high \ds example in supplement (\bass)
-
-\ch finished all other revisions
-
-\ch sent Brian latest draft
+\ch re-submit!!! Woo!
 
 
 
@@ -311,7 +311,7 @@ Subst Paper:
 
 Queenie is still finishing things up and moving slowly. But she is still willing to do work so that is good!
 
-As per our discussion on Friday, I will be incorporating genomic position of inversions into my analysis, DESeq, and HNS proteins.
+As per our discussion a few weeks ago, I will be incorporating genomic position of inversions into my analysis, DESeq, and HNS proteins.
 I started the position and inversions analysis by looking at inverted regions that had a significant difference in normalized gene expression (not differential gene expression via DESeq, yet).
 There appears to be no significant correlation between distance from the origin and significant inversion blocks (blocks that had a significant difference in gene expression between inverted and non-inverted sequences using wilcox sign-ranked test).
 I have been trying to visualize where these significant inversions are located in the genome, but having varying genomic positions for each taxa makes this messy.
@@ -326,6 +326,20 @@ Since the inversions are all relative to \ecol K12 MG655, I thought that maybe j
 Or, I could find an average position for the inverted and non-inverted sequences within each block?
 \textbf{What are your thoughts on all this? Do you know how to best represent this data?}
 All positions are currently accounting for bidirectional replication and distance from the origin.
+
+I started to run the DESeq pipeline on a toy data frame (the actual data frame is still being created by Queenie).
+Since we are using replicated from multiple experiments, I am accounting for these effects in the analysis.
+I will be running this pipeline on each of the inversion combinations (i.e. an inversion in ATCC but not any of the other taxa, an inversion in 2 out of 4 taxa...etc) and then be able to apply the results to all blocks that had that same inversion pattern.
+
+I also realized there was a minor issue in my gene mapping code (incorrect indenting), so I am re-running this part of the analysis (the part that lists the homologous genes from the PARSNP alignment).
+
+I looked into the H-NS protein binding data available there is quite a lot which is exciting!
+There are three datasets (Gainger et al. 2006, Ueda et al. 2013, and Higashi et al. 2016) that have nice CSV's with the genomic position of H-NS binding sites.
+There are also 2 datasets that have the same information but in cumbersome formats like PDF (Ishima et al. 2006 and Lang et al. 2007), which would be a bit more work to extract the data from.
+I have not read any of these papers in depth, just skimmed them.
+I am not sure if I should combine the information from all these datasets, or only use the intersection of the binding sites from each experiment, or only use the most recent one?
+the Higashi dataset also has some cutoff value to try and eliminate noise from their data set so I am not sure if I should use only that.
+\textbf{What are your thoughts on all of this?}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -372,162 +386,29 @@ All positions are currently accounting for bidirectional replication and distanc
 %It could be that all the variation is being considered an ``outlier'' because most of the values are zero (because they are so smilar)?
 %I am still really confused about why the selection graph for \smel Chromosome looks so odd and the only explanation I can come up with is that the sequences are just really really similar. \textbf{Do you have any thoughts on this or suggestions for other things I could investigate to figure out what is going on?}
 
-\textbf{Substitution Paper}
 
-All of the revisions for the subst paper are complete! I sent you the latest draft of this. 
-\textbf{I am hoping to submit it before the weekend.}
-%I am still trying to figure out how to add more species to the analysis. I am starting to re-do the analysis with all \smel complete genomes available (23) and seeing what happens.
-%I am also thinking about how we identify similar sequences and wondering if we should be changing the methods.
-%I know we are doing everything we can to ensure that we are aligning homologous sequences..but I worry.
-%Although, I am not sure how we would re-do everything while still accounting for genomic reorganization.
-%I am hoping that using blast to verify the alignment in the inversions project will be helpful here.
-%Maybe I could use this as proof to say that we blasted things and still it looks good (or removed things that were not RBBHs), not sure.
-%\textbf{let me know what you think about completely re-hauling the methods.}
-
-
-
-%
-%This new analysis using trimal to cut out bad blocks is done! The results are found in the %tables below. (I have not downloaded the figures yet.)
-%There are sill a few genes that have $\omega$ $>$ 1 in each of the bacterial replicons.
-%I looked at all of them by hand and there are on average about 5 substitutions per ``gene'' with $\omega$ $>$ 1, with one gene having max of 15 substitutions.
-%There were quite a few cases where there were no synonymous substitutions, but there was still an estimated dS $>$ 0.
-%Mostly the ratio of \# of non-synonymous substitutions to synonymous substitutions was 3.75:1 or lower.
-%So I think we are dealing with very few sites and thats why the ratio is skewed.
-%What do you think? We can talk more about this when I get back next week.
-%
-%\textbf{protein coding subs $>$ non-protein coding subs}
-%
-%I did some research about what proportion of a bacterial genome is protein coding and it looks like between 40-90\% with an average of 88\%. These numbers often include pseudogenes as protein coding, which I am not.
-%My data for \ecoli is estimating 85\% coding and 15\% non-coding. So really I am not that far off so I think things are fine!
-
-
-
-
-
-%Last week I did linear regression on the total number of substitutions in 10kb sections of the genome as well as a proportional number of substitutions for protein coding and non-protein coding sites (Table \ref{tab:lin_reg_10kb_subs}).
-%Mostly everything is not significant or negative which is good!
-%The only weird thing is that \strep is positive in non-protein coding when looking at proportional number of substitutions, but is negative when looking at raw counts of substitutions.
-%I did a linear regression on the number of protein coding and non-protein coding sites and there is a significant negative correlation between the number of sites and distance from the origin of replication.
-%So I think that there are just less sites here so that is why the proportion of substitutions per site increases near the end, but the raw number of substitutions is low.
-%I will come discuss this with you later.
-
-%I also calculated an average number of substitutions in 20kb regions near and far from the origin, these are found in Table \ref{tab:20kb_near_far_ori}.
-%The origin does have a higher number of substitutions near the origin than compared to the terminus, which is great!
-%However, the number of substitutions is higher in protein coding regions than in non-protein coding regions.
-%I also wrote a little script to check if the proportional number of substitutions was higher in each 10kb region for non-protein coding v.s. protein coding, and I found the opposite.
-%That the proportional number of substitutions (number of subs divided by number of sites) is higher in protein coding than non-protein coding in 60\% of the \ecol 10kb regions.
-%I am still looking into this, I think that it may be something wrong with how I split up the alignments into protein coding and non-protein coding.
-%So I need to look at this code carefully.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\textbf{dN, dS, $\omega$:}
-
-%For the \dn, \ds results (Table \ref{tab:dN_dS_ratios}) we see that for all the replicons that have $\omega$ < 1, \dn < \ds, as it should be.
-%The only replicon that has and $\omega$ > 1 is \strep and it has \dn > \ds, also as it should be.
-%So, using the classic definition of what it means to have $\omega$ > 1, the mutations here are going through positive selection which kind of makes sense because for \strep we are looking at different SPECIES so they are collectively trying to gain an advantage.
-%Where as for the other bacteria, $\omega$ < 1 suggests that most of the sites are going through purifying selection and therefore removing deleterious mutations. Which again kind of makes sense because here we are looking at the same SPECIES, in a variety of strains so they should be now trying to streamline their genome by removing bad things instead of trying to gain advantageous mutations.
-%What are your thoughts on this?
-
-%Finally the re-running of the selection and substitution analysis has finished! The results are found in the graphs and tables below.
-%The new logistic regression for the substitution analysis looks like now only \bass and \smel Chromosome and \pa have a decreasing trend. The %other replicons have a positive trend. So it is pretty evenly split with 3 positive replicons and 3 negative replicons.
-%Thoughts?
-%I also re-did the coding/non-coding substitutions histograms and they look way nicer now! (See below)
-%The only thing that is weird is that \strep has a positive linear regression for both coding and non-coding, but the graph looks negative...
-%
-%I also quickly fit linear regression models to the \dn, \ds, and $\omega$ values as they vary across the genome (Table \ref{tab:dN_dS_lin_reg}).
-%As you can see, mostly nothing is significant. I think this is because most of the graphs are very non-linear and are quite spiky/variable throughout the genome.
-%When looking at the graphs of the distribution of \dn, \ds, and $\omega$ they are quite spiky and not very pretty. Not sure if they are informative.
-%Three weird things about this is that \ecoli, \bass and \pa appear to have chunks of data missing from their genomes. 
-%When you look at the substitutions graphs you can see that there are less substitutions total in those areas, so it could just be a lack of data.
-%I am looking into this more.
-%
-%When comparing the average genome \dn, \ds, and $\omega$ values to the violin plots, you can see that half of the replicons have $\omega$ values $>$ 1, but the corresponding violin plot shows that the median $\omega$ value is $<$ 1 except for \strep. So I am not sure if it is better to use the median or average vale?
-%
-%That being said, \strep still has \dn $>$ \ds. So the errors I found before did not fix this. I will continue to look into this.
-%
-%Dotter takes a few days to run (which is not ideal), but I have played with the window size in the hopes to reduce some of the noise.
-%However, when looking at my original dot plot compared to the one you produced in mummer, they look different.
-%Mine looks like there are at least 3 inversions total near the beginning and ends of the genome (I will have to show you on my computer because it takes way too long to load).
-%And yours looks like there are no inversions at all..which is curious.
-%Any thoughts on this?
-%
-%I also calculated the average gene expression per replicon for fun, this is found in Table \ref{tab:gene_exp_mean}. \strep is like 2 orders of magnitude lower than everything else..which is weird so I am not sure what is going on there.
-%Do you think this is something that needs to be put into the gene expression paper?
-
-
-%I have also been working to put the \dn, \ds, and $\omega$ values for each gene into a supplementary table on github. This is slowly getting done.
-
-
-
-%\begin{itemize}
-%	\item Is 5 genomes going to provide enough data/information?
-%	\item would I use a midpoint for each gene and have one data point per node in the tree per gene?
-%	\item or should I have all positions in the gene have the same expression value?
-%\end{itemize}
-
-%For the papers solely on gene expression, they were all basically saying the things that we already know, that gene expression tends to decrease when moving away from the origin.
-%However, there were varying explanations as to why this was happening. Some papers attributed this to an increase in gene dosage near the origin, but others said that this was not the case and there must be some other mechanism for controlling this or that gene expression trends could be a secondary effect of selection on say gene order or chromosome organization.
-%But, they all basically said that because bacterial genomes are so highly organized based on gene order, physical folding of the chromosome, co-regulation of gene clusters...etc that this is why we see gene expression decreasing when moving away from the origin of replication.
-%
-%For the papers on Inversions, the results were a bit all over the place.
-%Most of the papers were older (1980's) and often focused on one known inversion in one bacteria.
-%These often were related to antibiotic resistance, flagella state of bacteria, or turning specific genes on/off.
-%Sometimes these studies would say how the inversion altered expression of close down or upstream genes by changing promoters locations.
-%Other studies engineered their own inversions, some mentioning gene expression and some don't and talk more about the replication of inversions or how they tend to be symmetrical around the origin.
-%One large study done with Staphylococcus in 2012 just mentions that lots of genes are deferentially expressed (some up regulated and some down regulated).
-%The overall feeling I got was that inversions can alter gene expression and this can be done by changing the promoter location of specific genes, which can impact many things about the bacteria like their growth state and resistance.
-%There seems to be no ``trend'' with respect to inversions always causing gene expression to go up or down.
-%It also looks like no one has done what we are doing: looking at existing expression data to see how having an inversion impacts gene expression within and outside of the inversion.
-
-%I also looked at the inversions and gene expression for the 5 strains of \ecol and there are inversions (pics of alignments below, the taxa with all the weird stuff going on is ATCC)!!
-%Mauve identified 3 large inversions roughly: 1,000,000bp, 800,000bp and 500,000bp. 
-%Parsnp identified similar inversions (in similar locations) roughly: 1,350,000bp, 547,000bp and 1,376,300bp.
-%Both of the programs had some sections that were not within an LCB or part of the core genome within these regions so the actual continuous length of the inversions may be smaller.
-%These inversions only exist in one of the bacteria: \ecoli ATCC. The other 4 strains are all VERY similar with hardly any rearrangements, let alone inversions.
-%So based on this we decided that we can just compaire the inversions between K-12 MG1655 and ATCC.
-%I believe that \p is only showing information from one strand so when something is listed on the opposite strand from the reference in \p then it should be an inversion. I obviously need to check this and make sure this is the case. If it is, then it will make coding to identify inversions super simple!
-%Also need to check if the inversions identified by \p and PARSNP are the same.
-
-%%%%%%%%%%%%%%%%%bring these up next time!!!
-
-%I realized that for \pb I miscalculated the bidirectionality transformation, so I had to fix this and re-run everything.
-%It did not change the logistic regression results (seen below).
-%However, when I re-did the origin shuffling to see if the placement of the origin changed anything, moving the origin 100kb, 90kb and 80kb to the left made the logistic regression negative (opposite). I have been trying to figure out why this is happening but I am having no luck. I thought maybe it was because these shufflings are now ~700kb away from the terminus, but the actual origin is about the same distance. I am still trying to figure this out but I am not sure what to do or what it means about the robustness of the origin shuffling.
-
-%I looked at the gene expression data for \smel in detail and it appears to look ok.
-%When I graph the raw data and plot the regression line it looks like there is no trend for \smel, the points are evenly distributed throughout the genome and there appears to be no increasing or decreasing trend.
-%When looking at the other bacteria's raw data, there is clearly a decreasing trend when moving away from the origin.
-%Additionally the number of genes and number of replicates are all comparable between \smel and the other bacteria.
-%So I think that the reason \smel does not have significant gene expression regressions is because there is simply no trend.
-
-%Last week I was reading an average of 2 articles a day (and will continue to do so until Aug 15). 
-%While reading these papers I was researching the increased number of substitutions found near the origin of mitochondria.
-%The papers I found on this subject are slightly misleading. The titles suggest that the substitution rate near the Control Region (CR) of mitochondria (which spans the origin on either side) is higher.
-%However, after reading the articles I found that the substitution rate is higher than what was previously estimated using phylogenetic methods.
-%So, I need to do a bit more research to see if I can find what the substitution rate for the rest of the mt genome is and see if the CR actually is higher.
 
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
 	\item Queenie: compare blast results and alignments
-	\item Queenie: new dataframe for \texttt{limma}
+	\item Queenie: new dataframe for DESeq
 %\item limma
 %\item list of genes that are DE in inversions
-\item update new code on git (subst paper)
-\item Brian's edits for subst paper
-\item submit subst paper!
-\item solidify inversion and position graph
-\item figure out what is up with the midpoint position in inversions stats code
+\item Keep working on position and inversion visualization
+\item keep looking at H-NS protein stuff: read in data and combine datasets
+
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item format data to be in DESeq format
-	\item analysis on deferentially expressed genes (long range effects) using DESeq
-	\item start looking at HNS protein binding sites
+	\item actual analysis on DESeq data
+	\item visualizations/results for $\uparrow$
+	\item keep working on H-NS protein stuff: combine with inversion positions
+	\item read papers on H-NS proteins
 \end{itemize}
 
 \newpage
