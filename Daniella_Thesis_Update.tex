@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{array}
 \pagestyle{fancy}
 \setlength{\headheight}{15.2pt}
 \setlength{\headsep}{13 pt}
@@ -122,112 +123,15 @@
 
 \underline{Subs Paper Things to Do:}
 \begin{itemize}
-	\item  \sout{more genomes}
-	\item \sout{new  outgroups? (too distant)}
-	\item \sout{explain high dS values in \bass}
-	\item \sout{potentially poor alignment and non-orthologous genes (core genome, change methods?)}
-	\item \sout{non-parametirc analysis for subs}
-	\item \sout{gap in \ecoli fig 5}
-	\item \sout{new methods for trees}
-	\item \sout{concerned about repeated genes (TEs) and not analyzing core genome}
-	\item \sout{check if trimming respects coding frame}
-	\item \sout{clear distinction between mutations and substitutions in intro (separate sections)}
-	\item \sout{datasets from previous papers (repeat my analysis on them?)}
-	\item \sout{why would uncharacterized proteins have higher subs rates?}
-	\item \sout{$R^2$ values in regression analysis}
-	\item \sout{update gene exp paper ref}
-	
-%	\item \sout{ \# of coding and non-coding sites}
-%	
-%	\item \sout{\# of subs in each of $\uparrow$}
-%	
-%	\item \sout{Look into \strep non-coding issue}
-%	
-%	\item \sout{Look into \ecol coding issue}
-%	
-%	\item \sout{Look into \pb coding/non-coding trend weirdness}
-%	
-%	\item \sout{Figure out why \strep appears to have tons of coding data missing}
-%	
-%	\item \sout{Figure out what is going on with cod/non-cod code and why it is still not working!}
-%	
-%	\item \sout{write up methods for coding/non-coding}
-%	
-%	\item \sout{write methods and results for clustering}
-%	
-%	\item \sout{start code to split alignment into multiple alignments of each gene}
-%	
-%	\item \sout{figure out how to deal with overlapping genes}
-%
-%	\item \sout{figure out how to deal with gaps in gene of ref taxa}
-%	
-%	\item \sout{split up the alignment into multiple alignments of each gene}
-%	
-%	\item \sout{check if each gene alignment is a multiple of 3 (proper codon alignment)}
-%	
-%	\item \sout{get dN/dS for coding/non-coding stuff per gene}
-%	 
-%	\item Or get 1st, 2nd, 3rd codon pos log regs
-	
-%	\item \sout{write up coding/non-coding results}
-%	
-%	\item \sout{take out gene expression from this paper}
-%	
-%	\item \sout{write better intro/methods for distribution of subs graphs}
-%	
-%	\item \sout{write discussion for coding/non-coding}
-%	
-%	\item \sout{write coding/non-coding into conclusion}
-%	
-%	\item \sout{figured out pipeline for CODEML to calculate dN/dS for each gene}
-%	
-%	\item \sout{make a list of what should be in supplementary files for subs paper}
-%	
-%	\item \sout{put everything in list into supplementary file for subs paper}
-%	
-%	\item \sout{write dN/dS methods}
-%	
-%	\item \sout{write dN/dS results}
-%	
-%	\item \sout{write dN/dS discussion}
-%	
-%	\item \sout{write dN/dS into conclusion}
-%	
-%	\item \sout{new bar graph with coding and non-coding sites separated}
-%	
-%	\item \sout{spatial analysis of \dn, \ds, and $\omega$}
 
-%	\item causes for weird selection and subs results in \strep
-%	\begin{itemize}
-%		\item see how often class 4 arises in strep to see what is going on in later portion of the genome (to see if annotation is really a problem)
-%		
-%		\item split up the strep data into core and non core and see if results are the same
-%	\end{itemize}
+%	\item Or get 1st, 2nd, 3rd codon pos log regs
 
 %    \item \sout{why does sinoC have omega lin reg = 0 near and far from the origin?}
 %    
  %   \item create new graphs for selection analysis
 %    
-%    \item \sout{find and example of high substitution bar in \strep and put this into supplement as an example of really diverged taxa (and that subs are real!)}
-%    
-%    \item \sout{discuss removing omega outliers in methods}
-%    
-%    \item \sout{double check that the ter and ori and max genome pos are correct}
-%	
-%	\item \sout{make graphs proportional to length of respective cod/non-cod regions}
-%	
-%	\item \sout{test examples for genes near and far from terminus (robust log reg/results)}
-%	
-%	\item \sout{linear regression on 10kb regions for weighted and non-weighted substitutions}
-%	
-%	\item \sout{average number of substitutions in 20kb regions near and far from the origin}
-%	
-%	\item \sout{figure out why the data is weird for number of cod/non-cod sites}
-%	
 	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
-%	
-%	\item \sout{grey out outliers in subs graphs?}
-	
+
 	\item mol clock for my analysis?
 	
 	\item GC content? COG? where do these fit?
@@ -281,66 +185,58 @@
 
 Inversions $+$ Gene Expression:
 
-\ch preliminary DESeq analysis (with toy data frame)
+\ch Read one H-NS paper
 
-\ch Inversions and position preliminary figure
+\ch diagram for inversions visualization
 
-\ch fixed indentation issue in gene mapping code
+\ch reverse complement ATCC for $\uparrow$ picture
 
-\ch explored H-NS protein data
-
-%\ch Queenie: comparing blast and gene alignment homologs
-
-%\ch Queenie: start creating dataframe that is compatible with \texttt{limma}
-
-Subst Paper:
-
-\ch re-submit!!! Woo!
+\ch preliminary code for correlation btwn H-NS binding and inversions/inverted blocks with significant gene expression differences
 
 
+General:
 
+\ch Wrote 3pages for conclusion of Dissertation
 
-
-%General:
-
-%\ch Edited some of dissertation intro 
-
-
+\bigskip
 
 \textbf{Inversions + Gene Expression:}
 
-Queenie is still finishing things up and moving slowly. But she is still willing to do work so that is good!
+\textbf{H-NS Preliminary Analysis:}
+I made some preliminary code to see if there is a correlation between H-NS binding and inverted blocks as well as inverted blocks with significant differences in gene expression.
+I did this using a simple Pearson correlation. 
+\textbf{Do you think I need to do something more complicated than this?}
+At the moment, there appears to be no correlation between inverted blocks and H-NS binding.
+However, I realized that there was a small formatting error in my data frame so this needs to be re-done and I would take these results with a grain of salt.
 
-As per our discussion a few weeks ago, I will be incorporating genomic position of inversions into my analysis, DESeq, and HNS proteins.
-I started the position and inversions analysis by looking at inverted regions that had a significant difference in normalized gene expression (not differential gene expression via DESeq, yet).
-There appears to be no significant correlation between distance from the origin and significant inversion blocks (blocks that had a significant difference in gene expression between inverted and non-inverted sequences using wilcox sign-ranked test).
-I have been trying to visualize where these significant inversions are located in the genome, but having varying genomic positions for each taxa makes this messy.
-My first attempt at showing significant blocks is in Figure \ref{fig:inversions_pos_1}.
-It is difficult to see what is going on because you can not tell which inversion matches the others.
-Please excuse the ugly axis, colours and general aesthetics. Those will be fixed.
-I then attempted to just show what was happening in \ecol K12 MG655 (Figure \ref{fig:inversions_pos_2}).
-Figure \ref{fig:inversions_pos_2} is a bit deceiving because it is actually plotting all genes within each block.
-My vision for this graph is sketched in Figure \ref{fig:inversions_pos_sketch}.
-My thought was that if I could some how get only one genomic position associated with each inversions, then it would be easier to visualize and I could have more useful information on the graph.
-Since the inversions are all relative to \ecol K12 MG655, I thought that maybe just using it's genomic positions would be ok?
-Or, I could find an average position for the inverted and non-inverted sequences within each block?
-\textbf{What are your thoughts on all this? Do you know how to best represent this data?}
-All positions are currently accounting for bidirectional replication and distance from the origin.
+\textbf{Inversion Visualization:}
+I have been looking at programs to best depict the inversions we are seeing but most take too long to run (dot plots) or are quite complicated in the input files.
+I found a way to use parallel sets in \texttt{R} to get around this and I think they are pretty good (Figure \ref{fig:inversion_norevcomp})!
+In Figure \ref{fig:inversion_norevcomp}, it appears as though the whole ATCC genome (CP009072) is inverted.
+So I decided to reverse complement the entire genome of ATCC and then re-create the diagram to see if it would make a difference (Figure \ref{fig:inversion_revcomp}).
+Figure \ref{fig:inversion_revcomp} does clean things up a bit and still shows some of the inversions.
+Additionally, I am a bit confused because theoretically just reversing one sequence should still identify the same blocks in \texttt{PARSNP} when the sequence is not reversed.
+However, the blocks are all slightly different in their positions but the overall \texttt{PARSNP} visualization looks identical.
+So I am a bit confused about which image I should use in the paper.
+My main concern with this is if it is ok to use one image for the visualization (the reverse complemented image Figure \ref{fig:inversion_revcomp}), and the data from the other figure (non-reverse complemented Figure \ref{fig:inversion_norevcomp}) for the data analysis.
+I mention this because when ATCC is reverse complemented it complicates the genomic position annotation. So I would have to ensure that all my annotation is also reverse complemented and that I am grabbing the correct sequence (reverse of the reverse complement?) when I re-align with \texttt{MAFFT}.
+\textbf{What are your thoughts on this?}
 
-I started to run the DESeq pipeline on a toy data frame (the actual data frame is still being created by Queenie).
-Since we are using replicated from multiple experiments, I am accounting for these effects in the analysis.
-I will be running this pipeline on each of the inversion combinations (i.e. an inversion in ATCC but not any of the other taxa, an inversion in 2 out of 4 taxa...etc) and then be able to apply the results to all blocks that had that same inversion pattern.
 
-I also realized there was a minor issue in my gene mapping code (incorrect indenting), so I am re-running this part of the analysis (the part that lists the homologous genes from the PARSNP alignment).
 
-I looked into the H-NS protein binding data available there is quite a lot which is exciting!
-There are three datasets (Gainger et al. 2006, Ueda et al. 2013, and Higashi et al. 2016) that have nice CSV's with the genomic position of H-NS binding sites.
-There are also 2 datasets that have the same information but in cumbersome formats like PDF (Ishima et al. 2006 and Lang et al. 2007), which would be a bit more work to extract the data from.
-I have not read any of these papers in depth, just skimmed them.
-I am not sure if I should combine the information from all these datasets, or only use the intersection of the binding sites from each experiment, or only use the most recent one?
-the Higashi dataset also has some cutoff value to try and eliminate noise from their data set so I am not sure if I should use only that.
-\textbf{What are your thoughts on all of this?}
+I also noticed from Figures \ref{fig:inversion_norevcomp} and \ref{fig:inversion_revcomp} that a lot of the inversions have been rearranged in addition to being inverted.
+I am not sure how best to account for this in my calculations.
+\textbf{Do you have any thoughts on this?}
 
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all.pdf}
+	\caption{\label{fig:inversion_norevcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is in the GenBank listed orientation.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf}
+	\caption{\label{fig:inversion_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is reverse complemented from the GenBank listed orientation.}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
@@ -392,12 +288,12 @@ the Higashi dataset also has some cutoff value to try and eliminate noise from t
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item Queenie: compare blast results and alignments
-	\item Queenie: new dataframe for DESeq
+	\item Queenie: new dataframe for DESeq (combining blast results and raw expression data)
 %\item limma
 %\item list of genes that are DE in inversions
-\item Keep working on position and inversion visualization
-\item keep looking at H-NS protein stuff: read in data and combine datasets
+\item Keep working on position and inversion visualization (finalize + make it pretty)
+\item determine what H-NS datasets we will be using (combine, intersect, separate..etc)
+\item write code to compare all H-NS datasets to inversions based on what is decided $\uparrow$
 
 
 \end{itemize}
@@ -407,31 +303,11 @@ the Higashi dataset also has some cutoff value to try and eliminate noise from t
 \begin{itemize}
 	\item actual analysis on DESeq data
 	\item visualizations/results for $\uparrow$
-	\item keep working on H-NS protein stuff: combine with inversion positions
 	\item read papers on H-NS proteins
+	\item think about how to visualize H-NS and inversions info
 \end{itemize}
 
 \newpage
 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{genome_pos_inversions_attempt1.pdf}
-		\caption{\label{fig:inversions_pos_1} An attempt at showing all taxa and the significant inversions (significant $=$ blocks that had a significant difference in gene expression between inverted and non-inverted sequences using wilcox sign-ranked test). The ``up'' and ``down'' simply mean that the sequences that were inverted in that block has significantly higher or lower gene expression than the non-inverted sequences in that block. This up/down was NOT done using DESeq, just a simple wilcox sign-ranked test.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{genome_pos_inversions_k12.pdf}
-		\caption{\label{fig:inversions_pos_2} An attempt at showing just the significant inversions (significant $=$ blocks that had a significant difference in gene expression between inverted and non-inverted sequences using wilcox sign-ranked test) using the distance from the origin of \ecol K12 MG655. The ``up'' and ``down'' simply mean that the sequences that were inverted in that block has significantly higher or lower gene expression than the non-inverted sequences in that block. This up/down was NOT done using DESeq, just a simple wilcox sign-ranked test.}
-	\end{center}
-\end{figure}
-
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=\textwidth]{genome_pos_inversions_sketch.png}
-		\caption{\label{fig:inversions_pos_sketch} A sketch of what I am hoping the position graph would look like. Each inverted region/block would be plotted and the average gene expression of the inverted and non-inverted sequences would be in different colours (green and yellow). Any blocks that had a significant difference in gene expression (significant $=$ blocks that had a significant difference in gene expression between inverted and non-inverted sequences using wilcox sign-ranked test), would be somehow bold in the diagram (red box).}
-	\end{center}
-\end{figure}
 
 \end{document}
