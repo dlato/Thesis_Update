@@ -447,4 +447,39 @@ So I am wondering if I should re-do the whole genome alignments with a different
 	\caption{\label{tab:pos_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks with a significant difference in normalized gene expression between inverted and non-inverted sequences within the block. Column 1 depicts the correlation coefficient between the significant blocks and the genomic position of the alignment blocks. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Inversion Category & midpoint & gbk midpoint \\
+			\midrule
+			rev comp & NS & NS \\
+			inversion & 2.20\e{-7}***& 2.20\e{-7}*** \\
+			sig rev comp & -1.00\e{-7}*** & -9.99\e{-8}***\\
+			sig inversion & NS & NS\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:log_reg} Logistic regression between various inversion categories and distance from the origin of replication for all strains. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, midpoint = block midpoint, gbk midpoint = gene midpoint, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Strain & rev comp & inversion \\
+			\midrule
+			\ecol K-12 MG1655 & &  \\
+			\ecol K-12 DH10B & &  \\
+			\ecol BW25113 & & \\
+			\ecol ATCC &  & \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:log_reg_strain} Logistic regression between various inversion categories and distance from the origin of replication for  each strain. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
 \end{document}
