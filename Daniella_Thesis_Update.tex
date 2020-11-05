@@ -456,8 +456,11 @@ So I am wondering if I should re-do the whole genome alignments with a different
 			\midrule
 			rev comp & NS & NS \\
 			inversion & 2.20\e{-7}***& 2.20\e{-7}*** \\
-			sig rev comp & -1.00\e{-7}*** & -9.99\e{-8}***\\
-			sig inversion & NS & NS\\
+			sig rev comp & -1.89\e{-7}* & -1.89\e{-7}*\\
+			sig ~ midpoint all blocks & NS & NS \\
+			sig ~ midpoint inverted blocks & NS & NS \\
+% below category makes no sense bc all sig blocks will be labeled as inverted.
+%			sig inversion & NS & NS\\
 			\bottomrule
 		\end{tabular}
 		
@@ -472,10 +475,12 @@ So I am wondering if I should re-do the whole genome alignments with a different
 			\toprule
 			Strain & rev comp & inversion \\
 			\midrule
-			\ecol K-12 MG1655 & &  \\
-			\ecol K-12 DH10B & &  \\
-			\ecol BW25113 & & \\
-			\ecol ATCC &  & \\
+			%K12 and BW have no inverted seqs so they have no values for first col
+			%no strains have values for second col because all sig blocks have inversion=1 for all rows
+			\ecol K-12 MG1655 &  & 3.55\e{-7}*** \\
+			\ecol K-12 DH10B & NS & 3.45\e{-7}*** \\
+			\ecol BW25113 & & 3.73\e{-7}***\\
+			\ecol ATCC & -1.92\e{-7}*** & -1.92\e{-7}*** \\
 			\bottomrule
 		\end{tabular}
 		
