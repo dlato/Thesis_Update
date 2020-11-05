@@ -416,4 +416,35 @@ So I am wondering if I should re-do the whole genome alignments with a different
 	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
 \end{table}
 
+\begin{table}[t!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{c}
+			\toprule
+			Block Length Correlation Coefficient (W)\\
+			\midrule
+			4060729.5***\\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:len_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks. The correlation coefficient represents a correlation between alignment block length and blocks with a significant/non-significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+
+
+\begin{table}[t!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{c}
+			\toprule
+			 Genomic Position Correlation Coefficient (W)\\
+			\midrule
+			 NS\\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:pos_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks with a significant difference in normalized gene expression between inverted and non-inverted sequences within the block. Column 1 depicts the correlation coefficient between the significant blocks and the genomic position of the alignment blocks. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
 \end{document}
