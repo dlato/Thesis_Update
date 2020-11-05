@@ -366,20 +366,55 @@ So I am wondering if I should re-do the whole genome alignments with a different
 			\midrule
 			Grainger 2006 & NS & NS \\
 			Ueda 2013 &  NS & NS \\
-			Higashi 2016: coding criteria 1 & 0.102**& 0.101***\\
-			 Higashi 2016: coding criteria 1 & 0.101** & 0.089***\\
+			Higashi 2016: coding criteria 1 & 0.102*& 0.101***\\
+			 Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
 			and non-coding criteria 1 & & \\
-			Higashi 2016: coding criteria 1 & 0.101** & 0.089***\\
+			Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
 			and non-coding criteria 2 & & \\
-			Higashi 2016: coding criteria 1 & 0.101** & 0.089***\\
+			Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
 			and non-coding criteria 3 & & \\
-			Higashi 2016: coding criteria 2 & 0.104** & 0.090***\\
-			Higashi 2016: coding criteria 3 & 0.104** & 0.090***\\
+			Higashi 2016: coding criteria 2 & 0.104* & 0.090***\\
+			Higashi 2016: coding criteria 3 & 0.104* & 0.090***\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
 	\caption{\label{tab:HNS} Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{table}[t!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Datasets:  & Correlation Coefficient (W)\\
+			\midrule
+			Inverted Blocks & 15218699**\\
+			Inverted Sequences & 11436344***\\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:overall_inver_exp} Correlation coefficients for Wilcoxon signed-rank test on various datasets to determine the correlation between an inversion and difference in normalized gene expression. The ``Inverted Blocks'' dataset represents alignment blocks that have at least one taxa with an inverted sequence. The ``Inverted Sequences'' dataset represents all individual sequences from all alignment blocks that were inverted. The correlation between both datasets was computed using a Wilcoxon signed-rank test. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+\begin{table}[t!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			& \multicolumn{3}{c}{\% of Blocks that are}  \\
+			\cmidrule{2-4}
+			Datasets:  & Inverted & Inverted with &Increased in Gene Expression\\
+			Taxa Per Block &  & Differences in Expression&in the Inverted Sequences \\
+			\midrule
+			All 4 & 68.15 & 8.66&  60.61 \\
+			At least 3 & 68.23& 8.91 & 57.14\\
+			At least 2 & 68.02 & 8.96 & 58.33 \\
+			\bottomrule
+		\end{tabular}
+	}%resizebox
+	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
 \end{table}
 
 \end{document}
