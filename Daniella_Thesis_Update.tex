@@ -229,6 +229,8 @@ I performed the H-NS analysis (looking at Pearson correlation between H-NS and I
 It seems as though within the Higashi 2016 dataset, it does not seem to matter which criteria for H-NS binding I use, they all give me roughly the same answer.
 This dataset also have multiple criteria for the non-coding H-NS binding so I looked at each non-coding criteria and the coding criteria 1, and again found that there appears to be no difference in the results depending on what criteria you choose.
 However, when we look across datasets, Grainger 2006 and Ueda 2013 have no significant correlation between H-NS binding and the inverted/significant inversions.
+In my data (meaning H-NS binding sites within my data), there are only 10 genes where all the H-NS datasets have the same binding sites.
+This could be why there is a difference in significance?
 For this reason, I think that the results from all the datasets need to be included in this paper/supplement.
 \textbf{I am not sure if it makes sense to say that H-NS has a positive correlation between inverted sites compared to non-inverted sites if some of the datasets do not show this. Thoughts?}
 
@@ -338,24 +340,24 @@ This only reverse complemented the inversions visually in ATCC and did not creat
 \begin{itemize}
 	\item double check Queenie's final dataframes 
 	\item double check new inversion combos with Queenie's new data frames
-\item get previous code working with Queenie's new dataframes
-\item combine/read in all data from all H-NS coding and non-coding datasets
-\item write code to compare all H-NS datasets to inversions 
-\item summarize $\uparrow$ results
-\item look into differences between inversion visualization with and without ATCC reverse complemented
-\item continue to run the ``leave one out'' analysis on subst data
+\item check into block lengths and inversions results
+\item choose log reg values for final table
+\item actual analysis on DESeq data
+\item visualizations/results for $\uparrow$
+\item continue working on other edits for subst paper
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item actual analysis on DESeq data
-	\item visualizations/results for $\uparrow$
 	\item read papers on H-NS proteins
+	\item check how many HNS binding sites there are for each dataset
 	\item think about how to visualize H-NS and inversions info
-	
-	\item continue to run the ``leave one out'' analysis on subst data
+	\item get Lang and Oshima data from PDF to csv formats
+	\item do H-NS analysis on $\uparrow$
+	\item final decision on inversion viz
+	\item continue working on other edits for subst paper
 \end{itemize}
 
 \newpage
