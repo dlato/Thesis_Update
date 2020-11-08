@@ -255,10 +255,18 @@ In the K-12 DH10B  there was no significant correlation with distance from the o
 
 
 \textbf{Inversion Visualization:}
-I
+I have figured out the differences between the images I presented you with last time (where ATCC was reverse complemented or not).
+Each time you run PARSNP, even if it is on the same sequences but one is reverse complemented, it (obviously) runs the entire algorithm again.
+However, the output creates subtle difference in the sequences within the blocks.
+So some blocks that did not have a rearrangement when ATCC was not reverse complemented, have a rearrangement when ATCC is reverse complemented.
+This is why there appears to be more rearrangements between BW25113 and K-12 DH10B in Figure \ref{fig:inversion_revcomp} (ATCC reverse complemented) compared to Figure \ref{fig:inversion_norevcomp} (ATCC not reverse complemented).
 
- did not get a chance to look into the output from the two inversion visualization figures (with and without ATCC reverse complemented) (Figures \ref{fig:inversion_norevcomp} and \ref{fig:inversion_revcomp}).
-I will look into these more this week.
+I cheated a bit and did a ``manual'' reverse complement of the ATCC block locations from the original data (where ATCC is not reverse complemented) by simply reversing the genomic positions (not altering the sequence data or anything else at all).
+This resulted in a much ``cleaner'' picture of the inversions (Figure \ref{fig:inversion_manual_revcomp}).
+This only reverse complemented the inversions visually in ATCC and did not create new rearrangements between BW25113 and K-12 DH10B.
+
+\textbf{The reason I wanted to ``clean up'' the inversion visualization is to combat reviewers comments. I suspect a reviewer will say ``it looks like the entire ATCC genome is inverted (in Figure \ref{fig:inversion_norevcomp}), so why didn't you fix this? Are your inversions accurate?'' I am unsure if it is ``correct'' to use the manual reverse complement cleaned version (Figure \ref{fig:inversion_manual_revcomp}) and say that ATCC was reverse complemented to simplify the diagram? But then I think maybe the inversions should also be manually reversed (so anything that was an inversion when it was not reverse complemented would now not be an inversion, and vice versa). But again, I am not sure if this is ``correct''. What do you think about all this?}
+
 %I have been looking at programs to best depict the inversions we are seeing but most take too long to run (dot plots) or are quite complicated in the input files.
 %I found a way to use parallel sets in \texttt{R} to get around this and I think they are pretty good (Figure \ref{fig:inversion_norevcomp})!
 %In Figure \ref{fig:inversion_norevcomp}, it appears as though the whole ATCC genome (CP009072) is inverted.
@@ -277,23 +285,6 @@ I will look into these more this week.
 %I am not sure how best to account for this in my calculations.
 %\textbf{Do you have any thoughts on this?}
 
-\textbf{Substitutions Paper:}
-
-I started to run the ``leave one out'' analysis on \ecol and I will let you know the results once they come in!
-
-I looked at the reviewers comments once again and I agree that Reviewer 2 is concerned about how robust our analysis is.
-They want to know if the differences in sign for the substitution correlation is due to i) the small sample size, ii) actual differences/the rearrangements and what we are claiming, or iii) differences between the datasets, I think meaning we see negative in \ecol because rather than \strep because of those particular sequences we chose.
-It seems as though they want one of the following things to be done:
-\begin{enumerate}
-	\item do my analysis (and pipeline) on the same genomes that previous papers used. to show that with our pipeline we get varying signs in our correlations
-	\item somehow do my analysis without accounting for rearrangements. This way we can show that without rearrangements we get the same increasing trend as previous studies, but with rearrangements we do not.
-\end{enumerate}
-
-We have discussed option 1) a few times and concluded that it just does not make sense to re-do my analysis when the genome annotation has likely changed on these previous datasets since they were published.
-I was thinking about option 2) a bit more and I thought of maybe just cutting out the ancestral reconstruction part of my analysis and only looking at the substitutions we see in the extant taxa and their associated genomic positions.
-However, since I did my alignment with \p the genomic positions of these extant sequences already has some component of genomic rearrangement accounted for.
-So I am wondering if I should re-do the whole genome alignments with a different alignment program?
-\textbf{What do you think about all this? Do you think I should do this analysis? If so, do I need to align the genomes with another program?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
@@ -377,6 +368,11 @@ So I am wondering if I should re-do the whole genome alignments with a different
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf}
 	\caption{\label{fig:inversion_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is reverse complemented from the GenBank listed orientation.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_maual_revcomp.pdf}
+	\caption{\label{fig:inversion_manual_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is ``manually'' reverse complemented (only genomic position).}
 \end{figure}
 
 \begin{figure}

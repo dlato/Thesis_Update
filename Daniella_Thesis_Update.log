@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  8 NOV 2020 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  8 NOV 2020 11:50
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1018,39 +1018,48 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ]
 [2] [3] [4]
 <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/paralle
-l_sets_all.pdf, id=56, 1084.05pt x 505.89pt>
+l_sets_all.pdf, id=59, 1084.05pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/pa
 rallel_sets_all.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
 allel_sets_all.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
-rk/Inversion_viz/parallel_sets_all.pdf  used on input line 362.
+rk/Inversion_viz/parallel_sets_all.pdf  used on input line 364.
 (pdftex.def)             Requested size: 505.89pt x 236.0778pt.
 <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/paralle
-l_sets_all_ATCC_revcomp.pdf, id=57, 1084.05pt x 505.89pt>
+l_sets_all_ATCC_revcomp.pdf, id=60, 1084.05pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/pa
 rallel_sets_all_ATCC_revcomp.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
 allel_sets_all_ATCC_revcomp.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
-rk/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf  used on input line 367.
+rk/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf  used on input line 369.
 (pdftex.def)             Requested size: 505.89pt x 236.0778pt.
-<C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf, id=5
-8, 505.89pt x 505.89pt>
+<C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/paralle
+l_sets_maual_revcomp.pdf, id=61, 1084.05pt x 505.89pt>
+File: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/pa
+rallel_sets_maual_revcomp.pdf Graphic file (type pdf)
+<use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
+allel_sets_maual_revcomp.pdf>
+Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
+rk/Inversion_viz/parallel_sets_maual_revcomp.pdf  used on input line 374.
+(pdftex.def)             Requested size: 505.89pt x 236.0778pt.
+<C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf, id=6
+2, 505.89pt x 505.89pt>
 File: C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf 
 Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_
-inversions_k12.pdf  used on input line 372.
+inversions_k12.pdf  used on input line 379.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-73.
+80.
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
-LaTeX Warning: Float too large for page by 17.83145pt on input line 374.
+LaTeX Warning: Float too large for page by 17.83145pt on input line 381.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1064,23 +1073,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [5 <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/para
 llel_sets_all.pdf> <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/In
 version_viz/parallel_sets_all_ATCC_revcomp.pdf>] [6 <C:/Users/synch/Documents/P
-hD/Thesis_Update/genome_pos_inversions_k12.pdf>] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 507.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
-
-(Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 507.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
+hD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_maual_revcomp.pdf>]
+[7 <C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf>]
+[8] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
+ (Daniella_Thesis_Update.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 507.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
  ) 
 Here is how much of TeX's memory you used:
- 22381 strings out of 481511
- 442296 string characters out of 2911892
- 702054 words of memory out of 3000000
- 37150 multiletter control sequences out of 15000+200000
+ 22388 strings out of 481511
+ 442922 string characters out of 2911892
+ 703879 words of memory out of 3000000
+ 37156 multiletter control sequences out of 15000+200000
  545162 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,90p,1580b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1098,9 +1108,9 @@ sfonts/cm/cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (9 pages, 4890977 bytes).
+Output written on Daniella_Thesis_Update.pdf (10 pages, 7266477 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
+ 333 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
