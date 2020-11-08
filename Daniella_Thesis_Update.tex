@@ -185,21 +185,19 @@
 Substitutions Paper:
 \ch looked over reviewers comments
 
-\ch started the ``leave one out'' analysis
+\ch completed the ``leave one out'' analysis
 
 Inversions $+$ Gene Expression:
 
-\ch Queenie finished final dataframes!
+\ch Checking over Queenie's dataframes
 
-\ch wrote code to get non-coding positions
+\ch wrote code to get all possible BLAST names
 
-\ch obtain new inversion combos for DESeq
+\ch working on DESeq analysis
 
-\ch final aesthetic inversions and expression graph
+\ch summary of all results for analysis (HNS, gene exp, distance from the ori..etc) except DESeq
 
-General:
-
-\ch Wrote 3pages for conclusion of Dissertation
+\ch looking into ATCC rev comp for inversion viz
 
 \bigskip
 
@@ -207,13 +205,23 @@ General:
 
 \textbf{Final dataframes:}
 Queenie has finished the final dataframes for this analysis for both the raw data (for DESeq) and normalized expression values (for other analysis).
-I am in the process of looking these over to double check that everything is correct.
-So far it looks like we had about 1000 genes that were aligned with PARSNP but were not reciprocal best BLAST hits, leaving us with a total of just over 2000 genes to analyze.
+I have been checking these to ensure that they are correct and have found some minor errors in her code.
+She is fixing these and should be done by end of day Monday.
+I suspect that the overall results will not change that much because the errors only impact a few genes and if they are included/excluded from the analysis.
 
 
-\textbf{Non-coding H-NS data:}
-I started to combine information from the coding and non-coding H-NS binding data and had to write some code to obtain the genomic position for one datasets as it only told me the flanking genes.
-I am still working on combining all non-coding information with the coding information for all H-NS binding datasets.
+\textbf{DESeq Analysis:}
+As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
+This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
+This is because the strain and inversion/non-inversion combinations are similar.
+For example, DESeq can not tell the difference between the ATCC strain and the inverted treatment, because it impacts the same samples (all the ATCC samples).
+Therefore, DESeq can not say if the differential expression is due to the strain or the inversion.
+I took your advice and tried to make my input data as simple as possible, but I am still getting this error.
+The only way that I will not get this error is if I look at each column in my experimental design matrix separately. 
+i.e. $~$ treatment, $~$ strain, $~$ experiment.
+However, based on my preliminary exploration of the data, it seems as though the experiment is driving most of the differential expression (which makes sense because the raw data is coming from a number of experiments that although we tried to use control data, they still were done in different labs, at different time...etc).
+\textbf{I am concerned that by doing $~$ treatment, and not $~$ treatment + experiment (which is what you usually do to combat say batch or lane effects), I am not accounting for the variation in expression between experiments. Do you have any thoughts on how I can ensure that the expression differences I am seeing with $~$ treatment are due to treatment along and not confounded by experiment? }
+ 
 
 \textbf{Inversion Combos:}
 DESeq requires ``treatment'' information for each sample so I have obtained all of the different inversion combinations that exist in our raw data frame (i.e. inversion in only ATCC, or ATCC and DH, ...etc).
