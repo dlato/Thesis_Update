@@ -182,12 +182,11 @@
 
 	
 \section*{Last Week}
-Substitutions Paper:
-\ch looked over reviewers comments
+\textbf{Substitutions Paper:}
 
 \ch completed the ``leave one out'' analysis
 
-Inversions $+$ Gene Expression:
+\textbf{Inversions $+$ Gene Expression:}
 
 \ch Checking over Queenie's dataframes
 
@@ -207,6 +206,7 @@ Inversions $+$ Gene Expression:
 Queenie has finished the final dataframes for this analysis for both the raw data (for DESeq) and normalized expression values (for other analysis).
 I have been checking these to ensure that they are correct and have found some minor errors in her code.
 She is fixing these and should be done by end of day Monday.
+Additionally, she needed more information from the BLAST outputs on all gene names so I have written a short script to extract this information for her.
 I suspect that the overall results will not change that much because the errors only impact a few genes and if they are included/excluded from the analysis.
 
 
@@ -218,26 +218,46 @@ For example, DESeq can not tell the difference between the ATCC strain and the i
 Therefore, DESeq can not say if the differential expression is due to the strain or the inversion.
 I took your advice and tried to make my input data as simple as possible, but I am still getting this error.
 The only way that I will not get this error is if I look at each column in my experimental design matrix separately. 
-i.e. $~$ treatment, $~$ strain, $~$ experiment.
+i.e. $\sim$ treatment, $\sim$ strain, $\sim$ experiment.
 However, based on my preliminary exploration of the data, it seems as though the experiment is driving most of the differential expression (which makes sense because the raw data is coming from a number of experiments that although we tried to use control data, they still were done in different labs, at different time...etc).
-\textbf{I am concerned that by doing $~$ treatment, and not $~$ treatment + experiment (which is what you usually do to combat say batch or lane effects), I am not accounting for the variation in expression between experiments. Do you have any thoughts on how I can ensure that the expression differences I am seeing with $~$ treatment are due to treatment along and not confounded by experiment? }
+\textbf{I am concerned that by doing $\sim$ treatment, and not $\sim$ treatment + experiment (which is what you usually do to combat say batch or lane effects), I am not accounting for the variation in expression between experiments. Do you have any thoughts on how I can ensure that the expression differences I am seeing with $\sim$ treatment are due to treatment along and not confounded by experiment? }
  
+\textbf{Summary of Inversion and Exp Results:}
+I have included all the results for this analysis (except the DESeq analysis) in Tables \ref{tab:HNS} - \ref{tab:log_reg_strain}.
 
-\textbf{Inversion Combos:}
-DESeq requires ``treatment'' information for each sample so I have obtained all of the different inversion combinations that exist in our raw data frame (i.e. inversion in only ATCC, or ATCC and DH, ...etc).
+I performed the H-NS analysis (looking at Pearson correlation between H-NS and Inversion/significant inversion) on each of the H-NS datasets (Table \ref{tab:HNS}).
+It seems as though within the Higashi 2016 dataset, it does not seem to matter which criteria for H-NS binding I use, they all give me roughly the same answer.
+This dataset also have multiple criteria for the non-coding H-NS binding so I looked at each non-coding criteria and the coding criteria 1, and again found that there appears to be no difference in the results depending on what criteria you choose.
+However, when we look across datasets, Grainger 2006 and Ueda 2013 have no significant correlation between H-NS binding and the inverted/significant inversions.
+For this reason, I think that the results from all the datasets need to be included in this paper/supplement.
+\textbf{I am not sure if it makes sense to say that H-NS has a positive correlation between inverted sites compared to non-inverted sites if some of the datasets do not show this. Thoughts?}
 
-\textbf{Inversions and Expression Graph:}
-I have finished tweaking the final aesthetics for Figure \ref{fig:inver_exp}.
-Let me know if you think there is anything I should add or change.
-I still need to run this through using Queenie's final dataframes.
-In this graph I chose to only use the genomic position for K12 MG1655 to represent the singular position for each block.
-Trying to account for varying positions in each taxa was too messy graphically.
-\textbf{Do you think it is appropriate to use only K12 MG1655 positions? My thought was that this would be sort of the ``reference'' and then I could do regressions on each strain separately to see if/how inversions vary with distance from the origin of replication. Thoughts?}
+In Table \ref{tab:overall_inver_exp}, there is a clear correlation between inverted blocks or individual inverted sequences and a significant difference in gene expression.
+When there is a significant difference in gene expression between inverted and non-inverted sequences within a block, inverted sequences have higher expression than non-inverted sequences about 58\% of the time (Table \ref{tab:multi_taxa_inver}).
+Table \ref{tab:len_summary} shows a positive correlation between block length and blocks with a significant difference in expression between inverted and non-inverted sequences.
+However, I am just looking into this now and I am confused by this. I will get back to you on that.
 
+When looking at distance from the origin of replication, we see that using all genomic positions across all strains (where inversions can be present in different genomic positions), there is no correlation between distance from the origin of replication and blocks with significant differences in gene expression between inverted and non-inverted sequences (Table \ref{tab:pos_summary}).
+Table \ref{tab:log_reg} shows multiple logistic regressions on the various values for inversions and distance from the origin of replication.
+This table again is considering points from all strains.
+The placement of inversion (all inversions, including ones with significant and non-significant differences in gene expression) appears to be concentrated near the terminus.
+When looking at only inversions with significant difference in gene expression, we see that these are located closer to the origin of replication.
+
+Table \ref{tab:log_reg_strain} shows the logistic regression between the inversion category (for all inversions, including ones that did not have a sig difference in gene expression) and distance from the origin of replication in each strain.
+The ``rev comp'' column is when that particular strain is inverted. The ``inversion'' column is when at least one strain in that block is inverted.
+Only \ecol K-12 DH10B and ATCC have inverted sequences, so really the other strains values are irrelevant.
+I also think the ``inversion'' column is irrelevant because it is the same data for each strain just with different genomic positions.
+We can see that the ATCC strain has most of its inversions concentrated near the origin of replication and less near the terminus.
+In the K-12 DH10B  there was no significant correlation with distance from the origin of replication and placement of inversions.
+
+
+\textbf{Aside from the DESeq analysis, this is all the analysis that I have planned. Plus some sort of figure potentially looking at H-NS binding and inversions. Do you have anything else that you think I should look at or look more into?}
 
 
 \textbf{Inversion Visualization:}
-I did not get a chance to look into the output from the two inversion visualization figures (with and without ATCC reverse complemented) (Figures \ref{fig:inversion_norevcomp} and \ref{fig:inversion_revcomp}).
+I
+
+ did not get a chance to look into the output from the two inversion visualization figures (with and without ATCC reverse complemented) (Figures \ref{fig:inversion_norevcomp} and \ref{fig:inversion_revcomp}).
 I will look into these more this week.
 %I have been looking at programs to best depict the inversions we are seeing but most take too long to run (dot plots) or are quite complicated in the input files.
 %I found a way to use parallel sets in \texttt{R} to get around this and I think they are pretty good (Figure \ref{fig:inversion_norevcomp})!
@@ -452,7 +472,7 @@ So I am wondering if I should re-do the whole genome alignments with a different
 			\bottomrule
 		\end{tabular}
 	}%resizebox
-	\caption{\label{tab:pos_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks with a significant difference in normalized gene expression between inverted and non-inverted sequences within the block. Column 1 depicts the correlation coefficient between the significant blocks and the genomic position of the alignment blocks. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:pos_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks with a significant difference in normalized gene expression between inverted and non-inverted sequences within the block. The correlation coefficient between the significant blocks and the genomic position of the alignment blocks. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 \begin{table}[h]
@@ -460,20 +480,20 @@ So I am wondering if I should re-do the whole genome alignments with a different
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcc}
 			\toprule
-			Inversion Category & midpoint & gbk midpoint \\
+			Inversion Category & Correlation Coefficient \\
 			\midrule
-			rev comp & NS & NS \\
-			inversion & 2.20\e{-7}***& 2.20\e{-7}*** \\
-			sig rev comp & -1.89\e{-7}* & -1.89\e{-7}*\\
-			sig ~ midpoint all blocks & NS & NS \\
-			sig ~ midpoint inverted blocks & NS & NS \\
+			rev comp & NS\\
+			inversion & 2.20\e{-7}*** \\
+			sig rev comp & -1.89\e{-7}*\\
+			sig $\sim$ midpoint all blocks & NS \\
+			sig $\sim$ midpoint inverted blocks & NS \\
 % below category makes no sense bc all sig blocks will be labeled as inverted.
 %			sig inversion & NS & NS\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:log_reg} Logistic regression between various inversion categories and distance from the origin of replication for all strains. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, midpoint = block midpoint, gbk midpoint = gene midpoint, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:log_reg} Logistic regression between various inversion categories and distance from the origin of replication for all strains. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, midpoint = block midpoint, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 \begin{table}[h]
