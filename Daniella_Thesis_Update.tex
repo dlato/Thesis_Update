@@ -288,6 +288,12 @@ This only reverse complemented the inversions visually in ATCC and did not creat
 %\textbf{Do you have any thoughts on this?}
 
 
+\textbf{Subst Paper:}
+The results from the ``leave one out'' analysis can be found in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}.
+It looks like the results are mostly consistent, so when you leave a taxa out, the sign remains unchanged. There are a few exceptions which I have highlighted in red. I will be looking into these further.
+\textbf{Thoughts on this?}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -513,4 +519,97 @@ This only reverse complemented the inversions visually in ATCC and did not creat
 	}%resizebox
 	\caption{\label{tab:log_reg_strain} Logistic regression between various inversion categories and distance from the origin of replication for  each strain. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
+
+
+\begin{table}[h]
+	\centering
+\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Strain Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\ecol} \\
+			None & -2.66\e{-8}*** \\
+			U00096 & -3.12\e{-8}***\\
+			CP0032890 & -3.07\e{-8}*** \\
+			CU9281640 & -2.95\e{-8}*** \\
+			CP0018550 & -1.50\e{-8}*** \\
+			BA0000070 & -2.63\e{-8}*** \\
+			CU9281630 & \\
+			
+			\midrule
+			\multicolumn{2}{c}{\bass} \\
+			None & 2.76\e{-8}***\\
+			NC\_000964 & \\
+			NC\_018520 & 3.57\e{-8}***\\
+			NC\_017195 & 1.00\e{-7}***\\
+			NC\_022898 & 5.17\e{-8}*** \\
+			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
+			CP01731 & 5.43\e{-8}*** \\
+			NC\_014479 & \\
+			
+			\midrule
+			\multicolumn{2}{c}{\strep} \\
+			None & 7.21\e{-8}***\\
+			CP050522 & 8.40\e{-8}*** \\
+			GG657756 & 3.62\e{-8}*** \\
+			CP042324 & 7.72\e{-8}*** \\
+			AL645882 & 7.71\e{-8}*** \\
+			CM001889 & \textcolor{red}{-2.46\e{-7}***}\\
+		
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Strain Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\smel Chromosome} \\
+			None & -6.57\e{-7}***\\
+			NC\_015590& -3.18\e{-7}***\\
+			NC\_003047 & -6.01\e{-7}*** \\
+			CP004140 & -6.00\e{-7}*** \\
+			CP009144 & -6.67\e{-7}*** \\
+			NC\_017322 & -7.19\e{-7}***\\
+			
+			\midrule
+			\multicolumn{2}{c}{\smel \pa} \\
+			None & 2.74\e{-7}***\\
+			NC\_017327 & 6.98\e{-7}***\\
+			CP009145 & 1.78\e{-7}***\\
+			NC\_003037 & 2.09\e{-7}***\\
+			CP004138 & 2.08\e{-7}***\\
+			NC\_015591 & \textcolor{red}{NS} \\
+			
+			\midrule
+			\multicolumn{2}{c}{\smel \pb} \\
+			None & 1.10\e{-7}***\\
+			NC\_015596 & 6.78\e{-7}***\\
+			NC\_017326 & 1.67\e{-7}***\\
+			NC\_017323 & \textcolor{red}{NS}\\
+			CP009146 & \textcolor{red}{-2.57\e{-7}***}\\
+			CP004139 & 1.04\e{-7}***\\
+			
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
 \end{document}
