@@ -291,7 +291,8 @@ This only reverse complemented the inversions visually in ATCC and did not creat
 \textbf{Subst Paper:}
 The results from the ``leave one out'' analysis can be found in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}.
 It looks like the results are mostly consistent, so when you leave a taxa out, the sign remains unchanged. There are a few exceptions which I have highlighted in red. I will be looking into these further.
-\textbf{Thoughts on this?}
+I am wondering if this could be because I used the maximum genome position when scaling my points to the origin of replication as the longest genome out of all the taxa, instead of the taxa that are used in each ``leave one out''. I will explore this to see if I missed something or messed up along the way.
+\textbf{Thoughts on these results so far? }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -539,7 +540,7 @@ It looks like the results are mostly consistent, so when you leave a taxa out, t
 			CU9281640 & -2.95\e{-8}*** \\
 			CP0018550 & -1.50\e{-8}*** \\
 			BA0000070 & -2.63\e{-8}*** \\
-			CU9281630 & \\
+			CU9281630 & -2.49\e{-8}***\\
 			
 			\midrule
 			\multicolumn{2}{c}{\bass} \\
@@ -550,7 +551,7 @@ It looks like the results are mostly consistent, so when you leave a taxa out, t
 			NC\_022898 & 5.17\e{-8}*** \\
 			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
 			CP01731 & 5.43\e{-8}*** \\
-			NC\_014479 & \\
+			NC\_014479 & \textcolor{red}{NS}\\
 			
 			\midrule
 			\multicolumn{2}{c}{\strep} \\

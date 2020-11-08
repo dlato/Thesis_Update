@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  8 NOV 2020 16:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  8 NOV 2020 16:28
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1024,7 +1024,7 @@ rallel_sets_all.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
 allel_sets_all.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
-rk/Inversion_viz/parallel_sets_all.pdf  used on input line 372.
+rk/Inversion_viz/parallel_sets_all.pdf  used on input line 373.
 (pdftex.def)             Requested size: 505.89pt x 236.0778pt.
 <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/paralle
 l_sets_all_ATCC_revcomp.pdf, id=68, 1084.05pt x 505.89pt>
@@ -1033,7 +1033,7 @@ rallel_sets_all_ATCC_revcomp.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
 allel_sets_all_ATCC_revcomp.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
-rk/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf  used on input line 377.
+rk/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf  used on input line 378.
 (pdftex.def)             Requested size: 505.89pt x 236.0778pt.
 <C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/paralle
 l_sets_maual_revcomp.pdf, id=69, 1084.05pt x 505.89pt>
@@ -1042,7 +1042,7 @@ rallel_sets_maual_revcomp.pdf Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/par
 allel_sets_maual_revcomp.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/inversion_and_gene_exp_wo
-rk/Inversion_viz/parallel_sets_maual_revcomp.pdf  used on input line 382.
+rk/Inversion_viz/parallel_sets_maual_revcomp.pdf  used on input line 383.
 (pdftex.def)             Requested size: 505.89pt x 236.0778pt.
 <C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf, id=7
 0, 505.89pt x 505.89pt>
@@ -1050,16 +1050,16 @@ File: C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf
 Graphic file (type pdf)
 <use C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf>
 Package pdftex.def Info: C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_
-inversions_k12.pdf  used on input line 387.
+inversions_k12.pdf  used on input line 388.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-88.
+89.
 
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 
-LaTeX Warning: Float too large for page by 17.83145pt on input line 389.
+LaTeX Warning: Float too large for page by 17.83145pt on input line 390.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1071,7 +1071,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Float too large for page by 23.31879pt on input line 569.
+LaTeX Warning: Float too large for page by 23.31879pt on input line 570.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1085,20 +1085,20 @@ version_viz/parallel_sets_all_ATCC_revcomp.pdf>] [7 <C:/Users/synch/Documents/P
 hD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_maual_revcomp.pdf>]
 [8 <C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf>]
 [9] [10] [11] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 615.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 615.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 616.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 616.
  (Daniella_Thesis_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 615.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 615.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 616.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 616.
 Package rerunfilecheck Info: File `Daniella_Thesis_Update.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 615.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 616.
  ) 
 Here is how much of TeX's memory you used:
  22395 strings out of 481511
  443015 string characters out of 2911892
- 714274 words of memory out of 3000000
+ 714307 words of memory out of 3000000
  37158 multiletter control sequences out of 15000+200000
  545162 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1117,7 +1117,7 @@ sfonts/cm/cmr8.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (13 pages, 7275064 bytes).
+Output written on Daniella_Thesis_Update.pdf (13 pages, 7275357 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
