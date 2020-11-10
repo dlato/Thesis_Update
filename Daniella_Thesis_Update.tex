@@ -352,6 +352,9 @@ I am wondering if this could be because I used the maximum genome position when 
 \item actual analysis on DESeq data
 \item visualizations/results for $\uparrow$
 \item continue working on other edits for subst paper
+\item maybe do inversions in 10kb blocks? (and other sliding windows?)
+\item dist from ori on DESeq results?
+\item HGT and HNS binding?
 
 \end{itemize}
 
@@ -386,28 +389,29 @@ I am wondering if this could be because I used the maximum genome position when 
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf}
-	\caption{\label{fig:inver_exp} Visualization of the difference in gene expression between inverted and non-inverted sequences within alignment blocks. Each alignment block represents homologous sequences between the \ecoli strains \textcolor{red}{insert table ref here}. Each alignment block has one point on the graph to represent the average expression value in \textbf{C}ounts \textbf{P}er \textbf{M}illion (\textbf{CPM}) for all inverted (circles) and non-inverted (triangles) sequences within the block. Blocks that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods) have the inverted and non-inverted gene expression averages highlighted in pink circles and purple triangles respectively. A smoothing line (\texttt{loewss}) was added to link the average gene expression values for the inverted (pink solid) and non-inverted (purple dashed) sequences within block that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods). All blocks that did not have a significant difference in average gene expression between inverted and non-inverted sequences within alignment blocks have the average inversion (circles) and non-inversion (triangles) gene expression values coloured in light grey.}
+	\caption{\label{fig:inver_exp} Visualization of the difference in gene expression between inverted and non-inverted sequences within alignment blocks. Each alignment block represents homologous sequences between the \ecoli strains \textcolor{red}{insert table ref here}. \ecol K-12 MG1655 was used as the reference genome for genomic position for each alignment block. The midpoint of each alignment block was calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.  Each alignment block has one point on the graph to represent the average expression value in \textbf{C}ounts \textbf{P}er \textbf{M}illion (\textbf{CPM}) for all inverted (circles) and non-inverted (triangles) sequences within the block. Blocks that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods) have the inverted and non-inverted gene expression averages highlighted in pink circles and purple triangles respectively. A smoothing line (\texttt{loewss}) was added to link the average gene expression values for the inverted (pink solid) and non-inverted (purple dashed) sequences within block that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods). All blocks that did not have a significant difference in average gene expression between inverted and non-inverted sequences within alignment blocks have the average inversion (circles) and non-inversion (triangles) gene expression values coloured in light grey.}
 \end{figure}
 
 
 \begin{table}[h]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
+		\begin{tabular}{lccc}
 			\toprule
-			H-NS Binding Study & All Inversions and H-NS Binding & Significant Inversions and H-NS Binding \\
+			H-NS Binding Study & All Inversions  & Significant Inversions & Total Number of\\
+			&  H-NS Binding & and H-NS Binding  & H-NS Binding Sites\\
 			\midrule
-			Grainger 2006 & NS & NS \\
-			Ueda 2013 &  NS & NS \\
-			Higashi 2016: coding criteria 1 & 0.102*& 0.101***\\
-			 Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
-			and non-coding criteria 1 & & \\
-			Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
-			and non-coding criteria 2 & & \\
-			Higashi 2016: coding criteria 1 & 0.101* & 0.089***\\
-			and non-coding criteria 3 & & \\
-			Higashi 2016: coding criteria 2 & 0.104* & 0.090***\\
-			Higashi 2016: coding criteria 3 & 0.104* & 0.090***\\
+			Grainger 2006 & NS & NS & 37\\
+			Ueda 2013 &  NS & NS & 165\\
+			Higashi 2016: coding criteria 1 & 0.102*& 0.101*** & 206\\
+			 Higashi 2016: coding criteria 1 & 0.101* & 0.089*** & 189\\
+			and non-coding criteria 1 & & & \\
+			Higashi 2016: coding criteria 1 & 0.101* & 0.089*** & 189\\
+			and non-coding criteria 2 & & & \\
+			Higashi 2016: coding criteria 1 & 0.101* & 0.089*** & 189\\
+			and non-coding criteria 3 & & &\\
+			Higashi 2016: coding criteria 2 & 0.104* & 0.090***& 187\\
+			Higashi 2016: coding criteria 3 & 0.104* & 0.090*** &187\\
 			\bottomrule
 		\end{tabular}
 		
@@ -545,7 +549,7 @@ I am wondering if this could be because I used the maximum genome position when 
 			\midrule
 			\multicolumn{2}{c}{\bass} \\
 			None & 2.76\e{-8}***\\
-			NC\_000964 & \\
+			NC\_000964 & 2.96\e{-8}***\\
 			NC\_018520 & 3.57\e{-8}***\\
 			NC\_017195 & 1.00\e{-7}***\\
 			NC\_022898 & 5.17\e{-8}*** \\
