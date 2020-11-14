@@ -182,105 +182,101 @@
 
 	
 \section*{Last Week}
+
+
+
 \textbf{Substitutions Paper:}
 
-\ch completed the ``leave one out'' analysis
+\ch re-did LOO analysis with proper trees
+
+\ch look into LOO analysis and the branches that caused a flip in sign
+
+\ch finished windowed analysis on \dn, \ds, and $\omega$ values
+
+\ch added reference for \texttt{Parsnp} (I did mention it briefly in the paper)
+
 
 \textbf{Inversions $+$ Gene Expression:}
 
 \ch Checking over Queenie's dataframes
 
-\ch wrote code to get all possible BLAST names
+\ch thinking about what results to include in the paper and how to word them
 
-\ch working on DESeq analysis
+\ch added legend to expression and inversions pic
 
-\ch summary of all results for analysis (HNS, gene exp, distance from the ori..etc) except DESeq
+\ch figure for H-NS binding and inversions
 
-\ch looking into ATCC rev comp for inversion viz
+\ch begun extracting H-NS data from PDF tables for Lang 2007 and Oshima 2006
+
+\ch finished writing methods for paper (minus DESeq analysis)
+
+\ch started writing up the results for paper
+
 
 \bigskip
 
 \textbf{Inversions + Gene Expression:}
-
-\textbf{Final dataframes:}
-Queenie has finished the final dataframes for this analysis for both the raw data (for DESeq) and normalized expression values (for other analysis).
-I have been checking these to ensure that they are correct and have found some minor errors in her code.
-She is fixing these and should be done by end of day Monday.
-Additionally, she needed more information from the BLAST outputs on all gene names so I have written a short script to extract this information for her.
-I suspect that the overall results will not change that much because the errors only impact a few genes and if they are included/excluded from the analysis.
+I added a legend to the inversions and gene expression figure (Figure ). \textbf{What are your thoughts?}
 
 
-\textbf{DESeq Analysis:}
-As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
-This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
-This is because the strain and inversion/non-inversion combinations are similar.
-For example, DESeq can not tell the difference between the ATCC strain and the inverted treatment, because it impacts the same samples (all the ATCC samples).
-Therefore, DESeq can not say if the differential expression is due to the strain or the inversion.
-I took your advice and tried to make my input data as simple as possible, but I am still getting this error.
-The only way that I will not get this error is if I look at each column in my experimental design matrix separately. 
-i.e. $\sim$ treatment, $\sim$ strain, $\sim$ experiment.
-However, based on my preliminary exploration of the data, it seems as though the experiment is driving most of the differential expression (which makes sense because the raw data is coming from a number of experiments that although we tried to use control data, they still were done in different labs, at different time...etc).
-\textbf{I am concerned that by doing $\sim$ treatment, and not $\sim$ treatment + experiment (which is what you usually do to combat say batch or lane effects), I am not accounting for the variation in expression between experiments. Do you have any thoughts on how I can ensure that the expression differences I am seeing with $\sim$ treatment are due to treatment along and not confounded by experiment? }
- 
-\textbf{Summary of Inversion and Exp Results:}
-I have included all the results for this analysis (except the DESeq analysis) in Tables \ref{tab:HNS} - \ref{tab:log_reg_strain}.
+I created a figure to show all inversions, H-NS binding, and location of inversions with significant differences in gene expression along the \ecol K-12 MG1655 genome (used as a reference since none of the inversions actually occur in this taxa) (Figure ).
+\textbf{Please let me know what you think.}
 
-I performed the H-NS analysis (looking at Pearson correlation between H-NS and Inversion/significant inversion) on each of the H-NS datasets (Table \ref{tab:HNS}).
-It seems as though within the Higashi 2016 dataset, it does not seem to matter which criteria for H-NS binding I use, they all give me roughly the same answer.
-This dataset also have multiple criteria for the non-coding H-NS binding so I looked at each non-coding criteria and the coding criteria 1, and again found that there appears to be no difference in the results depending on what criteria you choose.
-However, when we look across datasets, Grainger 2006 and Ueda 2013 have no significant correlation between H-NS binding and the inverted/significant inversions.
-In my data (meaning H-NS binding sites within my data), there are only 10 genes where all the H-NS datasets have the same binding sites.
-This could be why there is a difference in significance?
-For this reason, I think that the results from all the datasets need to be included in this paper/supplement.
-\textbf{I am not sure if it makes sense to say that H-NS has a positive correlation between inverted sites compared to non-inverted sites if some of the datasets do not show this. Thoughts?}
+I started extracting the H-NS binding data from the Oshima and Lang datasets using and R program. It is not perfect and requires some manual tweaking, but it is better than typing in 120 pages of tables by hand.
 
-In Table \ref{tab:overall_inver_exp}, there is a clear correlation between inverted blocks or individual inverted sequences and a significant difference in gene expression.
-When there is a significant difference in gene expression between inverted and non-inverted sequences within a block, inverted sequences have higher expression than non-inverted sequences about 58\% of the time (Table \ref{tab:multi_taxa_inver}).
-Table \ref{tab:len_summary} shows a positive correlation between block length and blocks with a significant difference in expression between inverted and non-inverted sequences.
-However, I am just looking into this now and I am confused by this. I will get back to you on that.
+%\textbf{DESeq Analysis:}
+%As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
+%This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
+%This is because the strain and inversion/non-inversion combinations are similar.
+%For example, DESeq can not tell the difference between the ATCC strain and the inverted treatment, because it impacts the same samples (all the ATCC samples).
+%Therefore, DESeq can not say if the differential expression is due to the strain or the inversion.
+%I took your advice and tried to make my input data as simple as possible, but I am still getting this error.
+%The only way that I will not get this error is if I look at each column in my experimental design matrix separately. 
+%i.e. $\sim$ treatment, $\sim$ strain, $\sim$ experiment.
+%However, based on my preliminary exploration of the data, it seems as though the experiment is driving most of the differential expression (which makes sense because the raw data is coming from a number of experiments that although we tried to use control data, they still were done in different labs, at different time...etc).
+%\textbf{I am concerned that by doing $\sim$ treatment, and not $\sim$ treatment + experiment (which is what you usually do to combat say batch or lane effects), I am not accounting for the variation in expression between experiments. Do you have any thoughts on how I can ensure that the expression differences I am seeing with $\sim$ treatment are due to treatment along and not confounded by experiment? }
+% 
 
-When looking at distance from the origin of replication, we see that using all genomic positions across all strains (where inversions can be present in different genomic positions), there is no correlation between distance from the origin of replication and blocks with significant differences in gene expression between inverted and non-inverted sequences (Table \ref{tab:pos_summary}).
-Table \ref{tab:log_reg} shows multiple logistic regressions on the various values for inversions and distance from the origin of replication.
-This table again is considering points from all strains.
-The placement of inversion (all inversions, including ones with significant and non-significant differences in gene expression) appears to be concentrated near the terminus.
-When looking at only inversions with significant difference in gene expression, we see that these are located closer to the origin of replication.
+%\textbf{Summary of Inversion and Exp Results:}
+%I have included all the results for this analysis (except the DESeq analysis) in Tables \ref{tab:HNS} - \ref{tab:log_reg_strain}.
+%
+%I performed the H-NS analysis (looking at Pearson correlation between H-NS and Inversion/significant inversion) on each of the H-NS datasets (Table \ref{tab:HNS}).
+%It seems as though within the Higashi 2016 dataset, it does not seem to matter which criteria for H-NS binding I use, they all give me roughly the same answer.
+%This dataset also have multiple criteria for the non-coding H-NS binding so I looked at each non-coding criteria and the coding criteria 1, and again found that there appears to be no difference in the results depending on what criteria you choose.
+%However, when we look across datasets, Grainger 2006 and Ueda 2013 have no significant correlation between H-NS binding and the inverted/significant inversions.
+%In my data (meaning H-NS binding sites within my data), there are only 10 genes where all the H-NS datasets have the same binding sites.
+%This could be why there is a difference in significance?
+%For this reason, I think that the results from all the datasets need to be included in this paper/supplement.
+%\textbf{I am not sure if it makes sense to say that H-NS has a positive correlation between inverted sites compared to non-inverted sites if some of the datasets do not show this. Thoughts?}
+%
+%In Table \ref{tab:overall_inver_exp}, there is a clear correlation between inverted blocks or individual inverted sequences and a significant difference in gene expression.
+%When there is a significant difference in gene expression between inverted and non-inverted sequences within a block, inverted sequences have higher expression than non-inverted sequences about 58\% of the time (Table \ref{tab:multi_taxa_inver}).
+%Table \ref{tab:len_summary} shows a positive correlation between block length and blocks with a significant difference in expression between inverted and non-inverted sequences.
+%However, I am just looking into this now and I am confused by this. I will get back to you on that.
+%
+%When looking at distance from the origin of replication, we see that using all genomic positions across all strains (where inversions can be present in different genomic positions), there is no correlation between distance from the origin of replication and blocks with significant differences in gene expression between inverted and non-inverted sequences (Table \ref{tab:pos_summary}).
+%Table \ref{tab:log_reg} shows multiple logistic regressions on the various values for inversions and distance from the origin of replication.
+%This table again is considering points from all strains.
+%The placement of inversion (all inversions, including ones with significant and non-significant differences in gene expression) appears to be concentrated near the terminus.
+%When looking at only inversions with significant difference in gene expression, we see that these are located closer to the origin of replication.
+%
+%Table \ref{tab:log_reg_strain} shows the logistic regression between the inversion category (for all inversions, including ones that did not have a sig difference in gene expression) and distance from the origin of replication in each strain.
+%The ``rev comp'' column is when that particular strain is inverted. The ``inversion'' column is when at least one strain in that block is inverted.
+%Only \ecol K-12 DH10B and ATCC have inverted sequences, so really the other strains values are irrelevant.
+%I also think the ``inversion'' column is irrelevant because it is the same data for each strain just with different genomic positions.
+%We can see that the ATCC strain has most of its inversions concentrated near the origin of replication and less near the terminus.
+%In the K-12 DH10B  there was no significant correlation with distance from the origin of replication and placement of inversions.
 
-Table \ref{tab:log_reg_strain} shows the logistic regression between the inversion category (for all inversions, including ones that did not have a sig difference in gene expression) and distance from the origin of replication in each strain.
-The ``rev comp'' column is when that particular strain is inverted. The ``inversion'' column is when at least one strain in that block is inverted.
-Only \ecol K-12 DH10B and ATCC have inverted sequences, so really the other strains values are irrelevant.
-I also think the ``inversion'' column is irrelevant because it is the same data for each strain just with different genomic positions.
-We can see that the ATCC strain has most of its inversions concentrated near the origin of replication and less near the terminus.
-In the K-12 DH10B  there was no significant correlation with distance from the origin of replication and placement of inversions.
-
-
-\textbf{Aside from the DESeq analysis, this is all the analysis that I have planned. Plus some sort of figure potentially looking at H-NS binding and inversions. Do you have anything else that you think I should look at or look more into?}
-
-
-\textbf{Inversion Visualization:}
-I have figured out the differences between the images I presented you with last time (where ATCC was reverse complemented or not).
-Each time you run PARSNP, even if it is on the same sequences but one is reverse complemented, it (obviously) runs the entire algorithm again.
-However, the output creates subtle difference in the sequences within the blocks.
-So some blocks that did not have a rearrangement when ATCC was not reverse complemented, have a rearrangement when ATCC is reverse complemented.
-This is why there appears to be more rearrangements between BW25113 and K-12 DH10B in Figure \ref{fig:inversion_revcomp} (ATCC reverse complemented) compared to Figure \ref{fig:inversion_norevcomp} (ATCC not reverse complemented).
-
-I cheated a bit and did a ``manual'' reverse complement of the ATCC block locations from the original data (where ATCC is not reverse complemented) by simply reversing the genomic positions (not altering the sequence data or anything else at all).
-This resulted in a much ``cleaner'' picture of the inversions (Figure \ref{fig:inversion_manual_revcomp}).
-This only reverse complemented the inversions visually in ATCC and did not create new rearrangements between BW25113 and K-12 DH10B.
-
-\textbf{The reason I wanted to ``clean up'' the inversion visualization is to combat reviewers comments. I suspect a reviewer will say ``it looks like the entire ATCC genome is inverted (in Figure \ref{fig:inversion_norevcomp}), so why didn't you fix this? Are your inversions accurate?'' I am unsure if it is ``correct'' to use the manual reverse complement cleaned version (Figure \ref{fig:inversion_manual_revcomp}) and say that ATCC was reverse complemented to simplify the diagram? But then I think maybe the inversions should also be manually reversed (so anything that was an inversion when it was not reverse complemented would now not be an inversion, and vice versa). But again, I am not sure if this is ``correct''. What do you think about all this?}
-
-%I have been looking at programs to best depict the inversions we are seeing but most take too long to run (dot plots) or are quite complicated in the input files.
-%I found a way to use parallel sets in \texttt{R} to get around this and I think they are pretty good (Figure \ref{fig:inversion_norevcomp})!
-%In Figure \ref{fig:inversion_norevcomp}, it appears as though the whole ATCC genome (CP009072) is inverted.
-%So I decided to reverse complement the entire genome of ATCC and then re-create the diagram to see if it would make a difference (Figure \ref{fig:inversion_revcomp}).
-%Figure \ref{fig:inversion_revcomp} does clean things up a bit and still shows some of the inversions.
-%Additionally, I am a bit confused because theoretically just reversing one sequence should still identify the same blocks in \texttt{PARSNP} when the sequence is not reversed.
-%However, the blocks are all slightly different in their positions but the overall \texttt{PARSNP} visualization looks identical.
-%So I am a bit confused about which image I should use in the paper.
-%My main concern with this is if it is ok to use one image for the visualization (the reverse complemented image Figure \ref{fig:inversion_revcomp}), and the data from the other figure (non-reverse complemented Figure \ref{fig:inversion_norevcomp}) for the data analysis.
-%I mention this because when ATCC is reverse complemented it complicates the genomic position annotation. So I would have to ensure that all my annotation is also reverse complemented and that I am grabbing the correct sequence (reverse of the reverse complement?) when I re-align with \texttt{MAFFT}.
-%\textbf{What are your thoughts on this?}
-
+%\textbf{Inversion Visualization:}
+%I have figured out the differences between the images I presented you with last time (where ATCC was reverse complemented or not).
+%Each time you run PARSNP, even if it is on the same sequences but one is reverse complemented, it (obviously) runs the entire algorithm again.
+%However, the output creates subtle difference in the sequences within the blocks.
+%So some blocks that did not have a rearrangement when ATCC was not reverse complemented, have a rearrangement when ATCC is reverse complemented.
+%This is why there appears to be more rearrangements between BW25113 and K-12 DH10B in Figure \ref{fig:inversion_revcomp} (ATCC reverse complemented) compared to Figure \ref{fig:inversion_norevcomp} (ATCC not reverse complemented).
+%I cheated a bit and did a ``manual'' reverse complement of the ATCC block locations from the original data (where ATCC is not reverse complemented) by simply reversing the genomic positions (not altering the sequence data or anything else at all).
+%This resulted in a much ``cleaner'' picture of the inversions (Figure \ref{fig:inversion_manual_revcomp}).
+%This only reverse complemented the inversions visually in ATCC and did not create new rearrangements between BW25113 and K-12 DH10B.
+%\textbf{The reason I wanted to ``clean up'' the inversion visualization is to combat reviewers comments. I suspect a reviewer will say ``it looks like the entire ATCC genome is inverted (in Figure \ref{fig:inversion_norevcomp}), so why didn't you fix this? Are your inversions accurate?'' I am unsure if it is ``correct'' to use the manual reverse complement cleaned version (Figure \ref{fig:inversion_manual_revcomp}) and say that ATCC was reverse complemented to simplify the diagram? But then I think maybe the inversions should also be manually reversed (so anything that was an inversion when it was not reverse complemented would now not be an inversion, and vice versa). But again, I am not sure if this is ``correct''. What do you think about all this?}
 
 
 %I also noticed from Figures \ref{fig:inversion_norevcomp} and \ref{fig:inversion_revcomp} that a lot of the inversions have been rearranged in addition to being inverted.
@@ -289,11 +285,15 @@ This only reverse complemented the inversions visually in ATCC and did not creat
 
 
 \textbf{Subst Paper:}
-The results from the ``leave one out'' analysis can be found in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}.
-It looks like the results are mostly consistent, so when you leave a taxa out, the sign remains unchanged. There are a few exceptions which I have highlighted in red. I will be looking into these further.
-I am wondering if this could be because I used the maximum genome position when scaling my points to the origin of replication as the longest genome out of all the taxa, instead of the taxa that are used in each ``leave one out''. I will explore this to see if I missed something or messed up along the way.
-\textbf{Thoughts on these results so far? }
+I looked into the LOO analysis and particularly the results highlighted in red in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}, where there is a complete switch in sign.
+I double checked the branch lengths of the trees that I was using and all were correct except \strep.
+After re-doing this analysis with the proper tree, the results did not change.
+So this did not fix the issue found in \pb. I also noticed that I forgot to list the result for one of the \pa strains, so it is not included and unfortunately also swapped in sign.
 
+For \strep and \pa, the taxa that are removed are the ones that are listed as the ``outgroup'' in the trees. This could potentially explain why there is such a dramatics change in sign.
+For \bass and \pb (and really for all the bacteria), after diving deeper into the substitutions, it seems as though when a sequence is removed, PAML shifts what branches the substitution is found on. This moves between the tip branch and the ancestor. This intern, changes the genomic location of the substitution (because different branches have different genomic positions associated with them). So there are some regions in the graphs that now have many more substitutions than before, and in the particular LOO cases of \pb, \bass, \strep and \pa, this changes the overall distribution enough that the sign flips.
+In the case of \pb, the genome that causes the sign flip happens to be the shortest genome. I am not sure if this has anything to do with anything.
+\textbf{I honestly do not know what to say about this to the reviewer, or what else to do. Maybe we should schedule a meeting so I can show you some of these cases? Maybe I should look into doing my same analysis on previous datasets? Or perhaps re-do this LOO analysis with completely new \p alignments and trees where the one strain is truly left out from the analysis? Maybe some sort of permutation test? I would really appreciate any help on what to do.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
@@ -347,50 +347,155 @@ I am wondering if this could be because I used the maximum genome position when 
 \begin{itemize}
 	\item double check Queenie's final dataframes 
 	\item double check new inversion combos with Queenie's new data frames
-\item check into block lengths and inversions results
-\item choose log reg values for final table
-\item actual analysis on DESeq data
-\item visualizations/results for $\uparrow$
-\item continue working on other edits for subst paper
-\item maybe do inversions in 10kb blocks? (and other sliding windows?)
-\item dist from ori on DESeq results?
-\item HGT and HNS binding?
+\item finish writing results for inversions paper
+\item clarify tests used in $\uparrow$
+\item continue working LOO analysis for subst paper
+\item address reviewers comment on HGT and ori/ter gradient
+\item address reviewers comment on annotation in outlier bars
+\item create new cover letter for subst paper
+
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
+	\item actual analysis on DESeq data
+	\item visualizations/results for $\uparrow$
 	\item read papers on H-NS proteins
-	\item check how many HNS binding sites there are for each dataset
-	\item think about how to visualize H-NS and inversions info
-	\item get Lang and Oshima data from PDF to csv formats
+	\item double check for HNS and inversions fig that ALL HNS binding sites are shown (not just ones in inversions)
+	\item continue get Lang and Oshima data from PDF to csv formats
 	\item do H-NS analysis on $\uparrow$
-	\item final decision on inversion viz
-	\item continue working on other edits for subst paper
+	\item final decision on inversion viz (caption that explains it well)
+	\item maybe do inversions in 10kb blocks? (and other sliding windows?)
+	\item dist from ori on DESeq results?
+	\item HGT and HNS binding?
 \end{itemize}
 
 \newpage
 
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all.pdf}
-	\caption{\label{fig:inversion_norevcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is in the GenBank listed orientation.}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all.pdf}
+%	\caption{\label{fig:inversion_norevcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is in the GenBank listed orientation.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf}
+%	\caption{\label{fig:inversion_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is reverse complemented from the GenBank listed orientation.}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_maual_revcomp.pdf}
+%	\caption{\label{fig:inversion_manual_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is ``manually'' reverse complemented (only genomic position).}
+%\end{figure}
 
 \begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_ATCC_revcomp.pdf}
-	\caption{\label{fig:inversion_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is reverse complemented from the GenBank listed orientation.}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_maual_revcomp.pdf}
-	\caption{\label{fig:inversion_manual_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is ``manually'' reverse complemented (only genomic position).}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/Thesis_Update/genome_pos_inversions_k12.pdf}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/genome_pos_inversions_k12.pdf}
 	\caption{\label{fig:inver_exp} Visualization of the difference in gene expression between inverted and non-inverted sequences within alignment blocks. Each alignment block represents homologous sequences between the \ecoli strains \textcolor{red}{insert table ref here}. \ecol K-12 MG1655 was used as the reference genome for genomic position for each alignment block. The midpoint of each alignment block was calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.  Each alignment block has one point on the graph to represent the average expression value in \textbf{C}ounts \textbf{P}er \textbf{M}illion (\textbf{CPM}) for all inverted (circles) and non-inverted (triangles) sequences within the block. Blocks that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods) have the inverted and non-inverted gene expression averages highlighted in pink circles and purple triangles respectively. A smoothing line (\texttt{loewss}) was added to link the average gene expression values for the inverted (pink solid) and non-inverted (purple dashed) sequences within block that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods). All blocks that did not have a significant difference in average gene expression between inverted and non-inverted sequences within alignment blocks have the average inversion (circles) and non-inversion (triangles) gene expression values coloured in light grey.}
 \end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/hns_all_inversions.pdf}
+	\caption{\label{fig:inver_hns} Visualization of the genomic locations of all inversion alignment blocks (light grey filled circles) identified between \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC.
+		The data points are plotted on the genome of \ecol K-12 MG1655 which is used as a reference. Each inversion alignment block has a single genomic location chosen to be the midpoint of the inverted region calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.
+		\textbf{H}istone-like \textbf{N}ucleoid-\textbf{S}tructuring (H-NS) protein binding sites in the \ecol K-12 MG1655 are overlaid on top of the inversion alignment blocks (circles outlined in dark purple). Data for the H-NS binding information is from Higashi \textcolor{red}{insert citation here.} Inversion alignment blocks that had a significant difference in gene expression between the inverted and non-inverted sequences within the block (using a Wilcoxon sign-ranked test, see Materials and Methods), are marked below the inverted alignment blocks with dark pink outlined triangles.}
+\end{figure}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Strain Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\ecol} \\
+			None & -2.66\e{-8}*** \\
+			U00096 & -3.12\e{-8}***\\
+			CP0032890 & -3.07\e{-8}*** \\
+			CU9281640 & -2.95\e{-8}*** \\
+			CP0018550 & -1.50\e{-8}*** \\
+			BA0000070 & -2.63\e{-8}*** \\
+			CU9281630 & -2.49\e{-8}***\\
+			
+			\midrule
+			\multicolumn{2}{c}{\bass} \\
+			None & 2.76\e{-8}***\\
+			NC\_000964 & 2.96\e{-8}***\\
+			NC\_018520 & 3.57\e{-8}***\\
+			NC\_017195 & 1.00\e{-7}***\\
+			NC\_022898 & 5.17\e{-8}*** \\
+			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
+			CP01731 & 5.43\e{-8}*** \\
+			NC\_014479 & \textcolor{red}{NS}\\
+			
+			\midrule
+			\multicolumn{2}{c}{\strep} \\
+			None & 7.21\e{-8}***\\
+			CP050522 & 8.40\e{-8}*** \\
+			GG657756 & 3.62\e{-8}*** \\
+			CP042324 & 7.72\e{-8}*** \\
+			AL645882 & 7.71\e{-8}*** \\
+			CM001889 & \textcolor{red}{-2.46\e{-7}***}\\
+			
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Strain Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\smel Chromosome} \\
+			None & -6.57\e{-7}***\\
+			NC\_015590& -3.18\e{-7}***\\
+			NC\_003047 & -6.01\e{-7}*** \\
+			CP004140 & -6.00\e{-7}*** \\
+			CP009144 & -6.67\e{-7}*** \\
+			NC\_017322 & -7.19\e{-7}***\\
+			NC\_017325 & -5.01\e{-7}***\\
+			\midrule
+			\multicolumn{2}{c}{\smel \pa} \\
+			None & 2.74\e{-7}***\\
+			NC\_017327 & 6.98\e{-7}***\\
+			CP009145 & 1.78\e{-7}***\\
+			NC\_003037 & 2.09\e{-7}***\\
+			CP004138 & 2.08\e{-7}***\\
+			NC\_015591 & \textcolor{red}{NS} \\
+			NC\_017324 & \textcolor{red}{-1.52\e{-6}***} \\
+			\midrule
+			\multicolumn{2}{c}{\smel \pb} \\
+			None & 1.10\e{-7}***\\
+			NC\_015596 & 6.78\e{-7}***\\
+			NC\_017326 & 1.67\e{-7}***\\
+			NC\_017323 & \textcolor{red}{NS}\\
+			CP009146 & \textcolor{red}{-2.57\e{-7}***}\\
+			CP004139 & 1.04\e{-7}***\\
+			NC\_003078 & 1.04\e{-7}*** \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+
+
 
 
 \begin{table}[h]
@@ -525,96 +630,5 @@ I am wondering if this could be because I used the maximum genome position when 
 	\caption{\label{tab:log_reg_strain} Logistic regression between various inversion categories and distance from the origin of replication for  each strain. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
-
-\begin{table}[h]
-	\centering
-\resizebox{0.7\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Strain Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\ecol} \\
-			None & -2.66\e{-8}*** \\
-			U00096 & -3.12\e{-8}***\\
-			CP0032890 & -3.07\e{-8}*** \\
-			CU9281640 & -2.95\e{-8}*** \\
-			CP0018550 & -1.50\e{-8}*** \\
-			BA0000070 & -2.63\e{-8}*** \\
-			CU9281630 & -2.49\e{-8}***\\
-			
-			\midrule
-			\multicolumn{2}{c}{\bass} \\
-			None & 2.76\e{-8}***\\
-			NC\_000964 & 2.96\e{-8}***\\
-			NC\_018520 & 3.57\e{-8}***\\
-			NC\_017195 & 1.00\e{-7}***\\
-			NC\_022898 & 5.17\e{-8}*** \\
-			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
-			CP01731 & 5.43\e{-8}*** \\
-			NC\_014479 & \textcolor{red}{NS}\\
-			
-			\midrule
-			\multicolumn{2}{c}{\strep} \\
-			None & 7.21\e{-8}***\\
-			CP050522 & 8.40\e{-8}*** \\
-			GG657756 & 3.62\e{-8}*** \\
-			CP042324 & 7.72\e{-8}*** \\
-			AL645882 & 7.71\e{-8}*** \\
-			CM001889 & \textcolor{red}{-2.46\e{-7}***}\\
-		
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.7\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Strain Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\smel Chromosome} \\
-			None & -6.57\e{-7}***\\
-			NC\_015590& -3.18\e{-7}***\\
-			NC\_003047 & -6.01\e{-7}*** \\
-			CP004140 & -6.00\e{-7}*** \\
-			CP009144 & -6.67\e{-7}*** \\
-			NC\_017322 & -7.19\e{-7}***\\
-			
-			\midrule
-			\multicolumn{2}{c}{\smel \pa} \\
-			None & 2.74\e{-7}***\\
-			NC\_017327 & 6.98\e{-7}***\\
-			CP009145 & 1.78\e{-7}***\\
-			NC\_003037 & 2.09\e{-7}***\\
-			CP004138 & 2.08\e{-7}***\\
-			NC\_015591 & \textcolor{red}{NS} \\
-			
-			\midrule
-			\multicolumn{2}{c}{\smel \pb} \\
-			None & 1.10\e{-7}***\\
-			NC\_015596 & 6.78\e{-7}***\\
-			NC\_017326 & 1.67\e{-7}***\\
-			NC\_017323 & \textcolor{red}{NS}\\
-			CP009146 & \textcolor{red}{-2.57\e{-7}***}\\
-			CP004139 & 1.04\e{-7}***\\
-			
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
 
 \end{document}
