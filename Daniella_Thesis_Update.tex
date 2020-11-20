@@ -389,6 +389,29 @@ In the case of \pb, the genome that causes the sign flip happens to be the short
 %	\caption{\label{fig:inversion_manual_revcomp} Visualization of rearrangements and inversions in all \ecol strains. ATCC is ``manually'' reverse complemented (only genomic position).}
 %\end{figure}
 
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.5\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			Bacteria and Replicon & Protein Coding Sequences\\
+			& Coefficient Estimate \\
+			\midrule
+			\ecol Chromosome & \cc -3.29\e{-8}*** \\
+			\bass Chromosome & \textcolor{red}{8.70\e{-9}*}\\
+			\strep Chromosome & \textcolor{red}{NS}\\
+			\smel Chromosome & \cc -6.80\e{-7}*** \\
+			\smel pSymA & 4.49\e{-7}*** \\
+			\smel pSymB & 6.27\e{-8}* \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:sub_log_reg_no_ancest} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. ONLY EXTANT BRANCHES. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/genome_pos_inversions_k12.pdf}
 	\caption{\label{fig:inver_exp} Visualization of the difference in gene expression between inverted and non-inverted sequences within alignment blocks. Each alignment block represents homologous sequences between the \ecoli strains \textcolor{red}{insert table ref here}. \ecol K-12 MG1655 was used as the reference genome for genomic position for each alignment block. The midpoint of each alignment block was calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.  Each alignment block has one point on the graph to represent the average expression value in \textbf{C}ounts \textbf{P}er \textbf{M}illion (\textbf{CPM}) for all inverted (circles) and non-inverted (triangles) sequences within the block. Blocks that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods) have the inverted and non-inverted gene expression averages highlighted in pink circles and purple triangles respectively. A smoothing line (\texttt{loewss}) was added to link the average gene expression values for the inverted (pink solid) and non-inverted (purple dashed) sequences within block that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods). All blocks that did not have a significant difference in average gene expression between inverted and non-inverted sequences within alignment blocks have the average inversion (circles) and non-inversion (triangles) gene expression values coloured in light grey.}
@@ -505,6 +528,7 @@ In the case of \pb, the genome that causes the sign flip happens to be the short
 			\toprule
 			H-NS Binding Study & All Inversions  & Significant Inversions & Total Number of\\
 			&  H-NS Binding & and H-NS Binding  & H-NS Binding Sites\\
+			& & & Within All Alignment Blocks \\
 			\midrule
 			Grainger 2006 & NS & NS & 37\\
 			Ueda 2013 &  NS & NS & 165\\
@@ -523,7 +547,7 @@ In the case of \pb, the genome that causes the sign flip happens to be the short
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:HNS} Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:HNS} \textcolor{red}{are there any other stats related to correlation that people like to have in these tables that I should also be including? }Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 \begin{table}[t!]
