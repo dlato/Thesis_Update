@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  22 NOV 2020 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  22 NOV 2020 10:28
 entering extended mode
 **./Daniella_Thesis_Update.tex
 (Daniella_Thesis_Update.tex
@@ -1093,7 +1093,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
 Here is how much of TeX's memory you used:
  22391 strings out of 481511
  442494 string characters out of 2911892
- 730546 words of memory out of 3000000
+ 730510 words of memory out of 3000000
  37155 multiletter control sequences out of 15000+200000
  545861 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1113,7 +1113,7 @@ onts/cm/cmr12.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Daniella_Thesis_Update.pdf (12 pages, 2601043 bytes).
+Output written on Daniella_Thesis_Update.pdf (12 pages, 2601026 bytes).
 PDF statistics:
  341 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
