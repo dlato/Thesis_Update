@@ -69,57 +69,7 @@
 \newcommand{\bor}{\textit{Bordetella}\xspace}
 \newcommand{\xan}{\textit{Xanthomonas}\xspace}
 \begin{document}
-%	Nov 30:	Create graphs with slopes for each COG
-	
-	
-%	Dec 3:	Create new binned scatter plot of COG log reg
-	
-%	Dec 6:	Determine if there are any other stats I want/need for COG stuff
-	
-%	Dec 10:	Calculate above stats and write in table
-	
-%	Dec 21:	Find papers on COG stuff (for intro and discussion), and other mol trends (discussion for sub paper)
-	
-%	Jan 6:	Read above mentioned papers and make notes
-%	Oct 31: Write out methods for gene expression paper
-%	
-%	Sep 9: Think about/compile list of inversions in \ecol for new paper
-%	
-%	Nov 15: Think about how to better look at the COG data
-%	
-%	Nov 25: Complete any extra analysis needed for Substitution paper
-%	
-%	Dec 4: Mac Scholarships and Awards Due
-%	
-%	Dec 1: Write out COG methods
-%	
-%	Dec 15: Gather papers for COG paper intro
-%	
-%	Dec 15: Implement COG stuff
-%	
-%	Other things to do:
-%	
-%	Create outline for gene expression paper
-%
-%  research mito increased subs near origin
-%
-%  add above to subs paper writeup
-%	
-%	Write Write Write gene expression paper
-%	
-%	 Have gene expression/inversion data combined and in graphical format/regression lines calculated
-%	
-%	re-do gene exp/sub graphs with patchwork R package so they line up exactly
-%	
-%	Have data for other molecular trends (GC content, number of genes, essential gene lists..etc.) combined with graphs (or in supplement) for sub analysis
-%
-% organize all the notes I made for comps into topics that can be integrated into an intro if needed
-%	
-%	May 31:	Complete COG analysis
-%	
-%	Jun 30:	COG analysis Paper draft completed
-%	
-%	Jul 31: Add other mol trends to Sub Paper
+
 
 \underline{Subs Paper Things to Do:}
 \begin{itemize}
@@ -155,15 +105,14 @@
 %	\item \sout{put notes from papers into doc}
 %	\item \sout{use large PARSNP alignment to identify inversions}
 
-	\item confirm inversions with dot plot
-	\item make dot plot of just gene presence and absence matrix (instead of each site) to see if this will go better
+
 	\item look up inversions and small RNA's paper Marie was talking about at Committee meeting
-	\item write outline for letter
+	\item \sout{write outline for letter}
 	\item write Abstract
 	\item \sout{write intro}
-	\item write methods
+	\item\sout{ write methods}
 	\item compile tables (supplementary)
-	\item write results
+	\item \sout{write results}
 	\item write discussion
 	\item write conclusion 
 	\item do same ancestral/phylogenetic analysis that I did in the subs paper 
@@ -176,54 +125,62 @@
 	
 \end{itemize}
 
-
-% next week look into how to calculate the dN/dS for the subs paper
-% week of Dec 17th do same ancestral analysis on gene exp data for ecoli...which is going to require me to do everything from scratch so make a tree and all that jazz
-
-	
 \section*{Last Week}
 
 
 
 \textbf{Substitutions Paper:}
 
-\ch re-did LOO analysis with proper trees
+\ch address reviewers comment on HGT and ori/ter gradient
 
-\ch look into LOO analysis and the branches that caused a flip in sign
+\ch address reviewers comment on annotation in outlier bars (mobile elements)
 
-\ch finished windowed analysis on \dn, \ds, and $\omega$ values
+\ch create new cover letter for subst paper
 
-\ch added reference for \texttt{Parsnp} (I did mention it briefly in the paper)
+\ch do subst analysis with only extant taxa branches (PAML and genome position)
 
+\ch other analysis on subst paper
 
 \textbf{Inversions $+$ Gene Expression:}
 
-\ch Checking over Queenie's dataframes
+\ch double check Queenie's final dataframes 
 
-\ch thinking about what results to include in the paper and how to word them
+\ch double check new inversion combos with Queenie's new data frames
 
-\ch added legend to expression and inversions pic
+\ch finish writing results for inversions paper (minus DESeq)
 
-\ch figure for H-NS binding and inversions
+\ch clarify tests used in $\uparrow$
 
-\ch begun extracting H-NS data from PDF tables for Lang 2007 and Oshima 2006
+\ch attempt DESeq on sample\_name $\sim$ treatment
 
-\ch finished writing methods for paper (minus DESeq analysis)
+\ch double check for HNS and inversions fig that ALL HNS binding sites are shown (not just ones in inversions)
 
-\ch started writing up the results for paper
+\ch continue get Lang and Oshima data from PDF to csv formats
 
+\ch do H-NS analysis on $\uparrow$
+
+\ch final decision on inversion viz (caption that explains it well): Figure \ref{fig:inversion_viz}
+
+
+\textbf{Dissertation:}
+
+\ch Finished dissertation discussion on gene expression paper
+
+\ch Finished 2/3 proposed studies for dissertation
+
+\ch Finished prefaces for each chapter
 
 \bigskip
 
 \textbf{Inversions + Gene Expression:}
-I added a legend to the inversions and gene expression figure (Figure ). \textbf{What are your thoughts?}
-
-
-I created a figure to show all inversions, H-NS binding, and location of inversions with significant differences in gene expression along the \ecol K-12 MG1655 genome (used as a reference since none of the inversions actually occur in this taxa) (Figure ).
-\textbf{Please let me know what you think.}
-
-I started extracting the H-NS binding data from the Oshima and Lang datasets using and R program. It is not perfect and requires some manual tweaking, but it is better than typing in 120 pages of tables by hand.
-
+I attempted to use the individual sample names as a component in the DESeq analysis (sample\_name $\sim$ treatment).
+But it did not work. DESeq still complains that the matrix is not full rank and the column factors (sample\_name and treatment) are linear combinations of each other.
+\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. I would really appreciate your help and insight into this.}
+ 
+I finished getting the Lang and Oshima data from PDF into a csv and complete the H-NS correlation analysis on these (Table \ref{tab:HNS}).
+Oshima is NS so it is sort of irrelevant.
+The Lang data however has a positive correlation with all inversions but a negative correlation with significant inversions (inversions that had a significant difference in gene expression between inverted and non-inverted sequences within the inversion).
+\textbf{This is curious, and maybe related to the small number of data points? Do you have any thoughts on this?}
 %\textbf{DESeq Analysis:}
 %As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
 %This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
@@ -285,15 +242,30 @@ I started extracting the H-NS binding data from the Oshima and Lang datasets usi
 
 
 \textbf{Subst Paper:}
-I looked into the LOO analysis and particularly the results highlighted in red in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}, where there is a complete switch in sign.
-I double checked the branch lengths of the trees that I was using and all were correct except \strep.
-After re-doing this analysis with the proper tree, the results did not change.
-So this did not fix the issue found in \pb. I also noticed that I forgot to list the result for one of the \pa strains, so it is not included and unfortunately also swapped in sign.
 
-For \strep and \pa, the taxa that are removed are the ones that are listed as the ``outgroup'' in the trees. This could potentially explain why there is such a dramatics change in sign.
-For \bass and \pb (and really for all the bacteria), after diving deeper into the substitutions, it seems as though when a sequence is removed, PAML shifts what branches the substitution is found on. This moves between the tip branch and the ancestor. This intern, changes the genomic location of the substitution (because different branches have different genomic positions associated with them). So there are some regions in the graphs that now have many more substitutions than before, and in the particular LOO cases of \pb, \bass, \strep and \pa, this changes the overall distribution enough that the sign flips.
-In the case of \pb, the genome that causes the sign flip happens to be the shortest genome. I am not sure if this has anything to do with anything.
-\textbf{I honestly do not know what to say about this to the reviewer, or what else to do. Maybe we should schedule a meeting so I can show you some of these cases? Maybe I should look into doing my same analysis on previous datasets? Or perhaps re-do this LOO analysis with completely new \p alignments and trees where the one strain is truly left out from the analysis? Maybe some sort of permutation test? I would really appreciate any help on what to do.}
+I finished addressing all the other reviewers comments in the paper and in the cover letter (which I will send to you soon).
+One of the comments was to check what types of genes were present in the outlier bars from the substitution figures, and perhaps if these are mobile elements, this may explain why these bars have high substitutions and are considered outliers.
+I looked into this and almost all mobile elements or phage-like genes were removed either via annotation (no \texttt{mobile\_elements}) or due to poor alignment.
+The reviewer suggested that I could look at the $\omega$ values of these mobile genes to see if they are what is driving the high substs in these bars.
+\textbf{I was thinking, should I be looking at all $\omega$ values in these outlier bars? I was really only searching for mobile elements as the reviewer suggested. What do you think?}
+
+
+As for the reviewer who is concerned about robust data, I was thinking about doing my analysis without accounting for rearrangements to show what those trends are (and hopefully they show a negative correlation like previous studies) and then show that when I account for rearrangements, then things change.
+However, using \p inherently accounts for rearrangements so I am not sure if I should be re-aligning everything (and new trees...etc) with a different aligner that does not account for rearrangements?
+But then I was thinking that you have to account for rearrangements somehow otherwise you would aligning non-homologous sequences.
+So I looked into what some of the previous papers did (Cooper et. al 2010, Morrow et. al 2012...etc) and they all used basically the same protocol.
+They identified orthologs via blastp (and often required these orthologs to have similar positions in the genome), aligned them with ClustalW, then used codeml to calculate rates.
+\textbf{These studies also just chucked anything that had \ds $>$ 1 since these are unreliable. 
+Should I be doing the same? This also got me thinking that I use different datasets for the subs analysis and the selection analysis. Should I be using the selection analysis to identify outlier genes and exclude those from my subst analysis??}
+
+Anyways, this all got me thinking that perhaps my \p alignments are ok and I can just choose the extant branches from PAML to use in my logistic regression of subs v.s. distance from the origin of replication.
+So I did this, where all the data and methods are the same except I only selected the tip branches and their corresponding substitutions and genomic positions.
+The results are found in Table \ref{tab:sub_log_reg_no_ancest}, you can see that they are essentially the same as ``with rearrangements''.
+However, based on my LOO we know that PAML can change what branch the substitutions are on based on the tree and what taxa are present.
+\textbf{So maybe for this ``no rearrangements'' analysis I need to only count what substitutions we can see in the alignment, so use a program other than PAML? I am just concerned that PAML is moving this extant subs to deeper branches and then its not captured in this ``no rearrangements'' dataset. Thoughts?}
+
+\textbf{Overall, I do not know what else to do about the robust-ness of the data to satisfy this reviewer. 
+Unless you can think of anything else, I will just craft the cover letter addressing the reviewers concerns and saying that we have done all we can do.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
@@ -345,28 +317,22 @@ In the case of \pb, the genome that causes the sign flip happens to be the short
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item double check Queenie's final dataframes 
-	\item double check new inversion combos with Queenie's new data frames
-\item finish writing results for inversions paper
-\item clarify tests used in $\uparrow$
-\item continue working LOO analysis for subst paper
-\item address reviewers comment on HGT and ori/ter gradient
-\item address reviewers comment on annotation in outlier bars
-\item create new cover letter for subst paper
-
+	\item finish subst analysis with ``no rearrangements''
+	\item write $\uparrow$ into polished cover letter and main paper
+	\item submit subst paper
+	\item actual analysis on DESeq data
+	\item visualizations/results for $\uparrow$
+	\item read papers on H-NS proteins
+\item write inversions paper abstract
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item actual analysis on DESeq data
-	\item visualizations/results for $\uparrow$
-	\item read papers on H-NS proteins
-	\item double check for HNS and inversions fig that ALL HNS binding sites are shown (not just ones in inversions)
-	\item continue get Lang and Oshima data from PDF to csv formats
-	\item do H-NS analysis on $\uparrow$
-	\item final decision on inversion viz (caption that explains it well)
+\item read papers on H-NS proteins
+\item write inversions paper discussion
+\item write conclusion for dissertation
 	\item maybe do inversions in 10kb blocks? (and other sliding windows?)
 	\item dist from ori on DESeq results?
 	\item HGT and HNS binding?
@@ -411,6 +377,11 @@ In the case of \pb, the genome that causes the sign flip happens to be the short
 	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 	\caption{\label{tab:sub_log_reg_no_ancest} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. ONLY EXTANT BRANCHES. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
+
+\begin{figure*}[t!]
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_colour.pdf}
+	\caption{\label{fig:inversion_viz} Visualization of rearrangements and inversions between all \ecol strains. The genome of each strain is represented as horizontal lines. Homologous alignment blocks in each taxa are connected with a winding vertical line. Alignment blocks can be found at varying genomic positions in each taxa. Inverted alignment blocks are coloured in dark purple and non-inverted alignment blocks (which include rearrangements) are coloured in light grey.}
+\end{figure*}
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/genome_pos_inversions_k12.pdf}
