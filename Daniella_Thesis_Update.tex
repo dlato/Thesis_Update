@@ -380,10 +380,10 @@ Unless you can think of anything else, I will just craft the cover letter addres
 	\caption{\label{tab:sub_log_reg_no_ancest} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. ONLY EXTANT BRANCHES. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
-\begin{figure*}[t!]
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_colour.pdf}
-	\caption{\label{fig:inversion_viz} Visualization of rearrangements and inversions between all \ecol strains. The genome of each strain is represented as horizontal lines. Homologous alignment blocks in each taxa are connected with a winding vertical line. Alignment blocks can be found at varying genomic positions in each taxa. Inverted alignment blocks are coloured in dark purple and non-inverted alignment blocks (which include rearrangements) are coloured in light grey.}
-\end{figure*}
+%\begin{figure*}[t!]
+%	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_colour.pdf}
+%	\caption{\label{fig:inversion_viz} Visualization of rearrangements and inversions between all \ecol strains. The genome of each strain is represented as horizontal lines. Homologous alignment blocks in each taxa are connected with a winding vertical line. Alignment blocks can be found at varying genomic positions in each taxa. Inverted alignment blocks are coloured in dark purple and non-inverted alignment blocks (which include rearrangements) are coloured in light grey.}
+%\end{figure*}
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/genome_pos_inversions_k12.pdf}
@@ -503,24 +503,22 @@ Unless you can think of anything else, I will just craft the cover letter addres
 			&  H-NS Binding & and H-NS Binding  & H-NS Binding Sites\\
 			& & & Within All Alignment Blocks \\
 			\midrule
-			Grainger 2006 & NS & NS & 37\\
-			Ueda 2013 &  NS & NS & 165\\
-			Higashi 2016: coding criteria 1 & 0.103*& 0.113*** & 206\\
-			 Higashi 2016: coding criteria 1 & 0.102* & 0.104*** & 189\\
-			and non-coding criteria 1 & & & \\
-			Higashi 2016: coding criteria 1 & 0.102* & 0.104*** & 189\\
-			and non-coding criteria 2 & & & \\
-			Higashi 2016: coding criteria 1 & 0.102* & 0.104*** & 189\\
-			and non-coding criteria 3 & & &\\
-			Higashi 2016: coding criteria 2 & 0.105* & 0.104***& 187\\
-			Higashi 2016: coding criteria 3 & 0.105* & 0.104*** &187\\
-			Lang 2007: composite data & 0.101* & -0.056* & 80\\
-			Oshima 2006 & NS & NS & 277\\
+			Grainger 2006 \cite{Grai:06} & NS & NS & 37\\
+			Ueda 2013 \cite{Ueda:13} &  NS & NS & 165\\
+			Higashi 2016 \cite{Higa:16} & &&\\
+			\hspace*{10mm} criteria A & 0.103*& 0.113*** & 206\\
+			\hspace*{10mm} criteria B & 0.102* & 0.104*** & 189\\
+			\hspace*{10mm} criteria C & 0.102* & 0.104*** & 189\\
+			\hspace*{10mm} criteria D & 0.102* & 0.104*** & 189\\
+			\hspace*{10mm} criteria E & 0.105* & 0.104***& 187\\
+			\hspace*{10mm} criteria F & 0.105* & 0.104*** &187\\
+			Lang 2007 \cite{Lang:07} & 0.101* & -0.056* & 80\\ %composite data
+			Oshima 2006 \cite{Oshi:06} & NS & NS & 277\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:HNS} \textcolor{red}{are there any other stats related to correlation that people like to have in these tables that I should also be including? }Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+	\caption{\label{tab:HNS} \textcolor{red}{are there any other stats related to correlation that people like to have in these tables that I should also be including? }Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. The \textcolor{red}{ref Higashi} data set had multiple criteria to define H-NS binding sites. They are listed as follows: A: Genes whose coding regions overlap with the H-NS binding regions, B: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that were bound by H-NS, C: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that are "class I " (see \textcolor{red}{cite Higashi}), D: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that contain known promoter sequences, E: Same as A, but genes on which H-NS binding is restricted to the 3' end and the length overlapping with H-NS-bound regions is <10\% of the total gene length were excluded from H-NS-bound genes, F: When genes included in transcriptional units whose upstream regions or first coding regions overlapped with H-NS bound regions, all genes in the transcriptional units were judged as genes affected by H-NS binding. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 \begin{table}[t!]
