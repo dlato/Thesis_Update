@@ -131,58 +131,51 @@
 
 \textbf{Substitutions Paper:}
 
-\ch address reviewers comment on HGT and ori/ter gradient
+\ch finished latest draft of second round of revisions
 
-\ch address reviewers comment on annotation in outlier bars (mobile elements)
+\ch submit!
 
-\ch create new cover letter for subst paper
-
-\ch do subst analysis with only extant taxa branches (PAML and genome position)
-
-\ch other analysis on subst paper
 
 \textbf{Inversions $+$ Gene Expression:}
 
-\ch double check Queenie's final dataframes 
+\ch finished first draft of inversions paper (minus the DESeq analysis)
 
-\ch double check new inversion combos with Queenie's new data frames
+\ch looked at some HGT genes and inversions
 
-\ch finish writing results for inversions paper (minus DESeq)
+\ch phylogentic tree for the taxa
 
-\ch clarify tests used in $\uparrow$
-
-\ch attempt DESeq on sample\_name $\sim$ treatment
-
-\ch double check for HNS and inversions fig that ALL HNS binding sites are shown (not just ones in inversions)
-
-\ch continue get Lang and Oshima data from PDF to csv formats
-
-\ch do H-NS analysis on $\uparrow$
-
-\ch final decision on inversion viz (caption that explains it well): Figure \ref{fig:inversion_viz}
+\ch HNS and expression values for bound and unbound regions
 
 
 \textbf{Dissertation:}
 
-\ch Finished dissertation discussion on gene expression paper
+\ch Finished inversions proposed studies
 
-\ch Finished 2/3 proposed studies for dissertation
+\ch Finished inversions conclusion thesis summary
 
-\ch Finished prefaces for each chapter
-
-\ch Finished overall conclusion
+\ch Started inversions discussion
 
 \bigskip
 
 \textbf{Inversions + Gene Expression:}
 I attempted to use the individual sample names as a component in the DESeq analysis (sample\_name $\sim$ treatment).
 But it did not work. DESeq still complains that the matrix is not full rank and the column factors (sample\_name and treatment) are linear combinations of each other.
-\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. I would really appreciate your help and insight into this.}
+\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. Do you know how I can achieve this?}
  
-I finished getting the Lang and Oshima data from PDF into a csv and complete the H-NS correlation analysis on these (Table \ref{tab:HNS}).
-Oshima is NS so it is sort of irrelevant.
-The Lang data however has a positive correlation with all inversions but a negative correlation with significant inversions (inversions that had a significant difference in gene expression between inverted and non-inverted sequences within the inversion).
-\textbf{This is curious, and maybe related to the small number of data points? Do you have any thoughts on this?}
+I realized that I was considering a ``match'' between HNS and my inversions if any part of an HNS binding site overlapped with any region within the entire inverted block. This meant that each gene within an inverted block would be considered ``bound'' to HNS.
+I think this is wrong, so I instead considered a ``match'' to be if any part of the HNS binding site overlapped with any portion of a gene. This way each individual gene would be assessed as to if it had HNS bound or not.
+Figure \ref{fig:inver_hns} and Table \ref{tab:HNS} are updated with this information.
+There is now complete consistency in sign between the significant correlations (Table \ref{tab:HNS}).
+However, I am not sure which genomes to use for the HNS binding.
+The data for HNS binding sites is based on the \ecol K-12 MG1655 strain. So I think that I should only be looking at this genome.
+However, the \ecol K-12 MG1655 strain has no inverions, they mostly occur in the \ecol ATCC strain.
+So I am considering an inverted alignment block as having at least one taxa inverted.
+\textbf{Do you think it is ok that I am only looking at \ecol K-12 MG1655 and using the above criteria for inverted blocks to see if there is a correlation between HNS and inversions?}
+ 
+Since a lot of the genes that HNS represses are linked to being recently horizontally transferred, I obtained the HGT information from the significant HNS datasets which is from previously published studies on HGT.
+I looked at the correlation (Pearson) between HGT genes and inverted sequences, and HGT and blocks with significant differences in gene expression and I found no significant correlation for either.
+\textbf{Should I be pulling HGT data from other sources to look into this? I just thought it would be good to at least touch on this in the paper since HGT genes are mentioned in a lot of the HNS literature.}
+ 
 %\textbf{DESeq Analysis:}
 %As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
 %This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
@@ -242,33 +235,6 @@ The Lang data however has a positive correlation with all inversions but a negat
 %I am not sure how best to account for this in my calculations.
 %\textbf{Do you have any thoughts on this?}
 
-
-\textbf{Subst Paper:}
-
-I finished addressing all the other reviewers comments in the paper and in the cover letter (which I will send to you soon).
-One of the comments was to check what types of genes were present in the outlier bars from the substitution figures, and perhaps if these are mobile elements, this may explain why these bars have high substitutions and are considered outliers.
-I looked into this and almost all mobile elements or phage-like genes were removed either via annotation (no \texttt{mobile\_elements}) or due to poor alignment.
-The reviewer suggested that I could look at the $\omega$ values of these mobile genes to see if they are what is driving the high substs in these bars.
-\textbf{I was thinking, should I be looking at all $\omega$ values in these outlier bars? I was really only searching for mobile elements as the reviewer suggested. What do you think?}
-
-
-As for the reviewer who is concerned about robust data, I was thinking about doing my analysis without accounting for rearrangements to show what those trends are (and hopefully they show a negative correlation like previous studies) and then show that when I account for rearrangements, then things change.
-However, using \p inherently accounts for rearrangements so I am not sure if I should be re-aligning everything (and new trees...etc) with a different aligner that does not account for rearrangements?
-But then I was thinking that you have to account for rearrangements somehow otherwise you would aligning non-homologous sequences.
-So I looked into what some of the previous papers did (Cooper et. al 2010, Morrow et. al 2012...etc) and they all used basically the same protocol.
-They identified orthologs via blastp (and often required these orthologs to have similar positions in the genome), aligned them with ClustalW, then used codeml to calculate rates.
-\textbf{These studies also just chucked anything that had \ds $>$ 1 since these are unreliable. 
-Should I be doing the same? This also got me thinking that I use different datasets for the subs analysis and the selection analysis. Should I be using the selection analysis to identify outlier genes and exclude those from my subst analysis??}
-
-Anyways, this all got me thinking that perhaps my \p alignments are ok and I can just choose the extant branches from PAML to use in my logistic regression of subs v.s. distance from the origin of replication.
-So I did this, where all the data and methods are the same except I only selected the tip branches and their corresponding substitutions and genomic positions.
-The results are found in Table \ref{tab:sub_log_reg_no_ancest}, you can see that they are essentially the same as ``with rearrangements''.
-However, based on my LOO we know that PAML can change what branch the substitutions are on based on the tree and what taxa are present.
-\textbf{So maybe for this ``no rearrangements'' analysis I need to only count what substitutions we can see in the alignment, so use a program other than PAML? I am just concerned that PAML is moving this extant subs to deeper branches and then its not captured in this ``no rearrangements'' dataset. Thoughts?}
-
-\textbf{Overall, I do not know what else to do about the robust-ness of the data to satisfy this reviewer. 
-Unless you can think of anything else, I will just craft the cover letter addressing the reviewers concerns and saying that we have done all we can do.}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HOW LARGE CAN THE SLOPE GET JUNE 1 2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -319,25 +285,26 @@ Unless you can think of anything else, I will just craft the cover letter addres
 %aim to tick off 4 tasks a week
 %
 \begin{itemize}
-	\item finish subst analysis with ``no rearrangements''
-	\item write $\uparrow$ into polished cover letter and main paper
-	\item submit subst paper
+	\item get HGT info for Oshima HNS data
+	\item do HGT correlations on $\uparrow$ data
+	\item Dissertation: discussion on inversions paper
+	\item Dissertation: intro for inversions paper
 	\item actual analysis on DESeq data
 	\item visualizations/results for $\uparrow$
-	\item read papers on H-NS proteins
-\item write inversions paper abstract
+	\item start working on exit seminar presentation
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-\item read papers on H-NS proteins
-\item write inversions paper discussion
-\item write conclusion for dissertation
+	\item continue working on exit seminar presentation
+	\item go over missing spots/red marks in conclusion
+	\item edit conclusion
+	\item Brian's edits to inversions paper
 	\item maybe do inversions in 10kb blocks? (and other sliding windows?)
 	\item dist from ori on DESeq results?
-	\item HGT and HNS binding?
+	
 \end{itemize}
 
 \newpage
