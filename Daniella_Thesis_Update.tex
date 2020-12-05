@@ -80,11 +80,11 @@
 %    
  %   \item create new graphs for selection analysis
 %    
-	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
+%	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
 
 	\item mol clock for my analysis?
 	
-	\item GC content? COG? where do these fit?
+	\item GC content?
 	
 \end{itemize}
 
@@ -108,13 +108,13 @@
 
 	\item look up inversions and small RNA's paper Marie was talking about at Committee meeting
 	\item \sout{write outline for letter}
-	\item write Abstract
+	\item \sout{write Abstract}
 	\item \sout{write intro}
 	\item\sout{ write methods}
 	\item compile tables (supplementary)
 	\item \sout{write results}
-	\item write discussion
-	\item write conclusion 
+	\item \sout{ write discussion}
+	\item \sout{write conclusion} 
 	\item do same ancestral/phylogenetic analysis that I did in the subs paper 
 \end{itemize}
 
@@ -129,52 +129,32 @@
 
 
 
-\textbf{Substitutions Paper:}
-
-\ch finished latest draft of second round of revisions
-
-\ch submit!
-
 
 \textbf{Inversions $+$ Gene Expression:}
 
-\ch finished first draft of inversions paper (minus the DESeq analysis)
+\ch did HGT correlations with Oshima data, still no correlation
 
-\ch looked at some HGT genes and inversions
-
-\ch phylogentic tree for the taxa
-
-\ch HNS and expression values for bound and unbound regions
-
+\ch looked into other HGT and HNS binding data
 
 \textbf{Dissertation:}
 
-\ch Finished inversions proposed studies
+\ch first draft of Exit Seminar presentation
 
-\ch Finished inversions conclusion thesis summary
+\ch practising exit seminar
 
-\ch Started inversions discussion
+\ch First draft of dissertation done!!
 
 \bigskip
 
 \textbf{Inversions + Gene Expression:}
-I attempted to use the individual sample names as a component in the DESeq analysis (sample\_name $\sim$ treatment).
-But it did not work. DESeq still complains that the matrix is not full rank and the column factors (sample\_name and treatment) are linear combinations of each other.
-\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. Do you know how I can achieve this?}
+%I attempted to use the individual sample names as a component in the DESeq analysis (sample\_name $\sim$ treatment).
+%But it did not work. DESeq still complains that the matrix is not full rank and the column factors (sample\_name and treatment) are linear combinations of each other.
+%\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. Do you know how I can achieve this?}
  
-I realized that I was considering a ``match'' between HNS and my inversions if any part of an HNS binding site overlapped with any region within the entire inverted block. This meant that each gene within an inverted block would be considered ``bound'' to HNS.
-I think this is wrong, so I instead considered a ``match'' to be if any part of the HNS binding site overlapped with any portion of a gene. This way each individual gene would be assessed as to if it had HNS bound or not.
-Figure \ref{fig:inver_hns} and Table \ref{tab:HNS} are updated with this information.
-There is now complete consistency in sign between the significant correlations (Table \ref{tab:HNS}).
-However, I am not sure which genomes to use for the HNS binding.
-The data for HNS binding sites is based on the \ecol K-12 MG1655 strain. So I think that I should only be looking at this genome.
-However, the \ecol K-12 MG1655 strain has no inverions, they mostly occur in the \ecol ATCC strain.
-So I am considering an inverted alignment block as having at least one taxa inverted.
-\textbf{Do you think it is ok that I am only looking at \ecol K-12 MG1655 and using the above criteria for inverted blocks to see if there is a correlation between HNS and inversions?}
- 
-Since a lot of the genes that HNS represses are linked to being recently horizontally transferred, I obtained the HGT information from the significant HNS datasets which is from previously published studies on HGT.
-I looked at the correlation (Pearson) between HGT genes and inverted sequences, and HGT and blocks with significant differences in gene expression and I found no significant correlation for either.
-\textbf{Should I be pulling HGT data from other sources to look into this? I just thought it would be good to at least touch on this in the paper since HGT genes are mentioned in a lot of the HNS literature.}
+I looked at finding other HGT data and HNS binding site data, but there really is not too much else.
+The HGT data is from early 2000s but is still being used frequently today (including in the most recent HNS study I could find).
+For the HNS binding sites, I found a few other data sets that I could be using, but they split up the binding sites into different growth phases (aerobic anerobic... etc.).
+\textbf{None of my other HNS data are partitioned like that. Should I be including these new datasets?}
  
 %\textbf{DESeq Analysis:}
 %As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
@@ -284,24 +264,32 @@ I looked at the correlation (Pearson) between HGT genes and inverted sequences, 
 \section*{This Week}
 %aim to tick off 4 tasks a week
 %
+
 \begin{itemize}
-	\item get HGT info for Oshima HNS data
-	\item do HGT correlations on $\uparrow$ data
-	\item Dissertation: discussion on inversions paper
-	\item Dissertation: intro for inversions paper
-	\item actual analysis on DESeq data
-	\item visualizations/results for $\uparrow$
-	\item start working on exit seminar presentation
+	
+	
+\item continue working on exit seminar presentation
+
+\item Brian's edits to inversions paper
+
+\item DESeq analysis for inversions
+
+\item graphs for $\uparrow$
+
+\item write methods and results for DESeq analysis
+
+\item read some papers
+
+\item send Brian first draft of thesis!
+
 
 \end{itemize}
 
 
 \section*{Next Week}
 \begin{itemize}
-	\item continue working on exit seminar presentation
-	\item go over missing spots/red marks in conclusion
-	\item edit conclusion
-	\item Brian's edits to inversions paper
+	\item write up DESeq discussion and conclusion
+	\item exit seminar
 	\item maybe do inversions in 10kb blocks? (and other sliding windows?)
 	\item dist from ori on DESeq results?
 	
