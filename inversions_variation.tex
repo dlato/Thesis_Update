@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage[margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xspace}
+%\usepackage{underscore}
+\usepackage{pdfpages}
+\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{13 pt}
+\setlength{\parindent}{28 pt}
+\setlength{\parskip}{12 pt}
+\pagestyle{fancyplain}
+\usepackage[T1]{fontenc}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage[normalem]{ulem} %to strikeout text
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc, arrows}
+\usepackage{lscape} %to make the page landscape
+\usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\usepackage{indentfirst} % to indent the first paragraph
+\rhead{\fancyplain{}{Thesis Update \today \hfill Daniella Lato}}
+%\rhead{\fancyplain{}{Thesis Update April 8, 2019 \hfill Daniella Lato}}
+\title{Sinorhizobium Update}
+\author{Daniella Lato}
+\date{\today}
+\renewcommand\headrulewidth{0.5mm}
+\newcommand{\cc}{\cellcolor{black!16}}
+\newcommand{\s}{\textit{Sinorhizobium}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\smed}{\textit{S.\,medicae}\xspace}
+\newcommand{\sfred}{\textit{S.\,fredii}\xspace}
+\newcommand{\ssah}{\textit{S.\,saheli}\xspace}
+\newcommand{\ster}{\textit{S.\,terangae}\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
+\newcommand{\escoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\sul}{\textit{Sulfolobus}\xspace}
+\newcommand{\ent}{\textit{Enterobacteria}\xspace}
+\newcommand{\p}{progressiveMauve\xspace}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\ecoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\newcommand{\snat}{\textit{S.\,natalensis}\xspace}
+\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\borrb}{\textit{Borrelia burgdorferi}\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\ch}{$\checkmark$}
+\newcommand{\dn}{\textit{dN}\xspace}
+\newcommand{\ds}{\textit{dS}\xspace}
+\newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
+%\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\sliv}{\textit{S.\,lividans}\xspace}
+\newcommand{\bor}{\textit{Bordetella}\xspace}
+\newcommand{\xan}{\textit{Xanthomonas}\xspace}
+\begin{document}
+
+
+\textbf{Inversions + Gene Expression:}
+I calculated the coefficient of variance (CV) for expression in a few different categories in Table \ref{tab:cv} ( inverted vs non-inverted, significant and non-significant inversions, and inverted and non-inverted within the ATCC strain).
+CV is higher in the non-inverted regions compared to inverted regions both overall and within the ATCC strain.
+Comparing the CV between expression in significant inversions (inversion alignment blocks that had a significant difference between the inverted and non-inverted sequences) and expression in non-significant inversions, we see that the significant inversions have a higher CV.
+So, when inversions cause a significant change in expression within that block, there is more variation?
+And looking at more long range impacts, inversions have less variation in expression than non-inverted regions?
+
+I also did a a Fligner-Klleen test to test for homogeneity of variances (I think this is just variance and not CV). This is a non-parametric test.
+These tests say that the variation between each of the above tested groups is significantly different (Table \ref{tab:fk_test}).
+I found two tests that determine if two CVs are equal between different groups (Table \ref{tab:cv_test}).
+Based on these tests, it appears as though the CVs between inverted and non-inverted regions does not differ (in all blocks or when only considering the ATCC genome).
+There is a significant difference in CVs between the significant inverted alignment blocks (blocks that had a significant difference in expression between inverted and non-inverted sequences within the block) and the non-significant inverted alignment blocks.
+So, only some inversions have an impact on expression, and when they do, the CVs in these blocks is different from non-significant inverted alignment blocks.
+\textbf{What do you think of these results?}
+
+\textbf{If you think I should be doing any other tests to look into how the variance in expression changes between inverted and non-inverted regions please let me know!}
+
+I attempted to make some figures to try and visualize these results but I am not happy with either of them.
+Please ignore the aesthetics because these will be changed.
+Figure \ref{fig:violin_exp} shows the distribution of expression values in the inverted alignment blocks and the non-inverted alignment blocks.
+We run into the same issue here as in the substitutions paper with \dn, \ds, and $\omega$. 
+When put on a log scale, expression values of 0 are not included in the violin plot.
+Without the log scale, the graphs are unreadable.
+Figure \ref{fig:mean_sd} plots the mean values for expression in the inverted and non-inverted alignment blocks as well as the 95\% confidence interval. 
+I was planing on making whichever graph we choose for each of the various categories in Tables \ref{tab:cv} and \ref{tab:fk_test}, perhaps putting all graphs into one figure.
+\textbf{Do you like either of these graphs? Can you think of a better way to display the difference in variance?}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Group & Inversions  & Non-Inversions \\
+			\midrule
+			All Blocks & 3.26 & 3.43\\
+			Only ATCC genes & 3.24 & 3.78\\
+			\midrule
+			Group & Significant Inversions & Non-Significant Inversions\\
+			\midrule
+			Significant Inversions & 4.39 & 3.08\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cv} Coefficient of variance in gene expression between different groups. ``All Blocks'' indicates all identified alignment blocks. ``Only ATCC genes'' indicates all ATCC genes that are both inverted and non-inverted. ``Significant Inversions'' indicates all inverted blocks that had a significant difference in gene expression between the inverted and non-inverted sequences. The coefficient variance in this group was calculated for the inversions that were significant inversions and non-significant inversions. }
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Group & chi-squared\\
+			\midrule
+			All Blocks & 6.005*\\
+			Only ATCC genes & 6.000*\\
+			Significant Inversions & 13.904***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:fk_test} Fligner-Killeen test for homogeneity of variances in gene expression between different groups. ``All Blocks'' indicates all identified alignment blocks. ``Only ATCC genes'' indicates all ATCC genes that are both inverted and non-inverted. ``Significant Inversions'' indicates all inverted blocks that had a significant difference in gene expression between the inverted and non-inverted sequences. The coefficient variance in this group was calculated for the inversions that were significant inversions and non-significant inversions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/all_inversions_violinplot.pdf}
+	\caption{\label{fig:violin_exp} Violin plots of distribution of expression values between inverted and non-inverted alignment blocks.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/all_inversions_mean_sd.pdf}
+	\caption{\label{fig:mean_sd} Plots of mean expression values between inverted and non-inverted alignment blocks with 95\% confidence intervals.}
+\end{figure}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			& \multicolumn{2}{c}{Test Statistic}\\
+			Group & Asymptotic & M-SLRT\\
+			\midrule
+			All Blocks & NS & NS\\
+			Only ATCC genes & NS & NS\\
+			Significant Inversions &8.738** & 13.600***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cv_test} Tests for equality of coefficient of variances in gene expression. The ``Asymptotic'' test refers to the \textcolor{red}{cite Feltz and Miller 1996 here} asymptotic test. The ``M-SLRT'' test refers to the Modified Signed-Likelihood Ratio Test (M-SLRT) from \textcolor{red}{cite Krishnamoorthy and Lee 2014}.  ``All Blocks'' indicates all identified alignment blocks. ``Only ATCC genes'' indicates all ATCC genes that are both inverted and non-inverted. ``Significant Inversions'' indicates all inverted blocks that had a significant difference in gene expression between the inverted and non-inverted sequences. The coefficient variance in this group was calculated for the inversions that were significant inversions and non-significant inversions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+
+\end{document}

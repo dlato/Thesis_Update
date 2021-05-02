@@ -71,22 +71,6 @@
 \begin{document}
 
 
-\underline{Subs Paper Things to Do:}
-\begin{itemize}
-
-%	\item Or get 1st, 2nd, 3rd codon pos log regs
-
-%    \item \sout{why does sinoC have omega lin reg = 0 near and far from the origin?}
-%    
- %   \item create new graphs for selection analysis
-%    
-%	\item why are the lin reg of \dn, \ds and $\omega$ NS but the subs graphs are...explain!
-
-	\item mol clock for my analysis?
-	
-	\item GC content?
-	
-\end{itemize}
 
 \underline{Inversions and Gene Expression Letter Things to Do:}
 \begin{itemize}
@@ -130,33 +114,31 @@
 
 
 
-\textbf{Inversions $+$ Gene Expression:}
-
-\ch did HGT correlations with Oshima data, still no correlation
-
-\ch looked into other HGT and HNS binding data
+%\textbf{Inversions $+$ Gene Expression:}
 
 \textbf{Dissertation:}
 
-\ch first draft of Exit Seminar presentation
+\ch general formatting
 
-\ch practising exit seminar
+\ch declaration of authorship
 
-\ch First draft of dissertation done!!
+\ch final edit for intro and conclusion
+
+\ch insert substitutions chapter
+
+\ch check citations
+
+
+
 
 \bigskip
+\section{Dissertation}
 
-\textbf{Inversions + Gene Expression:}
-%I attempted to use the individual sample names as a component in the DESeq analysis (sample\_name $\sim$ treatment).
-%But it did not work. DESeq still complains that the matrix is not full rank and the column factors (sample\_name and treatment) are linear combinations of each other.
-%\textbf{I do not know what to do. I need to account for variation in expression between datasets (since they were all done in different labs at different times), while still being able to see what differences are due to the ``treatment'' $=$ inversions. Do you know how I can achieve this?}
- 
-I looked at finding other HGT data and HNS binding site data, but there really is not too much else.
-The HGT data is from early 2000s but is still being used frequently today (including in the most recent HNS study I could find).
-For the HNS binding sites, I found a few other data sets that I could be using, but they split up the binding sites into different growth phases (aerobic anerobic... etc.).
-\textbf{None of my other HNS data are partitioned like that. Should I be including these new datasets?}
- 
-%\textbf{DESeq Analysis:}
+I spent most of the break working on your edits for the final chapter of my dissertation.
+I also fixed formatting and citation errors.
+The substitutions chapter and supplement has been added to the dissertation.1
+%\textbf{Inversions + Gene Expression:}
+
 %As I mentioned to you briefly last week, I was having trouble performing DESeq because my ``matrix is not full rank''. 
 %This means that the combination of levels in each of my experimental design columns (treatment (inversion/non-inversion), strain, experiment) are co-linear.
 %This is because the strain and inversion/non-inversion combinations are similar.
@@ -266,21 +248,11 @@ For the HNS binding sites, I found a few other data sets that I could be using, 
 %
 
 \begin{itemize}
+\item fix any supplementary things that are missing in inversions paper	
 	
-	
-\item continue working on exit seminar presentation
+\item Brian's edits for inversions paper
 
-\item Brian's edits to inversions paper
-
-\item DESeq analysis for inversions
-
-\item graphs for $\uparrow$
-
-\item write methods and results for DESeq analysis
-
-\item read some papers
-
-\item send Brian first draft of thesis!
+\item send Brian new draft of inversions paper (with supplement)
 
 
 \end{itemize}
@@ -288,14 +260,78 @@ For the HNS binding sites, I found a few other data sets that I could be using, 
 
 \section*{Next Week}
 \begin{itemize}
-	\item write up DESeq discussion and conclusion
-	\item exit seminar
+	\item Send dissertation to committee (Jan 18th)
 	\item maybe do inversions in 10kb blocks? (and other sliding windows?)
 	\item dist from ori on DESeq results?
-	
+
+% week of dec 28
+%\item double check authors for each chapter
+%\item check missing acronyms
+%\item missing references
+%\item overall formatting
+
+% week of jan 4th
+%\item edit abstract
+%\item edit intro
+%\item edit conclusion	
 \end{itemize}
 
 \newpage
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Group & Inversions  & Non-Inversions \\
+			\midrule
+			All Blocks & 3.26 & 3.43\\
+			Only ATCC genes & 3.24 & 3.78\\
+			\midrule
+			Group & Significant Inversions & Non-Significant Inversions\\
+			\midrule
+			Significant Inversions & 4.39 & 3.08\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:cv} Coefficient of variance in gene expression between different groups. ``All Blocks'' indicates all identified alignment blocks. ``Only ATCC genes'' indicates all ATCC genes that are both inverted and non-inverted. ``Significant Inversions'' indicates all inverted blocks that had a significant difference in gene expression between the inverted and non-inverted sequences. The coefficient variance in this group was calculated for the inversions that were significant inversions and non-significant inversions. }
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lccc}
+			\toprule
+			Group & chi-squared\\
+			\midrule
+			All Blocks & 6.005*\\
+			Only ATCC genes & 6.000*\\
+			Significant Inversions & 13.904***\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:fk_test} Fligner-Killeen test for homogeneity of variances in gene expression between different groups. ``All Blocks'' indicates all identified alignment blocks. ``Only ATCC genes'' indicates all ATCC genes that are both inverted and non-inverted. ``Significant Inversions'' indicates all inverted blocks that had a significant difference in gene expression between the inverted and non-inverted sequences. The coefficient variance in this group was calculated for the inversions that were significant inversions and non-significant inversions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/all_inversions_violinplot.pdf}
+	\caption{\label{fig:violin_exp} Violin plots of distribution of expression values between inverted and non-inverted alignment blocks.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/all_inversions_mean_sd.pdf}
+	\caption{\label{fig:mean_sd} Plots of mean expression values between inverted and non-inverted alignment blocks with 95\% confidence intervals.}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/hns_hist.pdf}
+	\caption{\label{fig:inver_hns} Visualization of the genomic locations of all inversion alignment blocks (light grey filled circles) identified between \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC.
+		The data points are plotted on the genome of \ecol K-12 MG1655 which is used as a reference. Each inversion alignment block has a single genomic location chosen to be the midpoint of the inverted region calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.
+		\textbf{H}istone-like \textbf{N}ucleoid-\textbf{S}tructuring (H-NS) protein binding sites in the \ecol K-12 MG1655 are overlaid on top of the inversion alignment blocks (circles outlined in dark purple). Data for the H-NS binding information is from Higashi \textcolor{red}{insert citation here.} Inversion alignment blocks that had a significant difference in gene expression between the inverted and non-inverted sequences within the block (using a Wilcoxon sign-ranked test, see Materials and Methods), are marked below the inverted alignment blocks with dark pink outlined triangles.}
+\end{figure}
+
 
 %\begin{figure}
 %	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all.pdf}
@@ -313,28 +349,6 @@ For the HNS binding sites, I found a few other data sets that I could be using, 
 %\end{figure}
 
 
-\begin{table}[h]
-	\centering
-	\resizebox{0.5\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			Bacteria and Replicon & Protein Coding Sequences\\
-			& Coefficient Estimate \\
-			\midrule
-			\ecol Chromosome & \cc -3.29\e{-8}*** \\
-			\bass Chromosome & 8.70\e{-9}*\\
-			\strep Chromosome & NS\\
-			\smel Chromosome & \cc -6.80\e{-7}*** \\
-			\smel pSymA & 4.49\e{-7}*** \\
-			\smel pSymB & 6.27\e{-8}* \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	%	\caption{\label{tab:cod_non_cod_log_reg} Logistic regression analysis of the number of substitutions along all positions of the genome of the respective bacteria replicons. These genomic positions were split up into the coding and non-coding regions of the genome. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-	\caption{\label{tab:sub_log_reg_no_ancest} Logistic regression analysis of the number of substitutions along all protein coding positions of the genome of the respective bacteria replicons. ONLY EXTANT BRANCHES. Grey coloured boxes indicate a negative logistic regression coefficient estimate. All results are statistically significant. Logistic regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
 %\begin{figure*}[t!]
 %	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Inversion_viz/parallel_sets_all_colour.pdf}
 %	\caption{\label{fig:inversion_viz} Visualization of rearrangements and inversions between all \ecol strains. The genome of each strain is represented as horizontal lines. Homologous alignment blocks in each taxa are connected with a winding vertical line. Alignment blocks can be found at varying genomic positions in each taxa. Inverted alignment blocks are coloured in dark purple and non-inverted alignment blocks (which include rearrangements) are coloured in light grey.}
@@ -344,109 +358,6 @@ For the HNS binding sites, I found a few other data sets that I could be using, 
 	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/genome_pos_inversions_k12.pdf}
 	\caption{\label{fig:inver_exp} Visualization of the difference in gene expression between inverted and non-inverted sequences within alignment blocks. Each alignment block represents homologous sequences between the \ecoli strains \textcolor{red}{insert table ref here}. \ecol K-12 MG1655 was used as the reference genome for genomic position for each alignment block. The midpoint of each alignment block was calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.  Each alignment block has one point on the graph to represent the average expression value in \textbf{C}ounts \textbf{P}er \textbf{M}illion (\textbf{CPM}) for all inverted (circles) and non-inverted (triangles) sequences within the block. Blocks that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods) have the inverted and non-inverted gene expression averages highlighted in pink circles and purple triangles respectively. A smoothing line (\texttt{loewss}) was added to link the average gene expression values for the inverted (pink solid) and non-inverted (purple dashed) sequences within block that had a significant difference in gene expression (using a Wilcoxon sign-ranked test, see Materials and Methods). All blocks that did not have a significant difference in average gene expression between inverted and non-inverted sequences within alignment blocks have the average inversion (circles) and non-inversion (triangles) gene expression values coloured in light grey.}
 \end{figure}
-
-\begin{figure}
-	\includegraphics[width=\textwidth]{C:/Users/synch/Documents/PhD/inversion_and_gene_exp_work/Stats/hns_all_inversions.pdf}
-	\caption{\label{fig:inver_hns} Visualization of the genomic locations of all inversion alignment blocks (light grey filled circles) identified between \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC.
-		The data points are plotted on the genome of \ecol K-12 MG1655 which is used as a reference. Each inversion alignment block has a single genomic location chosen to be the midpoint of the inverted region calculated to be the genomic distance from the \ecol K-12 MG1655 origin of replication.
-		\textbf{H}istone-like \textbf{N}ucleoid-\textbf{S}tructuring (H-NS) protein binding sites in the \ecol K-12 MG1655 are overlaid on top of the inversion alignment blocks (circles outlined in dark purple). Data for the H-NS binding information is from Higashi \textcolor{red}{insert citation here.} Inversion alignment blocks that had a significant difference in gene expression between the inverted and non-inverted sequences within the block (using a Wilcoxon sign-ranked test, see Materials and Methods), are marked below the inverted alignment blocks with dark pink outlined triangles.}
-\end{figure}
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.7\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Strain Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\ecol} \\
-			None & -2.66\e{-8}*** \\
-			U00096 & -3.12\e{-8}***\\
-			CP0032890 & -3.07\e{-8}*** \\
-			CU9281640 & -2.95\e{-8}*** \\
-			CP0018550 & -1.50\e{-8}*** \\
-			BA0000070 & -2.63\e{-8}*** \\
-			CU9281630 & -2.49\e{-8}***\\
-			
-			\midrule
-			\multicolumn{2}{c}{\bass} \\
-			None & 2.76\e{-8}***\\
-			NC\_000964 & 2.96\e{-8}***\\
-			NC\_018520 & 3.57\e{-8}***\\
-			NC\_017195 & 1.00\e{-7}***\\
-			NC\_022898 & 5.17\e{-8}*** \\
-			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
-			CP01731 & 5.43\e{-8}*** \\
-			NC\_014479 & \textcolor{red}{NS}\\
-			
-			\midrule
-			\multicolumn{2}{c}{\strep} \\
-			None & 7.21\e{-8}***\\
-			CP050522 & 8.37\e{-8}*** \\
-			GG657756 & 3.62\e{-8}*** \\
-			CP042324 & 7.72\e{-8}*** \\
-			AL645882 & 7.65\e{-8}*** \\
-			CM001889 & \textcolor{red}{-2.46\e{-7}***}\\
-			
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.7\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Strain Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\smel Chromosome} \\
-			None & -6.57\e{-7}***\\
-			NC\_015590& -3.18\e{-7}***\\
-			NC\_003047 & -6.01\e{-7}*** \\
-			CP004140 & -6.00\e{-7}*** \\
-			CP009144 & -6.67\e{-7}*** \\
-			NC\_017322 & -7.19\e{-7}***\\
-			NC\_017325 & -5.01\e{-7}***\\
-			\midrule
-			\multicolumn{2}{c}{\smel \pa} \\
-			None & 2.74\e{-7}***\\
-			NC\_017327 & 6.98\e{-7}***\\
-			CP009145 & 1.78\e{-7}***\\
-			NC\_003037 & 2.09\e{-7}***\\
-			CP004138 & 2.08\e{-7}***\\
-			NC\_015591 & \textcolor{red}{NS} \\
-			NC\_017324 & \textcolor{red}{-1.52\e{-6}***} \\
-			\midrule
-			\multicolumn{2}{c}{\smel \pb} \\
-			None & 1.10\e{-7}***\\
-			NC\_015596 & 6.78\e{-7}***\\
-			NC\_017326 & 1.67\e{-7}***\\
-			NC\_017323 & \textcolor{red}{NS}\\
-			CP009146 & \textcolor{red}{-2.57\e{-7}***}\\
-			CP004139 & 1.04\e{-7}***\\
-			NC\_003078 & 1.04\e{-7}*** \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-
-
-
 
 
 \begin{table}[h]
@@ -474,112 +385,6 @@ For the HNS binding sites, I found a few other data sets that I could be using, 
 		
 	}%resizebox
 	\caption{\label{tab:HNS} \textcolor{red}{are there any other stats related to correlation that people like to have in these tables that I should also be including? }Pearson correlation between H-NS binding sites and inverted regions of the \ecol K-12 MG1655 genome. A genomic region was considered inverted if this sequence was inverted in any of the following four taxa: \ecol K-12 MG1655, \ecol K-12 DH10B, \ecol BW25113, and \ecol ATCC. The genomic positions of these inversions in \ecol K-12 MG1655 was used for reference. The binding sites for the H-NS protein are in the genomic coordinates of \ecol K-12 MG1655, chosen as a reference. The second column ``All Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions and H-NS binding sites. The third column ``Significant Inversions and H-NS Binding'' represents the correlation coefficient between inverted regions with significant differences in normalized gene expression between inverted and non-inverted taxa (via a Wilcoxon signed-rank test) and H-NS binding sites. The \textcolor{red}{ref Higashi} data set had multiple criteria to define H-NS binding sites. They are listed as follows: A: Genes whose coding regions overlap with the H-NS binding regions, B: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that were bound by H-NS, C: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that are "class I " (see \textcolor{red}{cite Higashi}), D: Genes whose coding regions overlap with the H-NS binding regions and intergenic regions that contain known promoter sequences, E: Same as A, but genes on which H-NS binding is restricted to the 3' end and the length overlapping with H-NS-bound regions is <10\% of the total gene length were excluded from H-NS-bound genes, F: When genes included in transcriptional units whose upstream regions or first coding regions overlapped with H-NS bound regions, all genes in the transcriptional units were judged as genes affected by H-NS binding. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-\begin{table}[t!]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			Datasets:  & Correlation Coefficient (W)\\
-			\midrule
-			Inverted Blocks & 15218699**\\
-			Inverted Sequences & 11436344***\\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:overall_inver_exp} Correlation coefficients for Wilcoxon signed-rank test on various datasets to determine the correlation between an inversion and difference in normalized gene expression. The ``Inverted Blocks'' dataset represents alignment blocks that have at least one taxa with an inverted sequence. The ``Inverted Sequences'' dataset represents all individual sequences from all alignment blocks that were inverted. The correlation between both datasets was computed using a Wilcoxon signed-rank test. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-
-\begin{table}[t!]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{ccc}
-			\toprule
-			 \multicolumn{3}{c}{\% of Blocks that are}  \\
-			\cmidrule{1-3}
-			Inverted & Inverted with &Increased in \\
-			  & Differences in&Gene Expression\\
-			  & Gene Expression & in Inverted Sequences \\
-			\midrule
-			68.29 & 8.22& 58.06 \\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:multi_taxa_inver} Percent of blocks in categories for various datasets (blocks with all 4 taxa, at least 3 taxa, or at least 2 taxa). The second column is any block that had at least one sequences that was inverted. The last column only deals with blocks that had at least one inverted sequence and had a significant difference in gene expression (column 3).}
-\end{table}
-
-\begin{table}[t!]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{c}
-			\toprule
-			Block Length Correlation Coefficient (W)\\
-			\midrule
-			4060729.5***\\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:len_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks. The correlation coefficient represents a correlation between alignment block length and blocks with a significant/non-significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-
-
-
-\begin{table}[t!]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{c}
-			\toprule
-			 Genomic Position Correlation Coefficient (W)\\
-			\midrule
-			 NS\\
-			\bottomrule
-		\end{tabular}
-	}%resizebox
-	\caption{\label{tab:pos_summary} Correlation coefficients for Wilcoxon signed-rank test in alignment blocks with a significant difference in normalized gene expression between inverted and non-inverted sequences within the block. The correlation coefficient between the significant blocks and the genomic position of the alignment blocks. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Inversion Category & Correlation Coefficient \\
-			\midrule
-			rev comp & NS\\
-			inversion & 2.20\e{-7}*** \\
-			sig rev comp & -1.89\e{-7}*\\
-			sig $\sim$ midpoint all blocks & NS \\
-			sig $\sim$ midpoint inverted blocks & NS \\
-% below category makes no sense bc all sig blocks will be labeled as inverted.
-%			sig inversion & NS & NS\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:log_reg} Logistic regression between various inversion categories and distance from the origin of replication for all strains. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, midpoint = block midpoint, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Strain & rev comp & inversion \\
-			\midrule
-			%K12 and BW have no inverted seqs so they have no values for first col
-			%no strains have values for second col because all sig blocks have inversion=1 for all rows
-			\ecol K-12 MG1655 &  & 3.55\e{-7}*** \\
-			\ecol K-12 DH10B & NS & 3.45\e{-7}*** \\
-			\ecol BW25113 & & 3.73\e{-7}***\\
-			\ecol ATCC & -1.92\e{-7}*** & -1.92\e{-7}*** \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:log_reg_strain} Logistic regression between various inversion categories and distance from the origin of replication for  each strain. rev comp = individual sequences inverted, inversion = block that has at least one inverted sequence, sig = blocks with significant difference in normalized gene expression between inverted and non-inverted sequences within the block. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 
