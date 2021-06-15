@@ -52,6 +52,7 @@
 \newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
 \newcommand{\escoli}{\textit{Escherichia coli}\xspace}
 \newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\sal}{\textit{Salmonella}\xspace}
 \newcommand{\vib}{\textit{Vibrio}\xspace}
 \newcommand{\sul}{\textit{Sulfolobus}\xspace}
 \newcommand{\ent}{\textit{Enterobacteria}\xspace}
@@ -73,7 +74,7 @@
 \newcommand{\dn}{\textit{dN}\xspace}
 \newcommand{\ds}{\textit{dS}\xspace}
 \newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
-%\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\saur}{\textit{Staphylococcus aureus}\xspace}
 \newcommand{\sliv}{\textit{S.\,lividans}\xspace}
 \newcommand{\bor}{\textit{Bordetella}\xspace}
 \newcommand{\xan}{\textit{Xanthomonas}\xspace}
@@ -85,71 +86,117 @@
 
 \section*{\underline{Inversions and Gene Expression Paper Revisions:}}
 
-
-\section*{Permutations: Gene expression}
-I did permutations tests shuffling gene expression and inversion status to see if the means differ between inverted and non-inverted regions. 
-I did this for all blocks, looking at the overall difference between inverted and non-inverted regions.
-The result was not significant (which is opposite from what the wilcoxon test said).
-I also did a permutation test on a per-strain basis and found no difference between inverted and non-inverted regions and genes for each strain (which is opposite from what the wilcoxon test said for ATCC).
-This to me means that generally there is no difference between inverted and non-inverted regions.
-But, on a gene level, we do see difference between some inverted genes (see below, and Wilcoxon tests per block).
-\textbf{Overall, do you think this is still worth stating? Or since we only have a small number of inverted genes that have a significant difference in expression (8\% of inverted genes), should I change the tone of the paper to say that inversions only seem to have some gene specific effects?}
-
-However, when I did a permutation test with just the non-inverted regions of ATCC and all other strains, the test was not significant.
-Indicating that the non-inverted regions of ATCC have no expression difference than non-inverted regions of other strains. 
-Which means that any difference we do see is not just due to ATCC but the inversions! Yay!
-
-I did not do a permutation test comparing inverted and non-inverted genes within each block (this would be hundreds of tests).
-\textbf{Do you think that I should do a permutation test per block? Is this too much? Can we just stick with the Wilcoxon test results per block?}
-
-
-
-\section*{Ancestral Inversion}
-I ran PARSNP on a few different close outgroups: \efer, \ecol Saki, \ecol K5198, \ecol TW. 
-The other strains are \ecoli K-12 MG1655, K-12 DH10B, BW25113 and ATCC 25922.
-\textbf{Do you think is is ``close'' enough as an outgroup choice for inversions?}
-
-I ran this analysis and here are the results:
-
-\textbf{\efer}
+\section*{Papers looking at inversions across the genome}
+\textbf{\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4915352/}{Naseeb et al. 2016}}
 \begin{itemize}
-	\item 17.7\% of blocks had outgroup = K-12 MG = ATCC
-	\item 31.8\% of blocks had outgroup = K-12 MG
-	\item 39.4\% of blocks had outgroup = ATCC
-	\item 11\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+	\item Engineered various strains of yeast with a particular inversion (46Kb-800Kb) per strain to look at positioning of inversions, fitness, and expression.
+	Mostly looking at impact of inversions involving the centromere or not to see how those impact fitness.
+	Found large differences in expression (transcription) in inverted strains but no change in fitness (phenotype).
+	Changes in expression were across genome (not just in inverted regions).
+	\item Used limma (predecessor to DESeq) to look do a differential gene expression analysis (whole transcriptome, global expression profile). $+$ FDR info
+	Compared each gene inverted gene to it's controlled non-inverted gene (same gene because it was the same species).
+	Visualized these difference with a volcano plot.
+	\item Looked at genes within inversion and the closes 10, 20, and 40 genes on either side of the inversion.
+	\item Used microarray and real time PCR on a subset of genes to validate transcriptome data.
+	\item PCA to show strength in expression changes with the position of the inversion (in relation to the centromere I think)
+	\item enrichment of deferentially expressed genes with in inverted regions checked using binomial and chi-squared tests. Found that DE genes are scattered around the genome rather than concentrated in inversion or near breakpoints. 
 \end{itemize}
 
-\textbf{\ecol Saki}
+\textbf{\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3382547/}{Cui et al. 2012}}
 \begin{itemize}
-	\item 36.2\% of blocks had outgroup = K-12 MG = ATCC
-	\item 56.4\% of blocks had outgroup = K-12 MG
-	\item 5.1\% of blocks had outgroup = ATCC
-	\item 2.1\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+	\item identified naturally occurring inversion (not bioinformatically determined) in \saur that is reversible and causes change in phenotype.
+	\item thought to be a bet hedging move to have some cells in population with one phenotype and some cells with another
+	\item looked at expression and phenotype changes through DNA microarray and phenotypic array
+	\item I think used PCR to see if recA was over expressed. Does not really mention any serious bioinformatics for gene expression methods
 \end{itemize}
 
-\textbf{\ecol K5198}
+
+\textbf{\href{https://jb.asm.org/content/184/22/6190}{Alokam et al. 2002}}
 \begin{itemize}
-	\item 32.4\% of blocks had outgroup = K-12 MG = ATCC
-	\item 31.3\% of blocks had outgroup = K-12 MG
-	\item 32.3\% of blocks had outgroup = ATCC
-	\item 3.9\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+	\item Identified existing inversions (500Kb - 700Kb) between \ecol and \sal, one spanning terminus
+	\item these inversions persisted because they did not impact replication balance and replichore halves
+	\item deleterious inversions would have been lost and not detected
+	\item does not really look at expression at all, except to mention that gene dosage likely plays a role in not detecting inversions
 \end{itemize}
 
-\textbf{\ecol TW}
-\begin{itemize}
-	\item 4.3\% of blocks had outgroup = K-12 MG = ATCC
-	\item 7.8\% of blocks had outgroup = K-12 MG
-	\item 62.3\% of blocks had outgroup = ATCC
-	\item 25.5\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
-\end{itemize}
 
-Keep in mind that these blocks \textbf{are not} the same as the ones I am using in my analysis.
-So I am not sure what to do because depending on which strain is considered the ``outgroup'' it appears as though this ancestor is mostly similar to the K-12 MG strain or mostly similar to the ATCC strain.
-However, with each analysis, there are always some blocks that are in both categories (similar to MG or similar to ATCC).
+\section{Resampling (Permutations)}
+Since it has been so long since I looked at this project I wanted to just confirm that this is the approach we thought was best before I continue.
 
-Even if we did choose one of these strains, the blocks are not the same as the ones I am using in my analysis. 
-Unfortunately, I think the correct thing to do is to do an actual reconstruction of each block (either sequence or character state) to determine what the ``inverted'' state should be.
-I found \uhref{http://www.phytools.org/eqg/Exercise_5.2/}{this website} that discusses how to use an R package called phytools to do character state reconstruction using .
-This might be a quicker and simpler option, rather than doing my long reconstruction method I used in the substitutions paper.
+We have various block of alignment with various lengths. These blocks can therefore have varying numbers of genes in them.
 
+From my notes, I am not sure which of the following options we decided on:
+\begin{enumerate}
+	\item For all the block sizes, I will resample (without replacement?) individual columns (one nucleotide in the alignment = one column) to fill up the total length of the block while also keeping the total number of genes in that block the same.
+	\item For all block sizes, I will resample (without replacement?) entire genes (consecutive columns), to fill up the total number of genes within each block length? But then the resampled block could end up being longer than the original because not all genes are the same length. 
+\end{enumerate}
+
+
+
+%\section*{Permutations: Gene expression}
+%I did permutations tests shuffling gene expression and inversion status to see if the means differ between inverted and non-inverted regions. 
+%I did this for all blocks, looking at the overall difference between inverted and non-inverted regions.
+%The result was not significant (which is opposite from what the wilcoxon test said).
+%I also did a permutation test on a per-strain basis and found no difference between inverted and non-inverted regions and genes for each strain (which is opposite from what the wilcoxon test said for ATCC).
+%This to me means that generally there is no difference between inverted and non-inverted regions.
+%But, on a gene level, we do see difference between some inverted genes (see below, and Wilcoxon tests per block).
+%\textbf{Overall, do you think this is still worth stating? Or since we only have a small number of inverted genes that have a significant difference in expression (8\% of inverted genes), should I change the tone of the paper to say that inversions only seem to have some gene specific effects?}
+%
+%However, when I did a permutation test with just the non-inverted regions of ATCC and all other strains, the test was not significant.
+%Indicating that the non-inverted regions of ATCC have no expression difference than non-inverted regions of other strains. 
+%Which means that any difference we do see is not just due to ATCC but the inversions! Yay!
+%
+%I did not do a permutation test comparing inverted and non-inverted genes within each block (this would be hundreds of tests).
+%\textbf{Do you think that I should do a permutation test per block? Is this too much? Can we just stick with the Wilcoxon test results per block?}
+%
+%
+%
+%\section*{Ancestral Inversion}
+%I ran PARSNP on a few different close outgroups: \efer, \ecol Saki, \ecol K5198, \ecol TW. 
+%The other strains are \ecoli K-12 MG1655, K-12 DH10B, BW25113 and ATCC 25922.
+%\textbf{Do you think is is ``close'' enough as an outgroup choice for inversions?}
+%
+%I ran this analysis and here are the results:
+%
+%\textbf{\efer}
+%\begin{itemize}
+%	\item 17.7\% of blocks had outgroup = K-12 MG = ATCC
+%	\item 31.8\% of blocks had outgroup = K-12 MG
+%	\item 39.4\% of blocks had outgroup = ATCC
+%	\item 11\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+%\end{itemize}
+%
+%\textbf{\ecol Saki}
+%\begin{itemize}
+%	\item 36.2\% of blocks had outgroup = K-12 MG = ATCC
+%	\item 56.4\% of blocks had outgroup = K-12 MG
+%	\item 5.1\% of blocks had outgroup = ATCC
+%	\item 2.1\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+%\end{itemize}
+%
+%\textbf{\ecol K5198}
+%\begin{itemize}
+%	\item 32.4\% of blocks had outgroup = K-12 MG = ATCC
+%	\item 31.3\% of blocks had outgroup = K-12 MG
+%	\item 32.3\% of blocks had outgroup = ATCC
+%	\item 3.9\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+%\end{itemize}
+%
+%\textbf{\ecol TW}
+%\begin{itemize}
+%	\item 4.3\% of blocks had outgroup = K-12 MG = ATCC
+%	\item 7.8\% of blocks had outgroup = K-12 MG
+%	\item 62.3\% of blocks had outgroup = ATCC
+%	\item 25.5\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+%\end{itemize}
+%
+%Keep in mind that these blocks \textbf{are not} the same as the ones I am using in my analysis.
+%So I am not sure what to do because depending on which strain is considered the ``outgroup'' it appears as though this ancestor is mostly similar to the K-12 MG strain or mostly similar to the ATCC strain.
+%However, with each analysis, there are always some blocks that are in both categories (similar to MG or similar to ATCC).
+%
+%Even if we did choose one of these strains, the blocks are not the same as the ones I am using in my analysis. 
+%Unfortunately, I think the correct thing to do is to do an actual reconstruction of each block (either sequence or character state) to determine what the ``inverted'' state should be.
+%I found \uhref{http://www.phytools.org/eqg/Exercise_5.2/}{this website} that discusses how to use an R package called phytools to do character state reconstruction using .
+%This might be a quicker and simpler option, rather than doing my long reconstruction method I used in the substitutions paper.
+%
 \end{document}
