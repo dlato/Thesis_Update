@@ -86,52 +86,29 @@
 
 \section*{\underline{Inversions and Gene Expression Paper Revisions:}}
 
-\section*{Papers looking at inversions across the genome}
-\textbf{\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4915352/}{Naseeb et al. 2016}}
+I had to alter my data frame slightly to associate the normalized expression with homologous genes. I now have a nice table where each row is the expression value of a homologous gene, and the columns are the different taxa. This will make it easy to grab rows randomly for the permutation.
+
+
+\section*{What to do with overlapping genes?}
+I have a few cases where a gene in one taxa is large, and encompasses two (or more) genes in another taxa (Figure \ref{overlap}, please do not judge my hideous use of powerpoint. My new lab does not understand latex and they do not like automation (i.e. they use illustrator for EVERYTHING and then complain when they need to spend an hour editing it. I am working on changing them.). At the moment, I consider each of the genes in taxa A as separate homologous genes to the genes in taxa B and C. So, the sets of homologous genes would be:
 \begin{itemize}
-	\item Engineered various strains of yeast with a particular inversion (46Kb-800Kb) per strain to look at positioning of inversions, fitness, and expression.
-	Mostly looking at impact of inversions involving the centromere or not to see how those impact fitness.
-	Found large differences in expression (transcription) in inverted strains but no change in fitness (phenotype).
-	Changes in expression were across genome (not just in inverted regions).
-	\item Used limma (predecessor to DESeq) to look do a differential gene expression analysis (whole transcriptome, global expression profile). $+$ FDR info
-	Compared each gene inverted gene to it's controlled non-inverted gene (same gene because it was the same species).
-	Visualized these difference with a volcano plot.
-	\item Looked at genes within inversion and the closes 10, 20, and 40 genes on either side of the inversion.
-	\item Used microarray and real time PCR on a subset of genes to validate transcriptome data.
-	\item PCA to show strength in expression changes with the position of the inversion (in relation to the centromere I think)
-	\item enrichment of deferentially expressed genes with in inverted regions checked using binomial and chi-squared tests. Found that DE genes are scattered around the genome rather than concentrated in inversion or near breakpoints. 
+	\item gene A1, gene B1, gene C1
+	\item gene A2, gene B2, gene C2
 \end{itemize}
 
-\textbf{\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3382547/}{Cui et al. 2012}}
-\begin{itemize}
-	\item identified naturally occurring inversion (not bioinformatically determined) in \saur that is reversible and causes change in phenotype.
-	\item thought to be a bet hedging move to have some cells in population with one phenotype and some cells with another
-	\item looked at expression and phenotype changes through DNA microarray and phenotypic array
-	\item I think used PCR to see if recA was over expressed. Does not really mention any serious bioinformatics for gene expression methods
-\end{itemize}
+\textbf{Does this make sense? and, should I consider these separate ``columns'' for the permutation analysis? i.e. when I grab a column of homologous genes, is it ok for me to consider each of the above sets of homologous genes as a potential column?}
 
+\includegraphics[width=\textwidth]{overlapgenes.png}\label{overlap}
 
-\textbf{\href{https://jb.asm.org/content/184/22/6190}{Alokam et al. 2002}}
-\begin{itemize}
-	\item Identified existing inversions (500Kb - 700Kb) between \ecol and \sal, one spanning terminus
-	\item these inversions persisted because they did not impact replication balance and replichore halves
-	\item deleterious inversions would have been lost and not detected
-	\item does not really look at expression at all, except to mention that gene dosage likely plays a role in not detecting inversions
-\end{itemize}
+\section*{Permutation Test}
+I want to ensure that I understand the test correctly.
+First, I create my new permuted blocks with the same number of genes as the original block length (i.e. if the block was composed of 2 genes, my permuted block will also contain 2 genes).
+Second, I do a test (Wilcoxon?) to determine if the expression of the ATCC gene (which was inverted in the original block) is significantly different than the others. \textbf{Is this the test I should be doing?}
+Third, I repeat the first two steps many many times.
+Fourth, create a distribution of the p-values.
+Fifth, see where my original p-value falls within that distribution.
 
-
-\section{Resampling (Permutations)}
-Since it has been so long since I looked at this project I wanted to just confirm that this is the approach we thought was best before I continue.
-
-We have various block of alignment with various lengths. These blocks can therefore have varying numbers of genes in them.
-
-From my notes, I am not sure which of the following options we decided on:
-\begin{enumerate}
-	\item For all the block sizes, I will resample (without replacement?) individual columns (one nucleotide in the alignment = one column) to fill up the total length of the block while also keeping the total number of genes in that block the same.
-	\item For all block sizes, I will resample (without replacement?) entire genes (consecutive columns), to fill up the total number of genes within each block length? But then the resampled block could end up being longer than the original because not all genes are the same length. 
-\end{enumerate}
-
-
+\textbf{Is this general process correct?}
 
 %\section*{Permutations: Gene expression}
 %I did permutations tests shuffling gene expression and inversion status to see if the means differ between inverted and non-inverted regions. 
