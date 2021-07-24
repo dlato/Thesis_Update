@@ -85,30 +85,26 @@
 
 
 \section*{\underline{Inversions and Gene Expression Paper Revisions:}}
+I successfully created code to do the permutation tests for each block length (number of genes per block), and regarding both inversion patterns (checking if ATCC is different than all others and if ATCC and DH are different than all others).
 
-I had to alter my data frame slightly to associate the normalized expression with homologous genes. I now have a nice table where each row is the expression value of a homologous gene, and the columns are the different taxa. This will make it easy to grab rows randomly for the permutation.
+\section*{What is my ``observed'' value in the permutation test?}
+I am still a bit confused by this so I am trying to write out my thoughts to see if they make sense.
 
+Previously (before the permutation tests) I did two different Wilcoxon tests:
+\begin{enumerate}
+	\item comparing expression of ALL inverted genes, to the expression of ALL non-inverted genes (lumping all blocks/genes together)
+	\item a Wilcoxon test on each block (homologous genes): comparing expression of inverted genes, to expression of non-inverted genes within the same block
+\end{enumerate}
 
-\section*{What to do with overlapping genes?}
-I have a few cases where a gene in one taxa is large, and encompasses two (or more) genes in another taxa (Figure \ref{overlap}, please do not judge my hideous use of powerpoint. My new lab does not understand latex and they do not like automation (i.e. they use illustrator for EVERYTHING and then complain when they need to spend an hour editing it. I am working on changing them.). At the moment, I consider each of the genes in taxa A as separate homologous genes to the genes in taxa B and C. So, the sets of homologous genes would be:
-\begin{itemize}
-	\item gene A1, gene B1, gene C1
-	\item gene A2, gene B2, gene C2
-\end{itemize}
+For the second test, this means that I repeated this Wilcoxon test for each block (hundreds of blocks), obtaining multiple W statistics and p-values.
 
-\textbf{Does this make sense? and, should I consider these separate ``columns'' for the permutation analysis? i.e. when I grab a column of homologous genes, is it ok for me to consider each of the above sets of homologous genes as a potential column?}
+\textbf{Should I be replicating these two tests/questions, but with permutations?}
 
-\includegraphics[width=\textwidth]{overlapgenes.png}\label{overlap}
+If so, I assume that for the first test (1. above), lets say I have a total of 1000 inverted genes and 2000 non-inverted genes, I would re-sample randomly (both inverted and non-inverted from all taxa) 1000 genes as ``inverted'' and 2000 genes as ``non-inverted''. Perform a Wilcoxon test on these samples to get a p-value. Repeat this many times. Obtain a distribution of p-values. And see where my observed value (1. above) fits along this distribution. 
 
-\section*{Permutation Test}
-I want to ensure that I understand the test correctly.
-First, I create my new permuted blocks with the same number of genes as the original block length (i.e. if the block was composed of 2 genes, my permuted block will also contain 2 genes).
-Second, I do a test (Wilcoxon?) to determine if the expression of the ATCC gene (which was inverted in the original block) is significantly different than the others. \textbf{Is this the test I should be doing?}
-Third, I repeat the first two steps many many times.
-Fourth, create a distribution of the p-values.
-Fifth, see where my original p-value falls within that distribution.
+For the second test (2. above), I am getting a bit confused. Currently, I am splitting the data up into block length by gene. So if a block contains 3 genes it's length would be 3. I perform a permutation test on each block length. In this example, sample various columns from the alignment (homologous genes) to end up with a re-sampled block the same length as the original block (in this case 3). Compare expression of the ATCC strain vs. the other strains using a Wilcoxon test to get a p-value. Repeat many times. Obtain a distribution of p-values. And see where my observed value (from the original block) fits along this distribution. 
+Since each block has its own observed p-value, I end up with multiple p-values. \textbf{Would I have to test each p-value from each block against the permuted distribution of p-values generated from re-sampled blocks of the same length?}
 
-\textbf{Is this general process correct?}
 
 %\section*{Permutations: Gene expression}
 %I did permutations tests shuffling gene expression and inversion status to see if the means differ between inverted and non-inverted regions. 
@@ -128,52 +124,59 @@ Fifth, see where my original p-value falls within that distribution.
 %
 %
 %
-%\section*{Ancestral Inversion}
-%I ran PARSNP on a few different close outgroups: \efer, \ecol Saki, \ecol K5198, \ecol TW. 
-%The other strains are \ecoli K-12 MG1655, K-12 DH10B, BW25113 and ATCC 25922.
+\section*{Ancestral Inversion}
+I was looking over the reviewers comments to see what was left to do (which is not much!), and I noticed that we did not decide (or I can't remember) what to do about how we are ``defining'' inversions.
+The reviewer is concerned that by arbirtarally picking K-12 MG1655 as the reference, we may be inaccurately identifying inversions. I.e. what if K-12 was actually inverted (and therefore all other strains), making ATCC not inverted. They repeatedly mentioned determining what the ancestral inversion is and using this as the base for determining the inversion status of each gene.
+
+To address this, I attempted to look at various outgroup strains of \ecol, determine their inversion status, and see if it generally matches ATCC or K-12. If it always matched K-12, then we could confidently say that choosing K-12 as the reference for inversions was a sound choice. The results are summarized below.
+
+I ran PARSNP on a few different close outgroups: \efer, \ecol Saki, \ecol K5198, \ecol TW. 
+The other strains are \ecoli K-12 MG1655, K-12 DH10B, BW25113 and ATCC 25922.
 %\textbf{Do you think is is ``close'' enough as an outgroup choice for inversions?}
-%
-%I ran this analysis and here are the results:
-%
-%\textbf{\efer}
-%\begin{itemize}
-%	\item 17.7\% of blocks had outgroup = K-12 MG = ATCC
-%	\item 31.8\% of blocks had outgroup = K-12 MG
-%	\item 39.4\% of blocks had outgroup = ATCC
-%	\item 11\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
-%\end{itemize}
-%
-%\textbf{\ecol Saki}
-%\begin{itemize}
-%	\item 36.2\% of blocks had outgroup = K-12 MG = ATCC
-%	\item 56.4\% of blocks had outgroup = K-12 MG
-%	\item 5.1\% of blocks had outgroup = ATCC
-%	\item 2.1\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
-%\end{itemize}
-%
-%\textbf{\ecol K5198}
-%\begin{itemize}
-%	\item 32.4\% of blocks had outgroup = K-12 MG = ATCC
-%	\item 31.3\% of blocks had outgroup = K-12 MG
-%	\item 32.3\% of blocks had outgroup = ATCC
-%	\item 3.9\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
-%\end{itemize}
-%
-%\textbf{\ecol TW}
-%\begin{itemize}
-%	\item 4.3\% of blocks had outgroup = K-12 MG = ATCC
-%	\item 7.8\% of blocks had outgroup = K-12 MG
-%	\item 62.3\% of blocks had outgroup = ATCC
-%	\item 25.5\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
-%\end{itemize}
-%
-%Keep in mind that these blocks \textbf{are not} the same as the ones I am using in my analysis.
-%So I am not sure what to do because depending on which strain is considered the ``outgroup'' it appears as though this ancestor is mostly similar to the K-12 MG strain or mostly similar to the ATCC strain.
-%However, with each analysis, there are always some blocks that are in both categories (similar to MG or similar to ATCC).
-%
-%Even if we did choose one of these strains, the blocks are not the same as the ones I am using in my analysis. 
-%Unfortunately, I think the correct thing to do is to do an actual reconstruction of each block (either sequence or character state) to determine what the ``inverted'' state should be.
-%I found \uhref{http://www.phytools.org/eqg/Exercise_5.2/}{this website} that discusses how to use an R package called phytools to do character state reconstruction using .
-%This might be a quicker and simpler option, rather than doing my long reconstruction method I used in the substitutions paper.
+
+I ran this analysis and here are the results:
+
+\textbf{\efer}
+\begin{itemize}
+	\item 17.7\% of blocks had outgroup = K-12 MG = ATCC
+	\item 31.8\% of blocks had outgroup = K-12 MG
+	\item 39.4\% of blocks had outgroup = ATCC
+	\item 11\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+\end{itemize}
+
+\textbf{\ecol Saki}
+\begin{itemize}
+	\item 36.2\% of blocks had outgroup = K-12 MG = ATCC
+	\item 56.4\% of blocks had outgroup = K-12 MG
+	\item 5.1\% of blocks had outgroup = ATCC
+	\item 2.1\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+\end{itemize}
+
+\textbf{\ecol K5198}
+\begin{itemize}
+	\item 32.4\% of blocks had outgroup = K-12 MG = ATCC
+	\item 31.3\% of blocks had outgroup = K-12 MG
+	\item 32.3\% of blocks had outgroup = ATCC
+	\item 3.9\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+\end{itemize}
+
+\textbf{\ecol TW}
+\begin{itemize}
+	\item 4.3\% of blocks had outgroup = K-12 MG = ATCC
+	\item 7.8\% of blocks had outgroup = K-12 MG
+	\item 62.3\% of blocks had outgroup = ATCC
+	\item 25.5\% of blocks had the outgroup with a different sign than both ATCC and K-12 MG
+\end{itemize}
+
+Keep in mind that these blocks \textbf{are not} the same as the ones I am using in my analysis (because PARSNP re-calculates the core blocks based on what taxa are present).
+So I am not sure what to do because depending on which strain is considered the ``outgroup'' it appears as though this ancestor is mostly similar to the K-12 MG strain or mostly similar to the ATCC strain.
+However, with each analysis, there are always some blocks that are in both categories (similar to MG or similar to ATCC).
+
+Even if we did choose one of these strains, the blocks are not the same as the ones I am using in my analysis. 
+Unfortunately, I think the correct thing to do is to do an actual reconstruction of each block (either sequence or character state) to determine what the ``inverted'' state should be.
+I found \uhref{http://www.phytools.org/eqg/Exercise_5.2/}{this website} that discusses how to use an R package called phytools to do character state reconstruction using .
+This might be a quicker and simpler option, rather than doing my long reconstruction method I used in the substitutions paper.
+
+\textbf{I am unsure of what to do next. Is ancestral reconstruction worth it? Should I just justify in the cover letter that inversions are truly arbitrary (depending on the reference), but no matter who is the reference, we see that ATCC is usually in a different state compared to the other taxa? Let me know what you think.}
 %
 \end{document}

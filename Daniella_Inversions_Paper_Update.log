@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  8 JUL 2021 20:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  24 JUL 2021 14:52
 entering extended mode
 **./Daniella_Inversions_Paper_Update.tex
 (Daniella_Inversions_Paper_Update.tex
@@ -1017,60 +1017,38 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 87
 .
 ("C:\Users\synch\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
+) [1{C:/Users/synch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-Package hyperref Warning: Suppressing empty link on input line 93.
-
-<overlapgenes.png, id=10, 484.81125pt x 177.0615pt>
-File: overlapgenes.png Graphic file (type png)
-<use overlapgenes.png>
-Package pdftex.def Info: overlapgenes.png  used on input line 101.
-(pdftex.def)             Requested size: 505.89pt x 184.76909pt.
-
-Overfull \hbox (28.0pt too wide) in paragraph at lines 101--102
-[][][] 
- []
-
-[1{C:/Users/synch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
- <./overlapgenes.png>] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+]
+[2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (Daniella_Inversions_Paper_Update.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-
-
-Package rerunfilecheck Warning: File `Daniella_Inversions_Paper_Update.out' has
- changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Daniella_Inversions_Paper_Update.ou
-t':
-(rerunfilecheck)             Before: 5CC15D6B690B17E1D81FD6761C57E105;51
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package rerunfilecheck Info: File `Daniella_Inversions_Paper_Update.out' has no
+t changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 22298 strings out of 481511
- 439660 string characters out of 2911892
- 679125 words of memory out of 3000000
- 37107 multiletter control sequences out of 15000+200000
- 540681 words of font info for 48 fonts, out of 3000000 for 9000
+ 22319 strings out of 481511
+ 439804 string characters out of 2911892
+ 680068 words of memory out of 3000000
+ 37115 multiletter control sequences out of 15000+200000
+ 545493 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,90p,598b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.1} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-bx1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
-/dpi600\tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Daniella_Inversions_Paper_Update.pdf (2 pages, 60108 bytes).
+ 72i,11n,90p,684b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecbi1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\synch\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\synch\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk>
+Output written on Daniella_Inversions_Paper_Update.pdf (3 pages, 73147 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
